@@ -1,8 +1,8 @@
 inherit eutils
 
 DESCRIPTION="ODBC driver for Oracle"
-SRC_URI="http://fndapl.fnal.gov/~dbox/oracle/odbc/${PN}.0.5.4.tar.gz"
-HOMEPAGE="http://fndapl.fnal.gov/~dbox/oracle/odbc/"
+SRC_URI="http://home.fnal.gov/~dbox/oracle/odbc/${PN}.0.5.4.tar.gz"
+HOMEPAGE="http://home.fnal.gov/~dbox/oracle/odbc/"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""

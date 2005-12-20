@@ -1,4 +1,2 @@
-MD5 3d67c361de0d73e021075d9d572661f1 oracle-instantclient-precomp-9.0.1.ebuild 329
 MD5 cd9207f9e82c66937fe190e3640236d6 oracle-instantclient-precomp-9.0.1-r1.ebuild 412
-MD5 f820bc609bfa28f0afadff555be61a52 files/digest-oracle-instantclient-precomp-9.0.1 87
-MD5 5f84e237e78dde4fd8642d5c9c111550 files/digest-oracle-instantclient-precomp-9.0.1-r1 87
+MD5 f820bc609bfa28f0afadff555be61a52 files/digest-oracle-instantclient-precomp-9.0.1-r1 87
