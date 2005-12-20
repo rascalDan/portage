@@ -1,2 +1,4 @@
+MD5 0f14065ed977a985b5232a891c6d653d oracle_odbc_driver-0.5.5.ebuild 587
 MD5 caab41c1b9f74e88c1e73abf05943422 oracle_odbc_driver-0.5.4.ebuild 591
 MD5 aa9beded315bfaa0a241e3a9ee9f3a80 files/digest-oracle_odbc_driver-0.5.4 76
+MD5 a0f1f36dc2cc7bbca3baa09f7f95950b files/digest-oracle_odbc_driver-0.5.5 76
