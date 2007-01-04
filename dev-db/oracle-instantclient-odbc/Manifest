@@ -1,2 +1,16 @@
-MD5 29e325ae705117ff5886cadb330171e9 files/digest-oracle-instantclient-odbc-10.2.0.2 93
+DIST instantclient-odbc-linux32-10.2.0.2-20060331.zip 270945 RMD160 b41fc5793e79a18b350a259dfc93be955249ea12 SHA1 72e273dcfa4fcf19f49312a35235a5711e2579ad SHA256 d0aa56a6c4762764b4729fd47c1e95ccffa373104406607802c28085e59a0d57
+DIST instantclient-odbc-linux32-10.2.0.3-20061115.zip 276079 RMD160 7ea043c5216f9ad2828cdf5ec7650afc4eb05730 SHA1 569a093ba13ac3a7a8b88257d4e5d9c138a43c83 SHA256 eb9b6883d6742127f580a883bca63e183f070207b5aacc0e547bccdadcc58b1f
+EBUILD oracle-instantclient-odbc-10.2.0.2.ebuild 430 RMD160 882ff5d547c7f15d9e5a0f68169cc4d1944d9faa SHA1 ec8bc61dfd4fc2038207f6471164df14985a3337 SHA256 71550f32c81f230e02bee16382428e051b209c847250e4b434bf6e077df1d5dc
 MD5 caa1efaadabdb3294fd06247a880ccf9 oracle-instantclient-odbc-10.2.0.2.ebuild 430
+RMD160 882ff5d547c7f15d9e5a0f68169cc4d1944d9faa oracle-instantclient-odbc-10.2.0.2.ebuild 430
+SHA256 71550f32c81f230e02bee16382428e051b209c847250e4b434bf6e077df1d5dc oracle-instantclient-odbc-10.2.0.2.ebuild 430
+EBUILD oracle-instantclient-odbc-10.2.0.3.ebuild 430 RMD160 ddeea583bd9009c93c15606b445a9d9830d42462 SHA1 17e84ac5be93e6b093167493be5a9ee4f7c4bc68 SHA256 5f239d08656076ca57737bddace49b4d018babee96a166ca0cb09bbec6abe74b
+MD5 7bb3eee708ecc901c681dcb53aa79579 oracle-instantclient-odbc-10.2.0.3.ebuild 430
+RMD160 ddeea583bd9009c93c15606b445a9d9830d42462 oracle-instantclient-odbc-10.2.0.3.ebuild 430
+SHA256 5f239d08656076ca57737bddace49b4d018babee96a166ca0cb09bbec6abe74b oracle-instantclient-odbc-10.2.0.3.ebuild 430
+MD5 808df3d6b551deff9bd3d6e821f48c04 files/digest-oracle-instantclient-odbc-10.2.0.2 325
+RMD160 efdc53820a76bb8d2a85ac25c0568f5fe22ddff6 files/digest-oracle-instantclient-odbc-10.2.0.2 325
+SHA256 bc0d425e4a3705a300d43f3a2df02df940fa913ee91850061a94f9a0fb524a5a files/digest-oracle-instantclient-odbc-10.2.0.2 325
+MD5 31f2919807fae4c0939159c6bfb7e3fa files/digest-oracle-instantclient-odbc-10.2.0.3 325
+RMD160 cf546c1ec9287a3e008c62aafdd58992336489a9 files/digest-oracle-instantclient-odbc-10.2.0.3 325
+SHA256 add8225d3561a70aac1b71e955081ddb015ecf7af1d50a8f3f04b5d28afe3dd6 files/digest-oracle-instantclient-odbc-10.2.0.3 325
