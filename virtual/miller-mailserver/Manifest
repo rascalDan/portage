@@ -1,0 +1,7 @@
+EBUILD miller-mailserver-0.ebuild 213 RMD160 8fc78470d22c99f0699da75ee23c185a82a06680 SHA1 52429b28baeda29b04231ca9635e4c957b4e1a21 SHA256 ad88c17812c31da604e2e5ab16a227172bc32252a6b43d4be433d703bf10b573
+MD5 55b8c86838eb06fe26aa08cf4bf810ba miller-mailserver-0.ebuild 213
+RMD160 8fc78470d22c99f0699da75ee23c185a82a06680 miller-mailserver-0.ebuild 213
+SHA256 ad88c17812c31da604e2e5ab16a227172bc32252a6b43d4be433d703bf10b573 miller-mailserver-0.ebuild 213
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-mailserver-0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-mailserver-0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-mailserver-0 0
