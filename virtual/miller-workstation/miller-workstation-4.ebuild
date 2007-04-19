@@ -19,6 +19,7 @@ media-fonts/corefonts
 sys-auth/pam_ldap
 dev-java/blackdown-jre
 media-gfx/inkscape
+kde-base/krdc
 www-client/mozilla-firefox
 media-video/mplayer
 kde-misc/filelight
@@ -31,9 +32,12 @@ app-misc/freemind
 games-misc/fortune-mod
 app-office/openoffice-bin
 x11-wm/fluxbox
+media-gfx/gimp
+net-www/netscape-flash
 x11-plugins/gaim-encryption
 x11-themes/gtk-chtheme
 media-gfx/gimageview
 app-office/dia
+net-misc/dhcp
 "
 
