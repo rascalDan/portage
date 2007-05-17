@@ -2,6 +2,13 @@ EBUILD miller-webserver-0.ebuild 223 RMD160 b30300c29b5d368b43891177eb19c6587c66
 MD5 c6b77bb453808d31ed3a499b555344b4 miller-webserver-0.ebuild 223
 RMD160 b30300c29b5d368b43891177eb19c6587c66f808 miller-webserver-0.ebuild 223
 SHA256 767107f8d7a5f93882fb6509821493942ae7563c2e0280c0986b228134bb6f52 miller-webserver-0.ebuild 223
+EBUILD miller-webserver-1.ebuild 204 RMD160 d7a0a3b08dff8c36ef049eacfc5de5af7dbdb958 SHA1 d7c5f12fc95418645aac6f3a21892d9c5a1d83d4 SHA256 e3bf7e746c6cf6e0e96274b17bc286f0d3dcb736a579c63c05b433ce3601ab91
+MD5 f533d0338ca15006e2973abc6a46fcf2 miller-webserver-1.ebuild 204
+RMD160 d7a0a3b08dff8c36ef049eacfc5de5af7dbdb958 miller-webserver-1.ebuild 204
+SHA256 e3bf7e746c6cf6e0e96274b17bc286f0d3dcb736a579c63c05b433ce3601ab91 miller-webserver-1.ebuild 204
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-webserver-0 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-webserver-0 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-webserver-0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-webserver-1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-webserver-1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-webserver-1 0
