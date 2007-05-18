@@ -10,6 +10,10 @@ EBUILD miller-workstation-5.ebuild 860 RMD160 c89ecaf0009d8a98de2bbc6d3737fa3d10
 MD5 e20dd1712e67d66cb5a2db051056be64 miller-workstation-5.ebuild 860
 RMD160 c89ecaf0009d8a98de2bbc6d3737fa3d10a21eba miller-workstation-5.ebuild 860
 SHA256 2da44f180a1e745f149869f19bb9a3a0f27b333c4382f5da72d73e98b1f0ff05 miller-workstation-5.ebuild 860
+EBUILD miller-workstation-6.ebuild 864 RMD160 e93852e0a8e14bf44d7d082b08497388fd9ced80 SHA1 20e8cf382f3da1b918b206ddb1b1deee4f79b1c2 SHA256 1f122a6d605a007f4464794d11967c9cad86cafa7fa600f3596c6b2b6b9b8078
+MD5 277f2da460352f1d8839102817facc11 miller-workstation-6.ebuild 864
+RMD160 e93852e0a8e14bf44d7d082b08497388fd9ced80 miller-workstation-6.ebuild 864
+SHA256 1f122a6d605a007f4464794d11967c9cad86cafa7fa600f3596c6b2b6b9b8078 miller-workstation-6.ebuild 864
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-workstation-3 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-workstation-3 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-workstation-3 0
@@ -19,3 +23,6 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-workstation-5 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-workstation-5 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-workstation-5 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-workstation-6 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-workstation-6 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-workstation-6 0
