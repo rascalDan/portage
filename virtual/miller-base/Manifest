@@ -1,3 +1,7 @@
+AUX daily-av-scan.cron 120 RMD160 734d836d94a6255fdbc02de5fe0a0bd4100bdf8b SHA1 2bee1fc40d9b1f14e12bfc927f4ba0251fc34dc7 SHA256 800eb46f54670ba4fccb0908cb2129aa8026628f64bc1753be4d234ff768d2cc
+MD5 cebdc60be517b39ede4cc12c88a0f2ba files/daily-av-scan.cron 120
+RMD160 734d836d94a6255fdbc02de5fe0a0bd4100bdf8b files/daily-av-scan.cron 120
+SHA256 800eb46f54670ba4fccb0908cb2129aa8026628f64bc1753be4d234ff768d2cc files/daily-av-scan.cron 120
 EBUILD miller-base-2.ebuild 644 RMD160 5b2e469305ab803b626b20de5736cece9be4fcfa SHA1 78273863bc4458ffa9a33b04caa4e87d31db3eb4 SHA256 bcc33ff38848b618942a6a35930d1a120347050b4ba888cd6e294c13a233b0b7
 MD5 c246483e5b413c41b1c6577d8357dc6f miller-base-2.ebuild 644
 RMD160 5b2e469305ab803b626b20de5736cece9be4fcfa miller-base-2.ebuild 644
@@ -6,9 +10,16 @@ EBUILD miller-base-3.ebuild 731 RMD160 8c0ff959d018db05a58dba0339116f6b21d4f26d 
 MD5 057995fab5272916bd2aef8a78e86ac6 miller-base-3.ebuild 731
 RMD160 8c0ff959d018db05a58dba0339116f6b21d4f26d miller-base-3.ebuild 731
 SHA256 13f71cf2b2876b6ee1eb1ecb1f2dd740bd825ab275f6b0fdc7f09ad645ab228f miller-base-3.ebuild 731
+EBUILD miller-base-4.ebuild 852 RMD160 2a42ee23ab758227c378210d886b6526ac2b7f9f SHA1 ffb6cd828de1b912d497e6be0c96ace48cf15b21 SHA256 b1beaeedb1f6587af2963d83f41d37e9d5b9af1896130171a548a2f87bb0f107
+MD5 f5d3bdf2fbf4be5300d9d8a40f56816f miller-base-4.ebuild 852
+RMD160 2a42ee23ab758227c378210d886b6526ac2b7f9f miller-base-4.ebuild 852
+SHA256 b1beaeedb1f6587af2963d83f41d37e9d5b9af1896130171a548a2f87bb0f107 miller-base-4.ebuild 852
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-2 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-2 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-3 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-3 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-4 0
