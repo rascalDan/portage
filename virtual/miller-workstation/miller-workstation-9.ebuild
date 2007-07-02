@@ -6,10 +6,10 @@ IUSE=""
 
 DEPEND="
 virtual/miller-base
-kde-base/kcalc
+|| ( kde-base/kdeutils kde-base/kcalc )
 net-www/mplayerplug-in
 mail-client/mutt
-net-im/gaim
+net-im/pidgin
 games-misc/fortune-mod-all
 x11-themes/gtk-engines-qt
 sys-devel/bc
@@ -31,13 +31,16 @@ www-client/links
 app-misc/freemind
 games-misc/fortune-mod
 app-office/openoffice-bin
-x11-wm/fluxbox
 media-gfx/gimp
 net-www/netscape-flash
-x11-plugins/gaim-encryption
+x11-plugins/pidgin-encryption
 x11-themes/gtk-chtheme
 media-gfx/gimageview
 app-office/dia
 net-misc/dhcp
+x11-misc/googleearth
+media-sound/amarok
+kde-base/ksnapshot
+kde-misc/kdocker
 "
 
