@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source "/sbin/functions.sh"
+source "/etc/make.globals"
+source "/etc/make.conf"
+
+cd "${PORTDIR_OVERLAY}" && cvs -q up -dPCA
