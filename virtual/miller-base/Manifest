@@ -14,6 +14,10 @@ EBUILD miller-base-4.ebuild 852 RMD160 2a42ee23ab758227c378210d886b6526ac2b7f9f 
 MD5 f5d3bdf2fbf4be5300d9d8a40f56816f miller-base-4.ebuild 852
 RMD160 2a42ee23ab758227c378210d886b6526ac2b7f9f miller-base-4.ebuild 852
 SHA256 b1beaeedb1f6587af2963d83f41d37e9d5b9af1896130171a548a2f87bb0f107 miller-base-4.ebuild 852
+EBUILD miller-base-5.ebuild 874 RMD160 65ce2f733ad8463a16da419b833eda4d51936672 SHA1 d12cd6c47872234d429bdf977c681bea41a9e6b2 SHA256 005ab9d8a67c8ca63dd370d8679d6d3869d7a076fc276e3807ff836851ec9960
+MD5 603c92ca3f6deb1bff8d561bd28cf38d miller-base-5.ebuild 874
+RMD160 65ce2f733ad8463a16da419b833eda4d51936672 miller-base-5.ebuild 874
+SHA256 005ab9d8a67c8ca63dd370d8679d6d3869d7a076fc276e3807ff836851ec9960 miller-base-5.ebuild 874
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-2 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-2 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-2 0
@@ -23,3 +27,6 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-4 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-4 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-5 0
