@@ -39,5 +39,5 @@ src_install() {
 	exeinto /etc/cron.weekly
 	newexe "${FILESDIR}"/daily-av-scan.cron av-scan || die
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}"/update.local.portage.cron av-scan || die
+	newexe "${FILESDIR}"/update.local.portage.cron portage-update || die
 }
