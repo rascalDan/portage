@@ -36,6 +36,7 @@ dev-util/colorgcc
 net-analyzer/nmap
 media-video/ffmpeg
 >=dev-util/monodevelop-0.13
+dev-util/desktop-file-utils
 dev-util/mono-debugger
 app-editors/gvim"
 
