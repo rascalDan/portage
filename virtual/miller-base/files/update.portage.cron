@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source "/sbin/functions.sh"
+source "/etc/make.globals"
+source "/etc/make.conf"
+
+if df -l ${PORTDIR} 2> /dev/null > /dev/null ; then
+    emerge --sync --quiet
+fi
+
