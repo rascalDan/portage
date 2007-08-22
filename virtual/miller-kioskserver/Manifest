@@ -1,0 +1,7 @@
+EBUILD miller-kioskserver-0.ebuild 238 RMD160 4ae70c82233d4c8086764b95e5cb8f63d8daceff SHA1 0b1479c97edd720a516123a6ea46d0b4a17a3940 SHA256 c73bb70218969875539c9602ed916ca9b6c3ac5adc2e213a2087ea0898fc5340
+MD5 633f09f22382e377ccf797474206e690 miller-kioskserver-0.ebuild 238
+RMD160 4ae70c82233d4c8086764b95e5cb8f63d8daceff miller-kioskserver-0.ebuild 238
+SHA256 c73bb70218969875539c9602ed916ca9b6c3ac5adc2e213a2087ea0898fc5340 miller-kioskserver-0.ebuild 238
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-kioskserver-0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-kioskserver-0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-kioskserver-0 0
