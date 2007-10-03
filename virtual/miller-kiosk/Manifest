@@ -6,9 +6,16 @@ EBUILD miller-kiosk-1.ebuild 256 RMD160 0950f4cc181d48a44b45ed969139df3b35807a67
 MD5 ae48286d187398d132ddc47f3cb4fefa miller-kiosk-1.ebuild 256
 RMD160 0950f4cc181d48a44b45ed969139df3b35807a67 miller-kiosk-1.ebuild 256
 SHA256 6ef11383423e73fdaf39b3324945184d5d2614c7828446e7dccf7dea3c052227 miller-kiosk-1.ebuild 256
+EBUILD miller-kiosk-2.ebuild 278 RMD160 8c3b3a096a840e6ffe89756cabdc1cc6a462662b SHA1 39ceffec7fba56652ad2841dc3750a0da32513d0 SHA256 b5db9dbaae6b779fe2a189d17a99c2176258c7bd0a6a10e993e16afe17fda541
+MD5 653c796f09af98cfae3cacd0740e54c6 miller-kiosk-2.ebuild 278
+RMD160 8c3b3a096a840e6ffe89756cabdc1cc6a462662b miller-kiosk-2.ebuild 278
+SHA256 b5db9dbaae6b779fe2a189d17a99c2176258c7bd0a6a10e993e16afe17fda541 miller-kiosk-2.ebuild 278
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-kiosk-0 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-kiosk-0 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-kiosk-0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-kiosk-1 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-kiosk-1 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-kiosk-1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-kiosk-2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-kiosk-2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-kiosk-2 0
