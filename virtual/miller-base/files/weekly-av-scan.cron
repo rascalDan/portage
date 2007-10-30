@@ -1,0 +1,3 @@
+#!/bin/bash
+
+clamscan / -ri `mount | grep -v ^/dev | cut -d ' ' -f 3 | sed -e 's/^/--exclude-dir=/'` 

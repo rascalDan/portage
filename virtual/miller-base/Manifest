@@ -2,6 +2,10 @@ AUX daily-av-scan.cron 120 RMD160 734d836d94a6255fdbc02de5fe0a0bd4100bdf8b SHA1 
 MD5 cebdc60be517b39ede4cc12c88a0f2ba files/daily-av-scan.cron 120
 RMD160 734d836d94a6255fdbc02de5fe0a0bd4100bdf8b files/daily-av-scan.cron 120
 SHA256 800eb46f54670ba4fccb0908cb2129aa8026628f64bc1753be4d234ff768d2cc files/daily-av-scan.cron 120
+AUX daily-av-update.cron 31 RMD160 17399a1386d96221b51960ec38c7059af01c609e SHA1 e4ef1c8f4d2195229da18b4d23b8a42e9b61afe8 SHA256 1b83ac59e56ffbc3ec1c0f42c3c43de2b0cf9485690292a7dcb3440d529d0f78
+MD5 31721d0ddc172778aeca674dd81fd55d files/daily-av-update.cron 31
+RMD160 17399a1386d96221b51960ec38c7059af01c609e files/daily-av-update.cron 31
+SHA256 1b83ac59e56ffbc3ec1c0f42c3c43de2b0cf9485690292a7dcb3440d529d0f78 files/daily-av-update.cron 31
 AUX update.local.portage.cron 136 RMD160 f92d7664b6307ad77bfdf7c1d9acde096eb26118 SHA1 968e735b490db21485bdd3e9bff28391c0dee732 SHA256 4d65ecfcbeac115ab2d6da181c58c12f2e2401b9400d8719e7943942b138fd3b
 MD5 0b25d7dfa5f1351c5f1fc37f7496cc5f files/update.local.portage.cron 136
 RMD160 f92d7664b6307ad77bfdf7c1d9acde096eb26118 files/update.local.portage.cron 136
@@ -10,6 +14,10 @@ AUX update.portage.cron 187 RMD160 7a72c570223b3f13ed88300972838e3442f88517 SHA1
 MD5 33b7c61669226a5eeefefcca7251ed55 files/update.portage.cron 187
 RMD160 7a72c570223b3f13ed88300972838e3442f88517 files/update.portage.cron 187
 SHA256 8bfe8833dc166d3cd76e80ef768ec04b52dd3d72d51e34ce70db1021ff81cc5e files/update.portage.cron 187
+AUX weekly-av-scan.cron 102 RMD160 fdc8f2eb2b5e27c34713930d991580f4928fb261 SHA1 76515d0b6686aacb39f2b876b2de5b93667de11b SHA256 1befd772eb4574388323cc6123ea440498baa0f0de41427605a9dc8d24f034c4
+MD5 f2b9d432daac7ce7d0b61b7aa73123e3 files/weekly-av-scan.cron 102
+RMD160 fdc8f2eb2b5e27c34713930d991580f4928fb261 files/weekly-av-scan.cron 102
+SHA256 1befd772eb4574388323cc6123ea440498baa0f0de41427605a9dc8d24f034c4 files/weekly-av-scan.cron 102
 EBUILD miller-base-2.ebuild 644 RMD160 5b2e469305ab803b626b20de5736cece9be4fcfa SHA1 78273863bc4458ffa9a33b04caa4e87d31db3eb4 SHA256 bcc33ff38848b618942a6a35930d1a120347050b4ba888cd6e294c13a233b0b7
 MD5 c246483e5b413c41b1c6577d8357dc6f miller-base-2.ebuild 644
 RMD160 5b2e469305ab803b626b20de5736cece9be4fcfa miller-base-2.ebuild 644
@@ -30,6 +38,10 @@ EBUILD miller-base-6-r3.ebuild 1151 RMD160 c1b51d2a366057b019bd3442793175dda53b9
 MD5 aec5431d1f6354c8ab11e33125e82612 miller-base-6-r3.ebuild 1151
 RMD160 c1b51d2a366057b019bd3442793175dda53b9fc4 miller-base-6-r3.ebuild 1151
 SHA256 e5629f101e551704cd4752f1f57fcc1a06193bfaa4c2c70f2dc3c4d348f19582 miller-base-6-r3.ebuild 1151
+EBUILD miller-base-6-r4.ebuild 1214 RMD160 abc670d350e633044e42055fc0f57f3e34b77280 SHA1 65fa9b153cc2a575a1cd56dd44f775b9e571c9b3 SHA256 4be9a7a9279d76d3e777e050e1bcb7dc4a1c2462b92249726992b9458e73d41e
+MD5 3f5e9851ee7c784542d3d54a5ea09010 miller-base-6-r4.ebuild 1214
+RMD160 abc670d350e633044e42055fc0f57f3e34b77280 miller-base-6-r4.ebuild 1214
+SHA256 4be9a7a9279d76d3e777e050e1bcb7dc4a1c2462b92249726992b9458e73d41e miller-base-6-r4.ebuild 1214
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-2 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-2 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-2 0
@@ -45,3 +57,6 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-6-r3 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-6-r3 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-6-r3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-base-6-r4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-base-6-r4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-base-6-r4 0
