@@ -6,9 +6,16 @@ EBUILD miller-desktop-1.ebuild 275 RMD160 b2031608f309de42ba249dc33e70c0d1956870
 MD5 a23b781181a11e769875b2d8687d000b miller-desktop-1.ebuild 275
 RMD160 b2031608f309de42ba249dc33e70c0d195687040 miller-desktop-1.ebuild 275
 SHA256 acbc36c7f41b5387d195a6927f16ed989f7a309ad0848003949445a59b6265b6 miller-desktop-1.ebuild 275
+EBUILD miller-desktop-2.ebuild 289 RMD160 371270227ccd1474874afd30d6f426302bcb3084 SHA1 53d5b0b14e391a5bf81d9e940f86246be5028b47 SHA256 3b590a44ecc481faeb336562fefd29b9ffeb64ba0526501ae2e2c246254254a7
+MD5 6912603392109e90b6d0cb7dcb00e4a2 miller-desktop-2.ebuild 289
+RMD160 371270227ccd1474874afd30d6f426302bcb3084 miller-desktop-2.ebuild 289
+SHA256 3b590a44ecc481faeb336562fefd29b9ffeb64ba0526501ae2e2c246254254a7 miller-desktop-2.ebuild 289
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-desktop-0 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-desktop-0 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-desktop-0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-desktop-1 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-desktop-1 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-desktop-1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-desktop-2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-desktop-2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-desktop-2 0
