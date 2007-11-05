@@ -6,6 +6,10 @@ EBUILD miller-workstation-11-r1.ebuild 1217 RMD160 63b8b53384bbbb800019793948486
 MD5 68f2a755fd4c2c42e96eca6478037e63 miller-workstation-11-r1.ebuild 1217
 RMD160 63b8b53384bbbb8000197939484866ede4753e0c miller-workstation-11-r1.ebuild 1217
 SHA256 412f3627a08cef483dfa967a49a7aff8bf7474271e729ac36e054bb46cc0ae94 miller-workstation-11-r1.ebuild 1217
+EBUILD miller-workstation-11-r2.ebuild 1216 RMD160 486bf5e01db55e9b814ce796d5ff9da5d5a1a76a SHA1 8e1c85778fe611b41a29ac273d4b0093ccecc85b SHA256 5c1da7b6fd71a20b7d90ba801d8c611e6a32cb0866ada90d74f0b96a9921e45f
+MD5 9b45f589dc422960cb0060ca88013ccf miller-workstation-11-r2.ebuild 1216
+RMD160 486bf5e01db55e9b814ce796d5ff9da5d5a1a76a miller-workstation-11-r2.ebuild 1216
+SHA256 5c1da7b6fd71a20b7d90ba801d8c611e6a32cb0866ada90d74f0b96a9921e45f miller-workstation-11-r2.ebuild 1216
 EBUILD miller-workstation-11.ebuild 1073 RMD160 a59f17db1aa36590c2b9b121f4da1ddce8c7b5d7 SHA1 81d3ee792cd418d12497753f8a47e1033cb49c9a SHA256 19fba3722e25c5b04c29ff32b2402cdd0411b1fd527b8531b808307a44cb562a
 MD5 f8be3d91905eb7c86dfceccd1076c4bc miller-workstation-11.ebuild 1073
 RMD160 a59f17db1aa36590c2b9b121f4da1ddce8c7b5d7 miller-workstation-11.ebuild 1073
@@ -22,18 +26,6 @@ EBUILD miller-workstation-9.ebuild 950 RMD160 654bd3436805237ae8cb4ec2b7dfd3f04d
 MD5 db9379f2539f24e82f0d285e05da297b miller-workstation-9.ebuild 950
 RMD160 654bd3436805237ae8cb4ec2b7dfd3f04d632741 miller-workstation-9.ebuild 950
 SHA256 35432649a59694ab81479a823a73874de8be4194985ad275e619c4dbeb5cec1f miller-workstation-9.ebuild 950
-MISC .#Manifest.1.3 2169 RMD160 193e449b478296146c1b1a39fcf89cd8c6ac13e8 SHA1 d458488bd42e999385174923d46160623bdc2575 SHA256 cf918e66ea844be60d1bf5dd7dc90faad4ca88fffc8ebd25bdbde61852f6a612
-MD5 cba46c9dc3d7446af145d73cdf34fe07 .#Manifest.1.3 2169
-RMD160 193e449b478296146c1b1a39fcf89cd8c6ac13e8 .#Manifest.1.3 2169
-SHA256 cf918e66ea844be60d1bf5dd7dc90faad4ca88fffc8ebd25bdbde61852f6a612 .#Manifest.1.3 2169
-MISC .#Manifest.1.6 4375 RMD160 27cdc09e17d612e832bbfc2f599ca9bfcc60e158 SHA1 9327db70deff4ac404bdc616f77b59958043ee6e SHA256 4cf80dd1d21bbb78e1232da2149f0045fd4e41b49500c5b10dd4ebe304e8a68d
-MD5 fc6f096ba1fa6e6f92b2b8174f9de148 .#Manifest.1.6 4375
-RMD160 27cdc09e17d612e832bbfc2f599ca9bfcc60e158 .#Manifest.1.6 4375
-SHA256 4cf80dd1d21bbb78e1232da2149f0045fd4e41b49500c5b10dd4ebe304e8a68d .#Manifest.1.6 4375
-MISC .#miller-workstation-2.ebuild.1.1 769 RMD160 0feec454b137c6f9ce94a70cf54f58dbea7d7409 SHA1 0110459f831ceeb7a3528bd57b46d52c3dba641c SHA256 15acb5660122b9c45e94e2c010c1de625405767b2714a7b01e134f28a74878db
-MD5 4e8112d09cc30327d6c7401fa6354e3c .#miller-workstation-2.ebuild.1.1 769
-RMD160 0feec454b137c6f9ce94a70cf54f58dbea7d7409 .#miller-workstation-2.ebuild.1.1 769
-SHA256 15acb5660122b9c45e94e2c010c1de625405767b2714a7b01e134f28a74878db .#miller-workstation-2.ebuild.1.1 769
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-workstation-10 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-workstation-10 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-workstation-10 0
@@ -43,6 +35,9 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-workstation-11-r1 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-workstation-11-r1 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-workstation-11-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-workstation-11-r2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-workstation-11-r2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-workstation-11-r2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-miller-workstation-7 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-miller-workstation-7 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-miller-workstation-7 0
