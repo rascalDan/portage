@@ -7,5 +7,5 @@ IUSE=""
 DEPEND="
 virtual/miller-apps
 dev-db/postgresql
-dev-db/slony1"
+=dev-db/slony1-1.2.10"
 
