@@ -1,0 +1,9 @@
+DIST instantclient-sqlplus-linux-x86-64-10.2.0.3-20070103.zip 789884 RMD160 0f483aed1a64f22b1a46d05942e51213c2ba7234 SHA1 bf99c65de7483fa8bd60a7a1531529fcc3922eeb SHA256 8dcc95e3bf5723a7b1d6deccce049490bc70d99c0b9ac6ef13320b6b426303f6
+DIST instantclient-sqlplus-linux32-10.2.0.3-20061115.zip 741699 RMD160 31e5346bbc6f597d69d6449bca8292c78c049ad0 SHA1 646a9bc3170ccac26048978ee94e7a6e33937652 SHA256 aad12fd25a234fec76d672f7993911b9f267732b7bf244d76f44bc212edbd76a
+EBUILD oracle-instantclient-sqlplus-10.2.0.3.ebuild 2019 RMD160 9ad4aa6300701aa3d6e977eada7139930096462f SHA1 aca1312d9ee0720b01f214e4565af0f602e1f74d SHA256 a7267b9af404e0ce33def05dfbb0e0c85bb2ffd39dab29e643df84be3629b86f
+MD5 303b37d7492a0fc983665a526f46572d oracle-instantclient-sqlplus-10.2.0.3.ebuild 2019
+RMD160 9ad4aa6300701aa3d6e977eada7139930096462f oracle-instantclient-sqlplus-10.2.0.3.ebuild 2019
+SHA256 a7267b9af404e0ce33def05dfbb0e0c85bb2ffd39dab29e643df84be3629b86f oracle-instantclient-sqlplus-10.2.0.3.ebuild 2019
+MD5 3c1b7abdfc361d9684ef097f8e628f29 files/digest-oracle-instantclient-sqlplus-10.2.0.3 683
+RMD160 ab566669134c43b29830d05b3d90c516f589e492 files/digest-oracle-instantclient-sqlplus-10.2.0.3 683
+SHA256 4892479984b6ea67f073d9e7821830d041ff219ff8b5792863e85b720d32b02a files/digest-oracle-instantclient-sqlplus-10.2.0.3 683
