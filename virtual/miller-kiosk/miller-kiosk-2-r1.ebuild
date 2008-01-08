@@ -7,8 +7,9 @@ IUSE=""
 DEPEND="
 virtual/miller-base
 x11-wm/fluxbox
-kde-base/kdm
+|| (kde-base/kdm kde-base/kdebase)
 net-misc/dhcp
 sys-apps/ifplugd
+sys-power/acpid
 www-client/mozilla-firefox
 "

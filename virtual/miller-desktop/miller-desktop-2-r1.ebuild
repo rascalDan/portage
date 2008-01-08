@@ -9,5 +9,8 @@ virtual/miller-base
 media-gfx/splash-themes-gentoo
 media-gfx/splash-themes-livecd
 media-sound/alsa-utils
+sys-apps/ifplugd
+sys-power/acpid
+sys-apps/v86d
 "
 
