@@ -7,12 +7,16 @@ IUSE=""
 DEPEND="virtual/miller-apps
 app-text/htmltidy
 app-doc/doxygen
+=dev-db/slony1-1.2.10
 net-misc/rdesktop
 media-gfx/gimp
 dev-util/colorcvs
 net-misc/tightvnc
 x11-terms/root-tail
 media-gfx/gqview
+app-vim/cvsmenu
+net-analyzer/wireshark
+sys-devel/distcc
 x11-apps/xhost
 dev-db/tora
 kde-base/cervisia
@@ -32,5 +36,9 @@ dev-util/qsoapman
 dev-util/colorgcc
 net-analyzer/nmap
 media-video/ffmpeg
+>=dev-util/monodevelop-0.13
+dev-util/desktop-file-utils
+dev-util/mono-debugger
+dev-db/pgadmin3
 app-editors/gvim"
 
