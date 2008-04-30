@@ -7,7 +7,7 @@ IUSE="nohardenedkernel nohourlyupdate"
 DEPEND="
 || ( kde-base/kdebase kde-base/ksysguard )
 net-dns/bind-tools
-sys-fs/sshfs-fuse
+fuse? sys-fs/sshfs-fuse
 sys-fs/xfsdump
 app-portage/gentoolkit
 sys-process/vixie-cron
