@@ -1,0 +1,32 @@
+#!/bin/bash
+
+source "/etc/make.globals"
+source "/etc/make.conf"
+
+WORLD="/var/lib/portage/world"
+DB="${DISTDIR}/.`hostname`.packagefiles"
+
+# Update timestamp on portdir overlay
+for f in `find ${PORTDIR_OVERLAY}`; do
+        if [ ${f} -nt ${PORTDIR_OVERLAY} ]; then
+                touch ${PORTDIR_OVERLAY}
+                break;
+        fi
+done
+
+# Compare timestamps of all considered files with database
+if      [ ${WORLD} -nt ${DB} ] || \
+        [ ${PORTDIR} -nt ${DB} ] || \
+        [ ${PORTDIR_OVERLAY} -nt ${DB} ] || \
+        [ /etc/make.conf -nt ${DB} ] || \
+        [ /etc/portage/packge.use -nt ${DB} ] || \
+        [ /etc/portage/packge.keywords -nt ${DB} ] || \
+        [ /etc/portage/packge.mask -nt ${DB} ] || \
+        [ /etc/portage/packge.unmask -nt ${DB} ] \
+        ; then
+        # Update the database
+        for f in `emerge -fpe world 2>&1 | grep :// | grep -v '\*'` ; do basename $f ; done | sort -u > ${DB}
+else
+        touch ${DB}
+fi
+
