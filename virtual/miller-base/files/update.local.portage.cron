@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source "/sbin/functions.sh"
 source "/etc/make.globals"
 source "/etc/make.conf"
 
