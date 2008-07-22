@@ -3,4 +3,9 @@
 source "/etc/make.globals"
 source "/etc/make.conf"
 
-cd "${PORTDIR_OVERLAY}" && cvs -q up -dPCA
+for d in ${PORTDIR_OVERLAY}; do
+	if [ -d ${d}/CVS ] ; then
+		cd "${d}" && cvs -q up -dPCA
+	fi
+done
+
