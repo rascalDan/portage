@@ -15,7 +15,7 @@ if df -l ${DISTDIR} 2> /dev/null > /dev/null ; then
 	find ${DISTDIR} -name ".*.packagefiles" -mtime +7 -delete
 
 	cat ${DISTDIR}/.*.packagefiles | sort -u > ${NEEDED} &&
-		find ${DISTDIR} -type f -not -name ".*" -printf "%f\n" | sort -u > ${DISTGOT} &&
+		find ${DISTDIR} -type f -maxdepth 1 -not -name ".*" -printf "%f\n" | sort -u > ${DISTGOT} &&
 		diff ${NEEDED} ${DISTGOT} | grep "> " | cut -b 3- > ${RMLIST}
 
 	cd ${DISTDIR} && rm -f `cat ${RMLIST}`
