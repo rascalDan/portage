@@ -29,6 +29,7 @@ if      [ ${WORLD} -nt ${DB} ] || \
         ; then
         # Update the database
         for f in `emerge -fpe world 2>&1 | grep :// | grep -v '\*'` ; do basename $f ; done | sort -u > ${DB}
+        emerge -uDNqkpv world
 else
         touch ${DB}
 fi
