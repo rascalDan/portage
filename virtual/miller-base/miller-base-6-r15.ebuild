@@ -6,7 +6,8 @@ IUSE="nohardenedkernel nohourlyupdate fuse xfs"
 
 DEPEND="
 net-dns/bind-tools
-fuse? ( sys-fs/sshfs-fuse net-fs/mount-cifs )
+fuse? ( sys-fs/sshfs-fuse )
+net-fs/mount-cifs
 xfs? ( sys-fs/xfsdump )
 sys-fs/lvm2
 app-portage/gentoolkit
