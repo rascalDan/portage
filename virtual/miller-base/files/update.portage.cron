@@ -3,6 +3,7 @@
 source "/etc/make.globals"
 source "/etc/make.conf"
 
+layman -Sq
 if df -l ${PORTDIR} 2> /dev/null > /dev/null ; then
     emerge --sync --quiet > /dev/null
 fi

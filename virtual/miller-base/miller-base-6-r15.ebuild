@@ -6,7 +6,7 @@ IUSE="nohardenedkernel nohourlyupdate fuse xfs"
 
 DEPEND="
 net-dns/bind-tools
-fuse? ( sys-fs/sshfs-fuse )
+fuse? ( sys-fs/sshfs-fuse net-fs/mount-cifs )
 xfs? ( sys-fs/xfsdump )
 sys-fs/lvm2
 app-portage/gentoolkit
@@ -22,6 +22,7 @@ net-ftp/ncftp
 dev-util/cvs
 x11-apps/xauth
 sys-process/lsof
+app-portage/layman
 net-analyzer/net-snmp
 app-admin/syslog-ng
 app-admin/logrotate
@@ -46,7 +47,6 @@ src_install() {
 
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}"/daily-av-update.cron av-update || die
-	newexe "${FILESDIR}"/update.local.portage.cron portage-update || die
 
 	use nohourlyupdate && exeinto /etc/cron.daily
 	use !nohourlyupdate && exeinto /etc/cron.hourly
