@@ -35,7 +35,10 @@ app-misc/screen
 sys-boot/grub
 app-vim/gentoo-syntax
 sys-apps/kexec-tools
-app-text/dos2unix"
+app-text/dos2unix
+sys-auth/pam_ldap
+sys-auth/nss_ldap
+"
 
 src_install() {
 	exeinto /etc/cron.weekly
