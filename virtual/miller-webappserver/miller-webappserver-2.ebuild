@@ -5,11 +5,10 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/miller-webserver
-www-apps/twiki
+www-apps/mediawiki
 net-analyzer/cacti
 www-apps/phpsysinfo
 www-apps/bugzilla
-net-www/mod_xslt
 dev-db/phppgadmin
 "
 
