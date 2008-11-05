@@ -1,0 +1,3 @@
+#!/bin/bash
+
+eclean-dist -f -d -q -t 2w
