@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvs/lportage/sys-fs/curlfs/curlfs-0.ebuild,v 1.1 2008-11-20 11:08:36 dan.goodliffe Exp $
+# $Header: /var/cvs/lportage/sys-fs/curlfs/curlfs-0.ebuild,v 1.2 2008-11-20 11:20:43 dan.goodliffe Exp $
 
 inherit cvs
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="sys-fs/fuse net-misc/curl"
+DEPEND="sys-fs/fuse net-misc/curl x11-misc/makedepend"
 RDEPEND="${DEPEND}"
 
 ECVS_SERVER="cvs.millerbros.co.uk:/var/cvs"
