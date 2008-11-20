@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvs/lportage/sys-fs/ytfs/ytfs-0.1.ebuild,v 1.1 2008-11-19 02:43:55 randomdan Exp $
+# $Header: /var/cvs/lportage/sys-fs/ytfs/ytfs-0.1-r1.ebuild,v 1.1 2008-11-20 19:54:18 randomdan Exp $
 
 inherit cvs
 
@@ -19,6 +19,8 @@ RDEPEND="${DEPEND}"
 
 ECVS_SERVER="cvs.random.lan:/var/cvs"
 ECVS_MODULE="ytfs"
+ECVS_AUTH="ext"
+ECVS_USER="cvsanon"
 ECVS_TOP_DIR=${DISTDIR}/cvs-src/${PN}
 
 src_compile() {
