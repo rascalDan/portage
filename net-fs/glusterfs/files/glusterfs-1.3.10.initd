@@ -15,7 +15,7 @@ start() {
 
 	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --exec ${EXECUTABLE} --start -- \
-		-f "${CONF_FILE}" --pidfile=${PID_FILE} \
+		-f "${CONF_FILE}" --pid-file=${PID_FILE} \
 		-l "${LOG_FILE}" -L "${LOG_LEVEL}"
 	eend $?
 }
