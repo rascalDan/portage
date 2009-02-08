@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source "/etc/make.globals"
+source "/etc/make.conf"
+
+layman -SQ0
+if df -l ${PORTDIR} 2> /dev/null > /dev/null ; then
+    emerge --sync --quiet > /dev/null
+    log=${PORTDIR}/fetch.log
+    if [ ! -f ${log} ] ; then
+    	emerge -uDNqf @world @system > ${log}
+    fi
+fi
+
