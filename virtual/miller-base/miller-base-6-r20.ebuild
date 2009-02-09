@@ -53,5 +53,8 @@ src_install() {
 
 	use nohourlyupdate && exeinto /etc/cron.daily
 	use !nohourlyupdate && exeinto /etc/cron.hourly
-	newexe "${FILESDIR}"/update.portage.cron-2 gentoo-portage-update || die
+	newexe "${FILESDIR}"/update.portage.cron gentoo-portage-update || die
+
+	exeinto /etc/portage/postsync.d/
+	newexe "${FILESDIR}"/auto-download-packages auto-download-package || die
 }

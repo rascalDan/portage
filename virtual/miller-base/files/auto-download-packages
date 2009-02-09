@@ -1,0 +1,4 @@
+#!/bin/bash
+
+emerge -uDNqf @world @system 2>&1 >> /var/log/emerge-autofetch.log
+
