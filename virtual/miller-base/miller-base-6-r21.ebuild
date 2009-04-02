@@ -2,13 +2,13 @@ DESCRIPTION="Virtual for Miller servers"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdrw nohardenedkernel nohourlyupdate fuse xfs"
+IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs"
 
 DEPEND="
 	www-servers/apache
 	net-fs/glusterfs
 	sys-apps/inotail
-	cdrw? ( app-cdr/k3b )
+	cdr? ( app-cdr/k3b )
 	media-tv/mythtv
 	sys-apps/hdparm
 	sys-libs/unscd
