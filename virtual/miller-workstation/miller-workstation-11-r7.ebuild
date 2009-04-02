@@ -47,5 +47,8 @@ DEPEND="
 	x11-themes/gtk-engines-qtcurve
 	x11-themes/qtcurve
 	x11-themes/qtcurve-qt4
+	kde-base/gwenview
+	kde-base/kdebase-meta
+	kde-base/kdeplasma-addons
 	"
 
