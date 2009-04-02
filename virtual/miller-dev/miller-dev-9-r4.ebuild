@@ -7,15 +7,14 @@ IUSE=""
 DEPEND="virtual/miller-apps
 app-text/htmltidy
 app-doc/doxygen
+>=dev-db/slony1-1.2.15
 net-misc/rdesktop
 media-gfx/gimp
 dev-util/colorcvs
-net-misc/tightvnc
-x11-terms/root-tail
+|| ( net-misc/tightvnc net-misc/vnc )
 media-gfx/gqview
 app-vim/cvsmenu
 net-analyzer/wireshark
-sys-devel/distcc
 x11-apps/xhost
 dev-db/tora
 kde-base/cervisia
@@ -29,6 +28,7 @@ net-misc/tsclient
 dev-util/indent
 sys-devel/bc
 dev-util/weblint
+kde-base/khexedit
 net-ftp/ftp
 net-misc/telnet-bsd
 dev-util/qsoapman
@@ -38,6 +38,10 @@ media-video/ffmpeg
 >=dev-util/monodevelop-0.13
 dev-util/desktop-file-utils
 dev-util/mono-debugger
+dev-util/monodevelop-database
+dev-util/monodevelop-debugger-gdb
+dev-util/monodevelop-debugger-mdb
 dev-db/pgadmin3
+dev-db/postgresql_autodoc
 app-editors/gvim"
 
