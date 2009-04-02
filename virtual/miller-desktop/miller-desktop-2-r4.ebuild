@@ -10,11 +10,17 @@ DEPEND="
 	media-gfx/splash-themes-livecd
 	media-sound/alsa-utils
 	media-sound/alsamixergui
-	|| ( sys-apps/ifplugd sys-apps/netplug )
+	|| ( sys-apps/ifplugd
+		net-wireless/wpa_supplicant
+		sys-apps/netplug )
 	sys-power/acpid
 	sys-apps/v86d
 	x11-apps/mesa-progs
-	laptop? ( net-wireless/wireless-tools net-dns/openresolv )
+	laptop? ( net-wireless/wireless-tools
+		net-wireless/wpa_supplicant
+		net-dialup/ppp
+		net-dialup/pptpclient
+		net-dns/openresolv )
 	ndiswrapper? ( net-wireless/ndiswrapper )
 	b43? ( net-wireless/b43-fwcutter )
 "
