@@ -28,7 +28,7 @@ DEPEND="
 	games-misc/fortune-mod
 	app-office/openoffice-bin
 	media-gfx/gimp
-	net-www/netscape-flash
+	net-www/adobe-flash
 	x11-plugins/pidgin-encryption
 	x11-plugins/pidgin-facebookchat
 	x11-themes/gtk-chtheme
