@@ -6,7 +6,7 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 DEPEND="
 	virtual/miller-base
 	|| ( kde-base/kcalc kde-base/kdeutils )
-	net-www/mplayerplug-in
+	www-plugins/mplayerplug-in
 	mail-client/mutt
 	net-im/pidgin
 	games-misc/fortune-mod-all
