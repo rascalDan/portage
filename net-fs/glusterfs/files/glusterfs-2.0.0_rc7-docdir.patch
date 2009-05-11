@@ -1,0 +1,18 @@
+--- doc/examples/Makefile.am.orig	2009-01-23 03:57:06.000000000 -0600
++++ doc/examples/Makefile.am	2009-01-23 03:58:14.000000000 -0600
+@@ -1,7 +1,6 @@
+ EXTRA = README unify.vol afr.vol stripe.vol protocol-client.vol protocol-server.vol posix-locks.vol trash.vol write-behind.vol io-threads.vol io-cache.vol read-ahead.vol filter.vol trace.vol
+ EXTRA_DIST = $(EXTRA)
+ 
+-docdir = $(datadir)/doc/$(PACKAGE_NAME)
+ Examplesdir = $(docdir)/examples
+ Examples_DATA = $(EXTRA)
+ 
+--- extras/Makefile.am.orig	2009-01-23 04:01:18.000000000 -0600
++++ extras/Makefile.am	2009-01-23 04:01:54.000000000 -0600
+@@ -1,5 +1,3 @@
+-
+-docdir = $(datadir)/doc/glusterfs/
+ EditorModedir = $(docdir)/
+ EditorMode_DATA = glusterfs-mode.el
+ 
