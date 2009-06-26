@@ -1,0 +1,3 @@
+#!/bin/bash
+
+layman -SQ0
