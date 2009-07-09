@@ -42,7 +42,7 @@ DEPEND="
 	|| ( kde-misc/kdocker kde-base/kdemisc )
 	|| ( kde-base/superkaramba kde-base/kdeutils )
 	|| ( kde-base/kpdf kde-base/kdegraphics )
-	|| ( mail-client/mail-notification mail-client/kbiff)
+	|| ( mail-client/mail-notification mail-client/kbiff )
 	sys-auth/pam_mount
 	x11-themes/gtk-engines-qtcurve
 	x11-themes/qtcurve

@@ -22,7 +22,7 @@ DEPEND="
 		net-dns/openresolv )
 	ndiswrapper? ( net-wireless/ndiswrapper )
 	b43? ( net-wireless/b43-fwcutter )
-	sys-fs/dosfsutils
+	sys-fs/dosfstools
 	media-video/kmplayer
 "
 
