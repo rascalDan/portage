@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file="/var/www/files/localhost/`hostname`_updates.txt"
+dpfile="/var/www/files/localhost/`hostname`_depclean.txt"
+
+( emerge -uqDN @world @system --keep-going && rm -f $file && emerge --depclean -q 2>&1 | tee $dpfile && emerge -q @preserved-rebuild)
+revdep-rebuild -q -i
+etc-update 
