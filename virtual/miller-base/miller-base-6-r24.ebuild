@@ -70,7 +70,7 @@ src_install() {
 	newexe "${FILESDIR}"/update.portage.cron-2 gentoo-portage-update || die
 
 	exeinto /etc/portage/postsync.d/
-	newexe "${FILESDIR}"/sync-distclean-exec-eclean.cron 98-portage-distclean-exec || die
+	newexe "${FILESDIR}"/sync-distclean-exec.cron 98-portage-distclean-exec || die
 	newexe "${FILESDIR}"/auto-download-packages 99-auto-download-package || die
 	newexe "${FILESDIR}"/auto-update-overlays 01-auto-update-overlays || die
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates || die
