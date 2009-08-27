@@ -61,7 +61,7 @@ src_install() {
 
 	if [ -n "${UPDATETIME}" ]; then
 		mkdir -p ${D}/etc/cron.d
-		echo "${UPDATETIME} /sbin/gentoo-portage-update" > ${D}/etc/cron.d/gentoo-portage-update
+		echo "${UPDATETIME} root /sbin/gentoo-portage-update" > ${D}/etc/cron.d/gentoo-portage-update
 		exeinto /sbin
 	else
 		use nohourlyupdate && exeinto /etc/cron.daily
