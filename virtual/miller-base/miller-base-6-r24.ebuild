@@ -14,7 +14,7 @@ DEPEND="
 	sys-libs/unscd
 	net-dns/bind-tools
 	fuse? ( sys-fs/sshfs-fuse )
-	net-fs/mount-cifs
+	|| ( net-fs/mount-cifs net-fs/samba-client )
 	xfs? ( sys-fs/xfsdump )
 	sys-fs/lvm2
 	>=app-portage/gentoolkit-0.2.1
