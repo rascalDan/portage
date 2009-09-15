@@ -9,7 +9,7 @@ DEPEND="
 	net-fs/glusterfs
 	sys-apps/inotail
 	cdr? ( app-cdr/k3b )
-	!nomedia ( media-tv/mythtv )
+	!nomedia? ( media-tv/mythtv )
 	sys-apps/hdparm
 	sys-libs/unscd
 	net-dns/bind-tools
