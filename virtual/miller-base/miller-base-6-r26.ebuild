@@ -7,7 +7,7 @@ minimal"
 
 DEPEND="
 	!minimal? ( www-servers/apache )
-	net-fs/glusterfs
+	sys-cluster/glusterfs
 	sys-apps/inotail
 	cdr? ( app-cdr/k3b )
 	!nomedia? ( media-tv/mythtv )
