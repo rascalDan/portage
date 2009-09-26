@@ -12,7 +12,7 @@ DEPEND="
 	cdr? ( app-cdr/k3b )
 	!nomedia? ( media-tv/mythtv )
 	sys-apps/hdparm
-	sys-libs/unscd
+	sys-apps/unscd
 	!minimal? ( net-dns/bind-tools )
 	fuse? ( sys-fs/sshfs-fuse )
 	!minimal? ( || ( net-fs/mount-cifs net-fs/samba-client ) )
