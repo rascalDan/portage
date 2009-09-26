@@ -34,7 +34,6 @@ DEPEND="
 	x11-themes/gtk-chtheme
 	app-office/dia
 	net-misc/dhcp
-	x11-misc/googleearth
 	media-sound/amarok
 	|| ( kde-base/ksnapshot kde-base/kdegraphics )
 	|| ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork )
