@@ -2,8 +2,7 @@ DESCRIPTION="Virtual for Miller servers"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs bash-completion nomedia
-minimal"
+IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs bash-completion nomedia git minimal"
 
 DEPEND="
 	!minimal? ( www-servers/apache )
@@ -32,11 +31,10 @@ DEPEND="
 	!minimal? ( x11-apps/xauth )
 	sys-process/lsof
 	app-portage/layman
-	!minimal? ( net-analyzer/net-snmp )
 	app-admin/syslog-ng
 	app-admin/logrotate
 	!minimal? ( app-admin/gkrellm )
-	app-antivirus/clamav
+	!minimal? ( app-antivirus/clamav )
 	nohardenedkernel?  ( sys-kernel/gentoo-sources )
 	!nohardenedkernel?  ( sys-kernel/hardened-sources )
 	!minimal? ( app-text/unix2dos )
@@ -48,7 +46,7 @@ DEPEND="
 	sys-auth/pam_ldap
 	sys-auth/nss_ldap
 	app-editors/gvim
-	dev-util/git
+	git? ( dev-util/git )
 	!minimal? ( dev-util/strace )
 	bash-completion? ( app-shells/bash-completion )
 	"
