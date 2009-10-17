@@ -74,7 +74,7 @@ src_install() {
 	newexe "${FILESDIR}"/auto-download-packages 89-auto-download-package || die
 	newexe "${FILESDIR}"/auto-update-overlays 10-auto-update-overlays || die
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates || die
-	use autoupdate && dosym /sbin/update-install /etc/portage/postsync.d/99-update-install || die
+	use autoupdate && ( dosym /sbin/update-install /etc/portage/postsync.d/99-update-install || die )
 
 	exeinto /sbin
 	newexe "${FILESDIR}"/update-install2 update-install || die
