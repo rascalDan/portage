@@ -54,10 +54,10 @@ DEPEND="
 
 src_install() {
 	exeinto /etc/cron.weekly
-	newexe "${FILESDIR}"/weekly-av-scan.cron av-scan || die
+	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan || die
 
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}"/daily-av-update.cron av-update || die
+	use !minimal && newexe "${FILESDIR}"/daily-av-update.cron av-update || die
 
 	if [ -n "${UPDATETIME}" ]; then
 		mkdir -p ${D}/etc/cron.d
