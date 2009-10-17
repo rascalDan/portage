@@ -2,7 +2,8 @@
 
 file="/var/www/files/localhost/`hostname`_updates.txt"
 dpfile="/var/www/files/localhost/`hostname`_depclean.txt"
-
+tty -s
+TTYTEST=$?
 ( \
 	( \
 		( \
@@ -13,4 +14,6 @@ dpfile="/var/www/files/localhost/`hostname`_depclean.txt"
 	emerge -q @preserved-rebuild \
 )
 revdep-rebuild -q -i
-etc-update 
+if [ $TTYEST -eq 0 ]; then
+	etc-update 
+fi
