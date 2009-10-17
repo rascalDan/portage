@@ -2,8 +2,7 @@ DESCRIPTION="Virtual for Miller servers"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs bash-completion nomedia git
-minimal autoupdate"
+IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs bash-completion nomedia git minimal"
 
 DEPEND="
 	!minimal? ( www-servers/apache )
@@ -54,10 +53,10 @@ DEPEND="
 
 src_install() {
 	exeinto /etc/cron.weekly
-	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan || die
+	newexe "${FILESDIR}"/weekly-av-scan.cron av-scan || die
 
 	exeinto /etc/cron.daily
-	use !minimal && newexe "${FILESDIR}"/daily-av-update.cron av-update || die
+	newexe "${FILESDIR}"/daily-av-update.cron av-update || die
 
 	if [ -n "${UPDATETIME}" ]; then
 		mkdir -p ${D}/etc/cron.d
@@ -74,7 +73,6 @@ src_install() {
 	newexe "${FILESDIR}"/auto-download-packages 89-auto-download-package || die
 	newexe "${FILESDIR}"/auto-update-overlays 10-auto-update-overlays || die
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates || die
-	use autoupdate && ( dosym /sbin/update-install /etc/portage/postsync.d/99-update-install || die )
 
 	exeinto /sbin
 	newexe "${FILESDIR}"/update-install2 update-install || die
