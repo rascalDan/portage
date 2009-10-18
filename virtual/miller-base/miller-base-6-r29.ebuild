@@ -2,7 +2,8 @@ DESCRIPTION="Virtual for Miller servers"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs bash-completion nomedia git minimal"
+IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs bash-completion nomedia git
+minimal autoupdate"
 
 DEPEND="
 	!minimal? ( www-servers/apache )
@@ -53,18 +54,18 @@ DEPEND="
 
 src_install() {
 	exeinto /etc/cron.weekly
-	newexe "${FILESDIR}"/weekly-av-scan.cron av-scan || die
+	use !minimal && ( newexe "${FILESDIR}"/weekly-av-scan.cron av-scan || die )
 
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}"/daily-av-update.cron av-update || die
+	use !minimal && ( newexe "${FILESDIR}"/daily-av-update.cron av-update || die )
 
 	if [ -n "${UPDATETIME}" ]; then
 		mkdir -p ${D}/etc/cron.d
 		echo "${UPDATETIME} root /sbin/gentoo-portage-update" > ${D}/etc/cron.d/gentoo-portage-update
 		exeinto /sbin
 	else
-		use nohourlyupdate && exeinto /etc/cron.daily
-		use !nohourlyupdate && exeinto /etc/cron.hourly
+		use nohourlyupdate && ( exeinto /etc/cron.daily || die )
+		use !nohourlyupdate && ( exeinto /etc/cron.hourly || die )
 	fi
 	newexe "${FILESDIR}"/update.portage.cron-2 gentoo-portage-update || die
 
@@ -73,6 +74,7 @@ src_install() {
 	newexe "${FILESDIR}"/auto-download-packages 89-auto-download-package || die
 	newexe "${FILESDIR}"/auto-update-overlays 10-auto-update-overlays || die
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates || die
+	use autoupdate && ( dosym /sbin/update-install /etc/portage/postsync.d/99-update-install || die )
 
 	exeinto /sbin
 	newexe "${FILESDIR}"/update-install2 update-install || die
