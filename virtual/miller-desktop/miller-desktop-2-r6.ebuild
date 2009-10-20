@@ -6,6 +6,7 @@ IUSE="laptop ndiswrapper b43"
 
 DEPEND="
 	virtual/miller-base
+	x11-base/xorg-server
 	media-gfx/splash-themes-gentoo
 	media-gfx/splash-themes-livecd
 	media-sound/alsa-utils
