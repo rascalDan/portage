@@ -1,4 +1,4 @@
 #!/bin/bash
 
-if [ `who -q | grep ^# | cut -d = -f 2` -eq 0 ] ; then shutdown 2 ; fi
+if [ `who -q | grep ^# | cut -d = -f 2` -eq 0 ] ; then shutdown -h 2 ; fi
 
