@@ -1,0 +1,12 @@
+>=sys-fs/lvm2-2.02.49
+
+=media-tv/mythtv-0.22_p22772
+=media-tv/mythtv-0.22_p22764
+=media-plugins/mythvideo-0.22_p22763
+=media-plugins/mytharchive-0.22_p22763
+
+=net-misc/openssh-5.3_p1
+=net-misc/openssh-5.3_p1-r1
+
+=sys-libs/libhx-3.0*
+=sys-auth/pam_mount-1.31
