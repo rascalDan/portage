@@ -8,5 +8,5 @@
 =net-misc/openssh-5.3_p1
 =net-misc/openssh-5.3_p1-r1
 
-=sys-libs/libhx-3.0*
-=sys-auth/pam_mount-1.31
+>=sys-libs/libhx-3*
+>=sys-auth/pam_mount-1.30
