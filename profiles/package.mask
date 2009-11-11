@@ -1,5 +1,6 @@
 >=sys-fs/lvm2-2.02.49
 
+=media-tv/mythtv-0.22_p22778
 =media-tv/mythtv-0.22_p22772
 =media-tv/mythtv-0.22_p22764
 =media-plugins/mythvideo-0.22_p22763
