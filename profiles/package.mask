@@ -3,6 +3,7 @@
 =media-tv/mythtv-0.22_p22778
 =media-tv/mythtv-0.22_p22772
 =media-tv/mythtv-0.22_p22764
+=media-tv/mythtv-0.22_p22811
 =media-plugins/mythvideo-0.22_p22763
 =media-plugins/mytharchive-0.22_p22763
 
