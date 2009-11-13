@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvs/lportage/www-apps/bugzilla/bugzilla-3.4.3-r1.ebuild,v 1.1 2009-11-13 17:22:08 randomdan Exp $
+# $Header: /var/cvs/lportage/www-apps/bugzilla/bugzilla-3.4.3-r1.ebuild,v 1.2 2009-11-13 19:11:04 randomdan Exp $
 
 EAPI="2"
 
@@ -27,7 +27,10 @@ RDEPEND="
 	>=dev-perl/DateTime-Locale-0.43
 	>=dev-perl/DateTime-TimeZone-0.71
 	>=dev-perl/URI-1.38
-	|| ( >=dev-perl/Email-MIME-1.900
+	|| ( (	>=dev-perl/Email-MIME-1.900
+				dev-perl/Email-Simple-Creator
+				dev-perl/File-Find-Rule
+				dev-perl/Email-MessageID )
 		(	>=dev-perl/Email-MIME-Modifier-1.442
 			>=dev-perl/Email-MIME-1.861 ) )
 	>=dev-perl/Email-MIME-Encodings-1.313
