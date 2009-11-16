@@ -4,6 +4,8 @@
 =media-tv/mythtv-0.22_p22772
 =media-tv/mythtv-0.22_p22764
 =media-tv/mythtv-0.22_p22811
+=media-tv/mythtv-0.22_p22824
+=media-tv/mythtv-0.22_p22824-r1
 =media-plugins/mythvideo-0.22_p22763
 =media-plugins/mythvideo-0.22_p22807
 =media-plugins/mytharchive-0.22_p22763
