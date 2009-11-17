@@ -1,4 +1,8 @@
->=sys-fs/lvm2-2.02.49
+=sys-fs/lvm2-2.02.49*
+=sys-fs/lvm2-2.02.50*
+=sys-fs/lvm2-2.02.51
+=sys-fs/lvm2-2.02.51-r1
+=sys-fs/lvm2-2.02.51-r2
 
 =media-tv/mythtv-0.22_p22778
 =media-tv/mythtv-0.22_p22772
