@@ -1,0 +1,3 @@
+killall pptpd
+/etc/init.d/pptpd zap
+/etc/init.d/pptpd start
