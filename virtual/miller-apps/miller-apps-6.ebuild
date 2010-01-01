@@ -14,7 +14,7 @@ DEPEND="virtual/miller-base
 		media-libs/clibpdf
 		dev-db/oracle-instantclient-precomp
 		)
-	dev-util/kdbg
+	|| ( dev-util/kdbg dev-util/insight )
 	dev-util/valgrind
 	dev-util/strace
 	media-gfx/imagemagick
