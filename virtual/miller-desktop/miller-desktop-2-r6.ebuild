@@ -16,7 +16,11 @@ DEPEND="
 	sys-power/acpid
 	sys-apps/v86d
 	x11-apps/mesa-progs
-	networkmanager? ( kde-base/knetworkconf )
+	networkmanager? (
+		kde-base/knetworkconf
+		gnome-extra/nm-applet
+		laptop? ( net-misc/networkmanager-pptp )
+		)
 	laptop? ( net-wireless/wireless-tools
 		net-wireless/wpa_supplicant
 		net-dialup/ppp
