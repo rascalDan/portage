@@ -27,7 +27,7 @@ DEPEND="
 		net-dialup/pptpclient
 		net-dns/openresolv )
 	ndiswrapper? ( net-wireless/ndiswrapper )
-	b43? ( net-wireless/b43-fwcutter )
+	b43? ( net-wireless/b43-firmware )
 	sys-fs/dosfstools
 	media-video/kmplayer
 "
