@@ -7,10 +7,8 @@ DEPEND="
 	virtual/miller-base
 	|| ( kde-base/kcalc kde-base/kdeutils )
 	|| ( www-plugins/mplayerplug-in www-plugins/gecko-mediaplayer )
-	mail-client/mutt
 	net-im/pidgin
 	games-misc/fortune-mod-all
-	sys-devel/bc
 	x11-misc/xscreensaver
 	media-fonts/corefonts
 	virtual/jre
@@ -19,14 +17,12 @@ DEPEND="
 	media-video/mplayer
 	kde-misc/filelight
 	mail-client/mozilla-thunderbird
-	app-emulation/wine
 	games-misc/fortune-mod
 	|| ( app-office/koffice-meta app-office/openoffice-bin )
 	media-gfx/gimp
 	www-plugins/adobe-flash
 	x11-plugins/pidgin-encryption
 	x11-plugins/pidgin-facebookchat
-	net-misc/dhcp
 	media-sound/amarok
 	|| ( kde-base/ksnapshot kde-base/kdegraphics )
 	|| ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork )

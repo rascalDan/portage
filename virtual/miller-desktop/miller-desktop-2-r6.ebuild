@@ -11,11 +11,12 @@ DEPEND="
 	media-gfx/splash-themes-livecd
 	media-sound/alsa-utils
 	media-sound/alsamixergui
-	|| ( sys-apps/netplug
-		sys-apps/ifplugd )
+	!networkmanager? ( || ( sys-apps/netplug
+		sys-apps/ifplugd ) )
 	sys-power/acpid
 	sys-apps/v86d
 	x11-apps/mesa-progs
+	net-misc/dhcp
 	networkmanager? (
 		kde-base/knetworkconf
 		gnome-extra/nm-applet
