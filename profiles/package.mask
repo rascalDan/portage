@@ -19,4 +19,4 @@
 >=sys-libs/libhx-3
 >=sys-auth/pam_mount-1.30
 
-=sys-cluster/glusterfs-3.0.0
+#=sys-cluster/glusterfs-3.0.0
