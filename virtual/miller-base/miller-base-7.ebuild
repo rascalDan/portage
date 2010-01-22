@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller servers"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr nohardenedkernel nohourlyupdate fuse xfs bash-completion nomedia git
-minimal autoupdate autoshutdown autoservicerestart laptop"
+minimal autoupdate autoshutdown autoservicerestart"
 
 DEPEND="
 	!minimal? ( www-servers/apache )
@@ -36,10 +36,8 @@ DEPEND="
 	app-admin/logrotate
 	!minimal? ( app-admin/gkrellm )
 	!minimal? ( app-antivirus/clamav )
-	nohardenedkernel?  (
-		laptop? ( sys-kernel/tuxonice-sources )
-		!laptop? ( sys-kernel/gentoo-sources ) )
-	!nohardenedkernel?  ( sys-kernel/hardened-sources )
+	nohardenedkernel? ( sys-kernel/tuxonice-sources )
+	!nohardenedkernel? ( sys-kernel/hardened-sources )
 	!minimal? ( app-text/unix2dos )
 	app-misc/screen
 	sys-boot/grub
