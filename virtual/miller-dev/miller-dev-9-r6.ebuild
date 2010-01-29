@@ -22,16 +22,12 @@ DEPEND="virtual/miller-apps
 	dev-util/splint
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
-	sys-process/htop
 	app-arch/rar
 	net-misc/tsclient
 	dev-util/indent
-	sys-devel/bc
 	dev-util/weblint
 	|| ( kde-base/khexedit kde-base/okteta )
 	net-ftp/ftp
-	net-misc/telnet-bsd
-	dev-util/qsoapman
 	dev-util/colorgcc
 	net-analyzer/nmap
 	media-video/ffmpeg
