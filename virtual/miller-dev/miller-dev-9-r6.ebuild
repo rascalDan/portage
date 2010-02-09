@@ -12,7 +12,6 @@ DEPEND="virtual/miller-apps
 	media-gfx/gimp
 	dev-util/colorcvs
 	|| ( net-misc/tightvnc net-misc/vnc )
-	media-gfx/gqview
 	app-vim/cvsmenu
 	net-analyzer/wireshark
 	x11-apps/xhost

@@ -36,5 +36,6 @@ DEPEND="
 	kde-base/gwenview
 	kde-base/kdebase-meta
 	kde-base/kdeplasma-addons
+	media-gfx/geeqie
 	"
 
