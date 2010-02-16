@@ -6,7 +6,7 @@ IUSE=""
 
 DEPEND="
 virtual/miller-base
-net-mail/courier-imap
-|| ( mail-mta/exim mail-mta/postfix )
+|| ( net-mail/courier-imap mail-mta/courier )
+|| ( mail-mta/exim mail-mta/postfix mail-mta/courier )
 mail-filter/spamassassin
 "
