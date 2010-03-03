@@ -37,5 +37,6 @@ DEPEND="
 	kde-base/kdebase-meta
 	kde-base/kdeplasma-addons
 	media-gfx/geeqie
+	kde-base/ark
 	"
 

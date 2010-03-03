@@ -42,6 +42,7 @@ DEPEND="virtual/miller-apps
 	dev-db/myodbc
 	www-apache/mod_transform
 	www-apps/dbweb
+	net-misc/youtube-dl
 	www-servers/apache
 	app-editors/gvim"
 

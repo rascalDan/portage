@@ -10,7 +10,7 @@ DEPEND="
 	sys-cluster/glusterfs
 	sys-apps/inotail
 	cdr? ( app-cdr/k3b )
-	!nomedia? ( media-tv/mythtv )
+	!nomedia? ( media-tv/mythtv media-plugins/mythvideo )
 	sys-apps/hdparm
 	sys-apps/unscd
 	!minimal? ( net-dns/bind-tools )
@@ -31,10 +31,9 @@ DEPEND="
 	dev-util/cvs
 	!minimal? ( x11-apps/xauth )
 	sys-process/lsof
-	app-portage/layman
+	app-portage/layman[cvs]
 	app-admin/syslog-ng
 	app-admin/logrotate
-	!minimal? ( app-admin/gkrellm )
 	!minimal? ( app-antivirus/clamav )
 	!hardened? ( sys-kernel/tuxonice-sources )
 	hardened? ( sys-kernel/hardened-sources )
@@ -50,6 +49,7 @@ DEPEND="
 	git? ( dev-util/git )
 	!minimal? ( dev-util/strace )
 	bash-completion? ( app-shells/bash-completion )
+	net-misc/wakeonlan
 	"
 
 src_install() {
