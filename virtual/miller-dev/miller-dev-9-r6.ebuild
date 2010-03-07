@@ -10,7 +10,7 @@ DEPEND="virtual/miller-apps
 	>=dev-db/slony1-1.2.15
 	net-misc/rdesktop
 	media-gfx/gimp
-	dev-util/colorcvs
+	dev-vcs/colorcvs
 	|| ( net-misc/tightvnc net-misc/vnc )
 	app-vim/cvsmenu
 	net-analyzer/wireshark
