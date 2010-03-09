@@ -1,5 +1,4 @@
 #!/bin/bash
 
 file="/var/www/files/localhost/`hostname`_updates.txt"
-hostname > ${file}
 emerge -uDNpvq @world @system >> ${file}
