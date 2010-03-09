@@ -19,7 +19,7 @@
 >=sys-libs/libhx-3
 >=sys-auth/pam_mount-1.30
 
-#=sys-cluster/glusterfs-3.0.0
+=net-misc/openssh-5.4_p1
 
 =app-portage/layman-1.3.0*
 =x11-libs/pixman-0.17.4
