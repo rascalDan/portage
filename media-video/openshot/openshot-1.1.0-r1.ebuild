@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvs/lportage/media-video/openshot/openshot-1.1.0.ebuild,v 1.1 2010-03-08 19:03:00 randomdan Exp $
+# $Header: /var/cvs/lportage/media-video/openshot/openshot-1.1.0-r1.ebuild,v 1.1 2010-03-10 17:55:49 randomdan Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-python/pygoocanvas
 	dev-python/pyxdg
 	gnome-base/librsvg
-	>=media-libs/mlt-0.4.6-r1[dv,ffmpeg,frei0r,melt,python,quicktime?,xml]
+	>=media-libs/mlt-0.4.6-r1[dv,ffmpeg,frei0r,melt,python,quicktime?,sdl,xml]
 	media-sound/sox[encode,ffmpeg]
 	media-video/ffmpeg[encode,ieee1394?,jack?,x264?,vorbis?,theora?,faac?,faad?,mp3?]"
 
