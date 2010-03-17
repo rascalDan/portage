@@ -18,7 +18,7 @@ DEPEND="
 	kde-misc/filelight
 	mail-client/mozilla-thunderbird
 	games-misc/fortune-mod
-	|| ( app-office/koffice-meta app-office/openoffice-bin )
+	|| ( app-office/openoffice-bin )
 	media-gfx/gimp
 	www-plugins/adobe-flash
 	x11-plugins/pidgin-encryption
