@@ -47,7 +47,7 @@ DEPEND="
 	sys-auth/pam_ldap
 	sys-auth/nss_ldap
 	app-editors/gvim
-	git? ( dev-util/git )
+	git? ( dev-vcs/git )
 	!minimal? ( dev-util/strace )
 	bash-completion? ( app-shells/bash-completion )
 	net-misc/wakeonlan

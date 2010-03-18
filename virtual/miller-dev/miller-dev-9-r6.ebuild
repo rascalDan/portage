@@ -35,7 +35,6 @@ DEPEND="virtual/miller-apps
 	dev-util/mono-debugger
 	dev-util/monodevelop-database
 	dev-util/monodevelop-debugger-gdb
-	dev-util/monodevelop-debugger-mdb
 	dev-db/pgadmin3
 	dev-db/postgresql_autodoc
 	kde-base/kcachegrind
