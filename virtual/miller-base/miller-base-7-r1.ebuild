@@ -38,12 +38,13 @@ DEPEND="
 	!minimal? ( app-antivirus/clamav )
 	!hardened? ( sys-kernel/tuxonice-sources )
 	hardened? ( sys-kernel/hardened-sources )
-	!minimal? ( app-text/unix2dos )
+	!minimal? ( ||
+		( app-text/unix2dos app-text/dos2unix )
+		>=app-text/dos2unix-5 )
 	app-misc/screen
 	sys-boot/grub
 	app-vim/gentoo-syntax
 	sys-apps/kexec-tools
-	!minimal? ( app-text/dos2unix )
 	sys-auth/pam_ldap
 	sys-auth/nss_ldap
 	app-editors/gvim
