@@ -39,7 +39,7 @@ DEPEND="
 	!hardened? ( sys-kernel/tuxonice-sources )
 	hardened? ( sys-kernel/hardened-sources )
 	!minimal? ( ||
-		( app-text/unix2dos app-text/dos2unix )
+		( <app-text/unix2dos-5 app-text/dos2unix )
 		>=app-text/dos2unix-5 )
 	app-misc/screen
 	sys-boot/grub
