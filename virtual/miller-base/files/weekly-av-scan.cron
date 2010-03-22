@@ -3,4 +3,7 @@
 source /etc/make.globals
 source /etc/make.conf
 
-nice clamscan / -ri ${PORTDIR} ${DISTDIR} `mount | grep -v ^/dev | grep -v ^rootfs | cut -d ' ' -f 3 | sed -e 's/^/--exclude-dir=/'` 
+nice clamscan / -ri \
+	--exclude-dir=${PORTDIR} \
+	--exclude-dir=${DISTDIR} \
+	`mount | grep -v ^/dev | grep -v ^rootfs | cut -d ' ' -f 3 | sed -e 's/^/--exclude-dir=/'` 
