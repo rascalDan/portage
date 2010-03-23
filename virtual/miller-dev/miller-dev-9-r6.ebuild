@@ -23,11 +23,8 @@ DEPEND="virtual/miller-apps
 	app-shells/gentoo-bashcomp
 	app-arch/rar
 	net-misc/tsclient
-	dev-util/indent
-	dev-util/weblint
 	|| ( kde-base/khexedit kde-base/okteta )
 	net-ftp/ftp
-	dev-util/colorgcc
 	net-analyzer/nmap
 	media-video/ffmpeg
 	>=dev-util/monodevelop-0.13
@@ -40,7 +37,6 @@ DEPEND="virtual/miller-apps
 	kde-base/kcachegrind
 	dev-db/myodbc
 	www-apache/mod_transform
-	www-apps/dbweb
 	net-misc/youtube-dl
 	www-servers/apache
 	app-editors/gvim"
