@@ -10,7 +10,7 @@ TTYTEST=$?
 			emerge -uqDN -j2 @world @system --keep-going && \
 			rm -f $file ) || \
 		/etc/portage/postsync.d/50-write-new-updates ) && \
-	emerge --depclean -q 2>&1 | tee $dpfile && \
+	emerge --depclean -q -j2 --keep-going 2>&1 | tee $dpfile && \
 	emerge -q @preserved-rebuild \
 )
 revdep-rebuild -q -i
