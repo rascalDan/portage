@@ -10,6 +10,7 @@ DEPEND="
 	!minimal? ( www-servers/apache )
 	sys-cluster/glusterfs
 	sys-apps/inotail
+	sys-apps/ethtool
 	cdr? ( app-cdr/k3b )
 	!nomedia? ( media-tv/mythtv media-plugins/mythvideo )
 	sys-apps/hdparm
