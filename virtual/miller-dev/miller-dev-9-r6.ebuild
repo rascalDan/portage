@@ -27,11 +27,11 @@ DEPEND="virtual/miller-apps
 	net-ftp/ftp
 	net-analyzer/nmap
 	media-video/ffmpeg
-	>=dev-util/monodevelop-0.13
 	dev-util/desktop-file-utils
 	dev-util/mono-debugger
-	dev-util/monodevelop-database
-	dev-util/monodevelop-debugger-gdb
+	=dev-util/monodevelop-2.1*
+	=dev-util/monodevelop-database-2.1*
+	=dev-util/monodevelop-debugger-gdb-2.1*
 	dev-db/pgadmin3
 	dev-db/postgresql_autodoc
 	kde-base/kcachegrind
