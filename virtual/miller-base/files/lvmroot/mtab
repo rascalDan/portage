@@ -1,0 +1,12 @@
+rootfs / rootfs rw 0 0
+/dev/mapper/data-root / ext4 rw,relatime,barrier=1,data=ordered 0 0
+proc /proc proc rw,relatime 0 0
+rc-svcdir /lib/rc/init.d tmpfs rw,nosuid,nodev,noexec,relatime,size=1024k,mode=755 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev tmpfs rw,nosuid,relatime,size=10240k,mode=755 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620 0 0
+tmpfs /dev/shm tmpfs rw,noexec,relatime 0 0
+cachedir /lib/splash/cache tmpfs rw,relatime,size=4096k,mode=644 0 0
+/dev/mapper/data-boot /boot ext2 rw 0 0
+/dev/mapper/data-portage /usr/portage ext4 rw 0 0
+/etc/glusterfs/glusterfs-client.www.vol /var/www fuse.glusterfs rw,allow_other,default_permissions,max_read=131072 0 0

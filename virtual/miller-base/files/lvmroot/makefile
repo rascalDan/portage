@@ -1,0 +1,23 @@
+initrd.cpio.lzma : initrd.cpio.gz makefile init
+	gunzip -c $< | lzma -9 > $@
+
+initrd.cpio.gz : initrd.list makefile init
+	/usr/src/linux/usr/gen_init_cpio $< > $@
+	/usr/sbin/splash_geninitramfs -a $@ -r 1280x1024 livecd-2007.0 --no8bpp
+
+initrd.deps.mk : initrd.list makefile
+	echo -n 'initrd.cpio.gz : ' > $@
+	grep "^file " $< | cut -d ' ' -f 3 | tr '\n' ' ' >> $@
+
+-include initrd.deps.mk
+
+list : initrd.cpio.gz makefile
+	gunzip -c $< | cpio -it | sort > $@
+
+/boot/initrd.cpio.lzma : initrd.cpio.lzma
+	cp $< $@
+
+.PHONY : clean
+
+clean :
+	rm -f initrd.deps.mk list initrd.cpio.gz initrd.cpio.lzma

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+mount -n -t proc proc /proc
+mount -n -t sysfs sysfs /sysfs
+mount -n -t tmpfs tmpfs /dev/mapper
+mount -n -t tmpfs tmpfs /dev/data
+CMDLINE=`cat /proc/cmdline`
+
+vgchange -ay
+
+mount -n -r -t ext4 /dev/mapper/data-root /newroot || lvm
+
+cd /newroot
+umount /dev/mapper
+umount /dev/data
+umount /sysfs
+umount /proc
+exec chroot . /bin/sh -c "exec /sbin/init ${CMDLIND}" <dev/console >dev/console 2>&1
+

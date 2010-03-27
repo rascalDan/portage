@@ -1,0 +1,65 @@
+dir dev 0755 0 0
+dir dev/data 0755 0 0
+dir dev/mapper 0755 0 0
+dir root 0700 0 0
+dir bin 0755 0 0
+dir etc 0755 0 0
+dir etc/lvm 0755 0 0
+dir etc/lvm/cache 0755 0 0
+dir etc/lvm/archive 0755 0 0
+dir etc/lvm/backup 0755 0 0
+dir proc 0755 0 0
+dir newroot 0755 0 0
+dir lib 0755 0 0
+dir sysfs 0755 0 0
+dir sbin 0755 0 0
+nod dev/hda 0600 0 0 b 3 0
+nod dev/hda1 0600 0 0 b 3 1
+nod dev/hda2 0600 0 0 b 3 2
+nod dev/hda3 0600 0 0 b 3 3
+nod dev/hda4 0600 0 0 b 3 4
+nod dev/hdb 0600 0 0 b 3 64
+nod dev/hdb1 0600 0 0 b 3 65
+nod dev/hdb2 0600 0 0 b 3 66
+nod dev/hdb3 0600 0 0 b 3 67
+nod dev/hdb4 0600 0 0 b 3 68
+nod dev/sda 0600 0 0 b 8 0
+nod dev/sda1 0600 0 0 b 8 1
+nod dev/sda2 0600 0 0 b 8 2
+nod dev/sda3 0600 0 0 b 8 3
+nod dev/sda4 0600 0 0 b 8 4
+nod dev/console 0600 0 0 c 5 1
+nod dev/tty1 0600 0 0 c 4 1
+nod dev/zero 0600 0 0 c 1 5
+nod dev/mem 0600 0 0 c 1 1
+nod dev/fb0 0660 0 0 c 29 0
+nod dev/urandom 0600 0 0 c 1 9
+file lib/libpam_misc.so.0 /lib/libpam_misc.so.0 0755 0 0
+file lib/libdl.so.2 /lib/libdl.so.2 0755 0 0
+file lib/librt.so.1 /lib/librt.so.1 0755 0 0
+file lib/libdevmapper-event.so.1.02 /lib/libdevmapper-event.so.1.02 0755 0 0
+file lib/libdevmapper.so.1.02 /lib/libdevmapper.so.1.02 0755 0 0
+file lib/libpthread.so.0 /lib/libpthread.so.0 0755 0 0
+file lib/libm.so.6 /lib/libm.so.6 0755 0 0
+file lib/libc.so.6 /lib/libc.so.6 0755 0 0
+file lib/libpam.so.0 /lib/libpam.so.0 0755 0 0
+file lib/libncurses.so.5 /lib/libncurses.so.5 0755 0 0
+file lib/libreadline.so.6 /lib/libreadline.so.6 0755 0 0
+file lib/ld-linux.so.2 /lib/ld-linux.so.2 0755 0 0
+file sbin/tuxoniceui_fbsplash /sbin/tuxoniceui_fbsplash 0755 0 0
+file sbin/tuxoniceui_text /sbin/tuxoniceui_text 0755 0 0
+file sbin/v86d /sbin/v86d 0755 0 0
+file init init 0755 0 0
+file etc/mtab mtab 0644 0 0
+file bin/busybox /bin/busybox 0754 0 0
+file sbin/lvm /sbin/lvm 0755 0 0
+slink bin/ls /bin/busybox 0755 0 0
+slink bin/find /bin/busybox 0755 0 0
+slink bin/mount /bin/busybox 0755 0 0
+slink bin/cat /bin/busybox 0755 0 0
+slink bin/choot /bin/busybox 0755 0 0
+slink bin/switch_root /bin/busybox 0755 0 0
+slink bin/sh /bin/busybox 0755 0 0
+slink sbin/pvscan /sbin/lvm 0755 0 0
+slink sbin/vgscan /sbin/lvm 0755 0 0
+slink sbin/vgchange /sbin/lvm 0755 0 0
