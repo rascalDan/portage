@@ -27,3 +27,6 @@
 >=dev-util/monodevelop-debugger-mdb-2.2
 >=dev-util/monodevelop-debugger-gdb-2.2
 >=dev-util/monodevelop-database-2.2
+
+#=www-client/mozilla-firefox-3.6.3
+=net-libs/xulrunner-1.9.2.3
