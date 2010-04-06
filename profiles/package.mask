@@ -30,3 +30,4 @@
 
 =www-client/mozilla-firefox-3.6.3
 =net-libs/xulrunner-1.9.2.3
+=net-libs/xulrunner-1.9.2.2-r2
