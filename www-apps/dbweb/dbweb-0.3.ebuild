@@ -31,8 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/share/webapps/
+	insinto /usr/share/webapps/dbweb
 	doins ${WORKDIR}/dbweb/dbweb/htdocs/.htaccess
-	exeinto /usr/share/webapps/
+	exeinto /usr/share/webapps/dbweb
 	doexe ${WORKDIR}/dbweb/dbweb/dbweb
 }
