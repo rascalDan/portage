@@ -17,7 +17,10 @@ DEPEND="
 	sys-apps/unscd
 	!minimal? ( net-dns/bind-tools )
 	fuse? ( sys-fs/sshfs-fuse )
-	!minimal? ( || ( net-fs/mount-cifs net-fs/samba-client ) )
+	!minimal? ( || (
+		net-fs/mount-cifs
+		net-fs/samba-client
+		net-fs/samba[smbclient] ) )
 	xfs? ( sys-fs/xfsdump )
 	sys-fs/lvm2
 	>=app-portage/gentoolkit-0.2.1
