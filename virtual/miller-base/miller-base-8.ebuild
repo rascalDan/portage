@@ -36,7 +36,7 @@ DEPEND="
 	dev-util/cvs
 	!minimal? ( x11-apps/xauth )
 	sys-process/lsof
-	app-portage/layman[cvs]
+	app-portage/layman[subversion]
 	app-admin/syslog-ng
 	app-admin/logrotate
 	!minimal? ( app-antivirus/clamav )
