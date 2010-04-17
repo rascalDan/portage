@@ -4,3 +4,5 @@
 >=dev-util/monodevelop-debugger-mdb-2.2
 >=dev-util/monodevelop-debugger-gdb-2.2
 >=dev-util/monodevelop-database-2.2
+
+=net-misc/openssh-5.5_p1
