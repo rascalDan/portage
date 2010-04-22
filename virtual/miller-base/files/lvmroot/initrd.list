@@ -34,25 +34,13 @@ nod dev/zero 0600 0 0 c 1 5
 nod dev/mem 0600 0 0 c 1 1
 nod dev/fb0 0660 0 0 c 29 0
 nod dev/urandom 0600 0 0 c 1 9
-file lib/libpam_misc.so.0 /lib/libpam_misc.so.0 0755 0 0
-file lib/libdl.so.2 /lib/libdl.so.2 0755 0 0
-file lib/librt.so.1 /lib/librt.so.1 0755 0 0
-file lib/libdevmapper-event.so.1.02 /lib/libdevmapper-event.so.1.02 0755 0 0
-file lib/libdevmapper.so.1.02 /lib/libdevmapper.so.1.02 0755 0 0
-file lib/libpthread.so.0 /lib/libpthread.so.0 0755 0 0
-file lib/libm.so.6 /lib/libm.so.6 0755 0 0
-file lib/libc.so.6 /lib/libc.so.6 0755 0 0
-file lib/libpam.so.0 /lib/libpam.so.0 0755 0 0
-file lib/libncurses.so.5 /lib/libncurses.so.5 0755 0 0
-file lib/libreadline.so.6 /lib/libreadline.so.6 0755 0 0
-file lib/ld-linux.so.2 /lib/ld-linux.so.2 0755 0 0
 file sbin/tuxoniceui_fbsplash /sbin/tuxoniceui_fbsplash 0755 0 0
 file sbin/tuxoniceui_text /sbin/tuxoniceui_text 0755 0 0
 file sbin/v86d /sbin/v86d 0755 0 0
+file sbin/lvm /sbin/lvm.static 0755 0 0
+file bin/busybox /bin/busybox.static 0754 0 0
 file init init 0755 0 0
 file etc/mtab mtab 0644 0 0
-file bin/busybox /bin/busybox 0754 0 0
-file sbin/lvm /sbin/lvm 0755 0 0
 slink bin/ls /bin/busybox 0755 0 0
 slink bin/find /bin/busybox 0755 0 0
 slink bin/mount /bin/busybox 0755 0 0

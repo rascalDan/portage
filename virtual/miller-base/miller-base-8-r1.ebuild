@@ -22,7 +22,13 @@ DEPEND="
 		net-fs/samba-client
 		net-fs/samba[smbclient] ) )
 	xfs? ( sys-fs/xfsdump )
-	sys-fs/lvm2
+	!lvmroot? ( sys-fs/lvm2 )
+	lvmroot? (
+			sys-fs/lvm2[static]
+			busybox[static]
+			sys-apps/v86d
+			sys-apps/tuxonice-userui[fbsplash]
+			)
 	>=app-portage/gentoolkit-0.2.1
 	sys-process/vixie-cron
 	!minimal? ( sys-apps/eject )
