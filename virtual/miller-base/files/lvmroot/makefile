@@ -5,9 +5,12 @@ initrd.cpio.gz : initrd.list makefile init /usr/src/linux/usr/gen_init_cpio
 	/usr/src/linux/usr/gen_init_cpio $< > $@
 	/usr/sbin/splash_geninitramfs -a $@ -r 1280x1024 livecd-2007.0 --no8bpp
 
-initrd.deps.mk : initrd.list makefile
+initrd.deps.mk : initrd.list makefile /usr/src/linux/usr/gen_init_cpio
 	echo -n 'initrd.cpio.gz : ' > $@
 	grep "^file " $< | cut -d ' ' -f 3 | tr '\n' ' ' >> $@
+
+/usr/src/linux/usr/gen_init_cpio :
+	${MAKE} -C /usr/src/linux/usr/ gen_init_cpio
 
 -include initrd.deps.mk
 
