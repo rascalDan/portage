@@ -25,7 +25,7 @@ DEPEND="
 	!lvmroot? ( sys-fs/lvm2 )
 	lvmroot? (
 			sys-fs/lvm2[static]
-			busybox[static]
+			sys-apps/busybox[static]
 			sys-apps/v86d
 			sys-apps/tuxonice-userui[fbsplash]
 			)
