@@ -3,7 +3,7 @@ initrd.cpio.lzma : initrd.cpio.gz makefile init
 
 initrd.cpio.gz : initrd.list makefile init /usr/src/linux/usr/gen_init_cpio
 	/usr/src/linux/usr/gen_init_cpio $< > $@
-	/usr/sbin/splash_geninitramfs -a $@ -r 1280x1024 livecd-2007.0 --no8bpp
+	/usr/sbin/splash_geninitramfs -a $@ -r `fbres` livecd-2007.0 --no8bpp
 
 initrd.deps.mk : initrd.list makefile /usr/src/linux/usr/gen_init_cpio
 	echo -n 'initrd.cpio.gz : ' > $@

@@ -11,7 +11,7 @@ dir etc/lvm/backup 0755 0 0
 dir proc 0755 0 0
 dir newroot 0755 0 0
 dir lib 0755 0 0
-dir sysfs 0755 0 0
+dir sys 0755 0 0
 dir sbin 0755 0 0
 nod dev/hda 0600 0 0 b 3 0
 nod dev/hda1 0600 0 0 b 3 1
