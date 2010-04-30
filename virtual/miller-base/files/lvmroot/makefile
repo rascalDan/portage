@@ -2,8 +2,8 @@ initrd.cpio.lzma : initrd.cpio.gz makefile init
 	gunzip -c $< | lzma -9 > $@
 
 initrd.cpio.gz : initrd.list makefile init /usr/src/linux/usr/gen_init_cpio
-	/usr/src/linux/usr/gen_init_cpio $< > $@
-	/usr/sbin/splash_geninitramfs -a $@ -r `fbres` livecd-2007.0 --no8bpp
+	/usr/src/linux/usr/gen_init_cpio $< | gzip -1 > $@
+	[ ! -c /dev/fb0 -o ! -x /sbin/fbres -o ! -x /usr/sbin/splash_geninitramfs ] || /usr/sbin/splash_geninitramfs -a $@ -r `fbres` livecd-2007.0 --no8bpp
 
 initrd.deps.mk : initrd.list makefile /usr/src/linux/usr/gen_init_cpio
 	echo -n 'initrd.cpio.gz : ' > $@

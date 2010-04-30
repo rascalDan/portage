@@ -63,6 +63,8 @@ slink bin/cat /bin/busybox 0755 0 0
 slink bin/choot /bin/busybox 0755 0 0
 slink bin/switch_root /bin/busybox 0755 0 0
 slink bin/sh /bin/busybox 0755 0 0
+slink sbin/pivot_root /bin/busybox 0755 0 0
+slink sbin/switch_root /bin/busybox 0755 0 0
 slink sbin/pvscan /sbin/lvm 0755 0 0
 slink sbin/vgscan /sbin/lvm 0755 0 0
 slink sbin/vgchange /sbin/lvm 0755 0 0

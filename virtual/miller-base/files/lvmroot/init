@@ -7,13 +7,12 @@ mount -n -t tmpfs tmpfs /dev/data
 CMDLINE=`cat /proc/cmdline`
 
 vgchange -ay
-echo > /sys/power/tuxonice/do_resume
+[ -e /sys/power/tuxonice/do_resume ] && echo > /sys/power/tuxonice/do_resume
 mount -n -r -t ext4 /dev/mapper/data-root /newroot || lvm
 
-cd /newroot
 umount /dev/mapper
 umount /dev/data
 umount /sys
 umount /proc
-exec chroot . /bin/sh -c "exec /sbin/init ${CMDLIND}" <dev/console >dev/console 2>&1
+exec switch_root /newroot /bin/sh -c "exec /sbin/init ${CMDLIND}" <dev/console >dev/console 2>&1
 
