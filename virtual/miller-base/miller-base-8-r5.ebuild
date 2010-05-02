@@ -4,7 +4,8 @@ EAPI="2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion nomedia git
-minimal autoupdate autoshutdown autoservicerestart lvmroot"
+minimal autoupdate autoshutdown autoservicerestart lvmroot sw-suspend
+video_cards_nvidia"
 
 DEPEND="
 	!minimal? ( www-servers/apache )
@@ -26,9 +27,9 @@ DEPEND="
 	lvmroot? (
 			sys-fs/lvm2[static]
 			sys-apps/busybox[static]
-			sys-apps/v86d
-			sys-apps/tuxonice-userui[fbsplash]
 			)
+	video_cards_nvidia? ( sys-apps/v86d )
+	sw-suspend? ( sys-apps/tuxonice-userui )
 	>=app-portage/gentoolkit-0.2.1
 	sys-process/vixie-cron
 	!minimal? ( sys-apps/eject )
@@ -46,7 +47,9 @@ DEPEND="
 	app-admin/syslog-ng
 	app-admin/logrotate
 	!minimal? ( app-antivirus/clamav )
-	!hardened? ( sys-kernel/tuxonice-sources )
+	!hardened? ( 
+			!sw-suspend? ( sys-kernel/gentoo-sources )
+			sw-suspend? ( sys-kernel/tuxonice-sources ) )
 	hardened? ( sys-kernel/hardened-sources )
 	!minimal? ( ||
 		( app-text/dos2unix <app-text/unix2dos-5 )
@@ -55,7 +58,6 @@ DEPEND="
 	lvmroot? ( >=sys-boot/grub-1.98 )
 	sys-boot/grub
 	app-vim/gentoo-syntax
-	sys-apps/kexec-tools
 	sys-auth/pam_ldap
 	sys-auth/nss_ldap
 	app-editors/gvim
@@ -107,6 +109,16 @@ src_install() {
 		newexe ${FILESDIR}/lvmroot/init init
 		insinto /usr/share/lvmroot/
 		doins ${FILESDIR}/lvmroot/initrd.list
+		if use video_cards_nvidia ; then
+			cat ${FILESDIR}/lvmroot/initrd.list.v86d >> ${D}/usr/share/lvmroot/initrd.list
+		fi
+		if use sw-suspend ; then
+			if use fbsplash ; then
+				cat ${FILESDIR}/lvmroot/initrd.list.icefb >> ${D}/usr/share/lvmroot/initrd.list
+			else
+				cat ${FILESDIR}/lvmroot/initrd.list.icetext >> ${D}/usr/share/lvmroot/initrd.list
+			fi
+		fi
 		doins ${FILESDIR}/lvmroot/makefile
 		doins ${FILESDIR}/lvmroot/mtab
 		exeinto /etc/portage/postsync.d/

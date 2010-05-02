@@ -49,9 +49,6 @@ nod dev/zero 0600 0 0 c 1 5
 nod dev/mem 0600 0 0 c 1 1
 nod dev/fb0 0660 0 0 c 29 0
 nod dev/urandom 0600 0 0 c 1 9
-file sbin/tuxoniceui_fbsplash /sbin/tuxoniceui_fbsplash 0755 0 0
-file sbin/tuxoniceui_text /sbin/tuxoniceui_text 0755 0 0
-file sbin/v86d /sbin/v86d 0755 0 0
 file sbin/lvm /sbin/lvm.static 0755 0 0
 file bin/busybox /bin/busybox.static 0754 0 0
 file init init 0755 0 0

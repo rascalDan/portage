@@ -14,7 +14,6 @@ DEPEND="
 	!networkmanager? ( || ( sys-apps/netplug
 		sys-apps/ifplugd ) )
 	sys-power/acpid
-	sys-apps/v86d
 	x11-apps/mesa-progs
 	net-misc/dhcp
 	networkmanager? (
