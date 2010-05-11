@@ -7,6 +7,6 @@ IUSE=""
 DEPEND="
 virtual/miller-base
 >=dev-db/apgdiff-1.2
->=dev-db/postgresql-server-8.3
+=dev-db/postgresql-server-8.4*
 >=dev-db/slony1-2"
 
