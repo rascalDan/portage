@@ -6,3 +6,4 @@
 >=dev-util/monodevelop-database-2.2
 
 =net-misc/openssh-5.5_p1
+=sys-fs/udev-154
