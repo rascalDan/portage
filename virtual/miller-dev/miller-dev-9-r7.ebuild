@@ -10,13 +10,11 @@ DEPEND="virtual/miller-apps
 	>=dev-db/slony1-1.2.15
 	net-misc/rdesktop
 	media-gfx/gimp
-	dev-vcs/colorcvs
 	|| ( net-misc/tightvnc net-misc/vnc )
-	app-vim/cvsmenu
+	app-vim/svncommand
 	net-analyzer/wireshark
 	x11-apps/xhost
 	dev-db/tora
-	kde-base/cervisia
 	net-analyzer/arping
 	dev-util/splint
 	media-gfx/imagemagick
