@@ -1,4 +1,4 @@
-inherit cvs
+inherit subversion
 
 DESCRIPTION="Database driven website engine"
 HOMEPAGE="http://dbweb.randomdan.homeip.net"
@@ -10,29 +10,23 @@ IUSE=""
 
 DEPEND="dev-db/unixODBC www-apache/mod_transform"
 RDEPEND="${DEPEND}"
-
-ECVS_SERVER="cvs.random.lan:/var/cvs"
-ECVS_AUTH="ext"
-ECVS_USER="cvsanon"
-ECVS_MODULE="dbweb"
-ECVS_BRANCH="dbweb_0_3"
-ECVS_TOP_DIR=${DISTDIR}/cvs-src/${PN}
+ESVN_REPO_URI="svn+ssh://svn.random.lan/var/svn/src/tags/dbweb_0_4"
 
 src_compile() {
-	cd ${WORKDIR}/dbweb/libmisc
+	cd ${S}/libmisc || die
 	econf || die
 	emake || die
-	cd ${WORKDIR}/dbweb/libodbcpp
+	cd ${S}/libodbcpp || die
 	econf || die
 	emake || die
-	cd ${WORKDIR}/dbweb/dbweb
+	cd ${S}/dbweb || die
 	econf || die
 	emake || die
 }
 
 src_install() {
 	insinto /usr/share/webapps/dbweb
-	doins ${WORKDIR}/dbweb/dbweb/htdocs/.htaccess
+	doins ${S}/dbweb/htdocs/.htaccess
 	exeinto /usr/share/webapps/dbweb
-	doexe ${WORKDIR}/dbweb/dbweb/dbweb
+	doexe ${S}/dbweb/dbweb
 }
