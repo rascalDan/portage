@@ -7,8 +7,12 @@ LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+EAPI="2"
 
-DEPEND="dev-db/unixODBC www-apache/mod_transform"
+DEPEND="
+	dev-db/unixODBC[-minimal]
+	www-apache/mod_transform
+	"
 RDEPEND="${DEPEND}"
 ESVN_REPO_URI="svn+ssh://svn.random.lan/var/svn/src/tags/dbweb_0_4"
 
