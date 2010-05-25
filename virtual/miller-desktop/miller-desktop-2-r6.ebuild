@@ -10,14 +10,14 @@ DEPEND="
 	media-gfx/splash-themes-gentoo
 	media-gfx/splash-themes-livecd
 	media-sound/alsa-utils
-	media-sound/alsamixergui
+	kde-base/kmix
 	!networkmanager? ( || ( sys-apps/netplug
 		sys-apps/ifplugd ) )
 	sys-power/acpid
 	x11-apps/mesa-progs
 	net-misc/dhcp
 	networkmanager? (
-		gnome-extra/nm-applet
+		kde-misc/knetworkmanager
 		laptop? ( net-misc/networkmanager-pptp )
 		)
 	laptop? ( net-wireless/wireless-tools
