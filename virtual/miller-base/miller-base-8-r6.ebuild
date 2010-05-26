@@ -12,7 +12,6 @@ DEPEND="
 	sys-cluster/glusterfs
 	sys-apps/inotail
 	sys-apps/ethtool
-	sys-process/iotop
 	cdr? ( app-cdr/k3b )
 	!nomedia? ( media-tv/mythtv media-plugins/mythvideo )
 	sys-apps/hdparm
