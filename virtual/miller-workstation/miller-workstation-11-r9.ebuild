@@ -31,7 +31,6 @@ DEPEND="
 	|| ( kde-base/superkaramba kde-base/kdeutils )
 	|| ( kde-base/okular kde-base/kpdf kde-base/kdegraphics )
 	mail-client/mail-notification
-	sys-auth/pam_mount
 	kde-base/gwenview
 	kde-base/kdebase-meta
 	kde-base/kdeplasma-addons
