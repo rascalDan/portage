@@ -23,7 +23,7 @@ DEPEND="
 	www-plugins/adobe-flash
 	x11-plugins/pidgin-encryption
 	x11-plugins/pidgin-facebookchat
-	media-sound/amarok
+	media-sound/clementine
 	|| ( kde-base/ksnapshot kde-base/kdegraphics )
 	|| ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork )
 	|| ( kde-base/kdeutils-meta kde-base/kwalletmanager kde-base/kdeutils )
@@ -32,7 +32,6 @@ DEPEND="
 	|| ( kde-base/okular kde-base/kpdf kde-base/kdegraphics )
 	mail-client/mail-notification
 	sys-auth/pam_mount
-	x11-themes/gtk-engines-ubuntulooks
 	kde-base/gwenview
 	kde-base/kdebase-meta
 	kde-base/kdeplasma-addons
