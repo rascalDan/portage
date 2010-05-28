@@ -36,5 +36,8 @@ DEPEND="
 	kde-base/kdeplasma-addons
 	media-gfx/geeqie
 	kde-base/ark
+	kde-misc/kcm_gtk
+	x11-themes/qtcurve-qt4
+	x11-themes/gtk-engines-qtcurve
 	"
 
