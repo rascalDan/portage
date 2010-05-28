@@ -17,6 +17,7 @@ DEPEND="virtual/miller-apps
 	dev-db/tora
 	net-analyzer/arping
 	dev-util/splint
+	app-vim/omnicppcomplete
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
 	app-arch/rar
