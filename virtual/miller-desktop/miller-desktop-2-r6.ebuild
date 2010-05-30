@@ -17,7 +17,7 @@ DEPEND="
 	x11-apps/mesa-progs
 	net-misc/dhcp
 	networkmanager? (
-		kde-misc/knetworkmanager
+		net-misc/networkmanager
 		laptop? ( net-misc/networkmanager-pptp )
 		)
 	laptop? ( net-wireless/wireless-tools
