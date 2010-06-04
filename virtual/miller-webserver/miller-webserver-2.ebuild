@@ -6,5 +6,5 @@ IUSE=""
 
 DEPEND="virtual/miller-apps
 www-servers/apache
-app-text/htmltidy"
+www-apache/mod_fcgid"
 

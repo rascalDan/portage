@@ -18,6 +18,7 @@ DEPEND="virtual/miller-apps
 	net-analyzer/arping
 	dev-util/splint
 	app-vim/omnicppcomplete
+	dev-libs/fcgi
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
 	app-arch/rar
