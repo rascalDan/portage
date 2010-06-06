@@ -7,7 +7,6 @@ IUSE=""
 DEPEND="virtual/miller-apps
 	app-text/htmltidy
 	app-doc/doxygen
-	>=dev-db/slony1-1.2.15
 	net-misc/rdesktop
 	media-gfx/gimp
 	|| ( net-misc/tightvnc net-misc/vnc )
@@ -32,7 +31,7 @@ DEPEND="virtual/miller-apps
 	=dev-util/monodevelop-2.1*
 	=dev-util/monodevelop-database-2.1*
 	=dev-util/monodevelop-debugger-gdb-2.1*
-	dev-db/pgadmin3
+	>=dev-db/pgadmin3-1.12
 	dev-db/postgresql_autodoc
 	kde-base/kcachegrind
 	dev-db/myodbc
