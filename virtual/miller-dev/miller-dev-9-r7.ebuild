@@ -18,6 +18,7 @@ DEPEND="virtual/miller-apps
 	dev-util/splint
 	app-vim/omnicppcomplete
 	dev-libs/fcgi
+	www-apache/mod_fcgid
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
 	app-arch/rar
