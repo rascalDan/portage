@@ -16,7 +16,7 @@ DEPEND="
 	>=www-client/mozilla-firefox-3
 	media-video/mplayer
 	kde-misc/filelight
-	mail-client/mozilla-thunderbird
+	mail-client/thunderbird
 	games-misc/fortune-mod
 	|| ( app-office/openoffice-bin )
 	media-gfx/gimp
