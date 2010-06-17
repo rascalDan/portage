@@ -30,7 +30,7 @@ DEPEND="
 	|| ( kde-misc/kdocker kde-base/kdemisc )
 	|| ( kde-base/superkaramba kde-base/kdeutils )
 	|| ( kde-base/okular kde-base/kpdf kde-base/kdegraphics )
-	mail-client/mail-notification
+	kde-misc/gx-mail-notify
 	kde-base/gwenview
 	kde-base/kdebase-meta
 	kde-base/kdeplasma-addons
