@@ -18,6 +18,9 @@ DEPEND="virtual/miller-apps
 	dev-util/splint
 	app-vim/omnicppcomplete
 	dev-libs/fcgi
+	dev-cpp/glibmm
+	dev-cpp/libxmlpp
+	dev-util/nemiver
 	www-apache/mod_fcgid
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
