@@ -21,6 +21,7 @@ DEPEND="virtual/miller-apps
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp
 	dev-util/nemiver
+	dev-libs/cgicc
 	www-apache/mod_fcgid
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
