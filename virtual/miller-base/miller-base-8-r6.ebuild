@@ -40,7 +40,6 @@ DEPEND="
 	net-misc/ntp
 	!minimal? ( net-analyzer/netcat )
 	!minimal? ( net-ftp/ncftp )
-	dev-util/cvs
 	!minimal? ( x11-apps/xauth )
 	sys-process/lsof
 	app-portage/layman[subversion]
