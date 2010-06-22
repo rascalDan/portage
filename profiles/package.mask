@@ -7,5 +7,6 @@
 
 =net-misc/openssh-5.5_p1
 =sys-fs/udev-154
+=sys-fs/udev-157
 
 =net-libs/libproxy-0.4.1
