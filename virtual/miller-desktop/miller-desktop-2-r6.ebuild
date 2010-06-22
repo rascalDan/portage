@@ -17,7 +17,7 @@ DEPEND="
 	x11-apps/mesa-progs
 	net-misc/dhcp
 	networkmanager? (
-		gnome-extra/nm-applet
+		|| ( gnome-extra/nm-applet kde-misc/knetworkmanager )
 		laptop? ( net-misc/networkmanager-pptp )
 		)
 	laptop? ( net-wireless/wireless-tools
