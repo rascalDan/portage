@@ -19,7 +19,7 @@ SLOT="0"
 IUSE="debug"
 
 DEPEND="x11-libs/wxGTK:2.8
-	virtual/postgresql-base
+	dev-db/postgresql-base
 	>=dev-libs/libxml2-2.5
 	>=dev-libs/libxslt-1.1"
 RDEPEND="${DEPEND}"
