@@ -28,6 +28,7 @@ DEPEND="virtual/miller-apps
 	app-arch/rar
 	net-misc/tsclient
 	|| ( kde-base/khexedit kde-base/okteta )
+	dev-vcs/kdesvn
 	net-ftp/ftp
 	net-analyzer/nmap
 	media-video/ffmpeg
