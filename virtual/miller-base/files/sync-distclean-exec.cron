@@ -1,4 +1,4 @@
 #!/bin/bash
 
-eclean-dist -d -q
-eclean-pkg -d -q
+eclean-dist -d -q -t 1w
+eclean-pkg -d -q -t 1w
