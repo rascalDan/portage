@@ -11,7 +11,7 @@ IUSE=""
 DEPEND="dev-db/unixODBC
 	dev-cpp/libxmlpp
 	dev-cpp/glibmm
-	dev-libs/boost
+	>=dev-libs/boost-1.42
 	dev-libs/cgicc
 	=dev-util/boost-build-1.42*
 	virtual/httpd-fastcgi
