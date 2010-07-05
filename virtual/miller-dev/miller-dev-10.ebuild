@@ -9,7 +9,7 @@ DEPEND="virtual/miller-apps
 	app-doc/doxygen
 	X? net-misc/rdesktop
 	X? media-gfx/gimp
-	|| ( net-misc/tightvnc net-misc/vnc )
+	X? ( || ( net-misc/tightvnc net-misc/vnc ) )
 	app-vim/svncommand
 	X? net-analyzer/wireshark
 	X? x11-apps/xhost
@@ -27,7 +27,7 @@ DEPEND="virtual/miller-apps
 	app-shells/gentoo-bashcomp
 	app-arch/rar
 	X? net-misc/tsclient
-	X? || ( kde-base/khexedit kde-base/okteta )
+	X? kde-base/okteta
 	X? dev-vcs/kdesvn
 	net-ftp/ftp
 	X? net-analyzer/nmap
