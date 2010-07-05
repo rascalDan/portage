@@ -20,7 +20,7 @@ DEPEND="virtual/miller-apps
 	dev-libs/fcgi
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp
-	dev-util/nemiver
+	X? dev-util/nemiver
 	dev-libs/cgicc
 	www-apache/mod_fcgid
 	media-gfx/imagemagick
