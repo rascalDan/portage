@@ -29,22 +29,22 @@ DEPEND="virtual/miller-apps
 	www-servers/apache
 	X? (
 		|| ( net-misc/tightvnc net-misc/vnc )
-		X? net-misc/rdesktop
-		X? media-gfx/gimp
-		X? net-analyzer/wireshark
-		X? x11-apps/xhost
-		X? dev-db/tora
-		X? dev-util/nemiver
-		X? net-misc/tsclient
-		X? kde-base/okteta
-		X? dev-vcs/kdesvn
-		X? net-analyzer/nmap
-		X? dev-util/mono-debugger
-		X? =dev-util/monodevelop-2.1*
-		X? =dev-util/monodevelop-database-2.1*
-		X? =dev-util/monodevelop-debugger-gdb-2.1*
-		X? >=dev-db/pgadmin3-1.12
-		X? kde-base/kcachegrind
-		X? app-editors/gvim
+		net-misc/rdesktop
+		media-gfx/gimp
+		net-analyzer/wireshark
+		x11-apps/xhost
+		dev-db/tora
+		dev-util/nemiver
+		net-misc/tsclient
+		kde-base/okteta
+		dev-vcs/kdesvn
+		net-analyzer/nmap
+		dev-util/mono-debugger
+		=dev-util/monodevelop-2.1*
+		=dev-util/monodevelop-database-2.1*
+		=dev-util/monodevelop-debugger-gdb-2.1*
+		>=dev-db/pgadmin3-1.12
+		kde-base/kcachegrind
+		app-editors/gvim
 	)"
 
