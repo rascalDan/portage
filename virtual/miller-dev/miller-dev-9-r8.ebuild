@@ -41,6 +41,7 @@ DEPEND="virtual/miller-apps
 	dev-db/postgresql_autodoc
 	kde-base/kcachegrind
 	dev-db/myodbc
+	dev-db/psqlodbc
 	www-apache/mod_transform
 	net-misc/youtube-dl
 	www-servers/apache
