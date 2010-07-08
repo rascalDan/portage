@@ -4,7 +4,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="X"
 
-DEPEND="virtual/miller-apps
+DEPEND="virtual/miller-base
 	app-text/htmltidy
 	app-doc/doxygen
 	app-vim/svncommand
