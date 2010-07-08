@@ -5,6 +5,8 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="X"
 
 DEPEND="virtual/miller-base
+	sys-devel/gdb
+	dev-util/valgrind
 	app-text/htmltidy
 	app-doc/doxygen
 	app-vim/svncommand
