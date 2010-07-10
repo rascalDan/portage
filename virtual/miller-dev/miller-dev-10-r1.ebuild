@@ -17,6 +17,7 @@ DEPEND="virtual/miller-base
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp
 	dev-libs/cgicc
+	net-libs/libesmtp
 	www-apache/mod_fcgid
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
