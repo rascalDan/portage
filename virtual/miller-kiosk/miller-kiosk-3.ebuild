@@ -13,5 +13,5 @@ DEPEND="
 	sys-apps/ifplugd
 	sys-power/acpid
 	net-dialup/mingetty
-	www-client/mozilla-firefox
+	www-client/firefox
 	"
