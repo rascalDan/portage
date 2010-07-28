@@ -9,6 +9,7 @@ DEPEND="virtual/miller-base
 	dev-util/valgrind
 	app-text/htmltidy
 	app-doc/doxygen
+	media-fonts/freefont-ttf
 	app-vim/svncommand
 	net-analyzer/arping
 	dev-util/splint
