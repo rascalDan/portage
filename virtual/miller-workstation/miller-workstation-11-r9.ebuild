@@ -13,7 +13,7 @@ DEPEND="
 	media-fonts/corefonts
 	virtual/jre
 	|| ( kde-base/krdc kde-base/kdenetwork )
-	>=www-client/firefox-3
+	>=www-client/icecat-3.5
 	media-video/mplayer
 	kde-misc/filelight
 	mail-client/thunderbird
