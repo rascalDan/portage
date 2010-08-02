@@ -21,7 +21,7 @@ DEPEND="
 	!minimal? ( || (
 		net-fs/mount-cifs
 		net-fs/samba-client
-		net-fs/samba[smbclient] ) )
+		net-fs/samba[client] ) )
 	xfs? ( sys-fs/xfsdump )
 	!lvmroot? ( sys-fs/lvm2 )
 	lvmroot? (
