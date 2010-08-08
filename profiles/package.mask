@@ -6,3 +6,5 @@
 =sys-fs/udev-154
 
 =net-libs/libproxy-0.4.1
+=dev-libs/libmix-2.05-r4
+=dev-lang/spidermonkey-1.7.0-r2
