@@ -53,11 +53,13 @@ file sbin/lvm /sbin/lvm.static 0755 0 0
 file bin/busybox /bin/busybox.static 0754 0 0
 file init init 0755 0 0
 file etc/mtab mtab 0644 0 0
+slink bin/[ /bin/busybox 0755 0 0
 slink bin/ls /bin/busybox 0755 0 0
 slink bin/find /bin/busybox 0755 0 0
 slink bin/mount /bin/busybox 0755 0 0
+slink bin/umount /bin/busybox 0755 0 0
 slink bin/cat /bin/busybox 0755 0 0
-slink bin/choot /bin/busybox 0755 0 0
+slink bin/chroot /bin/busybox 0755 0 0
 slink bin/switch_root /bin/busybox 0755 0 0
 slink bin/sh /bin/busybox 0755 0 0
 slink sbin/pivot_root /bin/busybox 0755 0 0
