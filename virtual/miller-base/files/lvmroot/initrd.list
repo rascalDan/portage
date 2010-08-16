@@ -55,6 +55,7 @@ file init init 0755 0 0
 file etc/mtab mtab 0644 0 0
 slink bin/[ /bin/busybox 0755 0 0
 slink bin/ls /bin/busybox 0755 0 0
+slink bin/echo /bin/busybox 0755 0 0
 slink bin/find /bin/busybox 0755 0 0
 slink bin/mount /bin/busybox 0755 0 0
 slink bin/umount /bin/busybox 0755 0 0
