@@ -11,11 +11,10 @@ DEPEND="
 	media-gfx/splash-themes-livecd
 	media-sound/alsa-utils
 	kde-base/kmix
-	!networkmanager? ( || ( sys-apps/netplug
-		sys-apps/ifplugd ) )
+	!networkmanager? (
+		net-misc/dhcp )
 	sys-power/acpid
 	x11-apps/mesa-progs
-	net-misc/dhcp
 	networkmanager? (
 		|| ( gnome-extra/nm-applet kde-misc/knetworkmanager )
 		laptop? ( net-misc/networkmanager-pptp )
