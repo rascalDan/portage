@@ -25,11 +25,11 @@ DEPEND="
 	xfs? ( sys-fs/xfsdump )
 	!lvmroot? ( sys-fs/lvm2 )
 	lvmroot? (
+			>=sys-boot/grub-1.98
 			sys-fs/lvm2[static]
 			sys-apps/busybox[static]
 			)
 	video_cards_nvidia? ( sys-apps/v86d )
-	sw-suspend? ( sys-apps/tuxonice-userui )
 	>=app-portage/gentoolkit-0.2.1
 	sys-process/vixie-cron
 	!minimal? ( sys-apps/eject )
@@ -48,13 +48,14 @@ DEPEND="
 	!minimal? ( app-antivirus/clamav )
 	!hardened? ( 
 			!sw-suspend? ( sys-kernel/gentoo-sources )
-			sw-suspend? ( sys-kernel/tuxonice-sources ) )
+			sw-suspend? ( sys-apps/tuxonice-userui
+				|| ( sys-kernel/tuxonice-sources
+					sys-kernel/pf ) ) )
 	hardened? ( sys-kernel/hardened-sources )
 	!minimal? ( ||
 		( app-text/dos2unix <app-text/unix2dos-5 )
 		( >=app-text/dos2unix-5 !app-text/unix2dos ) )
 	app-misc/screen
-	lvmroot? ( >=sys-boot/grub-1.98 )
 	sys-boot/grub
 	app-vim/gentoo-syntax
 	sys-auth/pam_ldap
