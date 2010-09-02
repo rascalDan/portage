@@ -50,7 +50,7 @@ DEPEND="
 			!sw-suspend? ( sys-kernel/gentoo-sources )
 			sw-suspend? ( sys-apps/tuxonice-userui
 				|| ( sys-kernel/tuxonice-sources
-					sys-kernel/pf ) ) )
+					sys-kernel/pf-sources ) ) )
 	hardened? ( sys-kernel/hardened-sources )
 	!minimal? ( ||
 		( app-text/dos2unix <app-text/unix2dos-5 )
