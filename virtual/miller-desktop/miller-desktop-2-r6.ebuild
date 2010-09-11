@@ -29,6 +29,6 @@ DEPEND="
 		)
 	sys-fs/dosfstools
 	media-video/kmplayer
-	input_devices_synaptics? ( kde-misc/synaptics )
+	input_devices_synaptics? ( kde-misc/synaptiks )
 "
 
