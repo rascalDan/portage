@@ -13,6 +13,7 @@ DEPEND="
 	media-fonts/corefonts
 	virtual/jre
 	|| ( kde-base/krdc kde-base/kdenetwork )
+	kde-misc/kwebkitpart
 	>=www-client/icecat-3.5
 	media-video/mplayer
 	kde-misc/filelight
