@@ -6,5 +6,5 @@ IUSE=""
 
 DEPEND="
 virtual/miller-base
->=dev-db/postgresql-server-9.0_beta1"
+~dev-db/postgresql-server-9.0"
 
