@@ -15,6 +15,7 @@ DEPEND="virtual/miller-base
 	dev-util/splint
 	app-vim/omnicppcomplete
 	dev-libs/fcgi
+	dev-libs/Ice
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp
 	dev-libs/cgicc
