@@ -11,6 +11,7 @@ DEPEND="
 	!minimal? ( www-servers/apache )
 	raid? ( sys-fs/mdadm )
 	sys-cluster/glusterfs
+	sys-cluster/netfs
 	sys-apps/inotail
 	sys-apps/ethtool
 	cdr? ( app-cdr/k3b )
