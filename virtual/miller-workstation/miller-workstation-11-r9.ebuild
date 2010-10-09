@@ -14,7 +14,7 @@ DEPEND="
 	virtual/jre
 	|| ( kde-base/krdc kde-base/kdenetwork )
 	kde-misc/kwebkitpart
-	>=www-client/icecat-3.5
+	|| ( >=www-client/icecat-3.5 >=www-client/firefox-4 )
 	media-video/mplayer
 	kde-misc/filelight
 	mail-client/thunderbird
