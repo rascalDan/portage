@@ -30,7 +30,10 @@ src_install() {
 	cd ${S}/netfs || die
 	${BJAM} ${var} install -qj2 --bindir=${D}/usr/sbin --libdir=${D}/usr/lib || die
 
+	dosym /usr/sbin/netfs /sbin/mount.netfs || die
+
 	newinitd ${S}/netfs/etc/init netfsd || die
 	insinto /etc/netfs || die
 	doins ${S}/netfs/etc/daemon.xml || die
+	doins ${S}/netfs/client.xml || die
 }
