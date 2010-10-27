@@ -41,4 +41,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/slony1.init slony1 || die "newinitd failed!"
 	newconfd "${FILESDIR}"/slony1.conf slony1 || die "newconfd failed!"
+	insinto /etc/logrotate.d/
+	newins "${FILESDIR}"/slony1.logrotate slony1 || die "logrotate failed!"
 }

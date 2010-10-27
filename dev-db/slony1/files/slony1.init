@@ -9,7 +9,7 @@ depend() {
 
 start() {
 	ebegin "Starting slony1"
-	/usr/bin/slon -p /var/run/slony1.pid -d $LOGLEVEL $CLUSTER "dbname=$DBNAME user=$DBUSER host=$DBHOST" >> $LOGFILE 2>&1 &
+	/usr/bin/slon -p /var/run/slony1.pid -d $LOGLEVEL $CLUSTER "dbname=$DBNAME user=$DBUSER host=$DBHOST" 2>&1 | logger -t slony1 &
 
 	while :
 	do
