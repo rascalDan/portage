@@ -1,0 +1,2 @@
+# Continuous reboot on Firebrand
+=sys-kernel/hardened-sources-2.6.35-r6
