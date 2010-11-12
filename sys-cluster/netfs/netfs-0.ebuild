@@ -23,12 +23,13 @@ use !debug && var="variant=release"
 
 src_compile() {
 	cd ${S}/netfs || die
-	${BJAM} ${var} -q || die
+	${BJAM} ${var} -q cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die
 }
 
 src_install() {
 	cd ${S}/netfs || die
-	${BJAM} ${var} install -qj2 --bindir=${D}/usr/sbin --libdir=${D}/usr/lib || die
+	${BJAM} ${var} install -qj2 --bindir=${D}/usr/sbin --libdir=${D}/usr/lib \
+			cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die
 
 	dosym /usr/sbin/netfs /sbin/mount.netfs || die
 
