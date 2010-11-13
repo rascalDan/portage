@@ -25,10 +25,11 @@ use !debug && var="variant=release"
 
 src_compile() {
 	cd ${S}/project2 || die
-	${BJAM} ${var} -qj2 || die
+	${BJAM} ${var} -q cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die
 }
 
 src_install() {
 	cd ${S}/project2 || die
-	${BJAM} ${var} install -qj2 --bindir=${D}/usr/share/webapps/project2 --libdir=${D}/usr/lib || die
+	${BJAM} ${var} install -q --bindir=${D}/usr/share/webapps/project2 --libdir=${D}/usr/lib \
+			cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die
 }
