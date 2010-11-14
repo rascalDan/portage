@@ -8,6 +8,7 @@ inherit mount-boot eutils flag-o-matic toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub"
+	EBZR_REVISION="2931"
 	inherit autotools bzr
 	SRC_URI=""
 else
