@@ -9,6 +9,7 @@ KEYWORDS="~x86"
 IUSE="debug"
 
 DEPEND="dev-db/unixODBC
+	www-client/lynx
 	dev-cpp/libxmlpp
 	dev-cpp/glibmm
 	>=dev-libs/boost-1.42
