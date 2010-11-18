@@ -5,6 +5,7 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="X"
 
 DEPEND="virtual/miller-base
+	www-client/lynx
 	sys-devel/gdb
 	dev-util/valgrind
 	app-text/htmltidy
