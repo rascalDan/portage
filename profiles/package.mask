@@ -1,2 +1,8 @@
 # Continuous reboot on Firebrand
 =sys-kernel/hardened-sources-2.6.35-r6
+
+# Breaks GlusterFS
+=sys-kernel/hardened-sources-2.6.36-r3
+
+# Breaks Apache
+>=sys-devel/gcc-4.5
