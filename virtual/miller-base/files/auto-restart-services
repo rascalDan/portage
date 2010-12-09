@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in `lsof -n +c0 | grep '\(DEL\|deleted\)' | grep -v /dev/zero  | grep -v /SYS | cut -d ' ' -f 1 | sort -u`; do
+for f in `lsof -n +c0 | grep '\(DEL\|deleted\)' | grep -v /dev/zero  | grep -v /SYS | grep -v /var/lib/postgresql/ | cut -d ' ' -f 1 | sort -u`; do
 	echo $f
 	sc=/usr/libexec/scripts/auto-restart/$f
 	if [ -x $sc ] ; then
