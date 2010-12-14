@@ -3,6 +3,7 @@ inherit subversion
 DESCRIPTION="User configured application engine"
 HOMEPAGE="http://project2.randomdan.homeip.net"
 
+EAPI="3"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~x86"
