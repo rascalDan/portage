@@ -10,6 +10,7 @@ video_cards_nvidia"
 DEPEND="
 	!minimal? ( www-servers/apache )
 	raid? ( sys-fs/mdadm )
+	app-admin/ide-smart
 	sys-cluster/glusterfs
 	sys-cluster/netfs
 	sys-apps/inotail
