@@ -12,7 +12,7 @@ SRC_URI="http://main.slony.info/downloads/2.0/source/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS=""
 
 DEPEND="dev-db/postgresql-server
 	perl? ( dev-perl/DBD-Pg )"
