@@ -2,7 +2,7 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X"
+IUSE="X dotnet"
 
 DEPEND="virtual/miller-base
 	www-client/lynx
@@ -44,10 +44,12 @@ DEPEND="virtual/miller-base
 		kde-base/okteta
 		dev-vcs/kdesvn
 		net-analyzer/nmap
-		dev-util/mono-debugger
-		=dev-util/monodevelop-2.1*
-		=dev-util/monodevelop-database-2.1*
-		=dev-util/monodevelop-debugger-gdb-2.1*
+		dotnet? (
+			dev-util/mono-debugger
+			=dev-util/monodevelop-2.1*
+			=dev-util/monodevelop-database-2.1*
+			=dev-util/monodevelop-debugger-gdb-2.1*
+		)
 		>=dev-db/pgadmin3-1.12
 		kde-base/kcachegrind
 		app-editors/gvim
