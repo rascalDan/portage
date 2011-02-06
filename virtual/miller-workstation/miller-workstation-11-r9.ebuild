@@ -16,7 +16,7 @@ DEPEND="
 	kde-misc/kwebkitpart
 	|| ( >=www-client/icecat-3.5 >=www-client/firefox-4 )
 	media-video/mplayer
-	kde-misc/filelight
+	|| ( kde-misc/filelight kde-base/filelight )
 	mail-client/thunderbird
 	games-misc/fortune-mod
 	|| ( app-office/libreoffice app-office/libreoffice-bin )
