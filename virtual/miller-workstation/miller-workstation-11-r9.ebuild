@@ -8,7 +8,6 @@ DEPEND="
 	|| ( kde-base/kcalc kde-base/kdeutils )
 	|| ( www-plugins/mplayerplug-in www-plugins/gecko-mediaplayer )
 	net-im/pidgin
-	games-misc/fortune-mod-all
 	x11-misc/xscreensaver
 	media-fonts/corefonts
 	virtual/jre
@@ -22,8 +21,6 @@ DEPEND="
 	|| ( app-office/libreoffice app-office/libreoffice-bin )
 	media-gfx/gimp
 	www-plugins/adobe-flash
-	x11-plugins/pidgin-encryption
-	x11-plugins/pidgin-facebookchat
 	media-sound/clementine
 	|| ( kde-base/ksnapshot kde-base/kdegraphics )
 	|| ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork )
@@ -34,7 +31,6 @@ DEPEND="
 	kde-misc/gx-mail-notify
 	kde-base/gwenview
 	kde-base/kdebase-meta
-	kde-base/kdeplasma-addons
 	media-gfx/geeqie
 	kde-base/ark
 	kde-misc/kcm_gtk
