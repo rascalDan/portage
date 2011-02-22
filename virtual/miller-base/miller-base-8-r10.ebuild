@@ -13,7 +13,6 @@ DEPEND="
 	app-admin/ide-smart
 	sys-cluster/glusterfs
 	sys-cluster/netfs
-	sys-apps/inotail
 	sys-apps/ethtool
 	cdr? ( app-cdr/k3b )
 	!nomedia? ( media-tv/mythtv media-plugins/mythvideo )
