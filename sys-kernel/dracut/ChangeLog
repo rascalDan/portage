@@ -1,0 +1,72 @@
+# ChangeLog for sys-kernel/dracut
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.8 2011/01/09 03:27:27 vapier Exp $
+
+  09 Jan 2011; Mike Frysinger <vapier@gentoo.org> dracut-007.ebuild:
+  Use new mount-boot_pkg_postinst helper.
+
+  25 Aug 2010; Lance Albertson <ramereth@gentoo.org> dracut-006-r1.ebuild,
+  dracut-007.ebuild:
+  Fixes bug #334347 (dm related dependencies). Thanks to Akos Szalkai
+  <szalkai@szalkai.net> for report and patch.
+
+*dracut-007 (17 Aug 2010)
+*dracut-006-r1 (17 Aug 2010)
+
+  17 Aug 2010; Lance Albertson <ramereth@gentoo.org> +dracut-006-r1.ebuild,
+  +files/dracut-006-console_init-not-necessary.patch,
+  +files/dracut-006-dm-udev-rules.patch, +dracut-007.ebuild,
+  +files/dracut-007-dm-udev-rules.patch,
+  +files/dracut-007-multipath-udev-rules.patch, metadata.xml:
+  Version bump and revision update
+
+  Update 006 with patches from #329003, bump to 007 to resolve #331903.
+  Thanks to Amadeusz Żołnowski for contributing the ebuilds and patches.
+
+*dracut-006 (07 Jul 2010)
+
+  07 Jul 2010; Lance Albertson <ramereth@gentoo.org> +dracut-006.ebuild,
+  +files/dracut-006-dhcp6.patch, +files/dracut-006-lc-all-c.patch,
+  metadata.xml:
+  Version bump, resolves bug #324705
+
+  Thanks to Amadeusz Żołnowski for submitting the ebuild and patches.
+
+  22 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed herd.
+
+*dracut-004 (02 Feb 2010)
+
+  02 Feb 2010; Lance Albertson <ramereth@gentoo.org> -dracut-002.ebuild,
+  +dracut-004.ebuild:
+  Version bump
+
+*dracut-003 (09 Dec 2009)
+*dracut-002-r1 (09 Dec 2009)
+
+  09 Dec 2009; Lance Albertson <ramereth@gentoo.org> +dracut-002-r1.ebuild,
+  +files/dracut-002-makefile-add-with_switch_root.patch, +dracut-003.ebuild:
+  Version bump, fix switch_root issues #293178, & remove system deps
+
+  Force package dep >=sys-apps/util-linux-2.16 which includes switch_root by
+  default. Otherwise dracut would have a file conflict with util-linux.
+  Backport upstream Makefile patch b3611b525 for version 002 instead of patch
+  included in the bug report. 
+
+  29 Sep 2009; Lance Albertson <ramereth@gentoo.org> dracut-002.ebuild,
+  +files/dracut-002-add-missing-functions.patch,
+  +files/dracut-002-gencmdline-check-for-keyboard-i18n-files.patch:
+  Fix dracut-gencmdline issues
+
+*dracut-002 (27 Sep 2009)
+
+  27 Sep 2009; Lance Albertson <ramereth@gentoo.org> +dracut-002.ebuild,
+  +files/dracut-002-custom-paths.patch,
+  +files/dracut-002-dir-symlinks.patch, +files/dracut-002-unmount.patch,
+  +metadata.xml:
+  Initial ebuild based from #278442
+
+  Thanks to Ambroz Bizjak <ambro@b4ever.net> for the initial ebuild and
+  patches
+
