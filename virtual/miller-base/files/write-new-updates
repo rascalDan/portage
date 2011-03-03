@@ -1,4 +1,4 @@
 #!/bin/bash
 
 file="/var/www/files/localhost/`hostname`_updates.txt"
-emerge -uDNpvq @world @system > ${file}
+emerge -uDNpvq --with-bdeps=y @world @system > ${file}
