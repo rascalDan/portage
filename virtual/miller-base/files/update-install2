@@ -7,7 +7,7 @@ TTYTEST=$?
 ( \
 	( \
 		( \
-			emerge -uqDN -j2 @world @system --keep-going && \
+			emerge -uqDN -j2 @world @system --keep-going --with-bdeps=y && \
 			rm -f $file ) || \
 		/etc/portage/postsync.d/50-write-new-updates ) && \
 	emerge --depclean -q 2>&1 | tee $dpfile && \
