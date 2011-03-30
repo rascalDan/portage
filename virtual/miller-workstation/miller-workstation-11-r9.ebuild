@@ -2,11 +2,12 @@ DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
+EAPI="2"
 
 DEPEND="
 	virtual/miller-base
 	|| ( kde-base/kcalc kde-base/kdeutils )
-	|| ( www-plugins/mplayerplug-in www-plugins/gecko-mediaplayer )
+	|| ( www-plugins/gecko-mediaplayer media-video/vlc[nsplugin] )
 	net-im/pidgin
 	x11-misc/xscreensaver
 	media-fonts/corefonts

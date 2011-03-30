@@ -28,7 +28,6 @@ DEPEND="
 		b43? ( net-wireless/b43-firmware )
 		)
 	sys-fs/dosfstools
-	media-video/kmplayer
 	input_devices_synaptics? ( kde-misc/synaptiks )
 "
 
