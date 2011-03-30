@@ -14,7 +14,7 @@ DEPEND="
 	|| ( kde-base/krdc kde-base/kdenetwork )
 	kde-misc/kwebkitpart
 	|| ( >=www-client/icecat-3.5 >=www-client/firefox-4 )
-	media-video/mplayer
+	media-video/mplayer2
 	|| ( kde-misc/filelight kde-base/filelight )
 	mail-client/thunderbird
 	games-misc/fortune-mod
