@@ -24,7 +24,8 @@ DEPEND="net-dialup/ppp
 	virtual/miller-webserver
 	www-apps/project2
 	mediaserver? ( media-video/ushare
-		net-p2p/transmission )
+			media-tv/linuxtv-dvb-firmware
+			net-p2p/transmission )
 "
 RDEPEND="${DEPEND}"
 
