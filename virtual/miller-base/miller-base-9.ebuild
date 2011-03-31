@@ -30,7 +30,7 @@ DEPEND="
 	lvmroot? (
 			sys-fs/lvm2[static]
 			sys-apps/busybox[static]
-			sys-kernel/dracut[lvm]
+			sys-kernel/dracut[dracut_modules_lvm]
 			)
 	video_cards_nvidia? ( sys-apps/v86d )
 	>=app-portage/gentoolkit-0.2.1
