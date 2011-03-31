@@ -26,7 +26,7 @@ DEPEND="
 		net-fs/samba[client] ) )
 	xfs? ( sys-fs/xfsdump )
 	!lvmroot? ( sys-fs/lvm2 )
-	lvmboot? ( >=sys-boot/grub-1.98 virtual/miller-base[lvmroot] )
+	lvmboot? ( >=sys-boot/grub-1.98 )
 	lvmroot? (
 			sys-fs/lvm2[static]
 			sys-apps/busybox[static]
