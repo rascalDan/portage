@@ -34,7 +34,7 @@ DEPEND="
 	video_cards_nvidia? ( sys-apps/v86d )
 	>=app-portage/gentoolkit-0.2.1
 	sys-process/vixie-cron
-	!minimal? ( sys-apps/eject )
+	!minimal? ( virtual/eject )
 	app-admin/sudo
 	mail-client/mailx
 	sys-apps/pciutils
