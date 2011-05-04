@@ -25,6 +25,7 @@ DEPEND="net-dialup/ppp
 	www-apps/project2
 	mediaserver? ( media-video/ushare
 			media-tv/linuxtv-dvb-firmware
+			media-tv/mythtv
 			net-p2p/transmission )
 "
 RDEPEND="${DEPEND}"

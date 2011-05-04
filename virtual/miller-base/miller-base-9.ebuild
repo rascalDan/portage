@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller servers"
 EAPI="2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion nomedia git fbsplash
+IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash
 minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend raid
 video_cards_nvidia"
 
@@ -15,7 +15,6 @@ DEPEND="
 	sys-cluster/netfs
 	sys-apps/ethtool
 	cdr? ( app-cdr/k3b )
-	!nomedia? ( media-tv/mythtv media-plugins/mythvideo )
 	sys-apps/hdparm
 	sys-apps/unscd
 	!minimal? ( net-dns/bind-tools )
