@@ -22,6 +22,7 @@ DEPEND="x11-libs/wxGTK:2.8[X]
 	>=dev-libs/libxml2-2.5
 	>=dev-libs/libxslt-1.1"
 RDEPEND="${DEPEND}"
+S="${WORKDIR}/pgadmin3-1.14.0-beta1"
 
 src_configure() {
 	econf \
