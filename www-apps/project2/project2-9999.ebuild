@@ -26,7 +26,7 @@ DEPEND="
 				dev-libs/fcgi
 				)
 		 )
-	docs? ( app-doc/doxygen[cairo] )
+	docs? ( app-doc/doxygen )
 	"
 RDEPEND="${DEPEND}"
 ESVN_REPO_URI="http://svn.randomdan.homeip.net/src/trunk"
@@ -34,9 +34,9 @@ BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 use !debug && var="variant=release"
 use !odbc && odbc="odbc=no"
 use !postgres && pq="pq=no"
-use console && ( bt="$bt p2console" ; it="$it installp2con" )
-use web && ( bt="$bt p2cgi" ; it="$it installp2cgi" )
-use web && use fastcgi && ( bt="$bt p2fcgi" ; it="$it installp2fci" )
+use console && bt="$bt p2console" && it="$it installp2con"
+use web && bt="$bt p2cgi" && it="$it installp2cgi"
+use web && use fastcgi && bt="$bt p2fcgi" && it="$it installp2fcgi"
 
 src_compile() {
 	cd ${S}/project2 || die
