@@ -7,11 +7,11 @@ TTYTEST=$?
 ( \
 	( \
 		( \
-			emerge -uqDN -j2 @world @system --keep-going --with-bdeps=y && \
+			emerge -uqDN @world @system --keep-going --with-bdeps=y && \
 			rm -f $file ) || \
 		/etc/portage/postsync.d/50-write-new-updates ) && \
 	emerge --depclean -q 2>&1 | tee $dpfile && \
-	emerge -q -j2 --keep-going @preserved-rebuild \
+	emerge -q --keep-going @preserved-rebuild \
 )
 revdep-rebuild -q -i
 if [ $TTYTEST -eq 0 ]; then

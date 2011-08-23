@@ -1,2 +1,2 @@
-/etc/init.d/courier-imapd restart
+/etc/init.d/courier-imapd-ssl restart
 
