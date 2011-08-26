@@ -1,7 +1,3 @@
-# Copyright 1999-2011 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: $
-
 EAPI=3
 
 DESCRIPTION="SQuirreL SQL Client is a graphical Java program that will allow you to view the structure of a JDBC compliant database, browse the data in tables, issue SQL commands etc"
@@ -10,11 +6,18 @@ SRC_URI="http://heanet.dl.sourceforge.net/project/squirrel-sql/1-stable/${PV}-pl
 
 LICENSE="lgpl"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
+KEYWORDS="~x86 ~amd64"
+IUSE="oracle informix postgres mysql mssql jaybird"
 
 DEPEND="virtual/jre"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	informix? ( dev-java/jdbc-informix )
+	jaybird? ( dev-java/jdbc-jaybird )
+	mssql? ( dev-java/jdbc-mssqlserver )
+	mysql? ( dev-java/jdbc-mysql )
+	oracle? ( dev-java/jdbc-oracle-bin )
+	postgres? ( dev-java/jdbc-postgresql )
+	"
 
 src_install() {
 	mkdir -p ${D}/opt/${PN} || die "Create install dir"
