@@ -7,7 +7,7 @@ EAPI="2"
 DEPEND="
 	virtual/miller-base
 	|| ( kde-base/kcalc kde-base/kdeutils )
-	|| ( www-plugins/gecko-mediaplayer media-video/vlc[nsplugin] )
+	media-video/vlc[nsplugin]
 	net-im/pidgin
 	x11-misc/xscreensaver
 	media-fonts/corefonts
@@ -19,7 +19,7 @@ DEPEND="
 	|| ( kde-misc/filelight kde-base/filelight )
 	mail-client/thunderbird
 	games-misc/fortune-mod
-	|| ( app-office/libreoffice app-office/libreoffice-bin )
+	|| ( app-office/libreoffice-bin app-office/libreoffice )
 	media-gfx/gimp
 	www-plugins/adobe-flash
 	media-sound/clementine
