@@ -7,4 +7,8 @@ make modules -j2 || ( echo "Make modules failed" ; exit 1 )
 make modules_install -j2 || ( echo "Make modules install failed" ; exit 1 )
 qfile /lib/modules && emerge -q1 /lib/modules || exit 1
 make install -j2 || ( echo "Make install failed" ; exit 1 )
-[ -x /usr/sbin/dracut ] && /usr/sbin/dracut -H -f --lzma /boot/dracut.initrd.cpio.lzma $(head /boot/config -n3 | tail -n1 | cut -d ' ' -f 3)
+if [ -x /usr/sbin/dracut ] ; then
+	KV=$(head /boot/config -n3 | tail -n1 | cut -d ' ' -f 3)
+	/usr/sbin/dracut -H -f --lzma /boot/initrd-$KV.img $KV
+fi
+
