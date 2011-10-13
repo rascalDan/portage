@@ -9,8 +9,6 @@ dev-db/phppgadmin
 www-apps/bugzilla
 www-apps/mythweb
 net-nds/phpldapadmin
-dev-db/phpmyadmin
 www-apps/phpsysinfo
-mail-client/squirrelmail
 www-apps/websvn
 "
