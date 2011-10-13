@@ -6,6 +6,9 @@ IUSE="X dotnet"
 
 DEPEND="virtual/miller-base
 	www-client/lynx
+	www-client/chromium
+	|| ( www-client/firefox www-client/icecat )
+	www-client/opera
 	sys-devel/gdb
 	dev-util/valgrind
 	app-text/htmltidy
@@ -28,6 +31,7 @@ DEPEND="virtual/miller-base
 	net-ftp/ftp
 	media-video/ffmpeg
 	dev-db/postgresql_autodoc
+	dev-db/squirrel-sql
 	dev-db/myodbc
 	dev-db/psqlodbc
 	www-apache/mod_transform
