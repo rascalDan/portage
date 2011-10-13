@@ -8,7 +8,7 @@ IUSE="perl"
 
 DESCRIPTION="A replication system for the PostgreSQL Database Management System"
 HOMEPAGE="http://slony.info/"
-SRC_URI="http://main.slony.info/downloads/2.1/source/slony1-2.1.0.b1.tar.bz2"
+SRC_URI="http://main.slony.info/downloads/2.1/source/slony1-2.1.0.rc2.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="dev-db/postgresql-server
 	perl? ( dev-perl/DBD-Pg )"
-S="${WORKDIR}/slony1-2.1.0.b1"
+S="${WORKDIR}/slony1-2.1.0.rc2"
 
 src_compile() {
 	local myconf=""
