@@ -31,7 +31,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 ESVN_REPO_URI="http://svn.randomdan.homeip.net/src/trunk"
 ESVN_REVISION="${PV}"
-BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 use !debug && var="variant=release"
 use !odbc && odbc="odbc=no"
 use !postgres && pq="pq=no"
@@ -40,16 +39,22 @@ use web && bt="$bt p2cgi" && it="$it installp2cgi"
 use web && use fastcgi && bt="$bt p2fcgi" && it="$it installp2fcgi"
 
 src_compile() {
+	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/project2 || die
-	${BJAM} ${var} ${odbc} ${pq} ${bt} -q cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die "Compile failed"
+	setarch $(uname -m) -RL \
+			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${pq} ${bt} -q \
+			cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die "Compile failed"
 }
 
 src_install() {
+	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/project2 || die
-	${BJAM} ${var} ${odbc} ${pq} ${it} -q --bindir=${D}/usr/share/webapps/project2 --libdir=${D}/usr/lib \
+	setarch $(uname -m) -RL \
+			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${pq} ${it} -q \
+			--bindir=${D}/usr/share/webapps/project2 --libdir=${D}/usr/lib \
 			cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die "Installed failed"
-	mkdir -p ${D}/usr/share/doc/${P}
 	if use docs ; then
-		(cat Doxyfile ; echo OUTPUT_DIRECTORY=${D}/usr/share/doc/${P}) | doxygen - || die "Build docs failed"
+		mkdir -p ${D}/usr/share/doc/${PN}
+		(cat Doxyfile ; echo OUTPUT_DIRECTORY=${D}/usr/share/doc/${PN}) | doxygen - || die "Build docs failed"
 	fi
 }
