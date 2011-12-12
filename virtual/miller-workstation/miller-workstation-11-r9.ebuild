@@ -14,7 +14,7 @@ DEPEND="
 	virtual/jre
 	|| ( kde-base/krdc kde-base/kdenetwork )
 	kde-misc/kwebkitpart
-	|| ( >=www-client/icecat-3.5 >=www-client/firefox-4 )
+	|| ( www-client/firefox www-client/icecat )
 	|| ( kde-misc/filelight kde-base/filelight )
 	mail-client/thunderbird
 	games-misc/fortune-mod
