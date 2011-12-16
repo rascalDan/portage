@@ -8,12 +8,13 @@ SRC_URI="http://www.rbt.ca/autodoc/binaries/${PF}.tar.gz"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND="
 	dev-perl/HTML-Template
 	dev-perl/DBI
+	dev-perl/TermReadKey
 	dev-perl/DBD-Pg
 	sys-apps/sed
 	dev-lang/perl"
