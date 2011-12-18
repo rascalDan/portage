@@ -9,6 +9,7 @@ DEPEND="virtual/miller-base
 	www-client/chromium
 	|| ( www-client/firefox www-client/icecat )
 	www-client/opera
+	dev-db/apgdiff
 	sys-devel/gdb
 	dev-util/valgrind
 	app-text/htmltidy

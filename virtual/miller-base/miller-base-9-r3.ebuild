@@ -8,6 +8,8 @@ minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend ra
 video_cards_nvidia"
 
 DEPEND="
+	sys-apps/less
+	app-portage/eclean-kernel
 	!minimal? ( www-servers/apache )
 	raid? ( sys-fs/mdadm )
 	app-admin/ide-smart

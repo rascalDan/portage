@@ -11,6 +11,8 @@ DEPEND="
 	net-im/pidgin
 	x11-misc/xscreensaver
 	media-fonts/corefonts
+	kde-misc/basket
+	media-sound/clementine
 	virtual/jre
 	|| ( kde-base/krdc kde-base/kdenetwork )
 	kde-misc/kwebkitpart

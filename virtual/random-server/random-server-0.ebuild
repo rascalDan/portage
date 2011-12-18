@@ -17,13 +17,17 @@ DEPEND="net-dialup/ppp
 	net-fs/samba
 	net-misc/dhcp
 	net-proxy/squid
+	dev-db/myodbc
+	net-nds/smbldap-tools
 	virtual/miller-base
 	virtual/miller-mailserver
 	virtual/miller-postgresql
+	dev-db/couchdb
 	virtual/miller-webappserver
 	virtual/miller-webserver
 	www-apps/project2
-	mediaserver? ( media-video/ushare
+	mediaserver? (
+			net-misc/minidlna
 			media-tv/linuxtv-dvb-firmware
 			media-tv/mythtv
 			net-p2p/transmission )
