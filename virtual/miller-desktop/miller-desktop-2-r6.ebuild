@@ -2,14 +2,16 @@ DESCRIPTION="Virtual for Miller servers"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="vpn wifi ndiswrapper b43 networkmanager input_devices_synaptics iwl3945
+IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsplash iwl3945
 kde gnome"
 
 DEPEND="
 	virtual/miller-base
 	x11-base/xorg-server
-	media-gfx/splash-themes-gentoo
-	media-gfx/splash-themes-livecd
+	fbsplash? (
+			media-gfx/splash-themes-gentoo
+			media-gfx/splash-themes-livecd
+			)
 	media-sound/alsa-utils
 	kde? ( kde-base/kmix )
 	!networkmanager? (
@@ -19,9 +21,11 @@ DEPEND="
 	networkmanager? (
 		gnome? ( gnome-extra/nm-applet )
 		kde? ( kde-misc/networkmanagement )
-		vpn? ( net-misc/networkmanager-pptp )
-		)
-	wifi? ( net-wireless/wireless-tools
+		pptp? ( net-misc/networkmanager-pptp )
+		vpnc? ( net-misc/networkmanager-vpnc )
+			)
+	wifi? (
+	net-wireless/wireless-tools
 		net-wireless/wpa_supplicant
 		net-dialup/ppp
 		net-dialup/pptpclient

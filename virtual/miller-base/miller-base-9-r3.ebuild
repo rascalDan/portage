@@ -18,7 +18,6 @@ DEPEND="
 	sys-apps/ethtool
 	cdr? ( app-cdr/k3b )
 	sys-apps/hdparm
-	sys-apps/unscd
 	!minimal? ( net-dns/bind-tools )
 	fuse? ( sys-fs/sshfs-fuse )
 	!minimal? ( || (
@@ -26,11 +25,10 @@ DEPEND="
 		net-fs/samba-client
 		net-fs/samba[client] ) )
 	xfs? ( sys-fs/xfsdump )
-	!lvmroot? ( sys-fs/lvm2 )
+	sys-fs/lvm2
 	lvmboot? ( >=sys-boot/grub-1.98 )
 	lvmroot? (
-			sys-fs/lvm2[static]
-			sys-apps/busybox[static]
+			sys-apps/busybox
 			sys-kernel/dracut[dracut_modules_lvm]
 			)
 	video_cards_nvidia? ( sys-apps/v86d )
