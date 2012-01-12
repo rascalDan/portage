@@ -6,6 +6,7 @@ IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsp
 kde gnome"
 
 DEPEND="
+	media-gfx/MIB-Ossigeno-Ultimate-Plymouth
 	virtual/miller-base
 	x11-base/xorg-server
 	fbsplash? (
