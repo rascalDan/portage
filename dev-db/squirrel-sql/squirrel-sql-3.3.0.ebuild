@@ -6,7 +6,7 @@ SRC_URI="http://heanet.dl.sourceforge.net/project/squirrel-sql/1-stable/${PV}-pl
 
 LICENSE="lgpl"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="oracle informix postgres mysql mssql jaybird"
 
 DEPEND="virtual/jre"
