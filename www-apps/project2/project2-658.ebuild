@@ -38,12 +38,16 @@ use console && bt="$bt p2console" && it="$it installp2con"
 use web && bt="$bt p2cgi" && it="$it installp2cgi"
 use web && use fastcgi && bt="$bt p2fcgi" && it="$it installp2fcgi"
 
+src_prepare() {
+	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
+}
+
 src_compile() {
 	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
 			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${pq} ${bt} -q \
-			cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die "Compile failed"
+			|| die "Compile failed"
 }
 
 src_install() {
@@ -52,7 +56,7 @@ src_install() {
 	setarch $(uname -m) -RL \
 			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${pq} ${it} -q \
 			--bindir=${D}/usr/share/webapps/project2 --libdir=${D}/usr/lib \
-			cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die "Installed failed"
+			|| die "Installed failed"
 	if use docs ; then
 		mkdir -p ${D}/usr/share/doc/${PN}
 		(cat Doxyfile ; echo OUTPUT_DIRECTORY=${D}/usr/share/doc/${PN}) | doxygen - || die "Build docs failed"
