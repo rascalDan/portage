@@ -5,13 +5,11 @@ cd /usr/src/linux || ( echo "No kernel directory"; exit 1 )
 make -j2 || ( echo "Make failed" ; exit 1 )
 make modules -j2 || ( echo "Make modules failed" ; exit 1 )
 make modules_install -j2 || ( echo "Make modules install failed" ; exit 1 )
-if qfile /lib/modules ; then
-	emerge -q1 /lib/modules || exit 1
-fi
+emerge -q1 @module-rebuild || exit 1
 make install -j2 || ( echo "Make install failed" ; exit 1 )
-if [ -x /usr/sbin/dracut ] ; then
+if [ -x /usr/bin/dracut ] ; then
 	KV=$(head /boot/config -n3 | tail -n1 | cut -d ' ' -f 3)
-	/usr/sbin/dracut -H -f --lzma /boot/initramfs-$KV.img $KV
+	/usr/bin/dracut -H -f --lzma /boot/initramfs-$KV.img $KV
 fi
 grub2-mkconfig -o /boot/grub2/grub.cfg 
 
