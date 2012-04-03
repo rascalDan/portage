@@ -14,6 +14,7 @@ DEPEND="
 	net-libs/libesmtp
 	www-client/lynx
 	dev-cpp/libxmlpp
+	sys-libs/zlib
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
 	odbc? ( dev-db/unixODBC )
