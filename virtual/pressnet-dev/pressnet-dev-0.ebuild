@@ -31,6 +31,7 @@ DEPEND="virtual/miller-base
 	dev-java/jakarta-jstl
 	dev-java/sun-jdk
 	dev-java/sun-jre-bin
+	dev-java/maven-bin
 	dev-libs/omniEvents
 	dev-util/eclipse-sdk
 	net-misc/omniORB
