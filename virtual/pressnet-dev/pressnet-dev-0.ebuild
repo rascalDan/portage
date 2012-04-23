@@ -19,6 +19,8 @@ DEPEND="virtual/miller-base
 	dev-util/splint
 	app-vim/omnicppcomplete
 	dev-cpp/libxmlpp
+	dev-libs/libxml2[-icu]
+	media-libs/imlib2
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
 	app-arch/rar
