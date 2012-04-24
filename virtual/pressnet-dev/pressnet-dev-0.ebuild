@@ -19,7 +19,8 @@ DEPEND="virtual/miller-base
 	dev-util/splint
 	app-vim/omnicppcomplete
 	dev-cpp/libxmlpp
-	dev-libs/libxml2[-icu]
+	dev-libs/libxml2
+	dev-java/maven-bin
 	media-libs/imlib2
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
@@ -27,6 +28,7 @@ DEPEND="virtual/miller-base
 	net-ftp/ftp
 	dev-db/squirrel-sql
 	dev-db/myodbc
+	dev-util/cppunit
 	www-servers/apache
 	app-vim/tt2-syntax
 	dev-java/commons-fileupload

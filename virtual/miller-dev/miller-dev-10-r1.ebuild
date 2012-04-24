@@ -42,6 +42,7 @@ DEPEND="virtual/miller-base
 		|| ( net-misc/tightvnc net-misc/vnc )
 		net-misc/rdesktop
 		media-gfx/gimp
+		kde-base/kruler
 		net-analyzer/wireshark
 		x11-apps/xhost
 		dev-db/tora
