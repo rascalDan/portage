@@ -6,6 +6,8 @@ IUSE=""
 
 DEPEND="virtual/miller-base
 www-servers/apache
+www-apache/Apache2-Filter-Minifier-CSS
+www-apache/Apache2-Filter-Minifier-JavaScript
 www-apache/mod_transform
 www-apache/mod_fcgid"
 
