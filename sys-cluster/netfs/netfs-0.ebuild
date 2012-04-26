@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 IUSE="debug"
 
 DEPEND="dev-libs/Ice
@@ -17,7 +17,7 @@ DEPEND="dev-libs/Ice
 	dev-util/boost-build"
 RDEPEND="${DEPEND}"
 
-ESVN_REPO_URI="svn+ssh://svn.random.lan/var/svn/src/trunk"
+ESVN_REPO_URI="http://svn.randomdan.homeip.net/src/trunk"
 BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 use !debug && var="variant=release"
 
