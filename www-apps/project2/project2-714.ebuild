@@ -15,6 +15,7 @@ DEPEND="
 	www-client/lynx
 	dev-cpp/libxmlpp
 	sys-libs/zlib
+	>=sys-devel/gcc-4.5
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
 	odbc? ( dev-db/unixODBC )
