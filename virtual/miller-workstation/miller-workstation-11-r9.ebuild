@@ -7,7 +7,7 @@ EAPI="2"
 DEPEND="
 	virtual/miller-base
 	|| ( kde-base/kcalc kde-base/kdeutils )
-	media-video/vlc[nsplugin]
+	media-video/vlc
 	net-im/pidgin
 	x11-misc/xscreensaver
 	media-fonts/corefonts
