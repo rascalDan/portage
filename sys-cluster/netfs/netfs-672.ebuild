@@ -1,9 +1,9 @@
+EAPI="3"
 inherit subversion
 
 DESCRIPTION="Cluster capable network filesytem"
 HOMEPAGE="http://netfs.randomdan.homeip.net/"
 
-EAPI="3"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"

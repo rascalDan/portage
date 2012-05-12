@@ -1,6 +1,7 @@
 EAPI="3"
 inherit subversion
 
+EAPI="3"
 DESCRIPTION="User configured application engine"
 HOMEPAGE="http://project2.randomdan.homeip.net"
 
