@@ -9,7 +9,7 @@ video_cards_nvidia"
 
 DEPEND="
 	sys-apps/less
-	app-portage/eclean-kernel
+	app-admin/eclean-kernel
 	!minimal? ( www-servers/apache )
 	raid? ( sys-fs/mdadm )
 	app-admin/ide-smart
