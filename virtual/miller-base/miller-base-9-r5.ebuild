@@ -5,7 +5,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash
 minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend raid
-video_cards_nvidia"
+video_cards_nvidia video_cards_radeon"
 
 DEPEND="
 	sys-apps/less
@@ -32,6 +32,7 @@ DEPEND="
 			sys-kernel/dracut[dracut_modules_lvm]
 			)
 	video_cards_nvidia? ( sys-apps/v86d )
+	video_cards_radeon? ( x11-drivers/radeon-ucode )
 	>=app-portage/gentoolkit-0.2.1
 	sys-process/vixie-cron
 	!minimal? ( virtual/eject )
@@ -49,6 +50,7 @@ DEPEND="
 	app-admin/logrotate
 	!minimal? ( app-antivirus/clamav )
 	!hardened? ( 
+			sys-devel/prelink
 			!sw-suspend? ( sys-kernel/gentoo-sources )
 			sw-suspend? ( sys-apps/tuxonice-userui
 				|| ( sys-kernel/tuxonice-sources
