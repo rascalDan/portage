@@ -8,7 +8,7 @@ SRC_URI="http://www.slony.info/downloads/2.2/source/slony1-2.2.0.b1.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS=""
 
 DEPEND="dev-db/postgresql-server
 	perl? ( dev-perl/DBD-Pg )"
