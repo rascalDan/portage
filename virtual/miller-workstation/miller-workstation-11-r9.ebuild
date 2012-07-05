@@ -9,10 +9,10 @@ DEPEND="
 	|| ( kde-base/kcalc kde-base/kdeutils )
 	media-video/vlc
 	net-im/pidgin
+	x11-plugins/pidgin-mbpurple
 	x11-misc/xscreensaver
 	media-fonts/corefonts
 	kde-misc/basket
-	media-sound/clementine
 	virtual/jre
 	|| ( kde-base/krdc kde-base/kdenetwork )
 	kde-misc/kwebkitpart
