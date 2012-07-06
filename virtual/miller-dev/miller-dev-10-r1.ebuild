@@ -14,6 +14,7 @@ DEPEND="virtual/miller-base
 	dev-util/valgrind
 	app-text/htmltidy
 	app-doc/doxygen
+	dev-util/cppcheck
 	media-fonts/freefont-ttf
 	app-vim/vcscommand
 	net-analyzer/arping
