@@ -36,6 +36,7 @@ DEPEND="
 		iwl3945? ( net-wireless/iwl3945-ucode )
 		)
 	sys-fs/dosfstools
+	sys-boot/syslinux
 	input_devices_synaptics? ( kde? ( kde-misc/synaptiks ) )
 "
 
