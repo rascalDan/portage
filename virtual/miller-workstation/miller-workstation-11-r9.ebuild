@@ -27,7 +27,7 @@ DEPEND="
 	|| ( kde-base/ksnapshot kde-base/kdegraphics )
 	|| ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork )
 	|| ( kde-base/kdeutils-meta kde-base/kwalletmanager kde-base/kdeutils )
-	|| ( kde-misc/kdocker kde-base/kdemisc )
+	|| ( kde-misc/kdocker kde-base/kdemisc x11-misc/kdocker )
 	|| ( kde-base/superkaramba kde-base/kdeutils )
 	|| ( kde-base/okular kde-base/kpdf kde-base/kdegraphics )
 	kde-misc/gx-mail-notify
