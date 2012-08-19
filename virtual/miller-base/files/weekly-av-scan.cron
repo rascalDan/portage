@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source /etc/make.globals
-source /etc/make.conf
+source "/usr/share/portage/config/make.conf"
+source "/etc/make.conf"
 
 nice clamscan / -ri \
 	--exclude-dir=${PORTDIR} \

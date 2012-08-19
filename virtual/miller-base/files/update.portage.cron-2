@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "/etc/make.globals"
+source "/usr/share/portage/config/make.conf"
 source "/etc/make.conf"
 
 if df -l ${PORTDIR} 2> /dev/null > /dev/null ; then
