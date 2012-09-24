@@ -8,6 +8,7 @@ DEPEND="
 	virtual/miller-base
 	|| ( kde-base/kcalc kde-base/kdeutils )
 	media-video/vlc
+	net-im/skype
 	net-im/pidgin
 	x11-plugins/pidgin-mbpurple
 	x11-misc/xscreensaver
