@@ -2,14 +2,14 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet"
+IUSE="X dotnet odbc mysql postgres"
 
 DEPEND="virtual/miller-base
 	www-client/lynx
 	www-client/chromium
 	|| ( www-client/firefox www-client/icecat )
 	www-client/opera
-	dev-db/apgdiff
+	postgres? ( dev-db/apgdiff )
 	sys-devel/gdb
 	dev-util/valgrind
 	app-text/htmltidy
@@ -32,10 +32,12 @@ DEPEND="virtual/miller-base
 	app-arch/rar
 	net-ftp/ftp
 	media-video/ffmpeg
-	dev-db/postgresql_autodoc
+	postgres? ( dev-db/postgresql_autodoc )
 	dev-db/squirrel-sql
-	dev-db/myodbc
-	dev-db/psqlodbc
+	odbc? (
+			mysql? ( dev-db/myodbc )
+			postgres? ( dev-db/psqlodbc )
+		  )
 	www-apache/mod_transform
 	net-misc/youtube-dl
 	www-servers/apache
@@ -57,7 +59,7 @@ DEPEND="virtual/miller-base
 			=dev-util/monodevelop-database-2.1*
 			=dev-util/monodevelop-debugger-gdb-2.1*
 		)
-		>=dev-db/pgadmin3-1.12
+		postgres? ( >=dev-db/pgadmin3-1.12 )
 		kde-base/kcachegrind
 		app-editors/gvim
 	)"
