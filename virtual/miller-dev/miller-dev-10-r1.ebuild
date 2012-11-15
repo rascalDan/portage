@@ -55,9 +55,9 @@ DEPEND="virtual/miller-base
 		net-analyzer/nmap
 		dotnet? (
 			dev-util/mono-debugger
-			=dev-util/monodevelop-2.1*
-			=dev-util/monodevelop-database-2.1*
-			=dev-util/monodevelop-debugger-gdb-2.1*
+			dev-util/monodevelop
+			dev-util/monodevelop-database
+			dev-util/monodevelop-debugger-gdb
 		)
 		postgres? ( >=dev-db/pgadmin3-1.12 )
 		kde-base/kcachegrind
