@@ -17,7 +17,6 @@ DEPEND="net-dialup/ppp
 	net-fs/samba
 	net-misc/dhcp
 	net-proxy/squid
-	dev-db/myodbc
 	net-nds/smbldap-tools
 	virtual/miller-base
 	virtual/miller-mailserver
