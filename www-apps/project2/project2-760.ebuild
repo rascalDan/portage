@@ -7,7 +7,7 @@ HOMEPAGE="http://project2.randomdan.homeip.net"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="debug +docs odbc postgres +console +web +fastcgi"
+IUSE="debug +docs mysql odbc postgres +console +web +fastcgi"
 
 DEPEND="
 	dev-util/boost-build
@@ -18,10 +18,10 @@ DEPEND="
 	>=sys-devel/gcc-4.5
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
+	mysql? ( dev-db/mysql )
 	odbc? ( dev-db/unixODBC )
 	postgres? ( dev-db/postgresql-base )
 	web? (
-			www-apache/mod_transform
 			fastcgi? (
 				dev-libs/cgicc
 				virtual/httpd-fastcgi
@@ -35,6 +35,7 @@ ESVN_REPO_URI="http://svn.randomdan.homeip.net/src/trunk"
 ESVN_REVISION="${PV}"
 use !debug && var="variant=release"
 use !odbc && odbc="odbc=no"
+use !mysql && odbc="mysql=no"
 use !postgres && pq="pq=no"
 use console && bt="$bt p2console" && it="$it installp2con"
 use web && bt="$bt p2cgi" && it="$it installp2cgi"
@@ -48,7 +49,7 @@ src_compile() {
 	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
-			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${pq} ${bt} -q \
+			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${mysql} ${pq} ${bt} -q \
 			|| die "Compile failed"
 }
 
@@ -56,7 +57,7 @@ src_install() {
 	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
-			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${pq} ${it} -q \
+			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${mysql} ${pq} ${it} -q \
 			--bindir=${D}/usr/share/webapps/project2 --libdir=${D}/usr/lib \
 			|| die "Installed failed"
 	if use docs ; then
