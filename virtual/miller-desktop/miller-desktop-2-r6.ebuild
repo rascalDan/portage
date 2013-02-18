@@ -32,7 +32,7 @@ DEPEND="
 		net-dialup/pptpclient
 		net-dns/openresolv
 		ndiswrapper? ( net-wireless/ndiswrapper )
-		b43? ( net-wireless/b43-firmware )
+		b43? ( sys-firmware/b43-firmware )
 		iwl3945? ( sys-firmware/iwl3945-ucode )
 		)
 	sys-fs/dosfstools
