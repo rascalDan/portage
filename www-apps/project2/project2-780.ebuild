@@ -13,7 +13,7 @@ DEPEND="
 	dev-util/boost-build
 	net-libs/libesmtp
 	www-client/lynx
-	dev-cpp/libxmlpp
+	>=dev-cpp/libxmlpp-2.36
 	sys-libs/zlib
 	>=sys-devel/gcc-4.5
 	>=dev-cpp/glibmm-2.28
