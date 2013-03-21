@@ -8,6 +8,8 @@ minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend ra
 video_cards_nvidia video_cards_radeon"
 
 DEPEND="
+	sys-apps/kexec-tools
+	sys-process/htop
 	sys-apps/less
 	app-admin/eclean-kernel
 	!minimal? ( www-servers/apache )

@@ -7,9 +7,16 @@ make modules -j2 || ( echo "Make modules failed" ; exit 1 )
 make modules_install -j2 || ( echo "Make modules install failed" ; exit 1 )
 emerge -q1 @module-rebuild || exit 1
 make install -j2 || ( echo "Make install failed" ; exit 1 )
+
+KV=$(head /boot/config -n3 | tail -n1 | cut -d ' ' -f 3)
 if [ -x /usr/bin/dracut ] ; then
-	KV=$(head /boot/config -n3 | tail -n1 | cut -d ' ' -f 3)
 	/usr/bin/dracut -H -f --lzma /boot/initramfs-$KV.img $KV
+fi
+if [ -x /usr/sbin/kexec ] ; then
+	if [ -x /run/openrc/started/kexec ] ; then
+		/run/openrc/started/kexec stop
+	fi
+	kexec -l "/boot/vmlinuz-$KV" --append="`cat /proc/cmdline`" --initrd=/boot/initramfs-$KV.img
 fi
 grub2-mkconfig -o /boot/grub2/grub.cfg 
 
