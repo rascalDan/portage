@@ -50,6 +50,7 @@ DEPEND="virtual/miller-base
 		x11-apps/xhost
 		dev-db/tora
 		dev-util/nemiver
+		dev-util/kdbg
 		kde-base/okteta
 		dev-vcs/kdesvn
 		net-analyzer/nmap
