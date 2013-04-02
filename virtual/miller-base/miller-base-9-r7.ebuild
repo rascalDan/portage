@@ -57,7 +57,7 @@ DEPEND="
 			sw-suspend? ( sys-apps/tuxonice-userui
 				|| ( sys-kernel/tuxonice-sources
 					sys-kernel/pf-sources ) ) )
-	hardened? ( sys-kernel/hardened-sources =sys-apps/gradm-2.2.2* )
+	hardened? ( sys-kernel/hardened-sources sys-apps/gradm )
 	!minimal? ( ||
 		( app-text/dos2unix <app-text/unix2dos-5 )
 		( >=app-text/dos2unix-5 !app-text/unix2dos ) )
