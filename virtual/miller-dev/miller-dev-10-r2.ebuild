@@ -16,7 +16,7 @@ DEPEND="virtual/miller-base
 	app-doc/doxygen
 	app-benchmarks/siege
 	dev-util/cppcheck
-	media-fonts/freefont-ttf
+	media-fonts/freefont
 	app-vim/vcscommand
 	net-analyzer/arping
 	dev-util/splint

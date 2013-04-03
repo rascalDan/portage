@@ -14,7 +14,7 @@ DEPEND="virtual/miller-base
 	dev-util/valgrind
 	app-text/htmltidy
 	app-doc/doxygen
-	media-fonts/freefont-ttf
+	media-fonts/freefont
 	app-vim/vcscommand
 	dev-util/splint
 	app-vim/omnicppcomplete
