@@ -1,13 +1,15 @@
+EAPI="4"
 DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet odbc mysql postgres"
+IUSE="X dotnet odbc mysql postgres cxx"
 
-DEPEND="virtual/miller-base
+RDEPEND="
+	virtual/miller-base
 	www-client/lynx
 	www-client/chromium
-	|| ( www-client/firefox www-client/icecat )
+	www-client/firefox
 	www-client/opera
 	postgres? ( dev-db/apgdiff )
 	sys-devel/gdb
@@ -15,12 +17,15 @@ DEPEND="virtual/miller-base
 	app-text/htmltidy
 	app-doc/doxygen
 	app-benchmarks/siege
-	dev-util/cppcheck
+	cxx? (
+			dev-util/cppcheck
+			sys-devel/clang[static-analyzer]
+			app-vim/omnicppcomplete
+			dev-util/splint
+		 )
 	media-fonts/freefont
 	app-vim/vcscommand
 	net-analyzer/arping
-	dev-util/splint
-	app-vim/omnicppcomplete
 	dev-libs/fcgi
 	dev-libs/Ice
 	dev-cpp/glibmm
@@ -34,7 +39,6 @@ DEPEND="virtual/miller-base
 	net-ftp/ftp
 	media-video/ffmpeg
 	postgres? ( dev-db/postgresql_autodoc )
-	dev-db/squirrel-sql
 	odbc? (
 			mysql? ( dev-db/myodbc )
 			postgres? ( dev-db/psqlodbc )
@@ -42,26 +46,35 @@ DEPEND="virtual/miller-base
 	net-misc/youtube-dl
 	www-servers/apache
 	X? (
-		|| ( net-misc/tightvnc net-misc/vnc )
-		net-misc/rdesktop
-		media-gfx/gimp
-		kde-base/kruler
-		net-analyzer/wireshark
-		x11-apps/xhost
-		dev-db/tora
-		dev-util/nemiver
-		dev-util/kdbg
-		kde-base/okteta
-		dev-vcs/kdesvn
-		net-analyzer/nmap
-		dotnet? (
-			dev-util/mono-debugger
-			dev-util/monodevelop
-			dev-util/monodevelop-database
-			dev-util/monodevelop-debugger-gdb
-		)
-		postgres? ( >=dev-db/pgadmin3-1.12 )
-		kde-base/kcachegrind
-		app-editors/gvim
+			|| (
+				net-misc/tightvnc
+				net-misc/vnc
+			   )
+			net-misc/rdesktop
+			media-gfx/gimp
+			kde-base/kruler
+			net-analyzer/wireshark
+			x11-apps/xhost
+			dev-db/tora
+			dev-db/squirrel-sql
+			dev-util/nemiver
+			dev-util/kdbg
+			kde-base/okteta
+			dev-vcs/kdesvn
+			net-analyzer/nmap
+			dotnet? (
+				dev-util/mono-debugger
+				dev-util/monodevelop
+				|| (
+					>=dev-util/monodevelop-4
+					(
+					 dev-util/monodevelop-database
+					 dev-util/monodevelop-debugger-gdb
+					)
+				   )
+				)
+	postgres? ( >=dev-db/pgadmin3-1.12 )
+	kde-base/kcachegrind
+	app-editors/gvim
 	)"
 

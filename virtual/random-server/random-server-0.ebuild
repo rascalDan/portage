@@ -9,7 +9,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="mediaserver"
 
-DEPEND="net-dialup/ppp
+RDEPEND="
+	net-dialup/ppp
 	net-dialup/pptpd
 	net-dns/bind
 	net-dns/ddclient
@@ -27,9 +28,6 @@ DEPEND="net-dialup/ppp
 	www-apps/project2
 	mediaserver? (
 			net-misc/minidlna
-			media-tv/linuxtv-dvb-firmware
 			media-tv/mythtv
 			net-p2p/transmission )
 "
-RDEPEND="${DEPEND}"
-

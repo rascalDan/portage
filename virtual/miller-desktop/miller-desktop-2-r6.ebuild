@@ -1,11 +1,11 @@
-DESCRIPTION="Virtual for Miller servers"
+DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsplash iwl3945
-kde gnome"
+IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsplash kde gnome"
 
-DEPEND="
+RDEPEND="
+	virtual/eject
 	media-gfx/MIB-Ossigeno-Ultimate-Plymouth
 	virtual/miller-base
 	x11-base/xorg-server
@@ -33,7 +33,6 @@ DEPEND="
 		net-dns/openresolv
 		ndiswrapper? ( net-wireless/ndiswrapper )
 		b43? ( sys-firmware/b43-firmware )
-		iwl3945? ( sys-firmware/iwl3945-ucode )
 		)
 	sys-fs/dosfstools
 	sys-boot/syslinux
