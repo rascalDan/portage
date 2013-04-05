@@ -8,7 +8,7 @@ make modules_install -j2 || ( echo "Make modules install failed" ; exit 1 )
 emerge -q1 @module-rebuild || exit 1
 make install -j2 || ( echo "Make install failed" ; exit 1 )
 
-KV=$(head $(ls -lt /boot/config-* | head -n1) -n3 | tail -n1 | cut -d ' ' -f 3)
+KV=$(head $(ls -1t /boot/config-* | head -n1) -n3 | tail -n1 | cut -d ' ' -f 3)
 if [ -x /usr/bin/dracut ] ; then
 	/usr/bin/dracut -H -f --lzma /boot/initramfs-$KV.img $KV
 fi
