@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for base systems"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash
+IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash samba
 minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend raid
 video_cards_nvidia firmware"
 
@@ -44,12 +44,8 @@ RDEPEND="
 			net-dns/bind-tools 
 			www-servers/apache 
 			app-antivirus/clamav 
-			|| (
-				net-fs/mount-cifs
-				net-fs/samba-client
-				net-fs/samba[client]
-			   )
 			)
+	samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
 	firmware? ( sys-kernel/linux-firmware )
 	sys-process/lsof
 	app-portage/layman[subversion]
