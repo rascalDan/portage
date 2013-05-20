@@ -8,7 +8,7 @@ IUSE="perl"
 
 DESCRIPTION="A replication system for the PostgreSQL Database Management System"
 HOMEPAGE="http://slony.info/"
-SRC_URI="http://main.slony.info/downloads/2.1/source/slony1-2.1.1.tar.bz2"
+SRC_URI="http://main.slony.info/downloads/2.1/source/slony1-2.1.3.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="dev-db/postgresql-server
 	perl? ( dev-perl/DBD-Pg )"
-S="${WORKDIR}/slony1-2.1.1"
+S="${WORKDIR}/slony1-2.1.3"
 
 src_compile() {
 	local myconf=""
@@ -44,6 +44,8 @@ src_install() {
 
 	newinitd "${FILESDIR}"/slony1.init slony1 || die "newinitd failed!"
 	newconfd "${FILESDIR}"/slony1.conf slony1 || die "newconfd failed!"
+	insinto /etc/
+	newins "${FILESDIR}"/slony1.cfg slony1.cfg || die "config failed!"
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}"/slony1.logrotate slony1 || die "logrotate failed!"
 }
