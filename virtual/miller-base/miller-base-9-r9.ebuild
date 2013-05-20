@@ -37,6 +37,7 @@ RDEPEND="
 	net-misc/ntp
 	!minimal? (
 			x11-apps/xauth
+			sys-apps/moreutils
 			dev-util/strace
 			net-analyzer/netcat
 			net-ftp/ncftp

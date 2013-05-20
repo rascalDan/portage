@@ -12,6 +12,7 @@ RDEPEND="
 	www-client/firefox
 	www-client/opera
 	postgres? ( dev-db/apgdiff )
+	dev-util/uncrustify
 	sys-devel/gdb
 	dev-util/valgrind
 	app-text/htmltidy
