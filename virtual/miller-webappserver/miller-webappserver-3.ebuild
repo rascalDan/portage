@@ -6,10 +6,8 @@ IUSE=""
 
 RDEPEND="
 	virtual/miller-base
-	dev-db/phppgadmin
 	www-apps/bugzilla
 	www-apps/mythweb
-	net-nds/phpldapadmin
 	www-apps/phpsysinfo
 	www-apps/websvn
 "

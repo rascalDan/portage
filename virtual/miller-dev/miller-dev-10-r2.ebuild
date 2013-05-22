@@ -13,6 +13,7 @@ RDEPEND="
 	www-client/opera
 	postgres? ( dev-db/apgdiff )
 	dev-util/uncrustify
+	net-nds/shelldap
 	sys-devel/gdb
 	dev-util/valgrind
 	app-text/htmltidy
