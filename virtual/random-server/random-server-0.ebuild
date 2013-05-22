@@ -19,7 +19,7 @@ RDEPEND="
 	net-misc/dhcp
 	net-proxy/squid
 	net-nds/smbldap-tools
-	net-nds/shalldap
+	net-nds/shelldap
 	virtual/miller-base
 	virtual/miller-mailserver
 	virtual/miller-postgresql
