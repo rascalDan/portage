@@ -8,8 +8,8 @@ IUSE="X dotnet odbc mysql postgres cxx"
 RDEPEND="
 	virtual/miller-base
 	www-client/lynx
-	www-client/chromium
-	www-client/firefox
+	|| ( www-client/chromium www-client/google-chrome )
+	|| ( www-client/firefox www-client/firefox-bin )
 	www-client/opera
 	postgres? ( dev-db/apgdiff )
 	dev-util/uncrustify

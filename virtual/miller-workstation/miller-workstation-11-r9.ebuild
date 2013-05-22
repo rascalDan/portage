@@ -25,7 +25,10 @@ RDEPEND="
 			www-client/opera
 	   )
 	kde-base/filelight
-	mail-client/thunderbird
+	|| (
+			mail-client/thunderbird-bin
+			mail-client/thunderbird
+	   )
 	games-misc/fortune-mod
 	|| (
 			app-office/libreoffice-bin
