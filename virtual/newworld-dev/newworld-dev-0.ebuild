@@ -26,7 +26,7 @@ RDEPEND="
 	~dev-db/marklogic-5.0
 	dev-vcs/mercurial
 	X? (
-			dev-util/eclipse-sdk
+			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 			media-gfx/gimp
 			dev-db/squirrel-sql[informix]
 			kde-base/okteta

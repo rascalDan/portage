@@ -39,7 +39,7 @@ RDEPEND="
 	net-misc/omniORB
 	www-servers/tomcat:5.5
 	X? (
-			dev-util/eclipse-sdk
+			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 			media-gfx/gimp
 			dev-db/squirrel-sql[mysql]
 			dev-db/tora[mysql]
