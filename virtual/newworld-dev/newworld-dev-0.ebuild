@@ -27,8 +27,9 @@ RDEPEND="
 	dev-vcs/mercurial
 	X? (
 			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
+			dev-util/idea-community
 			media-gfx/gimp
-			dev-db/squirrel-sql[informix]
+			dev-db/squirrel-sql[informix,mysql]
 			kde-base/okteta
 			app-editors/gvim
 	   )"
