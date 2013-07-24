@@ -27,6 +27,7 @@ RDEPEND="
 	virtual/miller-webappserver
 	virtual/miller-webserver
 	www-apps/project2
+	sys-apps/logwatch
 	mediaserver? (
 			net-misc/minidlna
 			media-tv/mythtv
