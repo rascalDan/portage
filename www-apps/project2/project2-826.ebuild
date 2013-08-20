@@ -1,9 +1,9 @@
 EAPI="3"
-inherit subversion
 
 DESCRIPTION="User configured application engine"
 HOMEPAGE="http://project2.randomdan.homeip.net"
 
+SRC_URI="http://releases.randomdan.homeip.net/download/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
@@ -31,8 +31,6 @@ DEPEND="
 	docs? ( app-doc/doxygen )
 	"
 RDEPEND="${DEPEND}"
-ESVN_REPO_URI="http://svn.randomdan.homeip.net/src/trunk"
-ESVN_REVISION="${PV}"
 use !debug && var="variant=release"
 use !odbc && odbc="odbc=no"
 use !mysql && mysql="mysql=no"
