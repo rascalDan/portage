@@ -1,9 +1,9 @@
 EAPI="3"
-inherit subversion
 
 DESCRIPTION="Cluster capable network filesytem"
 HOMEPAGE="http://netfs.randomdan.homeip.net/"
 
+SRC_URI="http://releases.randomdan.homeip.net/download/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
@@ -14,23 +14,22 @@ DEPEND="dev-libs/Ice
 	dev-libs/boost
 	dev-util/boost-build"
 RDEPEND="${DEPEND}"
-ESVN_REPO_URI="http://svn.randomdan.homeip.net/src/trunk"
-ESVN_REVISION="${PV}"
 use !debug && var="variant=release"
+
+src_prepare() {
+	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
+}
 
 src_compile() {
 	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/netfs || die
-	setarch $(uname -m) -RL \
-		${BJAM} ${var} -q cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die
+	setarch $(uname -m) -RL ${BJAM} ${BJAMOPTS} ${var} -q || die
 }
 
 src_install() {
 	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/netfs || die
-	setarch $(uname -m) -RL \
-		${BJAM} ${var} install -qj2 --bindir=${D}/usr/sbin --libdir=${D}/usr/lib \
-				cflags="${CFLAGS}" linkflags="${LDFLAGS}" || die
+	setarch $(uname -m) -RL ${BJAM} ${BJAMOPTS} ${var} install -q --bindir=${D}/usr/sbin --libdir=${D}/usr/lib  || die
 
 	dosym /usr/sbin/netfs /sbin/mount.netfs || die
 
