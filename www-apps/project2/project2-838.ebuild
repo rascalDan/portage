@@ -7,7 +7,7 @@ SRC_URI="http://releases.randomdan.homeip.net/download/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="debug +docs mysql odbc postgres +console +web +fastcgi"
+IUSE="debug +docs mysql odbc postgres +console +web +fastcgi +daemon"
 
 DEPEND="
 	dev-util/boost-build
@@ -38,6 +38,7 @@ use !postgres && pq="pq=no"
 use console && bt="$bt p2console" && it="$it installp2con"
 use web && bt="$bt p2cgi" && it="$it installp2cgi"
 use web && use fastcgi && bt="$bt p2fcgi" && it="$it installp2fcgi"
+use daemon && bt="$bt p2daemon" && it="$it installp2daemon"
 
 src_prepare() {
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
