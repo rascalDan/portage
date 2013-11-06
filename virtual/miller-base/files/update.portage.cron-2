@@ -1,7 +1,6 @@
 #!/bin/bash
 
-source "/usr/share/portage/config/make.globals"
-source "/etc/make.conf"
+eval $(emerge --info | grep '="')
 
 if df -l ${PORTDIR} 2> /dev/null > /dev/null ; then
     emerge --sync --quiet > /dev/null

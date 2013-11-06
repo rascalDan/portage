@@ -1,9 +1,8 @@
 #!/bin/bash
 
-source "/usr/share/portage/config/make.globals"
-source "/etc/make.conf"
+eval $(emerge --info | grep '="')
 
-nice clamscan / -ri \
+nice clamscan -ri --cross-fs=no \
 	--exclude-dir=${PORTDIR} \
 	--exclude-dir=${DISTDIR} \
-	`mount | grep -v ^/dev | grep -v ^rootfs | cut -d ' ' -f 3 | sed -e 's/^/--exclude-dir=/'` 
+	$(mount | grep ^/dev/ | sort -u -k1,1 | cut -d ' ' -f 3 | sort)
