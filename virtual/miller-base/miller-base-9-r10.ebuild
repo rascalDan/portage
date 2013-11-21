@@ -68,6 +68,7 @@ RDEPEND="
 	git? ( dev-vcs/git )
 	bash-completion? ( app-shells/bash-completion )
 	net-misc/wakeonlan
+	sys-boot/plymouth-openrc-plugin
 	"
 
 src_install() {

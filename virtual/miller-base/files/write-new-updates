@@ -1,4 +1,6 @@
 #!/bin/bash
 
-file="/var/www/files/localhost/`hostname`_updates.txt"
-emerge -uDNpvq --with-bdeps=y @world @system > ${file}
+eval $(emerge --info | grep '="')
+updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
+
+emerge -uDNpvq --with-bdeps=y @world @system > ${updates}
