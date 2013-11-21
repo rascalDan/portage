@@ -7,6 +7,7 @@ IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsp
 RDEPEND="
 	virtual/eject
 	media-gfx/MIB-Ossigeno-Ultimate-Plymouth
+	sys-boot/plymouth-openrc-plugin
 	virtual/miller-base
 	x11-base/xorg-server
 	fbsplash? (
