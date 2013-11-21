@@ -1,6 +1,6 @@
 #!/bin/bash
 
-eval $(emerge --info -v | grep '^[A-Z_]\+="[^"]*"$')
+eval $(emerge --info -v | grep '^\(EMERGEEXTRAOPTS\|UPDATESTATEDIR\)="[^"]*"$')
 updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
 depcleans="${UPDATESTATEDIR:-/tmp}/`hostname`_depclean.txt"
 
