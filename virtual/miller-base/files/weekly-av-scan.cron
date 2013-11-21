@@ -1,6 +1,6 @@
 #!/bin/bash
 
-eval $(emerge --info | grep '="')
+eval $(emerge --info -v | grep '^[A-Z_]\+="[^"]*"$')
 
 nice clamscan -ri --cross-fs=no \
 	--exclude-dir=${PORTDIR} \
