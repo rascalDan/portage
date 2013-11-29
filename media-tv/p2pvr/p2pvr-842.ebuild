@@ -7,7 +7,7 @@ EAPI=5
 DESCRIPTION="Project2 based lightweight PVR"
 HOMEPAGE="http://p2pvr.randomdan.homeip.net"
 
-SRC_URI="http://releases.randomdan.homeip.net/download/${P}.tar.bz2"
+SRC_URI="http://releases.randomdan.homeip.net/download/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x64"
@@ -39,4 +39,12 @@ src_install() {
 			${BJAM} ${BJAMOPTS} -q install \
 			--prefix=${D}/usr \
 			|| die "Installed failed"
+	insinto /usr/share/doc/${PN}
+	dodoc doc/*
+	insinto /usr/share/${PN}/ice
+	doins ice/*.ice
+	insinto /etc/${PN}
+	doins .p2config
+	insinto /etc/${PN}/datasources
+	doins datasources/*.xml
 }
