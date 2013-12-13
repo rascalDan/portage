@@ -25,4 +25,7 @@ src_unpack() {
 src_install() {
 	mkdir -p ${D}/var/opt/MarkLogic
 	cp -a ${S}/opt ${D} || die "Install failed"
+	
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/init marklogic
 }

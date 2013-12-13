@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+	use net localmount
+}
+
+start() {
+	ebegin "Starting MarkLogic..."
+	/opt/MarkLogic/bin/MarkLogic
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping MarkLogic..."
+	killall MarkLogic
+	eend $?
+	while ps -fC MarkLogic > /dev/null ; do sleep 1; done
+}
