@@ -25,7 +25,7 @@ RDEPEND="
 	lvmboot? ( >=sys-boot/grub-1.98 )
 	lvmroot? (
 			sys-apps/busybox
-			sys-kernel/dracut[dracut_modules_lvm]
+			|| ( sys-kernel/dracut[dracut_modules_lvm] >=sys-kernel/dracut-036 )
 			)
 	video_cards_nvidia? ( sys-apps/v86d )
 	>=app-portage/gentoolkit-0.2.1
