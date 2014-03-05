@@ -17,6 +17,7 @@ RDEPEND="
 	sys-cluster/glusterfs
 	sys-cluster/netfs
 	sys-apps/ethtool
+	net-misc/unison
 	cdr? ( app-cdr/k3b )
 	sys-apps/hdparm
 	fuse? ( sys-fs/sshfs-fuse )

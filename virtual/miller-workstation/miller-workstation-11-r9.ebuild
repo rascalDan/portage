@@ -39,7 +39,7 @@ RDEPEND="
 	media-sound/clementine
 	kde-base/ksnapshot
 	kde-base/kdeartwork-kscreensaver
-	kde-base/kwallet
+	|| ( kde-base/kwallet kde-base/kwalletmanager )
 	x11-misc/kdocker
 	kde-base/superkaramba
 	kde-base/okular
