@@ -31,6 +31,7 @@ src_install() {
 	cd ${S}/netfs || die
 	setarch $(uname -m) -RL ${BJAM} ${BJAMOPTS} ${var} install -q --bindir=${D}/usr/sbin --libdir=${D}/usr/lib  || die
 	insinto /usr/include/netfs || die
+	doins ${S}/netfs/ice/*.h || die
 	doins ${S}/netfs/ice/bin/*/*/*.h || die
 
 	dosym /usr/sbin/netfs /sbin/mount.netfs || die
