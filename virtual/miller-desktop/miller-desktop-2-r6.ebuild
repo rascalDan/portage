@@ -22,7 +22,7 @@ RDEPEND="
 	x11-apps/mesa-progs
 	networkmanager? (
 		gnome? ( gnome-extra/nm-applet )
-		kde? ( kde-misc/networkmanagement )
+		kde? ( kde-misc/plasma-nm )
 		pptp? ( net-misc/networkmanager-pptp )
 		vpnc? ( net-misc/networkmanager-vpnc )
 			)
