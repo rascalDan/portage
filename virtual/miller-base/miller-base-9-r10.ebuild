@@ -14,7 +14,6 @@ RDEPEND="
 	app-admin/eclean-kernel
 	raid? ( sys-fs/mdadm )
 	app-admin/ide-smart
-	sys-cluster/glusterfs
 	sys-cluster/netfs
 	sys-apps/ethtool
 	net-misc/unison
