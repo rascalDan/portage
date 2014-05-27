@@ -10,6 +10,7 @@ KEYWORDS="x86 amd64"
 IUSE="debug"
 
 DEPEND="dev-libs/Ice
+	sys-fs/fuse
 	dev-cpp/libxmlpp
 	dev-libs/boost
 	dev-util/boost-build"
