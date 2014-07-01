@@ -33,6 +33,7 @@ RDEPEND="
 	dev-java/sun-jre-bin
 	dev-libs/omniEvents
 	net-misc/omniORB
+	virtual/mysql
 	!ischroot? (
 		www-servers/tomcat:5.5
 		www-servers/apache
