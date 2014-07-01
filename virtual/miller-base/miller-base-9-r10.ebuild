@@ -5,36 +5,45 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash samba
 minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend raid
-video_cards_nvidia firmware"
+video_cards_nvidia firmware ischroot"
 
 RDEPEND="
-	sys-apps/kexec-tools
 	sys-process/htop
 	sys-apps/less
-	app-admin/eclean-kernel
-	raid? ( sys-fs/mdadm )
-	app-admin/ide-smart
-	sys-cluster/netfs
-	sys-apps/ethtool
 	net-misc/unison
-	cdr? ( app-cdr/k3b )
-	sys-apps/hdparm
 	fuse? ( sys-fs/sshfs-fuse )
-	xfs? ( sys-fs/xfsdump )
-	sys-fs/lvm2
-	lvmboot? ( >=sys-boot/grub-1.98 )
-	lvmroot? (
-			sys-apps/busybox
-			|| ( sys-kernel/dracut[dracut_modules_lvm] >=sys-kernel/dracut-036 )
-			)
-	video_cards_nvidia? ( sys-apps/v86d )
+	!ischroot? (
+		sys-apps/ethtool
+		sys-cluster/netfs
+		sys-apps/kexec-tools
+		app-admin/eclean-kernel
+		raid? ( sys-fs/mdadm )
+		app-admin/ide-smart
+		cdr? ( app-cdr/k3b )
+		sys-apps/hdparm
+		xfs? ( sys-fs/xfsdump )
+		sys-fs/lvm2
+		lvmboot? ( >=sys-boot/grub-1.98 )
+		lvmroot? (
+				sys-apps/busybox
+				|| ( sys-kernel/dracut[dracut_modules_lvm] >=sys-kernel/dracut-036 )
+				)
+		sys-process/vixie-cron
+		sys-apps/pciutils
+		sys-apps/usbutils
+		net-misc/ntp
+		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
+		firmware? ( sys-kernel/linux-firmware )
+		app-admin/syslog-ng
+		app-admin/logrotate
+		hardened? ( sys-kernel/hardened-sources sys-apps/gradm )
+		sys-boot/grub
+		net-misc/wakeonlan
+		video_cards_nvidia? ( sys-apps/v86d )
+	)
 	>=app-portage/gentoolkit-0.2.1
-	sys-process/vixie-cron
 	app-admin/sudo
 	mail-client/mailx
-	sys-apps/pciutils
-	sys-apps/usbutils
-	net-misc/ntp
 	!minimal? (
 			x11-apps/xauth
 			sys-apps/moreutils
@@ -43,31 +52,28 @@ RDEPEND="
 			net-ftp/ncftp
 			app-text/dos2unix
 			net-dns/bind-tools 
-			www-servers/apache 
-			app-antivirus/clamav 
+			!ischroot? (
+				www-servers/apache 
+				app-antivirus/clamav 
+				)
 			)
-	samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
-	firmware? ( sys-kernel/linux-firmware )
 	sys-process/lsof
 	app-portage/layman[subversion]
-	app-admin/syslog-ng
-	app-admin/logrotate
 	!hardened? ( 
 			sys-devel/prelink
-			!sw-suspend? ( sys-kernel/gentoo-sources )
-			sw-suspend? ( sys-apps/tuxonice-userui
-				|| ( sys-kernel/tuxonice-sources
-					sys-kernel/pf-sources ) ) )
-	hardened? ( sys-kernel/hardened-sources sys-apps/gradm )
+			!ischroot? (
+				!sw-suspend? ( sys-kernel/gentoo-sources )
+				sw-suspend? ( sys-apps/tuxonice-userui
+					|| ( sys-kernel/tuxonice-sources
+						sys-kernel/pf-sources ) ) )
+			)
 	app-misc/screen
-	sys-boot/grub
 	app-vim/gentoo-syntax
 	sys-auth/pam_ldap
 	sys-auth/nss_ldap
 	app-editors/gvim
 	git? ( dev-vcs/git )
 	bash-completion? ( app-shells/bash-completion )
-	net-misc/wakeonlan
 	"
 
 src_install() {
