@@ -3,10 +3,17 @@ DESCRIPTION="Virtual for Pressnet development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X odbc ischroot"
+IUSE="X odbc ischroot strictversions"
 
 RDEPEND="
 	virtual/miller-base
+	strictversions? (
+		=sys-devel/gcc-4.1.2*
+		=sys-devel/gcc-4.4.7*
+		=dev-libs/boost-1.49*
+	)
+	sys-devel/gcc
+	dev-libs/boost
 	www-client/lynx
 	sys-devel/gdb
 	dev-util/valgrind
