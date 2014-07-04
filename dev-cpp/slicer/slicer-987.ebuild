@@ -11,7 +11,7 @@ IUSE="xml json"
 
 DEPEND="dev-libs/Ice
 	xml? ( dev-cpp/libxmlpp )
-	json? ( dev-libs/libjsonpp )
+	json? ( dev-cpp/libjsonpp )
 	dev-libs/boost
 	dev-util/boost-build"
 RDEPEND="${DEPEND}"
@@ -24,10 +24,12 @@ src_compile() {
 	cd ${S}/slicer || die
 	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release -q slicer tool || die
 	use xml && (setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release -q xml || die)
+	use json && (setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release -q json || die)
 }
 
 src_install() {
 	cd ${S}/slicer || die
 	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release install -q --bindir=${D}/usr/bin --libdir=${D}/usr/lib --includedir=${D}/usr/include/slicer || die
 	use xml && (setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release install-xml -q --bindir=${D}/usr/bin --libdir=${D}/usr/lib --includedir=${D}/usr/include/slicer || die)
+	use json && (setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release install-json -q --bindir=${D}/usr/bin --libdir=${D}/usr/lib --includedir=${D}/usr/include/slicer || die)
 }
