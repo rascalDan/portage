@@ -1,0 +1,11 @@
+[Unit]
+Description=MarkLogic
+
+[Service]
+Type=forking
+ExecStart=/opt/MarkLogic/bin/MarkLogic
+PIDFile=/run/MarkLogic.pid
+
+[Install]
+WantedBy=multi-user.target
+
