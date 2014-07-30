@@ -19,7 +19,7 @@ RDEPEND="
 	kde-misc/kwebkitpart
 	|| (
 			www-client/firefox
-			www-client/chromium
+			( www-client/chromium www-plugins/chrome-binary-plugins )
 			www-client/firefox-bin
 			www-client/google-chrome
 			www-client/opera
