@@ -25,6 +25,7 @@ RDEPEND="
 	www-servers/apache
 	~dev-db/marklogic-5.0
 	dev-vcs/mercurial
+	virtual/jdk:1.7
 	X? (
 			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 			dev-util/idea-community
