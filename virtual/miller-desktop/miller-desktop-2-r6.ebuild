@@ -2,12 +2,13 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsplash kde gnome"
+IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsplash kde gnome systemd"
 
 RDEPEND="
 	virtual/eject
 	media-gfx/MIB-Ossigeno-Ultimate-Plymouth
-	sys-boot/plymouth-openrc-plugin
+	!systemd? (
+		sys-boot/plymouth-openrc-plugin )
 	virtual/miller-base
 	x11-base/xorg-server
 	fbsplash? (
