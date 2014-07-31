@@ -24,7 +24,9 @@ RDEPEND="
 	odbc? ( dev-db/myodbc )
 	www-servers/apache
 	~dev-db/marklogic-5.0
+	dev-db/mongodb
 	dev-vcs/mercurial
+	dev-vcs/git
 	virtual/jdk:1.7
 	X? (
 			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
