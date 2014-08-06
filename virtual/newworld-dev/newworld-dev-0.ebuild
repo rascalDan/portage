@@ -16,6 +16,8 @@ RDEPEND="
 	media-fonts/freefont
 	app-vim/vcscommand
 	app-vim/omnicppcomplete
+	app-vim/youcompleteme
+	app-vim/syntastic
 	dev-libs/libxml2
 	dev-java/maven-bin
 	app-shells/gentoo-bashcomp

@@ -12,6 +12,8 @@ RDEPEND="
 		=sys-devel/gcc-4.4.7*
 		=dev-libs/boost-1.49*
 	)
+	app-vim/youcompleteme
+	app-vim/syntastic
 	sys-devel/gcc
 	dev-libs/boost
 	www-client/lynx
