@@ -19,7 +19,7 @@ DEPEND="
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
 	>=dev-libs/Ice-3.5
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	postgres? ( dev-db/postgresql-base )
 	web? (

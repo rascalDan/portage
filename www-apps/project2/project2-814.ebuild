@@ -18,7 +18,7 @@ DEPEND="
 	>=sys-devel/gcc-4.5
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	postgres? ( dev-db/postgresql-base )
 	web? (
