@@ -6,8 +6,8 @@ EAPI=4
 
 DESCRIPTION="MarkLogic"
 HOMEPAGE="http://www.marklogic.com/"
-SRC_URI="http://developer.marklogic.com/download/binaries/5.0/MarkLogic-5.0-5.x86_64.rpm"
-S="${WORKDIR}/MarkLogic-5.0-5.x86_64"
+SRC_URI="http://developer.marklogic.com/download/binaries/5.0/MarkLogic-5.0-6.1.x86_64.rpm"
+S="${WORKDIR}/MarkLogic-5.0-6.1.x86_64"
 
 LICENSE="marklogic"
 SLOT="0"
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	cd ${WORKDIR}
-	rpmunpack ${DISTDIR}/MarkLogic-5.0-5.x86_64.rpm || die "Unpack failed"
+	rpmunpack ${DISTDIR}/MarkLogic-5.0-6.1.x86_64.rpm || die "Unpack failed"
 }
 
 src_install() {

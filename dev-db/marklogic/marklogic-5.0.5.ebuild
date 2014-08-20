@@ -11,7 +11,7 @@ S="${WORKDIR}/MarkLogic-5.0-5.x86_64"
 
 LICENSE="marklogic"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="app-arch/rpm"
@@ -28,4 +28,6 @@ src_install() {
 	
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/init marklogic
+	insinto /usr/lib/systemd/system
+	newins ${FILESDIR}/marklogic.service marklogic.service
 }
