@@ -25,7 +25,7 @@ RDEPEND="
 	net-ftp/ftp
 	odbc? ( dev-db/myodbc )
 	www-servers/apache
-	~dev-db/marklogic-5.0
+	=dev-db/marklogic-5.0*
 	dev-db/mongodb
 	dev-vcs/mercurial
 	dev-vcs/git
