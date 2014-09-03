@@ -1,4 +1,4 @@
-EAPI="3"
+EAPI="5"
 
 DESCRIPTION="Cluster capable network filesytem"
 HOMEPAGE="http://netfs.randomdan.homeip.net/"
@@ -10,7 +10,7 @@ KEYWORDS="x86 amd64"
 IUSE="debug"
 
 DEPEND="dev-libs/Ice
-	>=dev-cpp/slicer-982[xml]
+	>=dev-cpp/slicer-982:=[xml]
 	sys-fs/fuse
 	dev-libs/boost
 	dev-util/boost-build"
