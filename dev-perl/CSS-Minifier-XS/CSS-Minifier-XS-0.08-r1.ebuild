@@ -2,13 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-perl/CSS-Minifier/CSS-Minifier-0.10.0.ebuild,v 1.1 2011/09/01 11:47:30 tove Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=GTERMARS
 MODULE_VERSION=0.08
 inherit perl-module
 
 DESCRIPTION="XS based CSS minifier"
+DEPEND="virtual/perl-Module-Build"
 
 SLOT="0"
 KEYWORDS="amd64 x86"
