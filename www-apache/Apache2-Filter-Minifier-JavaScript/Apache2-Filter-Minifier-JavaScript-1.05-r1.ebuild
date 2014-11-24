@@ -8,14 +8,17 @@ MODULE_AUTHOR="GTERMARS"
 MODULE_VERSION=1.05
 inherit perl-module
 
-DESCRIPTION="Apache2::Filter::Minifier::CSS - CSS minifying output filter"
+DESCRIPTION="Apache2::Filter::Minifier::JavaScript - JS minifying output filter"
 
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="dev-perl/CSS-Minifier
-	dev-perl/CSS-Minifier-XS
+RDEPEND="dev-perl/JavaScript-Minifier-XS
+	dev-perl/JavaScript-Minifier
 	perl-core/Time-HiRes
 	>=www-apache/mod_perl-2"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-perl/Apache-Test
+	virtual/perl-Module-Build"
+
