@@ -8,6 +8,5 @@ RDEPEND="
 	virtual/miller-base
 	www-apps/bugzilla
 	www-apps/mythweb
-	www-apps/phpsysinfo
-	www-apps/websvn
+	www-apps/cgit
 "
