@@ -6,6 +6,7 @@ IUSE=""
 
 RDEPEND="
 	virtual/miller-base
+	www-apps/gentoobrowse
 	www-apps/bugzilla
 	www-apps/mythweb
 	www-apps/cgit
