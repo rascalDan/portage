@@ -10,6 +10,7 @@ RDEPEND="
 	app-vim/youcompleteme
 	app-vim/syntastic
 	www-client/lynx
+	app-admin/webapp-config
 	|| ( www-client/chromium ( www-client/chromium www-plugins/chrome-binary-plugins ) )
 	|| ( www-client/firefox www-client/firefox-bin )
 	www-client/opera
