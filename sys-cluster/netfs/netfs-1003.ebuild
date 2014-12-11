@@ -3,7 +3,7 @@ EAPI="5"
 DESCRIPTION="Cluster capable network filesytem"
 HOMEPAGE="http://netfs.randomdan.homeip.net/"
 
-SRC_URI="http://releases.randomdan.homeip.net/download/${P}.tar.bz2"
+SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"

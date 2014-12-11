@@ -3,7 +3,7 @@ EAPI="3"
 DESCRIPTION="Lightweight native C++ JSON library"
 HOMEPAGE="http://libjsonpp.randomdan.homeip.net/"
 
-SRC_URI="http://releases.randomdan.homeip.net/download/${P}.tar.bz2"
+SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
