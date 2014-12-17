@@ -23,6 +23,7 @@ RDEPEND="
 	app-doc/doxygen
 	app-benchmarks/siege
 	cxx? (
+			dev-util/ccache
 			dev-util/cppcheck
 			sys-devel/clang[static-analyzer]
 			app-vim/omnicppcomplete
