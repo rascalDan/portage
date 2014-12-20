@@ -7,7 +7,7 @@ IUSE="pgmaster"
 
 RDEPEND="
 	virtual/miller-base
-	=dev-db/postgresql-server-9.3*
+	=virtual/postgresql-9.4*[server]
 	>=dev-db/slony1-2
 	pgmaster? ( >=dev-db/slony1-2[perl] )
 "
