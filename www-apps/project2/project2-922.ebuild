@@ -21,7 +21,7 @@ DEPEND="
 	>=dev-libs/Ice-3.5
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	web? (
 			fastcgi? (
 				dev-libs/cgicc
