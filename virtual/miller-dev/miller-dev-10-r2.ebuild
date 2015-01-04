@@ -20,6 +20,7 @@ RDEPEND="
 	app-text/htmltidy
 	app-doc/doxygen
 	app-benchmarks/siege
+	sys-fs/inotify-tools
 	cxx? (
 			dev-util/ccache
 			dev-util/cppcheck
