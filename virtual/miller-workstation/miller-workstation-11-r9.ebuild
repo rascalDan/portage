@@ -3,8 +3,10 @@ DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
+IUSE="systemd"
 
 RDEPEND="
+	systemd? ( kde-misc/kcmsystemd )
 	virtual/miller-base
 	kde-base/kcalc
 	media-video/vlc
