@@ -7,13 +7,11 @@ IUSE="X dotnet odbc mysql postgres cxx"
 
 RDEPEND="
 	virtual/miller-base
+	app-vim/nerdtree
 	app-vim/youcompleteme
 	app-vim/syntastic
 	www-client/lynx
 	app-admin/webapp-config
-	|| ( www-client/chromium ( www-client/chromium www-plugins/chrome-binary-plugins ) )
-	|| ( www-client/firefox www-client/firefox-bin )
-	www-client/opera
 	postgres? ( dev-db/apgdiff )
 	dev-util/uncrustify
 	net-nds/shelldap
@@ -52,6 +50,9 @@ RDEPEND="
 	net-misc/youtube-dl
 	www-servers/apache
 	X? (
+			|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
+			|| ( www-client/firefox www-client/firefox-bin )
+			www-client/opera
 			|| (
 				net-misc/tightvnc
 				net-misc/vnc
