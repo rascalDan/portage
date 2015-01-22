@@ -21,7 +21,6 @@ RDEPEND="
 	virtual/miller-base
 	virtual/miller-mailserver
 	virtual/miller-postgresql
-	dev-db/couchdb
 	virtual/miller-webappserver
 	virtual/miller-webserver
 	www-apps/project2
