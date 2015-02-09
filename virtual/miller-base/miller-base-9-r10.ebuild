@@ -58,7 +58,7 @@ RDEPEND="
 				)
 			)
 	sys-process/lsof
-	app-portage/layman[subversion]
+	app-portage/layman[git]
 	!hardened? ( 
 			sys-devel/prelink
 			!ischroot? (
