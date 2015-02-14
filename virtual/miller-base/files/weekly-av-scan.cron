@@ -3,6 +3,6 @@
 eval $(emerge --info -v | grep '^[A-Z_]\+="[^"]*"$')
 
 nice clamscan -ri --cross-fs=no \
-	--exclude-dir=${PORTDIR} \
 	--exclude-dir=${DISTDIR} \
+	$(emerge --info | sed -ne 's/\s\+location:\s\+\(.*\)/--exclude-dir="\1"/p') \
 	$(mount | grep ^/dev/ | sort -u -k1,1 | cut -d ' ' -f 3 | sort)
