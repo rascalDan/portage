@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for PA New World development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X odbc"
+IUSE="X odbc idea-ultimate"
 
 RDEPEND="
 	virtual/miller-base
@@ -36,7 +36,8 @@ RDEPEND="
 	virtual/jdk:1.7
 	X? (
 			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
-			dev-util/idea-community
+			idea-ultimate? ( dev-util/idea-ultimate )
+			!idea-ultimate? ( dev-util/idea-community )
 			media-gfx/gimp
 			dev-db/squirrel-sql[informix,mysql]
 			kde-base/okteta
