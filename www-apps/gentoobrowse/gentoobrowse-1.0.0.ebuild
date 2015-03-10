@@ -3,7 +3,7 @@ EAPI=5
 inherit webapp depend.apache eutils
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
-SRC_URI="http://releases.randomdan.homeip.net/git/gentoobrowse-1021.tar.bz2"
+SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 HOMEPAGE="http://gentoobrowse.randomdan.homip.net/"
 
 LICENSE="GPL"
