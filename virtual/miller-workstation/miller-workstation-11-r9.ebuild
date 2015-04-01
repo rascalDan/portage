@@ -50,7 +50,7 @@ RDEPEND="
 	kde-base/kdebase-meta
 	media-gfx/geeqie
 	kde-base/ark
-	x11-themes/gtk-engines-qtcurve
+	x11-themes/qtcurve
 	x11-themes/gtk-engines-xfce
 	"
 
