@@ -1,6 +1,9 @@
 #!/bin/bash
 
-eval $(emerge --info -v | grep '^[A-Z_]\+="[^"]*"$')
+eval $(emerge --info -v | grep '^UPDATESTATEDIR="[^"]*"$')
 updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
 
-emerge -uDNpvq --with-bdeps=y @world @system > ${updates}
+tmp="/tmp/$$.updates"
+emerge -uDNpvq --with-bdeps=y @world @system > ${tmp}
+mv ${tmp} ${updates}
+

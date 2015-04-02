@@ -1,6 +1,6 @@
 #!/bin/bash
 
-eval $(emerge --info -v | grep '^[A-Z_]\+="[^"]*"$')
+eval $(emerge --info -v | grep '^PORTDIR="[^"]*"$')
 
 if df -l ${PORTDIR} 2> /dev/null > /dev/null ; then
     emerge --sync --quiet > /dev/null
