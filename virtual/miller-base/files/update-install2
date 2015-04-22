@@ -1,5 +1,6 @@
 #!/bin/bash
 
+unset ABI ABI_X86
 eval $(emerge --info -v | grep '^\(EMERGEEXTRAOPTS\|UPDATESTATEDIR\)="[^"]*"$')
 updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
 depcleans="${UPDATESTATEDIR:-/tmp}/`hostname`_depclean.txt"
@@ -18,5 +19,5 @@ TTYTEST=$?
 
 etc-update --preen
 if [ $TTYTEST -eq 0 ]; then
-	etc-update 
+	etc-update
 fi

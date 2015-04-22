@@ -1,5 +1,6 @@
 #!/bin/bash
 
+unset ABI ABI_X86
 eval $(emerge --info -v | grep '^UPDATESTATEDIR="[^"]*"$')
 updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
 
