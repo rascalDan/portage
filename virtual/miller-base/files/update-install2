@@ -17,7 +17,7 @@ TTYTEST=$?
 	emerge -q --keep-going @preserved-rebuild ${EMERGEEXTRAOPTS} \
 )
 
-etc-update --preen
+/usr/sbin/etc-update --preen
 if [ $TTYTEST -eq 0 ]; then
-	etc-update
+	/usr/sbin/etc-update
 fi
