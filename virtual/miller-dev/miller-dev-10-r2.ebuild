@@ -46,8 +46,8 @@ RDEPEND="
 	postgres? ( dev-db/postgresql_autodoc )
 	odbc? (
 			mysql? ( dev-db/myodbc )
-			postgres? ( dev-db/psqlodbc )
 		  )
+	postgres? ( dev-db/psqlodbc )
 	net-misc/youtube-dl
 	www-servers/apache
 	X? (
