@@ -1,4 +1,4 @@
-EAPI="3"
+EAPI="5"
 
 DESCRIPTION="User configured application engine"
 HOMEPAGE="http://project2.randomdan.homeip.net"
@@ -7,7 +7,7 @@ SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="debug +docs mysql odbc postgres +console +web +fastcgi +daemon"
+IUSE="debug +docs mysql odbc postgres sqlite +console +web +fastcgi +daemon"
 
 DEPEND="
 	dev-util/boost-build
@@ -22,6 +22,7 @@ DEPEND="
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	postgres? ( dev-db/postgresql )
+	sqlite? ( dev-db/sqlite )
 	web? (
 			fastcgi? (
 				dev-libs/cgicc
@@ -30,12 +31,14 @@ DEPEND="
 				)
 		 )
 	docs? ( app-doc/doxygen )
+	dev-cpp/slicer:=
 	"
 RDEPEND="${DEPEND}"
-use !debug && var="variant=release"
-use !odbc && odbc="odbc=no"
-use !mysql && mysql="mysql=no"
-use !postgres && pq="pq=no"
+use !debug && opts+=" variant=release"
+use !odbc && opts+=" odbc=no"
+use !mysql && opts+=" mysql=no"
+use !postgres && opts+=" pq=no"
+use !sqlite && opts+=" sqlite=no"
 use console && bt="$bt p2console" && it="$it installp2con"
 use web && bt="$bt p2cgi" && it="$it installp2cgi"
 use web && use fastcgi && bt="$bt p2fcgi" && it="$it installp2fcgi"
@@ -46,23 +49,21 @@ src_prepare() {
 }
 
 src_compile() {
-	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
-			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${mysql} ${pq} ${bt} -q \
+			b2 ${BJAMOPTS} ${opts} ${bt} -q \
 			|| die "Compile failed"
 }
 
 src_install() {
-	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
-			${BJAM} ${BJAMOPTS} ${var} ${odbc} ${mysql} ${pq} ${it} -q \
+			b2 ${BJAMOPTS} ${opts} ${it} -q \
 			--prefix=${D}/usr \
 			|| die "Installed failed"
-	${BJAM} installheaders --includedir=${D}/usr/include/project2 || die "Install headers failed"
-	${BJAM} installheadersmisc --includedir=${D}/usr/include/project2/lib || die "Install headers failed"
-	${BJAM} installheadersdb --includedir=${D}/usr/include/project2/sql || die "Install headers failed"
+	b2 installheaders --includedir=${D}/usr/include/project2 || die "Install headers failed"
+	b2 installheadersmisc --includedir=${D}/usr/include/project2/lib || die "Install headers failed"
+	b2 installheadersdb --includedir=${D}/usr/include/project2/sql || die "Install headers failed"
 	if use docs ; then
 		mkdir -p ${D}/usr/share/doc/${PN}
 		(cat Doxyfile ; echo OUTPUT_DIRECTORY=${D}/usr/share/doc/${PN}) | doxygen - || die "Build docs failed"
