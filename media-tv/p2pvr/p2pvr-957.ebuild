@@ -14,7 +14,7 @@ IUSE=""
 DEPEND="
 	dev-util/boost-build
 	>=dev-libs/Ice-3.5
-	>=www-apps/project2-955[postgres,daemon]
+	www-apps/project2[postgres,daemon]
 "
 RDEPEND="${DEPEND}"
 
