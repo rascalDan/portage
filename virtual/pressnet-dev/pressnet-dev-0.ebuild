@@ -24,7 +24,6 @@ RDEPEND="
 	media-fonts/freefont
 	app-vim/vcscommand
 	dev-util/splint
-	app-vim/omnicppcomplete
 	dev-cpp/libxmlpp
 	dev-libs/libxml2
 	dev-java/maven-bin

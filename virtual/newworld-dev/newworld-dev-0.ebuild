@@ -15,7 +15,6 @@ RDEPEND="
 	app-doc/doxygen
 	media-fonts/freefont
 	app-vim/vcscommand
-	app-vim/omnicppcomplete
 	app-vim/youcompleteme
 	app-vim/syntastic
 	dev-libs/libxml2

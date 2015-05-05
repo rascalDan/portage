@@ -25,7 +25,6 @@ RDEPEND="
 			dev-util/ccache
 			dev-util/cppcheck
 			sys-devel/clang[static-analyzer]
-			app-vim/omnicppcomplete
 			dev-util/splint
 		 )
 	media-fonts/freefont
