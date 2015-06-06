@@ -59,14 +59,14 @@ RDEPEND="
 			   )
 			net-misc/rdesktop
 			media-gfx/gimp
-			kde-base/kruler
+			kde-apps/kruler
 			net-analyzer/wireshark
 			x11-apps/xhost
 			dev-db/tora
 			dev-db/squirrel-sql
 			dev-util/nemiver
 			dev-util/kdbg
-			kde-base/okteta
+			kde-apps/okteta
 			subversion? ( dev-vcs/kdesvn )
 			net-analyzer/nmap
 			dotnet? (
@@ -81,7 +81,7 @@ RDEPEND="
 				   )
 				)
 	postgres? ( >=dev-db/pgadmin3-1.12 )
-	kde-base/kcachegrind
+	kde-apps/kcachegrind
 	app-editors/gvim
 	)"
 

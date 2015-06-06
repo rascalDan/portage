@@ -16,7 +16,7 @@ RDEPEND="
 			media-gfx/splash-themes-livecd
 			)
 	media-sound/alsa-utils
-	kde? ( kde-base/kmix )
+	kde? ( kde-apps/kmix )
 	!networkmanager? (
 		net-misc/dhcp )
 	sys-power/acpid

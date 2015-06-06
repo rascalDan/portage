@@ -8,7 +8,7 @@ IUSE="systemd"
 RDEPEND="
 	systemd? ( kde-misc/kcmsystemd )
 	virtual/miller-base
-	kde-base/kcalc
+	kde-apps/kcalc
 	media-video/vlc
 	net-im/skype
 	net-im/pidgin
@@ -17,7 +17,7 @@ RDEPEND="
 	media-fonts/corefonts
 	kde-misc/basket
 	virtual/jre
-	kde-base/krdc
+	kde-apps/krdc
 	kde-misc/kwebkitpart
 	|| (
 			www-client/firefox
@@ -26,7 +26,7 @@ RDEPEND="
 			www-client/google-chrome
 			www-client/opera
 	   )
-	kde-base/filelight
+	kde-apps/filelight
 	|| (
 			mail-client/thunderbird-bin
 			mail-client/thunderbird
@@ -39,17 +39,17 @@ RDEPEND="
 	media-gfx/gimp
 	www-plugins/adobe-flash
 	media-sound/clementine
-	kde-base/ksnapshot
-	kde-base/kdeartwork-kscreensaver
-	|| ( kde-base/kwallet kde-base/kwalletmanager )
+	kde-apps/ksnapshot
+	kde-apps/kdeartwork-kscreensaver
+	|| ( kde-frameworks/kwallet kde-apps/kwalletmanager )
 	x11-misc/kdocker
-	kde-base/superkaramba
-	kde-base/okular
+	kde-apps/superkaramba
+	kde-apps/okular
 	kde-misc/gx-mail-notify
-	kde-base/gwenview
-	kde-base/kdebase-meta
+	kde-apps/gwenview
+	kde-apps/kdebase-meta
 	media-gfx/geeqie
-	kde-base/ark
+	kde-apps/ark
 	x11-themes/qtcurve
 	x11-themes/gtk-engines-xfce
 	"
