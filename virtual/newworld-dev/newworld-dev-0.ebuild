@@ -39,7 +39,7 @@ RDEPEND="
 			!idea-ultimate? ( dev-util/idea-community )
 			media-gfx/gimp
 			dev-db/squirrel-sql[informix,mysql]
-			kde-base/okteta
+			kde-apps/okteta
 			app-editors/gvim
 	   )"
 

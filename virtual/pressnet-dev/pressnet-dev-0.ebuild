@@ -55,9 +55,9 @@ RDEPEND="
 		dev-db/squirrel-sql[mysql]
 		dev-db/tora[mysql]
 		dev-util/nemiver
-		kde-base/okteta
+		kde-apps/okteta
 		dev-vcs/kdesvn
-		kde-base/kcachegrind
+		kde-apps/kcachegrind
 		app-editors/gvim
    )"
 
