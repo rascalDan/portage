@@ -10,7 +10,7 @@ KEYWORDS="x86 amd64"
 IUSE="debug"
 
 DEPEND="dev-libs/Ice
-	>=dev-cpp/slicer-1002:=[xml]
+	>=dev-cpp/slicer-0.8.1:=[xml]
 	sys-fs/fuse
 	dev-libs/boost
 	dev-util/boost-build"

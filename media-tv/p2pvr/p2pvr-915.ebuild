@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="
 	dev-util/boost-build
-	>=dev-cpp/slicer-1002:=
+	>=dev-cpp/slicer-0.8.1:=
 	>=dev-libs/Ice-3.5
 	www-apps/project2[postgres,daemon]
 "
