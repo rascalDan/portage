@@ -13,8 +13,9 @@ IUSE=""
 
 DEPEND="
 	dev-util/boost-build
+	>=dev-cpp/slicer-0.8.1:=
 	>=dev-libs/Ice-3.5
-	www-apps/project2[postgres,daemon]
+	>=www-apps/project2-1.1.4[postgres,daemon]
 "
 RDEPEND="${DEPEND}"
 
@@ -27,10 +28,9 @@ pkg_preinst() {
 }
 
 src_compile() {
-	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/p2pvr || die
 	setarch $(uname -m) -RL \
-		${BJAM} variant=release ${BJAMOPTS} -q \
+		b2 variant=release ${BJAMOPTS} -q finallib \
 		|| die "Compile failed"
 }
 
@@ -42,15 +42,17 @@ src_install() {
 	doins ice/*.ice || die
 	insinto /usr/share/p2pvr/sql || die
 	doins datasources/schema.sql || die
+	insinto /usr/lib/systemd/system || die
+	doins etc/systemd/* || die
 	doinitd etc/init.d/* || die
 	insinto /etc/p2pvr || die
 	doins etc/p2config || die
 	insinto /etc/p2pvr/datasources || die
 	doins datasources/postgres.xml || die
 
-	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	setarch $(uname -m) -RL \
-		${BJAM} variant=release ${BJAMOPTS} -q install \
+		b2 variant=release ${BJAMOPTS} -q install \
 		--prefix=${D}/usr \
-		|| die "Installed failed"
+		|| die "Install failed"
 }
+
