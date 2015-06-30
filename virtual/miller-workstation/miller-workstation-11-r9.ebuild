@@ -6,7 +6,7 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="systemd"
 
 RDEPEND="
-	systemd? ( kde-misc/kcmsystemd )
+	systemd? ( kde-misc/systemd-kcm )
 	virtual/miller-base
 	kde-apps/kcalc
 	media-video/vlc
