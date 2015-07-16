@@ -13,6 +13,7 @@ RDEPEND="
 	net-im/skype
 	net-im/pidgin
 	x11-plugins/pidgin-mbpurple
+	x11-plugins/purple-facebook
 	x11-misc/xscreensaver
 	media-fonts/corefonts
 	kde-misc/basket
