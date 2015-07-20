@@ -29,6 +29,8 @@ RDEPEND="
 		 )
 	media-fonts/freefont
 	app-vim/vcscommand
+	dev-vcs/git
+	dev-vcs/git-extras
 	net-analyzer/arping
 	dev-libs/fcgi
 	dev-libs/Ice

@@ -32,6 +32,7 @@ RDEPEND="
 	dev-db/mongodb
 	dev-vcs/mercurial
 	dev-vcs/git
+	dev-vcs/git-extras
 	virtual/jdk:1.7
 	X? (
 			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
