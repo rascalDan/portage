@@ -12,7 +12,7 @@ inherit toolchain-funcs versionator python-r1 mono-env ruby-ng db-use
 
 DESCRIPTION="ICE middleware C++ library and generator tools"
 HOMEPAGE="http://www.zeroc.com/"
-SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~ia64 x86 ~x86-linux ~x64-macos"
@@ -115,9 +115,9 @@ src_configure() {
 		embedded_runpath_prefix=\"${EPREFIX}/usr\"
 		LP64=yes"
 
-	use ncurses && OPTIONS="${MAKE_RULES} USE_READLINE=yes" || MAKE_RULES="${MAKE_RULES} USE_READLINE=no"
-	use debug && OPTIONS"${MAKE_RULES} OPTIMIZE=no" || MAKE_RULES="${MAKE_RULES} OPTIMIZE=yes"
-	use c++0x && OPTIONS"${MAKE_RULES} CPP11=no" || MAKE_RULES="${MAKE_RULES} CPP11=yes"
+	use ncurses && MAKE_RULES="${MAKE_RULES} USE_READLINE=yes" || MAKE_RULES="${MAKE_RULES} USE_READLINE=no"
+	use debug && MAKE_RULES="${MAKE_RULES} OPTIMIZE=no" || MAKE_RULES="${MAKE_RULES} OPTIMIZE=yes"
+	use c++0x && MAKE_RULES="${MAKE_RULES} CPP11=yes" || MAKE_RULES="${MAKE_RULES} CPP11=no"
 
 	local BERKDB_VERSION="$(suitable_db_version)"
 	MAKE_RULES="${MAKE_RULES} DB_FLAGS=-I$(db_includedir ${BERKDB_VERSION})"
