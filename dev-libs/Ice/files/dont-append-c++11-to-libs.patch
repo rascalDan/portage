@@ -1,0 +1,22 @@
+--- ice-3.6.0/cpp/src/Ice/DynamicLibrary.cpp
++++ ice-3.6.0/cpp/src/Ice/DynamicLibrary.cpp
+@@ -89,9 +89,6 @@
+     if(comma == string::npos)
+     {
+         libName = libSpec;
+-#  if defined(ICE_CPP11) && defined(__GLIBCXX__)
+-        libName += "++11";
+-#  endif
+         if(useIceVersion)
+         {
+             int majorVersion = (ICE_INT_VERSION / 10000);
+@@ -119,9 +116,6 @@
+             return 0;
+         }
+         libName = libSpec.substr(0, comma);
+-#  if defined(ICE_CPP11) && defined(__GLIBCXX__)
+-        libName += "++11";
+-#  endif
+         version = libSpec.substr(comma + 1);
+     }
+ 
