@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet subversion odbc mysql postgres cxx"
+IUSE="X dotnet odbc mysql postgres cxx"
 
 RDEPEND="
 	virtual/miller-base
@@ -69,7 +69,6 @@ RDEPEND="
 			dev-util/nemiver
 			dev-util/kdbg
 			kde-apps/okteta
-			subversion? ( dev-vcs/kdesvn )
 			net-analyzer/nmap
 			dotnet? (
 				dev-util/mono-debugger

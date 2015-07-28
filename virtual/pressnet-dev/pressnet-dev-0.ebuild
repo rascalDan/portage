@@ -12,6 +12,7 @@ RDEPEND="
 		=sys-devel/gcc-4.4.7*
 		=dev-libs/boost-1.49*
 	)
+	dev-vcs/git
 	app-vim/youcompleteme
 	app-vim/syntastic
 	sys-devel/gcc
@@ -56,7 +57,6 @@ RDEPEND="
 		dev-db/tora[mysql]
 		dev-util/nemiver
 		kde-apps/okteta
-		dev-vcs/kdesvn
 		kde-apps/kcachegrind
 		app-editors/gvim
    )"

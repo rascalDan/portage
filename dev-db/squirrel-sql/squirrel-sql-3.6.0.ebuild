@@ -13,7 +13,7 @@ DEPEND="virtual/jre"
 RDEPEND="${DEPEND}
 	informix? ( dev-java/jdbc-informix )
 	jaybird? ( dev-java/jdbc-jaybird )
-	mssql? ( dev-java/jdbc-mssqlserver )
+	mssql? ( dev-java/jtds )
 	mysql? ( dev-java/jdbc-mysql )
 	oracle? ( dev-java/jdbc-oracle-bin )
 	postgres? ( dev-java/jdbc-postgresql )

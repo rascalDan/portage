@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for PA New World development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X odbc idea-ultimate"
+IUSE="X mssql odbc idea-ultimate"
 
 RDEPEND="
 	virtual/miller-base
@@ -23,10 +23,13 @@ RDEPEND="
 	dev-java/oracle-jdk-bin:1.7
 	dev-java/oracle-jdk-bin:1.8
 	app-text/trang
+	app-benchmarks/jmeter
 	app-shells/gentoo-bashcomp
 	app-arch/rar
 	net-ftp/ftp
 	odbc? ( dev-db/myodbc )
+	mssql? ( dev-db/freetds )
+	dev-vcs/cvs2svn
 	www-servers/apache
 	=dev-db/marklogic-5.0*
 	dev-db/mongodb
@@ -34,6 +37,7 @@ RDEPEND="
 	dev-vcs/git
 	dev-vcs/git-extras
 	virtual/jdk:1.7
+	www-servers/tomcat:7
 	X? (
 			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 			idea-ultimate? ( dev-util/idea-ultimate )
