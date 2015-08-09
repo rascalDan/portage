@@ -2,7 +2,7 @@ EAPI=5
 
 inherit webapp depend.apache eutils
 
-DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
+DESCRIPTION="Gentoo Browse is a Project2 based web site for viewing Gentoo packages"
 SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 HOMEPAGE="http://gentoobrowse.randomdan.homip.net/"
 
