@@ -31,6 +31,7 @@ RDEPEND="
 	app-vim/vcscommand
 	dev-vcs/git
 	dev-vcs/git-extras
+	dev-util/patchutils
 	net-analyzer/arping
 	dev-libs/fcgi
 	dev-libs/Ice
