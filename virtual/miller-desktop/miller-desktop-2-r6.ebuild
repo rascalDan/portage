@@ -2,7 +2,7 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsplash kde gnome systemd"
+IUSE="vpnc pptp wifi ndiswrapper b43 networkmanager input_devices_synaptics fbsplash kde gnome systemd plasma"
 
 RDEPEND="
 	virtual/eject
@@ -23,7 +23,8 @@ RDEPEND="
 	x11-apps/mesa-progs
 	networkmanager? (
 		gnome? ( gnome-extra/nm-applet )
-		kde? ( kde-misc/plasma-nm )
+		kde? ( !plasma? ( kde-misc/plasma-nm ) )
+		plasma? ( kde-plasma/plasma-nm )
 		pptp? ( net-misc/networkmanager-pptp )
 		vpnc? ( net-misc/networkmanager-vpnc )
 			)

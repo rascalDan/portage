@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="systemd"
+IUSE="systemd plasma"
 
 RDEPEND="
 	systemd? ( kde-misc/systemd-kcm )
@@ -42,13 +42,19 @@ RDEPEND="
 	media-sound/clementine
 	kde-apps/ksnapshot
 	kde-apps/kdeartwork-kscreensaver
-	|| ( kde-frameworks/kwallet kde-apps/kwalletmanager )
+	kde-apps/kwalletmanager
 	x11-misc/kdocker
 	kde-apps/superkaramba
 	kde-apps/okular
-	kde-misc/gx-mail-notify
 	kde-apps/gwenview
-	kde-apps/kdebase-meta
+	kde-apps/dolphin
+	kde-apps/konsole
+	!plasma? ( kde-apps/kdebase-meta
+		kde-base/kdm
+		kde-base/kdebase-startkde
+		kde-misc/gx-mail-notify )
+	plasma? ( kde-plasma/plasma-meta
+		x11-plugins/pidgin-indicator )
 	media-gfx/geeqie
 	kde-apps/ark
 	x11-themes/qtcurve
