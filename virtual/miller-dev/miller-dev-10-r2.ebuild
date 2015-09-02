@@ -33,6 +33,7 @@ RDEPEND="
 	dev-vcs/git-extras
 	dev-util/patchutils
 	net-analyzer/arping
+	dev-libs/libadhocutil
 	dev-libs/fcgi
 	dev-libs/Ice
 	dev-cpp/glibmm
