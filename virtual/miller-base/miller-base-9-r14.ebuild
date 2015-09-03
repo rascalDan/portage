@@ -10,8 +10,6 @@ video_cards_nvidia firmware ischroot"
 RDEPEND="
 	sys-process/htop
 	sys-apps/less
-	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.02*
 	fuse? ( sys-fs/sshfs-fuse )
 	!ischroot? (
 		sys-apps/ethtool

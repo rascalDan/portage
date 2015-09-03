@@ -6,6 +6,8 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="systemd plasma"
 
 RDEPEND="
+	=net-misc/unison-2.48*
+	=dev-lang/ocaml-4.02*
 	systemd? ( kde-misc/systemd-kcm )
 	virtual/miller-base
 	kde-apps/kcalc
