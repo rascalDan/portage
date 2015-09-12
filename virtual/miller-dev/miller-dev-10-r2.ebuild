@@ -19,6 +19,7 @@ RDEPEND="
 	net-nds/shelldap
 	sys-devel/gdb
 	dev-util/valgrind
+	dev-util/lcov
 	app-text/htmltidy
 	app-doc/doxygen
 	app-benchmarks/siege
