@@ -12,7 +12,7 @@ inherit toolchain-funcs versionator python-r1 mono-env ruby-ng db-use
 
 DESCRIPTION="ICE middleware C++ library and generator tools"
 HOMEPAGE="http://www.zeroc.com/"
-SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV/_/-}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~ia64 x86 ~x86-linux ~x64-macos"
@@ -45,7 +45,8 @@ DEPEND="${RDEPEND}
 # TODO: java bindings
 
 #overwrite ruby-ng.eclass default
-S="${WORKDIR}/${P,,}"
+S="${P,,}"
+S="${WORKDIR}/${S/_/-}"
 
 pkg_setup() {
 	# prevent ruby-ng.eclass from messing with src_unpack
@@ -56,6 +57,7 @@ src_unpack() {
 	# prevent ruby-ng.eclass from messing with src_unpack
 	default
 	epatch ${FILESDIR}/dont-separate-c++11-libs.patch
+	epatch ${FILESDIR}/dont-append-c++11-to-libs.patch
 }
 
 src_prepare() {
