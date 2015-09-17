@@ -59,7 +59,6 @@ RDEPEND="
 		x11-plugins/pidgin-indicator )
 	media-gfx/geeqie
 	kde-apps/ark
-	x11-themes/qtcurve
-	x11-themes/gtk-engines-xfce
+	x11-themes/oxygen-gtk
 	"
 
