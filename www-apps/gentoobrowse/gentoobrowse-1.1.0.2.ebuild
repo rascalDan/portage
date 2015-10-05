@@ -11,7 +11,14 @@ KEYWORDS="amd64 x86"
 
 IUSE=""
 
-DEPEND="<www-apps/project2-1.1.5[fastcgi,postgres]"
+DEPEND="
+	|| ( www-apps/project2[fastcgi,postgres]
+		(
+			>=www-apps/project2-1.2[fastcgi]
+			dev-libs/libdbpp-postgresql
+		 )
+		)
+	"
 
 pkg_setup() {
 	webapp_pkg_setup
