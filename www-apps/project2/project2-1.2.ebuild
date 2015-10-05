@@ -9,16 +9,13 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="+docs unittest +console +web +fastcgi +daemon"
 
-DEPEND="
-	dev-util/boost-build
-	sys-devel/flex
+RDEPEND="
 	net-libs/libesmtp
-	dev-libs/libadhocutil
+	>=dev-libs/libadhocutil-0.2
 	dev-libs/libdbpp
 	www-client/lynx
 	>=dev-cpp/libxmlpp-2.36
 	sys-libs/zlib
-	>=sys-devel/gcc-4.5
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
 	>=dev-libs/Ice-3.5
@@ -29,10 +26,14 @@ DEPEND="
 				dev-libs/fcgi
 				)
 		 )
-	docs? ( app-doc/doxygen )
 	dev-cpp/slicer:=
 	"
-RDEPEND="${DEPEND}"
+
+DEPEND="${RDEPEND}
+	dev-util/boost-build
+	sys-devel/flex
+	docs? ( app-doc/doxygen )
+"
 
 src_prepare() {
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
