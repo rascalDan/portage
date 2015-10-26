@@ -70,7 +70,6 @@ RDEPEND="
 			net-analyzer/wireshark
 			x11-apps/xhost
 			dev-db/squirrel-sql
-			dev-util/nemiver
 			dev-util/kdbg
 			kde-apps/okteta
 			net-analyzer/nmap

@@ -53,7 +53,7 @@ RDEPEND="
 		www-client/opera
 		media-gfx/gimp
 		dev-db/squirrel-sql[mysql]
-		dev-util/nemiver
+		dev-util/kdbg
 		kde-apps/okteta
 		kde-apps/kcachegrind
 		app-editors/gvim
