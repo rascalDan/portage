@@ -69,7 +69,6 @@ RDEPEND="
 			kde-apps/kruler
 			net-analyzer/wireshark
 			x11-apps/xhost
-			dev-db/tora
 			dev-db/squirrel-sql
 			dev-util/nemiver
 			dev-util/kdbg

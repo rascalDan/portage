@@ -54,7 +54,6 @@ RDEPEND="
 		|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 		media-gfx/gimp
 		dev-db/squirrel-sql[mysql]
-		dev-db/tora[mysql]
 		dev-util/nemiver
 		kde-apps/okteta
 		kde-apps/kcachegrind
