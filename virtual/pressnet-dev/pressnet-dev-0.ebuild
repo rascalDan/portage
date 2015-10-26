@@ -51,7 +51,6 @@ RDEPEND="
 		www-client/chromium
 		www-client/firefox
 		www-client/opera
-		|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 		media-gfx/gimp
 		dev-db/squirrel-sql[mysql]
 		dev-util/nemiver
