@@ -48,8 +48,8 @@ RDEPEND="
 		www-servers/apache
 	)
 	X? (
-		www-client/chromium
-		www-client/firefox
+		|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
+		|| ( www-client/firefox www-client/firefox-bin )
 		www-client/opera
 		media-gfx/gimp
 		dev-db/squirrel-sql[mysql]
