@@ -14,6 +14,7 @@ RDEPEND="
 	app-text/htmltidy
 	app-doc/doxygen
 	media-fonts/freefont
+	media-fonts/hack
 	app-vim/vcscommand
 	app-vim/youcompleteme
 	app-vim/syntastic

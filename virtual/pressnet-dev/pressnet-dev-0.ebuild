@@ -23,6 +23,7 @@ RDEPEND="
 	app-text/htmltidy
 	app-doc/doxygen
 	media-fonts/freefont
+	media-fonts/hack
 	app-vim/vcscommand
 	dev-util/splint
 	dev-cpp/libxmlpp

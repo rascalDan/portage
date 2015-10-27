@@ -31,6 +31,7 @@ RDEPEND="
 			dev-util/splint
 		 )
 	media-fonts/freefont
+	media-fonts/hack
 	app-vim/vcscommand
 	dev-vcs/git
 	dev-vcs/git-extras
