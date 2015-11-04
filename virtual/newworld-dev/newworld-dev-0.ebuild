@@ -8,8 +8,8 @@ IUSE="X mssql odbc idea-ultimate"
 RDEPEND="
 	virtual/miller-base
 	www-client/lynx
-	www-client/chromium
-	www-client/firefox
+	|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
+	|| ( www-client/firefox www-client/firefox-bin )
 	www-client/opera
 	app-text/htmltidy
 	app-doc/doxygen
