@@ -39,8 +39,7 @@ RDEPEND="
 	app-vim/tt2-syntax
 	dev-java/commons-fileupload
 	dev-java/jakarta-jstl
-	dev-java/sun-jdk
-	dev-java/sun-jre-bin
+	dev-java/sun-jdk:1.6
 	dev-libs/omniEvents
 	net-misc/omniORB
 	virtual/mysql
