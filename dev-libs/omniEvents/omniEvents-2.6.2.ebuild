@@ -20,6 +20,7 @@ S=${WORKDIR}/omniEvents-2_6_2
 
 src_prepare() {
 	epatch "${FILESDIR}"/gcc-4.3.patch || die
+	epatch "${FILESDIR}"/parallel-make.patch || die
 }
 
 src_install() {

@@ -1,0 +1,16 @@
+--- config.mk.in	2005-05-11 19:44:18.000000000 +0100
++++ config.mk.in	2015-11-19 16:50:28.261688678 +0000
+@@ -176,10 +176,12 @@
+ ## Suffix rules for compiling .idl & .cc files.
+ ##
+ 
+-.SUFFIXES: .idl .cc .$(OBJEXT)
++.SUFFIXES: .idl .cc .hh .$(OBJEXT)
+ 
+ .idl.cc:
+ 	$(IDL) $(IDLFLAGS) $<
++.idl.hh:
++	$(IDL) $(IDLFLAGS) $<
+ 
+ .cc.$(OBJEXT):
+ 	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) $<
