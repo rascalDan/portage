@@ -11,6 +11,7 @@ IUSE="debug"
 
 DEPEND="dev-libs/Ice
 	>=dev-cpp/slicer-0.8.1:=[xml]
+	sys-apps/icebox-service
 	dev-libs/libadhocutil
 	sys-fs/fuse
 	dev-libs/boost
@@ -42,6 +43,9 @@ src_install() {
 	insinto /etc/netfs || die
 	doins ${S}/netfs/etc/daemon.xml || die
 	doins ${S}/netfs/etc/client.xml || die
+	doins ${FILESDIR}/icebox.config || die
 	insinto /usr/share/netfs/ice || die
 	doins ice/*.ice || die
+	insinto /usr/lib/systemd/system/icebox@netfsd.service.d || die
+	doins ${FILESDIR}/service.conf || die
 }
