@@ -21,11 +21,11 @@ IUSE=""
 src_unpack()
 {
 	mkdir ${S}
-	cp ${DISTDIR}/${A} ${S}
+	cp ${DISTDIR}/${A} ${S}/${TARGETNAME:=${A}}
 }
 
 src_install()
 {
-	systemd_dounit ${S}/${A}
+	systemd_dounit ${S}/${TARGETNAME:=${A}}
 }
 
