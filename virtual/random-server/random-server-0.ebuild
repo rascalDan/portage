@@ -27,8 +27,11 @@ RDEPEND="
 	virtual/miller-webserver
 	www-apps/project2
 	sys-apps/logwatch
+	sys-apps/glacier2-service
 	ocfs2? (
+			sys-apps/drbd-service
 			sys-cluster/drbd
+			sys-apps/ocfs2-service
 			sys-fs/ocfs2-tools )
 	mediaserver? (
 			net-misc/minidlna
