@@ -13,7 +13,6 @@ RDEPEND="
 	=net-misc/unison-2.48*
 	=dev-lang/ocaml-4.02*
 	net-dns/bind
-	net-dns/ddclient
 	net-firewall/iptables
 	net-fs/samba
 	net-misc/dhcp
@@ -28,6 +27,9 @@ RDEPEND="
 	www-apps/project2
 	sys-apps/logwatch
 	sys-apps/glacier2-service
+	net-misc/gentoobrowse-api
+	dev-util/ccache
+	dev-util/lcov
 	ocfs2? (
 			sys-apps/drbd-service
 			sys-cluster/drbd
