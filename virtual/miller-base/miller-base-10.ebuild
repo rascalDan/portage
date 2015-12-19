@@ -5,7 +5,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash samba
 minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend raid
-video_cards_nvidia firmware ischroot"
+video_cards_nvidia firmware ischroot systemd"
 
 RDEPEND="
 	sys-process/htop
@@ -73,11 +73,20 @@ RDEPEND="
 	app-editors/gvim
 	git? ( dev-vcs/git )
 	bash-completion? ( app-shells/bash-completion )
+	autoservicerestart? (
+			systemd? (
+				sys-apps/autorestart
+				)
+			)
 	"
 
 src_install() {
 	exeinto /etc/cron.hourly
-	newexe "${FILESDIR}"/service-check service-check
+	if use systemd ; then
+		newexe "${FILESDIR}"/service-check.systemd service-check
+	else
+		newexe "${FILESDIR}"/service-check.openrc service-check
+	fi
 
 	exeinto /etc/cron.weekly
 	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
@@ -104,15 +113,6 @@ src_install() {
 		dosym /sbin/update-install /etc/portage/postsync.d/75-update-install
 		if use autoshutdown ; then
 			newexe "${FILESDIR}"/update-autoshutdown 99-auto-shutdown
-		else
-			if use autoservicerestart ; then
-				exeinto /usr/libexec/scripts/auto-restart
-				for f in ${FILESDIR}/restart/* ; do
-					newexe ${FILESDIR}/restart/`basename $f` `basename $f`
-				done
-				exeinto /etc/portage/postsync.d/
-				newexe "${FILESDIR}"/auto-restart-services 80-auto-restart-services
-			fi
 		fi
 	fi
 

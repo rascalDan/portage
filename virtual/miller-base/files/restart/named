@@ -1,4 +1,0 @@
-/etc/init.d/named stop
-sleep 5
-/etc/init.d/named start
-
