@@ -88,12 +88,12 @@ src_prepare() {
 
 	# skip mono tests, bug #498484
 	sed -i \
-		-e 's|^\(SUBDIRS.*\)test|\1|' \
+		-e 's|\(SUBDIRS.*\) test|\1|' \
 		csharp/Makefile || die "sed failed"
 
 	if ! use test ; then
 		sed -i \
-			-e 's|^\(SUBDIRS.*\)test|\1|' \
+			-e 's|\(SUBDIRS.*\) test|\1|' \
 			{cpp,php,python,ruby}/Makefile || die "sed failed"
 	fi
 }
