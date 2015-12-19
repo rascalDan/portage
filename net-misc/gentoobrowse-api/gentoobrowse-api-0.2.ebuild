@@ -7,15 +7,14 @@ SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="client service"
+IUSE="client server"
 
 RDEPEND="dev-libs/Ice
-	service? (
-		>=dev-cpp/slicer-1.2:=[db]
+	server? (
+		>=dev-cpp/slicer-1.2.1:=[db]
 		sys-apps/icebox-service
 		dev-libs/libdbpp-postgresql
 	)
-	dev-cpp/slicer
 	>=dev-libs/libadhocutil-0.3
 	dev-libs/boost"
 DEPEND="${DEPEND}
@@ -28,9 +27,10 @@ src_prepare() {
 src_compile() {
 	cd ${S}/gentoobrowse-api || die
 	setarch $(uname -m) -RL b2 -q ${BJAMOPTS} variant=release \
+		api//gentoobrowse-api \
 		domain//gentoobrowse-domain \
 		$(use client && echo client//gbcli) \
-		$(use service && echo service//gentoobrowse-service) || die
+		$(use server && echo service//gentoobrowse-service) || die
 }
 
 src_install() {
@@ -39,8 +39,10 @@ src_install() {
 		install-libs \
 		install-slice \
 		$(use client && echo install-client) \
-		$(use service && echo install-service) || die
-	insinto /etc/gentoobrowseapi || die
-	doins etc/icebox.config || die
+		$(use server && echo install-service) || die
+	if use server ; then
+		insinto /etc/gentoobrowseapi || die
+		doins etc/icebox.config || die
+	fi
 }
 
