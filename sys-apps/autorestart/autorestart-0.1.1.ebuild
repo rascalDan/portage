@@ -10,7 +10,7 @@ SRC_URI="http://git.randomdan.homeip.net/cgit.cgi/util/snapshot/${P}.tar.xz"
 
 LICENSE="gpl"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -23,8 +23,9 @@ RDEPEND="
 	"
 
 src_install() {
-	exeinto /etc/portage/postsync.d
-	doexe ${S}/autorestart/scripts/95-systemd-restart-as-needed
+	exeinto /sbin
+	doexe ${S}/autorestart/scripts/systemd-restart-as-needed
+	dosym ../../../sbin/systemd-restart-as-needed /etc/portage/postsync.d/95-systemd-restart-as-needed
 	insinto /etc/autorestart
 	doins -r ${S}/autorestart/etc/ignore.d
 }
