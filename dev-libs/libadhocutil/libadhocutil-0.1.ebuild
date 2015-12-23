@@ -5,7 +5,7 @@ HOMEPAGE="http://libadhocutil.randomdan.homeip.net/"
 
 SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
-SLOT="0"
+SLOT="0/0"
 KEYWORDS="x86 amd64"
 IUSE="man test"
 

@@ -12,7 +12,7 @@ RDEPEND="
 	dev-libs/boost
 	dev-libs/libdbpp:=
 	virtual/libmysqlclient
-	dev-libs/libadhocutil
+	dev-libs/libadhocutil:=
 "
 DEPEND="
 	${RDEPEND}

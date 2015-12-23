@@ -12,7 +12,7 @@ IUSE="debug"
 DEPEND="dev-libs/Ice
 	>=dev-cpp/slicer-0.8.1:=[xml]
 	sys-apps/icebox-service
-	dev-libs/libadhocutil
+	dev-libs/libadhocutil:=
 	sys-fs/fuse
 	dev-libs/boost
 	dev-util/boost-build"

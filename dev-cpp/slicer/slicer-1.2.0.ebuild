@@ -13,7 +13,7 @@ RDEPEND="dev-libs/Ice
 	xml? ( dev-cpp/libxmlpp )
 	json? ( dev-cpp/libjsonpp )
 	db? ( >=dev-libs/libdbpp-0.10.2 )
-	>=dev-libs/libadhocutil-0.3
+	>=dev-libs/libadhocutil-0.3:=
 	dev-libs/boost"
 DEPEND="${RDEPEND}
 	dev-util/boost-build"
