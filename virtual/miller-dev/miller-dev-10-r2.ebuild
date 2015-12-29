@@ -38,6 +38,9 @@ RDEPEND="
 	dev-util/patchutils
 	net-analyzer/arping
 	dev-libs/libadhocutil
+	dev-libs/libdbpp-postgresql
+	dev-libs/libdbpp-mysql
+	dev-libs/icetray[ut]
 	dev-libs/fcgi
 	dev-libs/Ice
 	dev-cpp/glibmm
