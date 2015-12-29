@@ -1,0 +1,12 @@
+reverted:
+--- b/Makefile
++++ a/Makefile
+@@ -11,8 +11,6 @@
+ COMMANDS_USED_WITH_GIT_REPO = $(filter-out $(COMMANDS_USED_WITHOUT_GIT_REPO), \
+ 							  $(subst bin/, , $(BINS)))
+ 
+-default: install
+-
+ docs: $(MAN_HTML) $(MAN_PAGES)
+ 
+ install:
