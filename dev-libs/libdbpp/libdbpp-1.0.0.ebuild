@@ -5,13 +5,13 @@ HOMEPAGE="http://libdbpp.randomdan.homeip.net/"
 
 SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
-SLOT="0/1"
-KEYWORDS="x86 amd64"
+SLOT="0/2"
+KEYWORDS="~x86 ~amd64"
 IUSE="man ut"
 
 RDEPEND="
 	dev-libs/boost
-	>=dev-libs/libadhocutil-0.3:=
+	>=dev-libs/libadhocutil-0.3.2:=
 "
 DEPEND="
 	${RDEPEND}
