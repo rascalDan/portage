@@ -20,7 +20,6 @@ RDEPEND="
 	app-vim/syntastic
 	dev-libs/libxml2
 	dev-java/maven-bin
-	dev-java/jaxb-tools
 	dev-java/oracle-jdk-bin:1.7
 	dev-java/oracle-jdk-bin:1.8
 	app-text/trang
