@@ -6,7 +6,7 @@ HOMEPAGE="http://libdbpp.randomdan.homeip.net/mysql"
 SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 RDEPEND="
 	dev-libs/boost
