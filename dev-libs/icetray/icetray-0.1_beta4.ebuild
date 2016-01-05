@@ -13,7 +13,7 @@ RDEPEND="
 	dev-libs/boost
 	dev-libs/Ice
 	dev-libs/libdbpp:=
-	>=dev-libs/libadhocutil-0.3.2:=
+	>=dev-libs/libadhocutil-0.3.3:=
 	dev-cpp/slicer:=[db]
 	tools? ( dev-util/boost-build )
 "

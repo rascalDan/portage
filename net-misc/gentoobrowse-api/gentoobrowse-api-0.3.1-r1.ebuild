@@ -14,6 +14,7 @@ RDEPEND="dev-libs/Ice
 		>=dev-cpp/slicer-1.2.1:=[db]
 		sys-apps/icebox-service
 		dev-libs/libdbpp-postgresql
+		dev-libs/libadhocutil:=
 		>=dev-libs/icetray-0.1_beta3[tools]
 	)
 	>=dev-libs/libadhocutil-0.3
