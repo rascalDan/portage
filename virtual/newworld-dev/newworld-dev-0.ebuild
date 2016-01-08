@@ -19,6 +19,8 @@ RDEPEND="
 	app-vim/youcompleteme
 	app-vim/syntastic
 	dev-libs/libxml2
+	dev-db/redis
+	net-libs/nodejs[npm]
 	dev-java/maven-bin
 	dev-java/oracle-jdk-bin:1.7
 	dev-java/oracle-jdk-bin:1.8
@@ -37,7 +39,6 @@ RDEPEND="
 	dev-vcs/git
 	dev-vcs/git-extras
 	virtual/jdk:1.7
-	www-servers/tomcat:7
 	X? (
 			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 			idea-ultimate? ( dev-util/idea-ultimate )
