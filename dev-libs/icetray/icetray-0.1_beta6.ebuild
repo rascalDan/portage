@@ -21,6 +21,7 @@ DEPEND="
 	${RDEPEND}
 	dev-util/boost-build
 "
+
 src_prepare() {
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
 }
