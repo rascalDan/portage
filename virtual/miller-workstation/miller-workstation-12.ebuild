@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="systemd plasma"
+IUSE="systemd plasma abi_x86_32"
 
 RDEPEND="
 	=net-misc/unison-2.48*
@@ -12,7 +12,9 @@ RDEPEND="
 	virtual/miller-base
 	kde-apps/kcalc
 	media-video/vlc
-	net-im/skype
+	abi_x86_32? (
+		net-im/skype
+	)
 	net-im/pidgin
 	x11-plugins/pidgin-mbpurple
 	x11-plugins/purple-facebook
