@@ -35,5 +35,7 @@ src_install() {
 	setarch $(uname -m) -RL b2 ${BJAMOPTS} variant=release -q install --prefix=${D}/usr || die
 	insinto /etc/mythfs || die
 	doins etc/icebox.config
+	insinto /usr/lib/systemd/system/icebox@mythfs.service.d || die
+	doins ${FILESDIR}/service.conf || die
 }
 
