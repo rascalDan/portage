@@ -40,7 +40,6 @@ RDEPEND="
 	dev-vcs/git-extras
 	virtual/jdk:1.7
 	X? (
-			|| ( dev-util/eclipse-sdk dev-util/eclipse-sdk-bin )
 			idea-ultimate? ( dev-util/idea-ultimate )
 			!idea-ultimate? ( dev-util/idea-community )
 			media-gfx/gimp
