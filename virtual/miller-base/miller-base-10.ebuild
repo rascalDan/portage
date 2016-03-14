@@ -10,7 +10,7 @@ video_cards_nvidia firmware ischroot systemd"
 RDEPEND="
 	sys-process/htop
 	sys-apps/less
-	fuse? ( sys-fs/sshfs-fuse )
+	fuse? ( sys-fs/sshfs )
 	!ischroot? (
 		sys-apps/ethtool
 		sys-cluster/netfs
