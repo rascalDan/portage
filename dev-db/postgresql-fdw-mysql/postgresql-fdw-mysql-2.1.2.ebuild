@@ -16,7 +16,7 @@ IUSE=""
 S="${WORKDIR}/mysql_fdw-REL-${PV//./_}"
 
 DEPEND="
-	>=virtual/mysql-5.2
+	virtual/libmysqlclient
 	>=dev-db/postgresql-9.4
 	"
 RDEPEND="${DEPEND}"
