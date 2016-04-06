@@ -33,7 +33,7 @@ RDEPEND="
 	dev-util/lcov
 	ocfs2? (
 			sys-apps/drbd-service
-			sys-cluster/drbd
+			sys-cluster/drbd-utils
 			sys-apps/ocfs2-service
 			sys-fs/ocfs2-tools )
 	mediaserver? (
