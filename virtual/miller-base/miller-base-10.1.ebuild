@@ -84,6 +84,8 @@ src_install() {
 	exeinto /etc/cron.hourly
 	if use systemd ; then
 		newexe "${FILESDIR}"/service-check.systemd service-check
+		insinto /etc/tmpfiles.d
+		newins "${FILESDIR}/tmpfiles-d-portage.conf" "portage.conf"
 	else
 		newexe "${FILESDIR}"/service-check.openrc service-check
 	fi
