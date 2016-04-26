@@ -11,7 +11,7 @@ SRC_URI="https://codeload.github.com/tj/git-extras/zip/${PV} -> ${P}.zip"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
