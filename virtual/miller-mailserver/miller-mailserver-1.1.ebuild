@@ -15,5 +15,5 @@ RDEPEND="
 
 src_install() {
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}"/sa-learn sa-learn
+	newexe "${FILESDIR}"/sa-update sa-update
 }

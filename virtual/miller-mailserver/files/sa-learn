@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sa-learn --spam /mnt/home/*/.maildir/.Junk/{cur,new}/* > /dev/null
-

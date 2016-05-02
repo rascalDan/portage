@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Junk is moved to trash after a week; assume I've sorted stuff after 4 days
+find /home/*/.maildir/.Trash/cur -type f -mtime -4 | xargs sa-learn --ham > /dev/null
+find /home/*/.maildir/.Junk/cur -type f -mtime -4 | xargs sa-learn --spam > /dev/null
+
+sa-update --allowplugins --gpgkey D1C035168C1EBC08464946DA258CDB3ABDE9DC10  --channel updates.spamassassin.org
+sa-compile
+
+chown nobody:mail -R /var/lib/spamassassin
+chmod ug+r -R /var/lib/spamassassin
+
+systemctl restart spamassassin.service
+
