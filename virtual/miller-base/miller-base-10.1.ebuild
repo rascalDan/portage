@@ -4,7 +4,7 @@ DESCRIPTION="Virtual for base systems"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash samba
-minimal autoupdate autoshutdown autoservicerestart lvmboot lvmroot sw-suspend raid
+minimal autoupdate autoshutdown autoservicerestart sw-suspend raid
 video_cards_nvidia firmware ischroot systemd"
 
 RDEPEND="
@@ -22,11 +22,9 @@ RDEPEND="
 		sys-apps/hdparm
 		xfs? ( sys-fs/xfsdump )
 		sys-fs/lvm2
-		lvmboot? ( >=sys-boot/grub-1.98 )
-		lvmroot? (
-				sys-apps/busybox
-				|| ( sys-kernel/dracut[dracut_modules_lvm] >=sys-kernel/dracut-036 )
-				)
+		>=sys-boot/grub-2
+		sys-apps/busybox
+		>=sys-kernel/dracut-040
 		sys-process/vixie-cron
 		sys-apps/pciutils
 		sys-apps/usbutils
@@ -50,15 +48,15 @@ RDEPEND="
 			net-analyzer/netcat
 			net-ftp/ncftp
 			app-text/dos2unix
-			net-dns/bind-tools 
+			net-dns/bind-tools
 			!ischroot? (
-				www-servers/apache 
-				app-antivirus/clamav 
+				www-servers/apache
+				app-antivirus/clamav
 				)
 			)
 	sys-process/lsof
 	app-portage/layman[git]
-	!hardened? ( 
+	!hardened? (
 			sys-devel/prelink
 			!ischroot? (
 				!sw-suspend? ( sys-kernel/gentoo-sources )
