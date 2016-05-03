@@ -42,6 +42,7 @@ RDEPEND="
 	app-admin/sudo
 	mail-client/mailx
 	!minimal? (
+			app-shells/thefuck
 			x11-apps/xauth
 			sys-apps/moreutils
 			dev-util/strace
