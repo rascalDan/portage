@@ -1,14 +1,15 @@
 #!/bin/bash
 
+CORES=$(grep core\ id /proc/cpuinfo | sort -u | wc -l)
 PATH="/usr/lib/ccache/bin:$PATH"
 
 cd /usr/src/linux || ( echo "No kernel directory"; exit 1 )
 [ -f .config ] || ( echo "No kernel configuration"; exit 1 )
-make -j2 || ( echo "Make failed" ; exit 1 )
-make modules -j2 || ( echo "Make modules failed" ; exit 1 )
-make modules_install -j2 || ( echo "Make modules install failed" ; exit 1 )
+make -j$CORES || ( echo "Make failed" ; exit 1 )
+make modules -j$CORES || ( echo "Make modules failed" ; exit 1 )
+make modules_install -j$CORES || ( echo "Make modules install failed" ; exit 1 )
 emerge -q1 @module-rebuild || exit 1
-make install -j2 || ( echo "Make install failed" ; exit 1 )
+make install -j$CORES || ( echo "Make install failed" ; exit 1 )
 
 KV=$(head $(ls -1t /boot/config-* | head -n1) -n3 | tail -n1 | cut -d ' ' -f 3)
 if [ -x /usr/bin/dracut ] ; then
