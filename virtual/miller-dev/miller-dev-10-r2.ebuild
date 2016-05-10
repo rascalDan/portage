@@ -76,6 +76,7 @@ RDEPEND="
 			dev-db/squirrel-sql
 			dev-util/kdbg
 			kde-apps/okteta
+			kde-apps/dolphin-plugins
 			net-analyzer/nmap
 			dotnet? (
 				dev-util/mono-debugger
