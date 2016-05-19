@@ -47,6 +47,7 @@ RDEPEND="
 	kde-apps/ksnapshot
 	kde-apps/kdeartwork-kscreensaver
 	kde-apps/kwalletmanager
+	kde-apps/kpasswdserver
 	x11-misc/kdocker
 	kde-apps/superkaramba
 	kde-apps/okular
