@@ -57,6 +57,7 @@ src_compile() {
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
 			b2 ${BJAMOPTS} finalbin finallib -q \
+			variant=release \
 			|| die "Compile failed"
 }
 
@@ -64,6 +65,7 @@ src_install() {
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
 			b2 ${BJAMOPTS} install -q \
+			variant=release \
 			--bindir=${D}/usr/bin \
 			--libdir=${D}/usr/lib \
 			--includedir=${D}/usr/include/project2 \

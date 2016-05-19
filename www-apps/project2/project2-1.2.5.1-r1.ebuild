@@ -11,8 +11,8 @@ IUSE="+docs unittest +console +web +fastcgi +daemon"
 
 RDEPEND="
 	net-libs/libesmtp
-	>=dev-libs/libadhocutil-0.2
-	dev-libs/libdbpp
+	>=dev-libs/libadhocutil-0.2:=
+	=dev-libs/libdbpp-1.0*:=
 	www-client/lynx
 	>=dev-cpp/libxmlpp-2.36
 	sys-libs/zlib
@@ -26,7 +26,7 @@ RDEPEND="
 				dev-libs/fcgi
 				)
 		 )
-	dev-cpp/slicer:=
+	>=dev-cpp/slicer-1.3:=
 	"
 
 DEPEND="${RDEPEND}
@@ -57,6 +57,7 @@ src_compile() {
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
 			b2 ${BJAMOPTS} finalbin finallib -q \
+			variant=release \
 			|| die "Compile failed"
 }
 
@@ -64,6 +65,7 @@ src_install() {
 	cd ${S}/project2 || die
 	setarch $(uname -m) -RL \
 			b2 ${BJAMOPTS} install -q \
+			variant=release \
 			--bindir=${D}/usr/bin \
 			--libdir=${D}/usr/lib \
 			--includedir=${D}/usr/include/project2 \
