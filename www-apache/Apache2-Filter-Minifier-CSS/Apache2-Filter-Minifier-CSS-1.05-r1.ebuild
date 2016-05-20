@@ -20,5 +20,6 @@ RDEPEND="dev-perl/CSS-Minifier
 	dev-lang/perl
 	>=www-apache/mod_perl-2.0.8"
 DEPEND="${RDEPEND}
+	dev-perl/Module-Build
 	>=dev-perl/Apache-Test-1.38"
 
