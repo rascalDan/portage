@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="dev-perl/JavaScript-Minifier-XS
 	dev-perl/JavaScript-Minifier
 	dev-lang/perl
+	dev-perl/Module-Build
 	>=www-apache/mod_perl-2.0.8"
 DEPEND="${RDEPEND}
 	>=dev-perl/Apache-Test-1.38"
