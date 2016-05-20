@@ -17,4 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-lang/perl"
+DEPEND="
+	dev-lang/perl
+	dev-perl/Module-Build
+"
+
