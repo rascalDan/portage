@@ -17,7 +17,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-lang/perl"
+DEPEND="
+	dev-lang/perl
+	dev-perl/Module-Build
+"
 
 src_prepare() {
 	epatch "${FILESDIR}/copyright-only-functions.patch"
