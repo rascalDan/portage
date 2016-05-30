@@ -5,7 +5,7 @@ HOMEPAGE="http://icetray.randomdan.homeip.net/"
 SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 
 LICENSE="GPL"
-SLOT="0/b2"
+SLOT="0/b8"
 KEYWORDS="~amd64 ~x86"
 IUSE="ut tools"
 
