@@ -15,7 +15,8 @@ DEPEND="
 	sys-apps/icebox-service
 	dev-cpp/slicer:=[db]
 	dev-libs/boost
-	=sys-cluster/netfs-1.1*
+	>=dev-libs/icetray-0.1
+	=sys-cluster/netfs-1.2*
 	dev-libs/libadhocutil:=
 "
 RDEPEND="${DEPEND}
