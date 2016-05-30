@@ -13,9 +13,10 @@ RDEPEND="dev-libs/Ice
 	server? (
 		>=dev-cpp/slicer-1.2.1:=[db]
 		sys-apps/icebox-service
-		dev-libs/libdbpp-postgresql
+		>=dev-libs/libdbpp-postgresql-1.0.5_beta3
 		dev-libs/libadhocutil:=
 		>=dev-libs/icetray-0.1_beta3[tools]
+		>=dev-libs/boost-1.60
 	)
 	>=dev-libs/libadhocutil-0.3
 	dev-libs/boost"
@@ -33,7 +34,7 @@ src_compile() {
 		api//gentoobrowse-api \
 		domain//gentoobrowse-domain \
 		$(use client && echo client//gbcli) \
-		$(use server && echo service//gentoobrowse-service) || die
+		$(use server && echo service//gentoobrowse-service util) || die
 }
 
 src_install() {
