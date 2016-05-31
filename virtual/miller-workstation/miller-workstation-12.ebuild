@@ -49,7 +49,6 @@ RDEPEND="
 	kde-apps/kwalletmanager
 	kde-apps/kpasswdserver
 	x11-misc/kdocker
-	kde-apps/superkaramba
 	kde-apps/okular
 	kde-apps/gwenview
 	kde-apps/dolphin
