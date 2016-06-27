@@ -13,10 +13,11 @@ RDEPEND="dev-libs/Ice
 	server? (
 		>=dev-cpp/slicer-1.2.1:=[db]
 		sys-apps/icebox-service
-		>=dev-libs/libdbpp-postgresql-1.0.5_beta3
+		>=dev-libs/libdbpp-postgresql-1.0.5
 		dev-libs/libadhocutil:=
-		>=dev-libs/icetray-0.1_beta3[tools]
+		>=dev-libs/icetray-0.1[tools]
 		>=dev-libs/boost-1.60
+		>=dev-libs/libgit2-0.24.0
 	)
 	>=dev-libs/libadhocutil-0.3
 	dev-libs/boost"
@@ -40,6 +41,7 @@ src_compile() {
 src_install() {
 	cd ${S}/gentoobrowse-api || die
 	setarch $(uname -m) -RL b2 -q ${BJAMOPTS} variant=release --prefix=${D}/usr \
+		--includedir=${D}/usr/include/${PN} \
 		install-libs \
 		install-slice \
 		$(use client && echo install-client) \
