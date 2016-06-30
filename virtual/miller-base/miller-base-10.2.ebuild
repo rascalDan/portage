@@ -24,7 +24,7 @@ RDEPEND="
 		sys-fs/lvm2
 		>=sys-boot/grub-2
 		sys-apps/busybox
-		>=sys-kernel/dracut-040
+		sys-kernel/genkernel-next
 		sys-process/vixie-cron
 		sys-apps/pciutils
 		sys-apps/usbutils
@@ -119,5 +119,4 @@ src_install() {
 
 	exeinto /sbin
 	newexe "${FILESDIR}"/update-install2 update-install
-	newexe "${FILESDIR}"/update-kernel update-kernel
 }
