@@ -44,7 +44,7 @@ RDEPEND="
 	media-gfx/gimp
 	www-plugins/adobe-flash
 	media-sound/clementine
-	kde-apps/ksnapshot
+	kde-apps/spectacle
 	kde-apps/kdeartwork-kscreensaver
 	kde-apps/kwalletmanager
 	kde-apps/kpasswdserver
