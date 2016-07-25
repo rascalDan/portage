@@ -1,7 +1,8 @@
 #!/bin/bash
 
 unset ABI ABI_X86
-eval $(emerge --info -v | grep '^\(EMERGEEXTRAOPTS\|UPDATESTATEDIR\)="[^"]*"$')
+EMERGEEXTRAOPTS=$(portageq envvar EMERGEEXTRAOPTS)
+UPDATESTATEDIR=$(portageq envvar UPDATESTATEDIR)
 updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
 depcleans="${UPDATESTATEDIR:-/tmp}/`hostname`_depclean.txt"
 
