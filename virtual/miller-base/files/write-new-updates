@@ -3,8 +3,12 @@
 unset ABI ABI_X86
 UPDATESTATEDIR=$(portageq envvar UPDATESTATEDIR)
 updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
+errors="${UPDATESTATEDIR:-/tmp}/`hostname`_update_errors.txt"
 
 tmp="/tmp/$$.updates"
-emerge -uDNpvq --with-bdeps=y @world @system > ${tmp}
+tmperr="/tmp/$$.errors"
+emerge -uDNpvq --with-bdeps=y @world @system > ${tmp} 2> ${tmperr}
 mv ${tmp} ${updates}
+mv ${tmperr} ${errors}
+cat ${errors}
 
