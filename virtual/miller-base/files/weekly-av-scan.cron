@@ -1,8 +1,28 @@
 #!/bin/bash
 
-eval $(emerge --info -v | grep '^DISTDIR="[^"]*"$')
+EXCL=$(
+	portageq distdir
+	portageq pkgdir
+	portageq get_repo_path / $(portageq get_repos /)
+)
+ROOTS=$(mount | grep ^/dev/ | sort -u -k1,1 | cut -d ' ' -f 3 | sort)
 
-nice clamscan -ri --cross-fs=no \
-	--exclude-dir=${DISTDIR} \
-	$(emerge --info | sed -ne 's/\s\+location:\s\+\(.*\)/--exclude-dir="\1"/p') \
-	$(mount | grep ^/dev/ | sort -u -k1,1 | cut -d ' ' -f 3 | sort)
+echo "Scanning:"
+echo $ROOTS
+echo
+echo "Excluding:"
+echo $EXCL
+echo
+
+if [ -S /run/clamav/clamd.sock ] ; then
+	echo "Using clamd"
+	EXCLARGS=$(ls -1d $EXCL | sed -ne 's/\(.*\)/-path "\1" -prune -o/p')
+	rm -f /tmp/scan
+	mkfifo /tmp/scan
+	find $ROOTS -xdev -type f $EXCLARGS -print > /tmp/scan &
+	clamdscan -i --fdpass -f /tmp/scan
+	rm -f /tmp/scan
+else
+	EXCLARGS=$(ls -1d $EXCL | sed -ne 's/\(.*\)/--exclude-dir="\1"/p')
+	nice clamscan -ri --cross-fs=no $ROOTS $EXCLARGS
+fi
