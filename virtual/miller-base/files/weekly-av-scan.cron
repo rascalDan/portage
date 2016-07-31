@@ -16,10 +16,10 @@ echo
 
 if [ -S /run/clamav/clamd.sock ] ; then
 	echo "Using clamd"
-	EXCLARGS=$(ls -1d $EXCL | sed -ne 's/\(.*\)/-path "\1" -prune -o/p')
+	EXCLARGS=$(ls -1d $EXCL | sed -ne 's/\(.*\)/-path \1 -o/p')
 	rm -f /tmp/scan
 	mkfifo /tmp/scan
-	find $ROOTS -xdev -type f $EXCLARGS -print > /tmp/scan &
+	find $ROOTS -xdev \( $EXCLARGS -empty \) -prune -o -type f -print > /tmp/scan &
 	clamdscan -i --fdpass -f /tmp/scan
 	rm -f /tmp/scan
 else
