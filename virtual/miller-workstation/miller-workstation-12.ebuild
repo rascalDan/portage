@@ -45,7 +45,6 @@ RDEPEND="
 	www-plugins/adobe-flash
 	media-sound/clementine
 	kde-apps/spectacle
-	kde-apps/kdeartwork-kscreensaver
 	kde-apps/kwalletmanager
 	kde-apps/kpasswdserver
 	x11-misc/kdocker
