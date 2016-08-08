@@ -9,7 +9,7 @@ RDEPEND="
 	virtual/miller-base
 	=dev-db/postgresql-9.4*[server]
 	sys-apps/slony1-service
-	=dev-db/slony1-2.2.3*
+	=dev-db/slony1-2.2.4*
 	pgmaster? ( >=dev-db/slony1-2[perl] )
 "
 
