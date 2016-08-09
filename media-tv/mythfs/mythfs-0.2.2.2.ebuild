@@ -14,6 +14,7 @@ KEYWORDS="~x86 ~amd64"
 DEPEND="
 	sys-apps/icebox-service
 	dev-cpp/slicer:=[db]
+	dev-libs/libdbpp-mysql
 	dev-libs/boost
 	>=dev-libs/icetray-0.1
 	=sys-cluster/netfs-1.2*
