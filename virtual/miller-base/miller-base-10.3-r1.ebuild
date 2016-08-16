@@ -13,6 +13,7 @@ RDEPEND="
 	sys-apps/less
 	fuse? ( sys-fs/sshfs )
 	!ischroot? (
+		sys-apps/systemd-readahead
 		sys-apps/ethtool
 		sys-cluster/netfs
 		sys-apps/kexec-tools
