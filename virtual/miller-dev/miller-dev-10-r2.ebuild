@@ -12,6 +12,8 @@ RDEPEND="
 	app-vim/nerdtree
 	app-vim/youcompleteme
 	app-vim/syntastic
+	app-vim/ctx
+	app-vim/alternate
 	www-client/lynx
 	app-admin/webapp-config
 	postgres? ( dev-db/apgdiff )
@@ -65,7 +67,7 @@ RDEPEND="
 			|| ( www-client/firefox www-client/firefox-bin )
 			www-client/opera
 			|| (
-				net-misc/tightvnc
+				net-misc/tigervnc
 				net-misc/vnc
 			   )
 			net-misc/rdesktop
