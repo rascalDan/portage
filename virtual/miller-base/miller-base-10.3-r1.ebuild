@@ -11,7 +11,7 @@ RDEPEND="
 	app-arch/hardlink
 	sys-process/htop
 	sys-apps/less
-	fuse? ( sys-fs/sshfs )
+	fuse? ( net-fs/sshfs )
 	!ischroot? (
 		sys-apps/systemd-readahead
 		sys-apps/ethtool
