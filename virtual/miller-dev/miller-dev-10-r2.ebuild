@@ -46,7 +46,7 @@ RDEPEND="
 	dev-libs/fcgi
 	dev-libs/Ice
 	dev-cpp/glibmm
-	dev-cpp/libxmlpp
+	=dev-cpp/libxmlpp-2.40*
 	dev-libs/cgicc
 	net-libs/libesmtp
 	www-apache/mod_fcgid

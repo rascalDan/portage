@@ -10,7 +10,7 @@ KEYWORDS="x86 amd64"
 IUSE="db xml json"
 
 RDEPEND="dev-libs/Ice
-	xml? ( dev-cpp/libxmlpp )
+	xml? ( =dev-cpp/libxmlpp-2.40* )
 	json? ( dev-cpp/libjsonpp )
 	db? ( =dev-libs/libdbpp-0.10* )
 	>=dev-libs/libadhocutil-0.3:=

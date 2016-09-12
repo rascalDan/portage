@@ -26,7 +26,7 @@ RDEPEND="
 	media-fonts/hack
 	app-vim/vcscommand
 	dev-util/splint
-	dev-cpp/libxmlpp
+	=dev-cpp/libxmlpp-2.40*
 	dev-libs/libxml2
 	dev-java/maven-bin
 	media-libs/imlib2

@@ -10,7 +10,7 @@ KEYWORDS="x86 amd64"
 IUSE="xml json"
 
 DEPEND="dev-libs/Ice
-	xml? ( dev-cpp/libxmlpp )
+	xml? ( =dev-cpp/libxmlpp-2.40* )
 	json? ( dev-cpp/libjsonpp )
 	dev-libs/boost
 	dev-util/boost-build"

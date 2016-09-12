@@ -14,7 +14,7 @@ RDEPEND="
 	>=dev-libs/libadhocutil-0.2:=
 	=dev-libs/libdbpp-1.0*:=
 	www-client/lynx
-	>=dev-cpp/libxmlpp-2.36
+	=dev-cpp/libxmlpp-2.40*
 	sys-libs/zlib
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
