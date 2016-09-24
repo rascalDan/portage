@@ -1,6 +1,6 @@
 #!/bin/bash
 
-unset ABI ABI_X86
+[ -s "$PORTAGE_TMPDIR" ] && exec -c /bin/bash -l -c $0
 EMERGEEXTRAOPTS=$(portageq envvar EMERGEEXTRAOPTS)
 UPDATESTATEDIR=$(portageq envvar UPDATESTATEDIR)
 updates="${UPDATESTATEDIR:-/tmp}/`hostname`_updates.txt"
