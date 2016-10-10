@@ -81,7 +81,6 @@ RDEPEND="
 			kde-apps/dolphin-plugins
 			net-analyzer/nmap
 			dotnet? (
-				dev-util/mono-debugger
 				dev-util/monodevelop
 				|| (
 					>=dev-util/monodevelop-4
