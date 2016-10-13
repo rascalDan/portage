@@ -58,7 +58,7 @@ src_unpack() {
 	default
 	cd ${S}
 	epatch ${FILESDIR}/dont-separate-c++11-libs.patch
-	epatch ${FILESDIR}/dont-append-c++11-to-libs.patch
+	epatch ${FILESDIR}/dont-append-c++11-to-libs-3.6.3.patch
 }
 
 src_prepare() {

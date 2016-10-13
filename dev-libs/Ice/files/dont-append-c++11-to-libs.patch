@@ -1,5 +1,5 @@
---- ice-3.6.2/cpp/src/Ice/DynamicLibrary.cpp
-+++ ice-3.6.2/cpp/src/Ice/DynamicLibrary.cpp
+--- cpp/src/Ice/DynamicLibrary.cpp
++++ cpp/src/Ice/DynamicLibrary.cpp
 @@ -89,9 +89,6 @@
      if(comma == string::npos)
      {
