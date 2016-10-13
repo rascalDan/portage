@@ -11,14 +11,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x64"
 IUSE=""
 
-DEPEND="
-	dev-util/boost-build
-	=dev-cpp/slicer-1.3*:=
+RDEPEND="
+	=dev-cpp/slicer-1.4*:=[db]
 	>=dev-libs/Ice-3.5
-	>=www-apps/project2-1.1.4[postgres,daemon]
-	<www-apps/project2-1.2[postgres,daemon]
+	>=www-apps/project2-1.2.5.1[daemon]
+	dev-libs/libdbpp-postgresql
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/boost-build"
 
 src_prepare() {
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam

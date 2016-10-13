@@ -11,8 +11,8 @@ IUSE="+docs unittest +console +web +fastcgi +daemon"
 
 RDEPEND="
 	net-libs/libesmtp
-	>=dev-libs/libadhocutil-0.2
-	dev-libs/libdbpp
+	>=dev-libs/libadhocutil-0.2:=
+	=dev-libs/libdbpp-1.0*:=
 	www-client/lynx
 	=dev-cpp/libxmlpp-2.40*
 	sys-libs/zlib
@@ -26,7 +26,7 @@ RDEPEND="
 				dev-libs/fcgi
 				)
 		 )
-	=dev-cpp/slicer-1.3*:=
+	=dev-cpp/slicer-1.4*:=
 	"
 
 DEPEND="${RDEPEND}

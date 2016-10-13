@@ -10,7 +10,7 @@ KEYWORDS="x86 amd64"
 IUSE="client server systemd"
 
 RDEPEND="dev-libs/Ice
-	>=dev-cpp/slicer-0.8.1:=[xml]
+	=dev-cpp/slicer-1.3*:=[xml]
 	server? (
 			sys-apps/icebox-service
 		)

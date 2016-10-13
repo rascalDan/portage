@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x64"
 IUSE=""
 
 RDEPEND="
-	>=dev-cpp/slicer-1.1.0:=[db]
+	=dev-cpp/slicer-1.3*:=[db]
 	>=dev-libs/Ice-3.5
 	>=www-apps/project2-1.2[daemon]
 	dev-libs/libdbpp-postgresql

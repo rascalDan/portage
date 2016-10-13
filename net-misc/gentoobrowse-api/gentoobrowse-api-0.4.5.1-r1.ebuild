@@ -1,4 +1,5 @@
 EAPI="5"
+inherit eutils
 
 DESCRIPTION="ICE API and client for Gentoo Browse"
 HOMEPAGE="http://gentoobrowse.randomdan.homeip.net/"
@@ -11,7 +12,7 @@ IUSE="client server"
 
 RDEPEND="dev-libs/Ice
 	server? (
-		=dev-cpp/slicer-1.3*:=[db]
+		=dev-cpp/slicer-1.4*:=[db]
 		sys-apps/icebox-service
 		>=dev-libs/libdbpp-postgresql-1.0.5
 		dev-libs/libadhocutil:=
@@ -26,6 +27,7 @@ DEPEND="${DEPEND}
 	dev-util/boost-build"
 
 src_prepare() {
+	epatch ${FILESDIR}/slicer.patch
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
 }
 

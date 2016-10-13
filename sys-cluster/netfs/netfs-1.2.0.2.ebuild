@@ -10,7 +10,7 @@ KEYWORDS="x86 amd64"
 IUSE="client server systemd"
 
 RDEPEND="dev-libs/Ice
-	=dev-cpp/slicer-1.3*:=[xml]
+	=dev-cpp/slicer-1.4*:=[xml]
 	server? (
 			sys-apps/icebox-service
 		)
@@ -35,7 +35,6 @@ src_compile() {
 }
 
 src_install() {
-	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/netfs || die
 	setarch $(uname -m) -RL b2 ${BJAMOPTS} variant=release -q \
 			$(use client && echo fuse//install) \

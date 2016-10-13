@@ -7,15 +7,13 @@ SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="debug"
 
 DEPEND="dev-libs/Ice
-	>=dev-cpp/slicer-0.8.1:=[xml]
+	=dev-cpp/slicer-1.3*:=[xml]
 	sys-fs/fuse
 	dev-libs/boost
 	dev-util/boost-build"
 RDEPEND="${DEPEND}"
-use !debug && var="variant=release"
 
 src_prepare() {
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
@@ -24,13 +22,13 @@ src_prepare() {
 src_compile() {
 	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/netfs || die
-	setarch $(uname -m) -RL ${BJAM} ${BJAMOPTS} ${var} fuse//netfs daemon//netfsd -q || die
+	setarch $(uname -m) -RL ${BJAM} ${BJAMOPTS} variant=release fuse//netfs daemon//netfsd -q || die
 }
 
 src_install() {
 	BJAM=`ls -1 /usr/bin/bjam* | tail -1`
 	cd ${S}/netfs || die
-	setarch $(uname -m) -RL ${BJAM} ${BJAMOPTS} ${var} install -q --bindir=${D}/usr/bin --libdir=${D}/usr/lib  || die
+	setarch $(uname -m) -RL ${BJAM} ${BJAMOPTS} variant=release install -q --bindir=${D}/usr/bin --libdir=${D}/usr/lib  || die
 	insinto /usr/include/netfs || die
 	doins ${S}/netfs/ice/*.h || die
 	doins ${S}/netfs/ice/bin/*/*/*.h || die
