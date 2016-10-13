@@ -1,0 +1,20 @@
+diff --git a/config/Make.common.rules b/config/Make.common.rules
+index d21f1cd..66bbda9 100644
+--- a/config/Make.common.rules
++++ b/config/Make.common.rules
+@@ -111,15 +111,6 @@ ifeq ($(UNAME),Linux)
+           endif
+       endif
+    endif
+-
+-   #
+-   # x86 builds uses 32 binsuffix
+-   #
+-   ifneq ($(STATICLIBS),yes)
+-	ifeq ($(findstring $(MACHINE_TYPE),i386 i486 i586 i686),$(MACHINE_TYPE))
+-	    binsuffix     = 32
+-	endif
+-    endif
+ endif
+ 
+ ifeq ($(CPP11),yes)

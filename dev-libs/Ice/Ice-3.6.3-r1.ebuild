@@ -59,6 +59,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/dont-separate-c++11-libs.patch
 	epatch ${FILESDIR}/dont-append-c++11-to-libs-3.6.3.patch
+	epatch ${FILESDIR}/dont-append-32-to-bins.patch
 }
 
 src_prepare() {
@@ -115,12 +116,12 @@ src_configure() {
 		install_docdir=\"${ED}/usr/share/doc/${PF}\"
 		install_configdir=\"${ED}/usr/share/Ice-${PV}/config\"
 		install_mandir=\"${ED}/usr/share/man\"
-		embedded_runpath_prefix=\"${EPREFIX}/usr\"
-		LP64=yes"
+		embedded_runpath_prefix=\"${EPREFIX}/usr\""
 
 	use ncurses && MAKE_RULES="${MAKE_RULES} USE_READLINE=yes" || MAKE_RULES="${MAKE_RULES} USE_READLINE=no"
 	use debug && MAKE_RULES="${MAKE_RULES} OPTIMIZE=no" || MAKE_RULES="${MAKE_RULES} OPTIMIZE=yes"
 	use c++0x && MAKE_RULES="${MAKE_RULES} CPP11=yes" || MAKE_RULES="${MAKE_RULES} CPP11=no"
+	use amd64 && MAKE_RULES="${MAKE_RULES} LP64=yes"
 
 	local BERKDB_VERSION="$(suitable_db_version)"
 	MAKE_RULES="${MAKE_RULES} DB_FLAGS=-I$(db_includedir ${BERKDB_VERSION})"
