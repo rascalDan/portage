@@ -11,15 +11,14 @@ IUSE="client server"
 
 RDEPEND="dev-libs/Ice
 	server? (
-		=dev-cpp/slicer-1.3*:=[db]
+		=dev-cpp/slicer-1.4*:=[db]
 		sys-apps/icebox-service
 		>=dev-libs/libdbpp-postgresql-1.0.5
-		dev-libs/libadhocutil:=
 		>=dev-libs/icetray-0.1[tools]
 		>=dev-libs/boost-1.60
 		>=dev-libs/libgit2-0.24.0
 	)
-	>=dev-libs/libadhocutil-0.3
+	>=dev-libs/libadhocutil-0.3.6:=
 	dev-libs/boost"
 DEPEND="${DEPEND}
 	sys-devel/flex
