@@ -1,7 +1,7 @@
 diff --git cpp/src/Ice/DynamicLibrary.cpp cpp/src/Ice/DynamicLibrary.cpp
 index d70e14b..721832b 100644
---- cpp/src/Ice/DynamicLibrary.cpp
-+++ cpp/src/Ice/DynamicLibrary.cpp
+--- ice-3.6.3/cpp/src/Ice/DynamicLibrary.cpp
++++ ice-3.6.3/cpp/src/Ice/DynamicLibrary.cpp
 @@ -16,7 +16,6 @@
  #endif
  
