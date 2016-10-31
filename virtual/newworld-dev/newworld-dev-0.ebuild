@@ -20,9 +20,10 @@ RDEPEND="
 	app-vim/syntastic
 	dev-libs/libxml2
 	dev-db/redis
+	virtual/mysql
+	dev-db/postgresql:9.4
 	net-libs/nodejs[npm]
 	dev-java/maven-bin
-	dev-java/oracle-jdk-bin:1.7
 	dev-java/oracle-jdk-bin:1.8
 	app-text/trang
 	app-benchmarks/jmeter
@@ -38,7 +39,9 @@ RDEPEND="
 	dev-vcs/mercurial
 	dev-vcs/git
 	dev-vcs/git-extras
-	virtual/jdk:1.7
+	sys-cluster/zookeeper-bin
+	sys-cluster/zookeepercli
+	net-misc/rabbitmq-server
 	X? (
 			idea-ultimate? ( dev-util/idea-ultimate )
 			!idea-ultimate? ( dev-util/idea-community )
