@@ -6,33 +6,33 @@ EAPI=5
 PYTHON_COMPAT=( python2_7 )
 inherit multilib python-single-r1 cmake-utils vim-plugin
 
-youcompletemev="cb5756943fdd3ba062f101a5aba34acdd34d1356"
-ycmdv="89e558f7d49b6d9672477c0d1b4df41d33f1c2e7"
+youcompletemev="f27787f2630a0b0cc3ef60685d6188cc13281e7f"
+ycmdv="63c3d992a2db8d189cd78a25a70c87348726fc52"
 reqfuv="98712e7d0f6be2a090b6fda2a925f85e63656b58"
 ossv="e1902915c6790bcec00b8d551199c8a3537d33c9"
 pfdv="b27053e4d11f5891319fd29eda561c130ba3112a"
-gocodev="61468c30b06b9e069203f3ef02ca438aa6806253"
+gocodev="93093563812be3e6679f590e1caaf8627abeb16e"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 SRC_URI="
 	https://github.com/Valloric/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/Valloric/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
 	https://github.com/ross/requests-futures/archive/$reqfuv.tar.gz -> requests-futures-$reqfuv.tar.gz
-	https://github.com/OmniSharp/omnisharp-server/archive/$ossv.tar.gz -> omnisharp-server-$ossv.tar.gz
+	csharp? ( https://github.com/OmniSharp/omnisharp-server/archive/$ossv.tar.gz -> omnisharp-server-$ossv.tar.gz )
 	https://github.com/slezica/python-frozendict/archive/$pfdv.tar.gz -> python-frozendict-$pfdv.tar.gz
-	https://github.com/nsf/gocode/archive/$gocodev.tar.gz -> gocode-$gocodev.tar.gz
+	go? ( https://github.com/nsf/gocode/archive/$gocodev.tar.gz -> gocode-$gocodev.tar.gz )
 "
 
 DESCRIPTION="vim plugin: a code-completion engine for Vim"
 HOMEPAGE="http://valloric.github.io/YouCompleteMe/"
 
 LICENSE="GPL-3"
-IUSE="+clang test"
+IUSE="+clang test go csharp"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	clang? ( >=sys-devel/clang-3.3 )
+	clang? ( >=sys-devel/clang-3.8 )
 	dev-libs/boost[python,threads,${PYTHON_USEDEP}]
 	|| (
 		app-editors/vim[python,${PYTHON_USEDEP}]
@@ -70,12 +70,10 @@ src_prepare() {
 		rm -r "${S}"/third_party/${third_party_module} || die "Failed to remove third party module ${third_party_module}"
 	done
 	mv ${WORKDIR}/ycmd-$ycmdv ${S}/third_party/ycmd
-	mv ${WORKDIR}/omnisharp-server-$ossv ${S}/third_party/ycmd/third_party/omnisharp-server
+	use csharp && mv ${WORKDIR}/omnisharp-server-$ossv ${S}/third_party/ycmd/third_party/omnisharp-server
 	mv ${WORKDIR}/python-frozendict-$pfdv ${S}/third_party/ycmd/third_party/python-frozendict
-	mv ${WORKDIR}/gocode-$gocodev ${S}/third_party/ycmd/third_party/gocode
+	use go && mv ${WORKDIR}/gocode-$gocodev ${S}/third_party/ycmd/third_party/gocode
 	mv ${WORKDIR}/requests-futures-$reqfuv ${S}/third_party/request-futures
-
-	epatch ${FILESDIR}/a6aa425894d5816946e5a59997de5e4c27c975a9.patch
 }
 
 src_configure() {
@@ -106,7 +104,8 @@ src_install() {
 	rm -r *.md *.sh COPYING.txt third_party/ycmd/cpp || die
 	rm -r third_party/ycmd/{*.md,*.sh} || die
 	find python third_party/ycmd -depth -name '*test*' -exec rm -r {} + || die
-	rm third_party/ycmd/libclang.so.3.7 || die
+	find python third_party/ycmd -depth -name '*examples*' -exec rm -r {} + || die
+	rm third_party/ycmd/libclang.so.* || die
 
 	vim-plugin_src_install
 
