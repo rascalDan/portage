@@ -1,0 +1,21 @@
+From ee19c6315b575f10b3179572382dd267b84473b6 Mon Sep 17 00:00:00 2001
+From: Dan Goodliffe <daniel.goodliffe@pressassociation.com>
+Date: Thu, 3 Nov 2016 11:24:48 +0000
+Subject: [PATCH] Copy backlog from config to context.
+
+---
+ src/haywire/http_server.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/haywire/http_server.c b/src/haywire/http_server.c
+index 52b9220..ba0692c 100644
+--- a/src/haywire/http_server.c
++++ b/src/haywire/http_server.c
+@@ -214,6 +214,7 @@ int hw_http_open()
+             int rc = 0;
+             struct server_ctx* ctx = servers + i;
+             ctx->index = i;
++            ctx->listen_backlog = config->listen_backlog;
+             
+             rc = uv_sem_init(&ctx->semaphore, 0);
+             rc = uv_thread_create(&ctx->thread_id, connection_consumer_start, ctx);
