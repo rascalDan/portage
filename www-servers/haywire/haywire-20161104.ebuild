@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Haywire is an asynchronous HTTP server framework written in C."
 HOMEPAGE="https://github.com/haywire/haywire"
-HWV="35ef50357ff72166cd2327af20722a6e59238e61"
+HWV="6d276bc5dc8a372f6606a112913bf10abea176a7"
 SRC_URI="https://github.com/haywire/haywire/archive/${HWV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
@@ -20,11 +20,6 @@ DEPEND="
 "
 RDEPEND="dev-libs/libuv"
 S="${WORKDIR}/${PN}-${HWV}"
-
-src_prepare()
-{
-	epatch ${FILESDIR}/ee19c6315b575f10b3179572382dd267b84473b6.patch
-}
 
 src_compile()
 {
