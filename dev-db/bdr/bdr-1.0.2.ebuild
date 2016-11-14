@@ -4,21 +4,30 @@
 
 EAPI=5
 
+inherit eutils
+
 DESCRIPTION="Bi-Directional Multi-Master Replication (BDR) for PostgreSQL"
 HOMEPAGE="http://2ndquadrant.com/en/resources/bdr/"
-SRC_URI="https://github.com/2ndQuadrant/bdr/archive/bdr-plugin/0.9.3-2.tar.gz postgresql-9.4.5.tar.bz2"
+SRC_URI="
+	https://github.com/2ndQuadrant/bdr/archive/bdr-plugin/${PV}.tar.gz -> ${P}.tar.gz
+	postgresql-9.6.1.tar.bz2"
 
 LICENSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=dev-db/postgresql-9.4*[server]"
+DEPEND="=dev-db/postgresql-9.6*[server]"
 RDEPEND="${DEPEND}"
 
-bdrS="${WORKDIR}/bdr-bdr-plugin-0.9.3-2"
-pqS="${WORKDIR}/postgresql-9.4.5"
+bdrS="${WORKDIR}/bdr-bdr-plugin-1.0.2"
+pqS="${WORKDIR}/postgresql-9.6.1"
 S=${bdrS}
+
+src_prepare() {
+	cd ${bdrS}
+	epatch ${FILESDIR}/postgresql-9.6.patch.xz
+}
 
 src_configure() {
 	cd ${pqS}
@@ -30,6 +39,7 @@ src_configure() {
 src_compile() {
 	emake -C ${pqS}/src/port
 	emake -C ${pqS}/src/common
-	emake -C ${bdrS} LDFLAGS=-L${pqS}/src/common/\ -L${pqS}/src/port
+	emake -C ${pqS}/src/fe_utils
+	emake -C ${bdrS} LDFLAGS=-L${pqS}/src/common/\ -L${pqS}/src/port\ -L${pqS}/src/fe_utils
 }
 
