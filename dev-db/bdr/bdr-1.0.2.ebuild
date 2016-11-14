@@ -27,6 +27,7 @@ S=${bdrS}
 src_prepare() {
 	cd ${bdrS}
 	epatch ${FILESDIR}/postgresql-9.6.patch.xz
+	epatch ${FILESDIR}/32bit.patch
 }
 
 src_configure() {
