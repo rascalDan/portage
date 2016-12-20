@@ -45,6 +45,7 @@ RDEPEND="
 	mail-client/mailx
 	!minimal? (
 			app-shells/thefuck
+			app-shells/hstr
 			x11-apps/xauth
 			sys-apps/moreutils
 			dev-util/strace
