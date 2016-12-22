@@ -19,7 +19,7 @@ RDEPEND="
 	www-client/lynx
 	sys-devel/gdb
 	dev-util/valgrind
-	app-text/htmltidy
+	app-text/tidy-html5
 	app-doc/doxygen
 	media-fonts/freefont
 	media-fonts/hack

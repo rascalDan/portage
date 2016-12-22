@@ -11,7 +11,7 @@ RDEPEND="
 	|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
 	|| ( www-client/firefox www-client/firefox-bin )
 	www-client/opera
-	app-text/htmltidy
+	app-text/tidy-html5
 	app-doc/doxygen
 	media-fonts/freefont
 	media-fonts/hack
