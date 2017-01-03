@@ -14,6 +14,7 @@ RDEPEND="dev-libs/Ice
 	server? (
 		=dev-cpp/slicer-1.4*:=[db]
 		sys-apps/icebox-service
+		>=dev-libs/libdbpp-1:0
 		>=dev-libs/libdbpp-postgresql-1.0.5
 		dev-libs/libadhocutil:=
 		>=dev-libs/icetray-0.1[tools]

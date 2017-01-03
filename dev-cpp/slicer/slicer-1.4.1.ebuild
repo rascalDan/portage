@@ -12,7 +12,7 @@ IUSE="db xml json"
 RDEPEND="dev-libs/Ice
 	xml? ( =dev-cpp/libxmlpp-2.40* )
 	json? ( dev-cpp/libjsonpp )
-	db? ( =dev-libs/libdbpp-1.0*:= )
+	db? ( =dev-libs/libdbpp-1*:= )
 	>=dev-libs/libadhocutil-0.3:=
 	dev-libs/boost"
 DEPEND="${RDEPEND}

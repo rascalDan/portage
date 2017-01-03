@@ -12,7 +12,7 @@ IUSE="+docs unittest +console +web +fastcgi +daemon"
 RDEPEND="
 	net-libs/libesmtp
 	>=dev-libs/libadhocutil-0.2:=
-	=dev-libs/libdbpp-1.0*:=
+	=dev-libs/libdbpp-1*:=
 	www-client/lynx
 	=dev-cpp/libxmlpp-2.40*
 	sys-libs/zlib
