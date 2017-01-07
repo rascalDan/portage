@@ -2,7 +2,7 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="vpnc pptp wifi b43 networkmanager input_devices_synaptics fbsplash kde gnome systemd plasma"
+IUSE="vpnc pptp wifi b43 networkmanager fbsplash kde gnome systemd plasma"
 
 RDEPEND="
 	virtual/eject
@@ -36,6 +36,5 @@ RDEPEND="
 		)
 	sys-fs/dosfstools
 	sys-boot/syslinux
-	input_devices_synaptics? ( kde? ( kde-misc/synaptiks ) )
 "
 
