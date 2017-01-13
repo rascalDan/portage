@@ -16,7 +16,7 @@ DEPEND="
 	=dev-cpp/slicer-1.4*:=[db]
 	dev-libs/libdbpp-mysql
 	dev-libs/boost
-	>=dev-libs/icetray-0.1
+	>=dev-libs/icetray-0.1.3:=
 	=sys-cluster/netfs-1.2*
 	dev-libs/libadhocutil:=
 "

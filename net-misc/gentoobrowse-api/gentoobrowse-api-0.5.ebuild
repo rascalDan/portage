@@ -15,6 +15,7 @@ RDEPEND="dev-libs/Ice
 		sys-apps/icebox-service
 		>=dev-libs/libdbpp-1:0
 		>=dev-libs/libdbpp-postgresql-1.0.5
+		!>=dev-libs/libdbpp-postgresql-1.1.2
 		>=dev-libs/icetray-0.1[tools]
 		>=dev-libs/boost-1.60
 		>=dev-libs/libgit2-0.24.0
