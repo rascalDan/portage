@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="
 	www-misc/icespider
-	net-misc/gentoobrowse-api[client]
+	net-misc/gentoobrowse-api
 "
 
 pkg_setup() {
