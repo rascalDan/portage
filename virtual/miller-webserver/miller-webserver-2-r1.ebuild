@@ -10,5 +10,6 @@ RDEPEND="
 	www-apache/Apache2-Filter-Minifier-CSS
 	www-apache/Apache2-Filter-Minifier-JavaScript
 	www-apache/mod_fcgid
+	app-crypt/certbot
 "
 
