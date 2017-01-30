@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	www-misc/icespider
+	>=www-misc/icespider-0.2:=
 	>=net-misc/gentoobrowse-api-0.7.2
 "
 

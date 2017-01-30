@@ -1,11 +1,11 @@
 EAPI="5"
 
-DESCRIPTION="ICE API and client for Gentoo Browse"
-HOMEPAGE="http://gentoobrowse.randomdan.homeip.net/"
+DESCRIPTION="Tools and libraries for building web services/sites that are clients of ICE services"
+HOMEPAGE="http://icespider.randomdan.homeip.net/"
 
-#SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
+SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
-SLOT="0"
+SLOT="0/0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
@@ -17,10 +17,6 @@ RDEPEND="dev-libs/Ice
 DEPEND="${DEPEND}
 	dev-util/boost-build"
 
-src_unpack() {
-	mkdir ${S}
-	rsync -a --exclude=bin /home/randomdan/dev/src/{icespider,*.jam} ${S}
-}
 src_prepare() {
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
 }
