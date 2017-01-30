@@ -25,6 +25,7 @@ RDEPEND="
 	net-libs/nodejs[npm]
 	dev-java/maven-bin
 	dev-java/oracle-jdk-bin:1.8
+	dev-util/visualvm
 	app-text/trang
 	app-benchmarks/jmeter
 	app-shells/gentoo-bashcomp
