@@ -1,4 +1,5 @@
 EAPI="5"
+inherit systemd
 
 DESCRIPTION="ICE API and client for Gentoo Browse"
 HOMEPAGE="http://gentoobrowse.randomdan.homeip.net/"
@@ -49,6 +50,8 @@ src_install() {
 	if use server ; then
 		insinto /etc/gentoobrowseapi || die
 		doins etc/icebox.config || die
+		insinto $(systemd_get_systemunitdir)/icebox@gentoobrowseapi.service.d || die
+		doins etc/service.conf || die
 	fi
 }
 
