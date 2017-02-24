@@ -12,6 +12,7 @@ RDEPEND="
 	app-vim/nerdtree
 	app-vim/youcompleteme
 	app-vim/syntastic
+	app-vim/gitgutter
 	app-vim/ctx
 	app-vim/alternate
 	www-client/lynx

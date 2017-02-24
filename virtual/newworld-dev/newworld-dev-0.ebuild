@@ -18,6 +18,7 @@ RDEPEND="
 	app-vim/vcscommand
 	app-vim/youcompleteme
 	app-vim/syntastic
+	app-vim/gitgutter
 	dev-libs/libxml2
 	dev-db/redis
 	virtual/mysql
