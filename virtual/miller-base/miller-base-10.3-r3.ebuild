@@ -8,6 +8,7 @@ minimal autoupdate autoshutdown autoservicerestart sw-suspend raid
 video_cards_nvidia firmware ischroot systemd"
 
 RDEPEND="
+	sys-kernel/kergen
 	app-arch/hardlink
 	sys-process/htop
 	sys-apps/less
