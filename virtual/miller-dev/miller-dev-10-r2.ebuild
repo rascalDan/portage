@@ -7,7 +7,7 @@ IUSE="X dotnet odbc mysql postgres cxx"
 
 RDEPEND="
 	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.02*
+	=dev-lang/ocaml-4.04*
 	virtual/miller-base
 	app-vim/nerdtree
 	app-vim/youcompleteme
