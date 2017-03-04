@@ -11,7 +11,7 @@ IUSE="mediaserver ocfs2"
 
 RDEPEND="
 	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.02*
+	=dev-lang/ocaml-4.04*
 	app-text/highlight
 	net-dns/bind
 	net-firewall/iptables

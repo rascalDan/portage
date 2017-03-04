@@ -7,7 +7,7 @@ IUSE="systemd plasma abi_x86_32"
 
 RDEPEND="
 	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.02*
+	=dev-lang/ocaml-4.04*
 	systemd? ( kde-misc/systemd-kcm )
 	virtual/miller-base
 	kde-apps/kcalc
