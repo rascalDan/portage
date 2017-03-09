@@ -21,7 +21,7 @@ RDEPEND="
 		app-admin/eclean-kernel
 		raid? ( sys-fs/mdadm )
 		app-admin/ide-smart
-		cdr? ( app-cdr/k3b )
+		cdr? ( kde-apps/k3b )
 		sys-apps/hdparm
 		xfs? ( sys-fs/xfsdump )
 		sys-fs/lvm2
