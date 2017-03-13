@@ -4,13 +4,13 @@
 
 EAPI=6
 
-DESCRIPTION="Simplify a list of files and folders.￼Edit"
+DESCRIPTION="Simplify a list of files and folders."
 HOMEPAGE="https://github.com/rascalDan/simplify"
 SRC_URI="https://github.com/rascalDan/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
