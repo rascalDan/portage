@@ -8,6 +8,7 @@ minimal autoupdate autoshutdown autoservicerestart sw-suspend raid
 video_cards_nvidia firmware ischroot systemd"
 
 RDEPEND="
+	app-misc/simplify
 	sys-kernel/kergen
 	app-arch/hardlink
 	sys-process/htop
@@ -93,6 +94,9 @@ src_install() {
 		newexe "${FILESDIR}"/service-check.openrc service-check
 	fi
 
+	exeinto /etc/cron.monthly
+	use !minimal && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
+
 	exeinto /etc/cron.weekly
 	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
 
@@ -114,6 +118,8 @@ src_install() {
 	use !autoupdate && newexe "${FILESDIR}"/auto-download-packages 70-auto-download-package
 	newexe "${FILESDIR}"/auto-update-overlays 10-auto-update-overlays
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates
+	newexe "${FILESDIR}"/newkernel 80-newkernel
+	newexe "${FILESDIR}"/systemd-reload 90-systemd-reload
 	if use autoupdate ; then
 		dosym /sbin/update-install /etc/portage/postsync.d/75-update-install
 		if use autoshutdown ; then

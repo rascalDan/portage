@@ -1,28 +1,55 @@
 #!/bin/bash
 
-EXCL=$(
-	portageq distdir
-	portageq pkgdir
-	portageq get_repo_path / $(portageq get_repos /)
+CLAMD=${CLAMD:-auto}
+CLAMDSOCK="${CLAMDSOCK:-/run/clamav/clamd.sock}"
+
+if [ -f /etc/conf.d/av-scan ] ; then
+	set -o allexport
+	. /etc/conf.d/av-scan
+	set +o allexport
+fi
+
+declare -a EXCL
+declare -A M
+EXCL=(
+		$(portageq distdir)
+		$(portageq pkgdir)
+		$(portageq get_repo_path / $(portageq get_repos /))
+		$(mount | grep -v ^/dev/ | sort -u -k3,3 | cut -d ' ' -f 3 | sort -u)
+		$(mount | grep ^/dev | while read dev on path type fs opts ; do
+			devhash=${dev//\//_}
+			if [ ${M[$devhash]} ] ; then
+				echo $path
+			else
+				M[$devhash]=$path
+			fi
+		done)
 )
-ROOTS=$(mount | grep ^/dev/ | sort -u -k1,1 | cut -d ' ' -f 3 | sort)
-
-echo "Scanning:"
-echo $ROOTS
-echo
 echo "Excluding:"
-echo $EXCL
+echo ${EXCL[@]}
 echo
+EXCLARGS=("${EXCL[@]/#/-x }")
 
-if [ -S /run/clamav/clamd.sock ] ; then
+if [ ! -S ${CLAMDSOCK} -a ${CLAMD} = "yes" ] ; then
+	echo "Starting clamd..."
+	systemctl start clamd
+	CLAMD="started"
+fi
+
+if [ -S ${CLAMDSOCK} -a ${CLAMD} != "no" ] ; then
 	echo "Using clamd"
-	EXCLARGS=$(ls -1d $EXCL | sed -ne 's/\(.*\)/-path \1 -o/p')
 	rm -f /tmp/scan
 	mkfifo /tmp/scan
-	find $ROOTS -xdev \( $EXCLARGS -empty \) -prune -o -type f -print > /tmp/scan &
-	clamdscan -i --fdpass -f /tmp/scan
+	simplifind -r / ${EXCLARGS[@]} > /tmp/scan &
+	clamdscan -i --fdpass -f /tmp/scan -m -l /var/log/av-scan.log
 	rm -f /tmp/scan
 else
-	EXCLARGS=$(ls -1d $EXCL | sed -ne 's/\(.*\)/--exclude-dir="\1"/p')
-	nice clamscan -ri --cross-fs=no $ROOTS $EXCLARGS
+	echo "Using clamscan"
+	simplifind -r / ${EXCLARGS[@]} | xargs nice clamscan -ri -l /var/log/av-scan.log
 fi
+
+if [ -S ${CLAMDSOCK} -a ${CLAMD} = "started" ] ; then
+	echo "Stopping clamd..."
+	systemctl stop clamd
+fi
+

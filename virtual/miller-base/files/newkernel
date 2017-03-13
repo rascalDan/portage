@@ -1,0 +1,13 @@
+#!/bin/bash
+
+[ -s "$PORTAGE_TMPDIR" ] && exec -c /bin/bash -l -c $0
+
+if [ /usr/src/linux -nt /boot ] ; then
+	if [ ! -f /usr/src/linux/.config -a -f /proc/config.gz ] ; then
+		zcat /proc/config.gz > /usr/src/linux/.config
+	fi
+	genkernel all && \
+		grub-mkconfig -o /boot/grub/grub.cfg
+	touch /boot
+fi
+
