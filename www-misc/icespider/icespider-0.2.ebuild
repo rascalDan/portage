@@ -11,7 +11,7 @@ IUSE=""
 
 RDEPEND="dev-libs/Ice
 	dev-libs/libadhocutil
-	dev-cpp/slicer
+	dev-cpp/slicer:=
 	dev-libs/fcgi
 	dev-libs/boost"
 DEPEND="${DEPEND}
