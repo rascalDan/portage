@@ -6,8 +6,8 @@ EAPI=5
 PYTHON_COMPAT=( python2_7 )
 inherit multilib python-single-r1 cmake-utils vim-plugin
 
-youcompletemev="f27787f2630a0b0cc3ef60685d6188cc13281e7f"
-ycmdv="63c3d992a2db8d189cd78a25a70c87348726fc52"
+youcompletemev="6583da75bd7f4ba01be3c9f5ddc7cc6b4d53bb50"
+ycmdv="de3e92aadd421e3a23412101a84d1abbe56afb4d"
 reqfuv="98712e7d0f6be2a090b6fda2a925f85e63656b58"
 ossv="e1902915c6790bcec00b8d551199c8a3537d33c9"
 pfdv="b27053e4d11f5891319fd29eda561c130ba3112a"
