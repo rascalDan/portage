@@ -5,7 +5,7 @@ HOMEPAGE="http://slicer.randomdan.homeip.net/"
 
 SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
 LICENSE="GPL"
-SLOT="0/1.4.2"
+SLOT="0/1.4.3"
 KEYWORDS="x86 amd64"
 IUSE="db xml json"
 
