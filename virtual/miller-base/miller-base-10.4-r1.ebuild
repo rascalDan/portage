@@ -94,11 +94,9 @@ src_install() {
 		newexe "${FILESDIR}"/service-check.openrc service-check
 	fi
 
-	exeinto /etc/cron.monthly
-	use !minimal && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
-
 	exeinto /etc/cron.weekly
 	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
+	use !minimal && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
 
 	exeinto /etc/cron.daily
 	use !minimal && newexe "${FILESDIR}"/daily-av-update.cron av-update
