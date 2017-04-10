@@ -1,5 +1,5 @@
 EAPI="5"
-inherit systemd
+inherit systemd eutils
 
 DESCRIPTION="ICE API and client for Gentoo Browse"
 HOMEPAGE="http://gentoobrowse.randomdan.homeip.net/"
