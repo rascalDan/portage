@@ -31,6 +31,8 @@ RDEPEND="
 	net-misc/gentoobrowse-api
 	dev-util/ccache
 	dev-util/lcov
+	sys-cluster/heartbeat
+	sys-apps/heartbeat-service
 	ocfs2? (
 			sys-apps/drbd-service
 			sys-cluster/drbd-utils
