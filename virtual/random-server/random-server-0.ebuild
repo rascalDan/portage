@@ -7,7 +7,7 @@ SRC_URI=""
 LICENSE=""
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="mediaserver ocfs2"
+IUSE="mediaserver ocfs2 ci"
 
 RDEPEND="
 	=net-misc/unison-2.48*
@@ -30,8 +30,10 @@ RDEPEND="
 	sys-apps/glacier2-service
 	net-misc/gentoobrowse-api
 	dev-util/ccache
-	dev-util/lcov
 	>=sys-cluster/heartbeat-3.0.6
+	ci? (
+			virtual/ci-server
+		)
 	ocfs2? (
 			sys-apps/drbd-service
 			sys-cluster/drbd-utils
