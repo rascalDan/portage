@@ -12,6 +12,7 @@ RDEPEND="
 	sys-kernel/kergen
 	app-arch/hardlink
 	sys-process/htop
+	sys-process/iotop
 	sys-apps/less
 	fuse? ( net-fs/sshfs )
 	!ischroot? (
