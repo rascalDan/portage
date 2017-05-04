@@ -18,6 +18,7 @@ RDEPEND="dev-libs/Ice
 		>=dev-libs/libdbpp-postgresql-1.1.2
 		>=dev-libs/icetray-0.1.3[tools]
 		>=dev-libs/boost-1.60
+		dev-cpp/libxmlpp:2.6
 		>=dev-libs/libgit2-0.24.0
 	)
 	>=dev-libs/libadhocutil-0.3.6:=
