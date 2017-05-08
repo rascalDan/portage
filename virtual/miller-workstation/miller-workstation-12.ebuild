@@ -46,7 +46,6 @@ RDEPEND="
 	media-sound/clementine
 	kde-apps/spectacle
 	kde-apps/kwalletmanager
-	kde-apps/kpasswdserver
 	x11-misc/kdocker
 	kde-apps/okular
 	kde-apps/gwenview
