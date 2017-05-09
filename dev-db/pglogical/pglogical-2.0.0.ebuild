@@ -12,7 +12,7 @@ SRC_URI="https://github.com/2ndQuadrant/${PN}/archive/REL${PV//./_}.tar.gz -> ${
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="=dev-db/postgresql-9.6*[server,static-libs]"
