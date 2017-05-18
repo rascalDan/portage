@@ -1,9 +1,11 @@
 EAPI="5"
 
+inherit eutils bjam
+
 DESCRIPTION="Cluster capable network filesytem"
 HOMEPAGE="http://netfs.randomdan.homeip.net/"
 
-SRC_URI="http://releases.randomdan.homeip.net/git-modules/${P}.tar.bz2"
+SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
@@ -22,13 +24,9 @@ RDEPEND="dev-libs/Ice
 DEPEND="${DEPEND}
 	dev-util/boost-build"
 
-src_prepare() {
-	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
-}
-
 src_compile() {
 	cd ${S}/netfs || die
-	setarch $(uname -m) -RL b2 ${BJAMOPTS} variant=release -q \
+	bjambuild \
 			$(use client && echo fuse//netfs) \
 			$(use server && echo daemon//netfsd) \
 			ice//netfsComms || die
@@ -36,7 +34,7 @@ src_compile() {
 
 src_install() {
 	cd ${S}/netfs || die
-	setarch $(uname -m) -RL b2 ${BJAMOPTS} variant=release -q \
+	bjambuild \
 			$(use client && echo fuse//install) \
 			$(use server && echo daemon//install) \
 			ice//install \
