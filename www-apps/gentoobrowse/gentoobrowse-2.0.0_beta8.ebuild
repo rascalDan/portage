@@ -1,9 +1,9 @@
 EAPI=5
 
-inherit webapp depend.apache eutils
+inherit webapp depend.apache eutils bjam
 
 DESCRIPTION="Gentoo Browse is an IceSpider based web site for viewing Gentoo content"
-SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
+SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 HOMEPAGE="http://gentoobrowse.randomdan.homip.net/"
 
 LICENSE="GPL"
@@ -13,25 +13,21 @@ IUSE=""
 
 DEPEND="
 	>=www-misc/icespider-0.2:=
-	>=net-misc/gentoobrowse-api-0.7.2
+	>=net-misc/gentoobrowse-api-0.9
 "
 
 pkg_setup() {
 	webapp_pkg_setup
 }
 
-src_prepare() {
-	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
-}
-
 src_compile() {
 	cd ${S}/${PN} || die
-	b2 -q ${BJAMOPTS} variant=release cgi || die
+	bjambuild cgi || die
 }
 
 src_install () {
 	cd ${S}/${PN} || die
-	b2 -q ${BJAMOPTS} variant=release install --bindir=${D}/${MY_CGIBINDIR} || die
+	bjambuild install --bindir=${D}/${MY_CGIBINDIR} || die
 	webapp_src_preinst
 
 	insinto ${MY_HTDOCSDIR}
