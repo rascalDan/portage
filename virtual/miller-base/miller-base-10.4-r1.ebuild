@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for base systems"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr hardened nohourlyupdate fuse xfs bash-completion git fbsplash samba
+IUSE="cdr hardened nohourlyupdate fuse xfs btrfs bash-completion git fbsplash samba
 minimal autoupdate autoshutdown autoservicerestart sw-suspend raid
 video_cards_nvidia firmware ischroot systemd"
 
@@ -26,6 +26,7 @@ RDEPEND="
 		cdr? ( kde-apps/k3b )
 		sys-apps/hdparm
 		xfs? ( sys-fs/xfsdump )
+		btrfs? ( sys-fs/btrfs-progs )
 		sys-fs/lvm2
 		>=sys-boot/grub-2
 		sys-apps/busybox
