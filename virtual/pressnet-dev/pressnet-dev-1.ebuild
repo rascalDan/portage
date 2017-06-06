@@ -9,8 +9,9 @@ RDEPEND="
 	virtual/miller-base
 	strictversions? (
 		=dev-libs/boost-1.48*
+		=sys-devel/gcc-4.4.7*
 	)
-	=sys-devel/gcc-4.4.7*
+	=sys-devel/gcc-4*
 	dev-vcs/git
 	app-vim/youcompleteme
 	app-vim/syntastic
