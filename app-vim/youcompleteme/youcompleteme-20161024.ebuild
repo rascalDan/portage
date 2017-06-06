@@ -13,7 +13,7 @@ ossv="e1902915c6790bcec00b8d551199c8a3537d33c9"
 pfdv="b27053e4d11f5891319fd29eda561c130ba3112a"
 gocodev="93093563812be3e6679f590e1caaf8627abeb16e"
 
-KEYWORDS="~amd64"
+KEYWORDS="amd64 x86"
 SRC_URI="
 	https://github.com/Valloric/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/Valloric/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
