@@ -9,13 +9,13 @@ video_cards_nvidia firmware ischroot systemd"
 
 RDEPEND="
 	app-misc/simplify
-	sys-kernel/kergen
 	app-arch/hardlink
 	sys-process/htop
 	sys-process/iotop
 	sys-apps/less
 	fuse? ( net-fs/sshfs )
 	!ischroot? (
+		sys-kernel/kergen
 		sys-apps/systemd-readahead
 		sys-apps/ethtool
 		sys-cluster/netfs
