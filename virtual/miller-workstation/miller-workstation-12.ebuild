@@ -23,7 +23,6 @@ RDEPEND="
 	kde-misc/basket
 	virtual/jre
 	kde-apps/krdc
-	kde-misc/kwebkitpart
 	|| (
 			www-client/firefox
 			( www-client/chromium www-plugins/chrome-binary-plugins )
