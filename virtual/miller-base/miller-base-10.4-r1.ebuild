@@ -16,7 +16,6 @@ RDEPEND="
 	fuse? ( net-fs/sshfs )
 	!ischroot? (
 		sys-kernel/kergen
-		sys-apps/systemd-readahead
 		sys-apps/ethtool
 		sys-cluster/netfs
 		sys-apps/kexec-tools
