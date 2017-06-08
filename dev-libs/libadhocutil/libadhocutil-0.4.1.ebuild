@@ -13,6 +13,7 @@ RDEPEND="
 	net-misc/curl
 	dev-libs/Ice
 	dev-libs/boost
+	dev-cpp/glibmm
 "
 DEPEND="
 	${RDEPEND}
