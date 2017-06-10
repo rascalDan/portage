@@ -42,6 +42,7 @@ RDEPEND="
 	mediaserver? (
 			net-misc/minidlna
 			media-tv/mythtv
+			media-tv/mythfs
 			media-tv/p2pvr
 			net-misc/youtube-dl
 			net-p2p/transmission )
