@@ -13,7 +13,7 @@ pfdv="c5d16bafcca7b72ff3e8f40d3a9081e4c9233f1b"
 ossv="e1902915c6790bcec00b8d551199c8a3537d33c9"
 gocodev="843b7a63f621bb441274849d58671870adf1a5ce"
 
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 SRC_URI="
 	https://github.com/Valloric/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/Valloric/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
@@ -32,7 +32,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	clang? ( =sys-devel/clang-4.0* )
+	clang? ( =sys-devel/clang-3.9* )
 	dev-libs/boost[python,threads,${PYTHON_USEDEP}]
 	|| (
 		app-editors/vim[python,${PYTHON_USEDEP}]
