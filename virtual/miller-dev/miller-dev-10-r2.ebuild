@@ -39,7 +39,10 @@ RDEPEND="
 	dev-vcs/git
 	dev-vcs/git-extras
 	dev-util/patchutils
-	net-analyzer/arping
+	|| (
+		net-misc/iputils[arping(+)]
+		net-analyzer/arping
+	)
 	dev-libs/libadhocutil
 	dev-libs/libdbpp-postgresql
 	dev-libs/libdbpp-mysql
