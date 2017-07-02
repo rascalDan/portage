@@ -25,7 +25,7 @@ DEPEND="
 src_compile() {
 	cd ${S}/libdbpp || die
 	bjambuild \
-		variant=release dbppcore $(use ut && echo dbpptestcore) -q || die
+		variant=release dbppcore $(use ut && echo dbpptestcore createmockdb) -q || die
 }
 
 src_install() {
