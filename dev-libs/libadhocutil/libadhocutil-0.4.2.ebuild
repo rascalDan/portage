@@ -3,7 +3,7 @@ EAPI="5"
 inherit bjam
 
 DESCRIPTION="Ad-hoc collection of utility functions, classes, helpers"
-HOMEPAGE="http://libadhocutil.randomdan.homeip.net/"
+HOMEPAGE="http://docs.randomdan.homeip.net/libadhocutil"
 
 SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
@@ -25,33 +25,21 @@ DEPEND="
 "
 
 src_compile() {
-	cd ${S}/libadhocutil || die
-	bjambuild variant=release adhocutil -q || die
+	bjambuild libadhocutil//adhocutil || die
 }
 
 src_install() {
-	cd ${S}/libadhocutil || die
-
-	bjambuild variant=release install -q \
+	bjambuild libadhocutil//install \
 		--libdir=${D}/usr/lib \
 		--includedir=${D}/usr/include/adhocutil || die
 
 	insinto /usr/include/adhocutil || die
-	doins ${S}/libadhocutil/bin/*/*/*.h || die
+	doins libadhocutil/bin/*/*/*.h || die
 	insinto /usr/share/adhocutil/ice || die
-	doins *.ice || die
+	doins libadhocutil/*.ice || die
 
 	if use man ; then
-		mkdir -p ${D}/usr/share/man
-		(cat Doxyfile ;
-			echo OUTPUT_DIRECTORY=${D}/usr/share
-			echo PROJECT_NUMBER=${PV}
-		) | tee ${T}/doxy | doxygen - || die "Build docs failed"
+		doxygenbuild
 	fi
-}
-
-src_test() {
-	cd ${S}/libadhocutil || die
-	bjambuild variant=release -q || die
 }
 
