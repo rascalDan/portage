@@ -8,7 +8,7 @@ HOMEPAGE="http://libdbpp.randomdan.homeip.net/postgresql"
 SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 RDEPEND="
 	dev-libs/boost
@@ -23,16 +23,13 @@ DEPEND="
 "
 
 src_compile() {
-	cd ${S}/libpqpp || die
 	bjambuild \
-		variant=release dbpp-postgresql -q || die
+		libpqpp//dbpp-postgresql -q || die
 }
 
 src_install() {
-	cd ${S}/libpqpp || die
-
 	bjambuild \
-		variant=release install -q \
+		libpqpp//install -q \
 		--libdir=${D}/usr/lib \
 		--includedir=${D}/usr/include/dbpp-postgresql || die
 }
