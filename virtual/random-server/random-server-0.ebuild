@@ -31,6 +31,7 @@ RDEPEND="
 	net-misc/gentoobrowse-api
 	dev-util/ccache
 	>=sys-cluster/heartbeat-3.0.6
+	net-analyzer/fail2ban
 	ci? (
 			virtual/ci-server
 		)
