@@ -1,3 +1,4 @@
+EAPI="6"
 DESCRIPTION="Virtual for Miller webapp servers"
 
 SLOT="0"
@@ -9,5 +10,6 @@ RDEPEND="
 	www-apps/gentoobrowse
 	www-apps/bugzilla
 	www-apps/mythweb
+	virtual/httpd-php:7.1
 	www-apps/cgit
 "
