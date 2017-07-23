@@ -10,6 +10,7 @@ RDEPEND="
 	=dev-lang/ocaml-4.04*
 	virtual/miller-base
 	app-vim/nerdtree
+	app-vim/nerdcommenter
 	app-vim/youcompleteme
 	app-vim/syntastic
 	app-vim/gitgutter
