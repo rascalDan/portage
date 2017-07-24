@@ -55,7 +55,6 @@ RDEPEND="
 		kde-base/kdebase-startkde
 		kde-misc/gx-mail-notify )
 	plasma? ( kde-plasma/plasma-meta
-		kde-misc/kbiff
 		x11-plugins/pidgin-indicator )
 	media-gfx/geeqie
 	kde-apps/ark

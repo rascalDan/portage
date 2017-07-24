@@ -21,7 +21,6 @@ RDEPEND="
 		sys-apps/kexec-tools
 		app-admin/eclean-kernel
 		raid? ( sys-fs/mdadm )
-		app-admin/ide-smart
 		cdr? ( kde-apps/k3b )
 		sys-apps/hdparm
 		xfs? ( sys-fs/xfsdump )
@@ -39,8 +38,6 @@ RDEPEND="
 		app-admin/syslog-ng
 		app-admin/logrotate
 		hardened? ( sys-kernel/hardened-sources sys-apps/gradm )
-		sys-boot/grub
-		net-misc/wakeonlan
 		video_cards_nvidia? ( sys-apps/v86d )
 	)
 	>=app-portage/gentoolkit-0.2.1

@@ -18,7 +18,9 @@ RDEPEND="
 	app-vim/alternate
 	www-client/lynx
 	app-admin/webapp-config
-	postgres? ( dev-db/apgdiff )
+	postgres? (
+			dev-db/apgdiff
+			dev-db/postgresql_autodoc )
 	dev-util/uncrustify
 	net-nds/shelldap
 	sys-devel/gdb
@@ -26,7 +28,7 @@ RDEPEND="
 	dev-util/lcov
 	app-text/tidy-html5
 	app-doc/doxygen
-	app-benchmarks/siege
+	app-benchmarks/wrk
 	sys-fs/inotify-tools
 	cxx? (
 			dev-util/ccache
@@ -41,7 +43,7 @@ RDEPEND="
 	dev-vcs/git-extras
 	dev-util/patchutils
 	|| (
-		net-misc/iputils[arping(+)]
+		net-misc/iputils[arping]
 		net-analyzer/arping
 	)
 	dev-libs/libadhocutil
@@ -51,7 +53,7 @@ RDEPEND="
 	dev-libs/fcgi
 	dev-libs/Ice
 	dev-cpp/glibmm
-	=dev-cpp/libxmlpp-2.40*
+	dev-cpp/libxmlpp:3.0
 	dev-libs/cgicc
 	net-libs/libesmtp
 	www-apache/mod_fcgid
@@ -60,11 +62,10 @@ RDEPEND="
 	app-arch/rar
 	net-ftp/ftp
 	media-video/ffmpeg
-	postgres? ( dev-db/postgresql_autodoc )
 	odbc? (
 			mysql? ( dev-db/myodbc )
+			postgres? ( dev-db/psqlodbc )
 		  )
-	postgres? ( dev-db/psqlodbc )
 	net-misc/youtube-dl
 	www-servers/apache
 	X? (
