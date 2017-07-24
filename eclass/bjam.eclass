@@ -17,11 +17,11 @@ src_prepare() {
 }
 
 src_test() {
-	bjambuild || die
+	bjambuild
 }
 
 bjambuild() {
-	setarch $(uname -m) -RL b2 ${BJAMOPTS} variant=release -q $@
+	setarch $(uname -m) -RL b2 ${BJAMOPTS} variant=release -q $@ || die
 }
 
 doxygenbuild() {
