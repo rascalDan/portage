@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for base systems"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr hardened nohourlyupdate fuse xfs btrfs bash-completion git fbsplash samba
+IUSE="cdr hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
 minimal autoupdate autoshutdown autoservicerestart sw-suspend raid
 video_cards_nvidia firmware ischroot systemd"
 
