@@ -2,11 +2,13 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="vpnc pptp wifi b43 networkmanager fbsplash kde gnome systemd plasma"
+IUSE="vpnc pptp wifi b43 networkmanager fbsplash kde gnome systemd plasma plymouth"
 
 RDEPEND="
 	virtual/eject
-	media-gfx/MIB-Ossigeno-Ultimate-Plymouth
+	plymouth? (
+			media-gfx/MIB-Ossigeno-Ultimate-Plymouth
+	)
 	!systemd? (
 		sys-boot/plymouth-openrc-plugin )
 	virtual/miller-base
