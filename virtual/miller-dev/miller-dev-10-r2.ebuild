@@ -95,7 +95,11 @@ RDEPEND="
 					)
 				   )
 				)
-	postgres? ( >=dev-db/pgadmin3-1.12 )
+	postgres? (
+			|| (
+				dev-db/pgadmin4
+				dev-db/pgadmin3
+			   ) )
 	kde-apps/kcachegrind
 	app-editors/gvim
 	)"
