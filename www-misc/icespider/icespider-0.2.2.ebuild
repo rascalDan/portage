@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="dev-libs/Ice
-	dev-libs/libadhocutil
+	dev-libs/libadhocutil:=
 	dev-cpp/libxmlpp:3.0
 	dev-cpp/slicer:=
 	dev-libs/fcgi
