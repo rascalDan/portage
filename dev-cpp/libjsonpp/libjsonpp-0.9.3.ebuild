@@ -1,30 +1,27 @@
 EAPI="5"
+inherit bjam
 
 DESCRIPTION="Lightweight native C++ JSON library"
 HOMEPAGE="http://libjsonpp.randomdan.homeip.net/"
 
-SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
+SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
 
-DEPEND="dev-cpp/glibmm
+RDEPEND="dev-cpp/glibmm
 	sys-devel/flex
-	dev-libs/boost
+	dev-libs/boost"
+RDEPEND="${DEPEND}
 	dev-util/boost-build"
-RDEPEND="${DEPEND}"
-
-src_prepare() {
-	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
-}
 
 src_compile() {
-	cd ${S}/libjsonpp || die
-	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release jsonpp -q || die
+	bjambuild libjsonpp//jsonpp
 }
 
 src_install() {
-	cd ${S}/libjsonpp || die
-	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release install -q --libdir=${D}/usr/lib --includedir=${D}/usr/include || die
+	bjaminstall libjsonpp//install \
+		-i ""
 }
+
