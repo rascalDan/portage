@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit bjam
+inherit bjam systemd
 
 DESCRIPTION="NetFS daemon module for MythTV"
 HOMEPAGE="http://mythfs.randomdan.homeip.net/"
@@ -30,10 +30,10 @@ src_compile() {
 }
 
 src_install() {
-	bjambuild mythfs//install --prefix=${D}/usr
+	bjaminstall mythfs//install
 	insinto /etc/mythfs || die
 	doins etc/icebox.config
-	insinto /usr/lib/systemd/system/icebox@mythfs.service.d || die
+	insinto $(systemd_get_systemunitdir)/icebox@mythfs.service.d || die
 	doins ${FILESDIR}/service.conf || die
 }
 

@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	bjambuild mythfs//install --prefix=${D}/usr
+	bjaminstall mythfs//install
 	insinto /etc/mythfs
 	doins mythfs/etc/icebox.config
 	insinto $(systemd_get_systemunitdir)/icebox@mythfs.service.d
