@@ -26,16 +26,16 @@ DEPEND="${DEPEND}
 
 src_compile() {
 	bjambuild \
-			$(use client && echo netfs/fuse//netfs) \
-			$(use server && echo netfs/daemon//netfsd) \
-			netfs/ice//netfs-api
+		$(use client && echo netfs/fuse//netfs) \
+		$(use server && echo netfs/daemon//netfsd) \
+		netfs/ice//netfs-api
 }
 
 src_install() {
-	bjambuild --prefix=${D}/usr --includedir=${D}/usr/include/${PN} \
-			$(use client && echo netfs/fuse//install) \
-			$(use server && echo netfs/daemon//install) \
-			netfs/ice//install
+	bjaminstall \
+		$(use client && echo netfs/fuse//install) \
+		$(use server && echo netfs/daemon//install) \
+		netfs/ice//install
 
 	if use client ; then
 		insinto /etc/netfs
