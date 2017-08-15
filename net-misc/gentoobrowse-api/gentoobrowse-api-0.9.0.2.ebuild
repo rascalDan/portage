@@ -37,8 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	bjambuild --prefix=${D}/usr \
-		--includedir=${D}/usr/include/${PN} \
+	bjaminstall \
 		gentoobrowse-api//install-libs \
 		gentoobrowse-api//install-slice \
 		$(use client && echo gentoobrowse-api//install-client) \

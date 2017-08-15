@@ -43,6 +43,7 @@ src_compile() {
 src_install() {
 	cd ${S}/gentoobrowse-api || die
 	setarch $(uname -m) -RL b2 -q ${BJAMOPTS} variant=release --prefix=${D}/usr \
+		--libdir=${D}/usr/$(get_libdir) \
 		--includedir=${D}/usr/include/${PN} \
 		install-libs \
 		install-slice \
