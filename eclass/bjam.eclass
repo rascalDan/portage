@@ -24,6 +24,30 @@ bjambuild() {
 	setarch $(uname -m) -RL b2 ${BJAMOPTS} variant=release -q $@ || die
 }
 
+bjaminstall() {
+	local -a other
+	local include
+	include=${PN}
+	while [[ $# -gt 0 ]] ; do
+		case "$1" in
+			-i|--include)
+				include=$2
+				shift
+				;;
+			*)
+				other+=( $1 )
+				;;
+		esac
+		shift
+	done
+
+	bjambuild \
+		--prefix="${D}/usr" \
+		--libdir="${D}/usr/$(get_libdir)" \
+		--includedir="${D}/usr/include/$include" \
+		${other[@]}
+}
+
 doxygenbuild() {
 	mkdir -p ${D}/usr/share/man
 	find ${S} -name Doxyfile -printf '%h %p\n' | while read d p ; do
