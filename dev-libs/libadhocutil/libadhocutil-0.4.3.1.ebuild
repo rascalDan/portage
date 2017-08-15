@@ -25,13 +25,12 @@ DEPEND="
 "
 
 src_compile() {
-	bjambuild libadhocutil//adhocutil || die
+	bjambuild libadhocutil//adhocutil
 }
 
 src_install() {
-	bjambuild libadhocutil//install \
-		--libdir=${D}/usr/lib \
-		--includedir=${D}/usr/include/adhocutil || die
+	bjaminstall libadhocutil//install \
+		-i adhocutil
 
 	insinto /usr/include/adhocutil || die
 	doins libadhocutil/bin/*/*/*.h || die

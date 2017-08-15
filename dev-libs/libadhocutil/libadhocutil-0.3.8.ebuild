@@ -1,4 +1,5 @@
 EAPI="5"
+inherit multilib
 
 DESCRIPTION="Ad-hoc collection of utility functions, classes, helpers"
 HOMEPAGE="http://libadhocutil.randomdan.homeip.net/"
@@ -35,7 +36,7 @@ src_install() {
 	cd ${S}/libadhocutil || die
 
 	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release install -q \
-		--libdir=${D}/usr/lib \
+		--libdir=${D}/usr/$(get_libdir) \
 		--includedir=${D}/usr/include/adhocutil || die
 
 	insinto /usr/include/adhocutil || die
