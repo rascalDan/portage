@@ -31,10 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	bjambuild icetray/icetray//install-main \
+	bjaminstall icetray/icetray//install-main \
 		$(use tools && echo icetray/tool//install-tools) \
-		$(use ut && echo icetray/dryice//install-dryice) \
-		--prefix=${D}/usr \
-		--includedir=${D}/usr/include/icetray
+		$(use ut && echo icetray/dryice//install-dryice)
 }
 
