@@ -1,4 +1,5 @@
 EAPI="5"
+inherit bjam
 
 DESCRIPTION="User configured application engine"
 HOMEPAGE="http://project2.randomdan.homeip.net"
@@ -11,10 +12,10 @@ IUSE="+docs unittest +console +web +fastcgi +daemon"
 
 RDEPEND="
 	net-libs/libesmtp
-	>=dev-libs/libadhocutil-0.2
-	dev-libs/libdbpp
+	>=dev-libs/libadhocutil-0.2:=
+	=dev-libs/libdbpp-1*:=
 	www-client/lynx
-	=dev-cpp/libxmlpp-2.40*
+	dev-cpp/libxmlpp:3.0
 	sys-libs/zlib
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
@@ -26,7 +27,7 @@ RDEPEND="
 				dev-libs/fcgi
 				)
 		 )
-	=dev-cpp/slicer-1.3*:=
+	>=dev-cpp/slicer-1.4:=
 	"
 
 DEPEND="${RDEPEND}
@@ -54,22 +55,12 @@ src_configure() {
 }
 
 src_compile() {
-	cd ${S}/project2 || die
-	setarch $(uname -m) -RL \
-			b2 ${BJAMOPTS} finalbin finallib -q \
-			variant=release \
-			|| die "Compile failed"
+	bjambuild project2//finalbin project2//finallib
 }
 
 src_install() {
-	cd ${S}/project2 || die
-	setarch $(uname -m) -RL \
-			b2 ${BJAMOPTS} install -q \
-			variant=release \
-			--bindir=${D}/usr/bin \
-			--libdir=${D}/usr/lib \
-			--includedir=${D}/usr/include/project2 \
-			|| die "Installed failed"
+	bjaminstall project2//install \
+		-i project2
 	if use docs ; then
 		mkdir -p ${D}/usr/share/doc/${PN}
 		(cat Doxyfile ; echo OUTPUT_DIRECTORY=${D}/usr/share/doc/${PN}) | doxygen - || die "Build docs failed"
