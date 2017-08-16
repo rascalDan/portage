@@ -3,6 +3,7 @@
 # $Id$
 
 EAPI=6
+inherit bjam
 
 DESCRIPTION="Simplify a list of files and folders."
 HOMEPAGE="https://github.com/rascalDan/simplify"
@@ -21,16 +22,11 @@ DEPEND="
 	dev-util/boost-build
 "
 
-src_prepare() {
-	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
-	eapply_user
-}
-
 src_compile() {
-	b2 ${BJAMOPTS} variant=release simplify simplifind -q || die
+	bjambuild simplify
 }
 
 src_install() {
-	b2 ${BJAMOPTS} variant=release install -q --prefix=${D}/usr || die
+	bjaminstall install
 }
 
