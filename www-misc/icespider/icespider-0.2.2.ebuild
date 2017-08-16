@@ -21,16 +21,20 @@ DEPEND="${DEPEND}
 	dev-util/boost-build"
 
 src_compile() {
-	cd ${S}/icespider || die
-	bjambuild variant=release \
-		common core compile fcgi xslt fileSessions testing || die
+	bjambuild \
+		icespider//common \
+		icespider//core \
+		icespider//compile \
+		icespider//fcgi \
+		icespider//xslt \
+		icespider//fileSessions \
+		icespider//testing
 }
 
 src_install() {
-	cd ${S}/icespider || die
-	bjambuild variant=release --prefix=${D}/usr --includedir=/${D}/usr/include/icespider \
-		install \
-		install-ice \
-		install-tools || die
+	bjaminstall \
+		icespider//install \
+		icespider//install-ice \
+		icespider//install-tools
 }
 
