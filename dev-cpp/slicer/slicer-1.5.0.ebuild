@@ -22,17 +22,17 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	bjambuild \
-			$(use xml && echo slicer/xml//slicer-xml) \
-			$(use json && echo slicer/json//slicer-json) \
-			$(use db && echo slicer/db//slicer-db) \
-			slicer/slicer//slicer slicer/tool//slicer slicer/ice//slicer-ice || die
+		$(use xml && echo slicer/xml//slicer-xml) \
+		$(use json && echo slicer/json//slicer-json) \
+		$(use db && echo slicer/db//slicer-db) \
+		slicer/slicer//slicer slicer/tool//slicer slicer/ice//slicer-ice || die
 }
 
 src_install() {
-	bjambuild slicer//install \
-			$(use xml && echo slicer//install-xml) \
-			$(use json && echo slicer//install-json) \
-			$(use db && echo slicer//install-db) \
-			--prefix=${D}/usr || die
+	bjaminstall slicer//install \
+		$(use xml && echo slicer//install-xml) \
+		$(use json && echo slicer//install-json) \
+		$(use db && echo slicer//install-db) \
+		-i ""
 }
 
