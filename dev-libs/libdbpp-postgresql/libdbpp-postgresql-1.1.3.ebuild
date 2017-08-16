@@ -23,14 +23,11 @@ DEPEND="
 "
 
 src_compile() {
-	bjambuild \
-		libpqpp//dbpp-postgresql -q || die
+	bjambuild libpqpp//dbpp-postgresql
 }
 
 src_install() {
-	bjambuild \
-		libpqpp//install -q \
-		--libdir=${D}/usr/lib \
-		--includedir=${D}/usr/include/dbpp-postgresql || die
+	bjaminstall libpqpp//install \
+		-i /dbpp-postgresql
 }
 

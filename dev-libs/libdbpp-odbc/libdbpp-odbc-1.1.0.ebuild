@@ -1,9 +1,10 @@
 EAPI="5"
+inherit bjam
 
 DESCRIPTION="C++ database connectivity ODBC components"
 HOMEPAGE="http://libdbpp.randomdan.homeip.net/odbc"
 
-SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
+SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -19,20 +20,12 @@ DEPEND="
 	dev-util/boost-build
 "
 
-src_prepare() {
-	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
-}
-
 src_compile() {
-	cd ${S}/libodbcpp || die
-	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release dbpp-odbc -q || die
+	bjambuild libodbcpp//dbpp-odbc
 }
 
 src_install() {
-	cd ${S}/libodbcpp || die
-
-	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release install -q \
-		--libdir=${D}/usr/lib \
-		--includedir=${D}/usr/include/dbpp-odbc || die
+	bjaminstall libodbcpp//install \
+		-i dbpp-odbc
 }
 

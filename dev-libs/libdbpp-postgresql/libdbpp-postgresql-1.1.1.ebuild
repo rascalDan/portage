@@ -1,9 +1,11 @@
 EAPI="5"
 
+inherit bjam
+
 DESCRIPTION="C++ database connectivity PostgreSQL components"
 HOMEPAGE="http://libdbpp.randomdan.homeip.net/postgresql"
 
-SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
+SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
@@ -19,20 +21,12 @@ DEPEND="
 	dev-util/boost-build
 "
 
-src_prepare() {
-	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
-}
-
 src_compile() {
-	cd ${S}/libpqpp || die
-	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release dbpp-postgresql -q || die
+	bjambuild libpqpp//dbpp-postgresql
 }
 
 src_install() {
-	cd ${S}/libpqpp || die
-
-	setarch $(uname -m) -RL bjam ${BJAMOPTS} variant=release install -q \
-		--libdir=${D}/usr/lib \
-		--includedir=${D}/usr/include/dbpp-postgresql || die
+	bjaminstall libpqpp//install \
+		-i /dbpp-postgresql
 }
 

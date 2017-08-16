@@ -24,15 +24,13 @@ DEPEND="
 
 src_compile() {
 	bjambuild \
-		libdbpp//dbppcore $(use ut && echo libdbpp//dbpptestcore libdbpp//createmockdb) -q || die
+		libdbpp//dbppcore $(use ut && echo libdbpp//dbpptestcore libdbpp//createmockdb)
 }
 
 src_install() {
-	bjambuild \
-		libdbpp//install $(use ut && echo libdbpp//installtest) -q \
-		--libdir=${D}/usr/lib \
-		--bindir=${D}/usr/bin \
-		--includedir=${D}/usr/include/dbpp || die
+	bjaminstall \
+		libdbpp//install $(use ut && echo libdbpp//installtest) \
+		-i dbpp
 
 	if use man ; then
 		doxygenbuild
