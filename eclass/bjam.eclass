@@ -10,7 +10,7 @@
 
 inherit eutils
 
-src_prepare() {
+src_configure() {
 	ebegin "Setting portage CXX and LD flags"
 	sed -i "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
 	eend $?
