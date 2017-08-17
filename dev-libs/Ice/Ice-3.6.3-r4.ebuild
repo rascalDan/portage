@@ -65,6 +65,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-libressl.patch"
 	"${FILESDIR}/${P}-dont-append-c++11-to-libs.patch"
 	"${FILESDIR}/${P}-dont-separate-c++11-libs.patch"
+	"${FILESDIR}/${P}-slice.patch"
 )
 
 pkg_setup() {
