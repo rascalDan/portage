@@ -37,7 +37,6 @@ RDEPEND="
 		firmware? ( sys-kernel/linux-firmware )
 		app-admin/syslog-ng
 		app-admin/logrotate
-		hardened? ( sys-kernel/hardened-sources sys-apps/gradm )
 		video_cards_nvidia? ( sys-apps/v86d )
 	)
 	>=app-portage/gentoolkit-0.2.1
@@ -61,13 +60,13 @@ RDEPEND="
 	sys-process/lsof
 	app-portage/layman[git]
 	!hardened? (
-			sys-devel/prelink
-			!ischroot? (
-				!sw-suspend? ( sys-kernel/gentoo-sources )
-				sw-suspend? ( sys-apps/tuxonice-userui
-					|| ( sys-kernel/tuxonice-sources
-						sys-kernel/pf-sources ) ) )
-			)
+		sys-devel/prelink
+	)
+	!ischroot? (
+		!sw-suspend? ( sys-kernel/gentoo-sources )
+		sw-suspend? ( sys-apps/tuxonice-userui
+			|| ( sys-kernel/tuxonice-sources
+				sys-kernel/pf-sources ) ) )
 	app-misc/screen
 	app-vim/gentoo-syntax
 	sys-auth/pam_ldap
