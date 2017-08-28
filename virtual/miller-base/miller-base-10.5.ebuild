@@ -1,4 +1,5 @@
-EAPI="2"
+EAPI="6"
+inherit systemd
 DESCRIPTION="Virtual for base systems"
 
 SLOT="0"
@@ -81,12 +82,22 @@ RDEPEND="
 			)
 	"
 
+src_unpack() {
+	mkdir ${S}
+}
+
 src_install() {
 	exeinto /etc/cron.hourly
 	if use systemd ; then
 		newexe "${FILESDIR}"/service-check.systemd service-check
-		insinto /etc/tmpfiles.d
-		newins "${FILESDIR}/tmpfiles-d-portage.conf" "portage.conf"
+		systemd_newtmpfilesd "${FILESDIR}/tmpfiles-d-portage.conf" "portage.conf"
+		dodir /etc/systemd/system/multi-user.target.wants
+		dosym /usr/lib/systemd/system/freshclamd.service /etc/systemd/system/multi-user.target.wants/freshclamd.service
+		dosym /lib/systemd/system/nscd.service /etc/systemd/system/multi-user.target.wants/nscd.service
+		dosym /lib/systemd/system/ntpd.service /etc/systemd/system/multi-user.target.wants/ntpd.service
+		dosym /usr/lib/systemd/system/sshd.service /etc/systemd/system/multi-user.target.wants/sshd.service
+		dosym /usr/lib/systemd/system/syslog-ng.service /etc/systemd/system/multi-user.target.wants/syslog-ng.service
+		dosym /usr/lib/systemd/system/vixie-cron.service /etc/systemd/system/multi-user.target.wants/vixie-cron.service
 	else
 		newexe "${FILESDIR}"/service-check.openrc service-check
 	fi
@@ -95,8 +106,6 @@ src_install() {
 	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
 	use !minimal && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
 
-	exeinto /etc/cron.daily
-	use !minimal && newexe "${FILESDIR}"/daily-av-update.cron av-update
 
 	if [ -n "${UPDATETIME}" ]; then
 		mkdir -p ${D}/etc/cron.d
