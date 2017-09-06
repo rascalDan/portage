@@ -36,7 +36,6 @@ RDEPEND="
 	mssql? ( dev-db/freetds )
 	dev-vcs/cvs2svn
 	www-servers/apache
-	=dev-db/marklogic-5.0*
 	dev-db/mongodb
 	dev-vcs/mercurial
 	dev-vcs/git
