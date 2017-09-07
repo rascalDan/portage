@@ -28,7 +28,6 @@ RDEPEND="
 	dev-java/oracle-jdk-bin:1.8
 	dev-util/visualvm
 	app-text/trang
-	app-benchmarks/jmeter
 	app-shells/gentoo-bashcomp
 	app-arch/rar
 	net-ftp/ftp
