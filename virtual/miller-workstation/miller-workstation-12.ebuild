@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="systemd plasma"
+IUSE="systemd plasma rdp vnc xscreensaver vlc"
 
 RDEPEND="
 	=net-misc/unison-2.48*
@@ -11,16 +11,17 @@ RDEPEND="
 	systemd? ( kde-misc/systemd-kcm )
 	virtual/miller-base
 	kde-apps/kcalc
-	media-video/vlc
+	vlc? ( media-video/vlc )
 	net-im/pidgin
 	x11-plugins/pidgin-mbpurple
 	x11-plugins/purple-facebook
 	x11-plugins/pidgin-skypeweb
-	x11-misc/xscreensaver
+	xscreensaver? ( x11-misc/xscreensaver )
 	media-fonts/corefonts
 	kde-misc/basket
 	virtual/jre
-	kde-apps/krdc
+	rdp? ( kde-apps/krdc[rdp] )
+	vnc? ( kde-apps/krdc[vnc] )
 	|| (
 			www-client/firefox
 			( www-client/chromium www-plugins/chrome-binary-plugins )
