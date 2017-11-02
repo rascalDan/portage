@@ -3,8 +3,9 @@
 # $Header: /var/cvs/lportage/dev-db/postgresql_autodoc/postgresql_autodoc-1.31.ebuild,v 1.1 2008-11-13 19:20:50 dan.goodliffe Exp $
 
 DESCRIPTION="PostgreSQL Autodoc"
-HOMEPAGE="http://www.rbt.ca/autodoc/index.html"
-SRC_URI="http://www.rbt.ca/autodoc/binaries/${PF}.tar.gz"
+HOMEPAGE="https://github.com/cbbrowne/autodoc"
+COMMIT_HASH="11c3c47ae009360d7633ba24c130285fbca18277"
+SRC_URI="https://github.com/cbbrowne/autodoc/archive/${COMMIT_HASH}.tar.gz"
 
 LICENSE=""
 SLOT="0"
@@ -20,12 +21,10 @@ DEPEND="
 	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	make -C "${WORKDIR}/postgresql_autodoc" || die
-}
-
 src_install() {
-	make PREFIX="${D}/usr/local" install -C "${WORKDIR}/postgresql_autodoc" || die
+	make \
+		PREFIX="/usr" \
+		DESTDIR="${D}" \
+		install -C "${WORKDIR}/autodoc-${COMMIT_HASH}"
 }
-
 
