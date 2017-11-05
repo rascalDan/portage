@@ -27,8 +27,7 @@ RDEPEND="
 				dev-libs/fcgi
 				)
 		 )
-	>=dev-cpp/slicer-1.4:=
-	<=dev-cpp/slicer-1.7:=
+	>=dev-cpp/slicer-1.7:=
 	"
 
 DEPEND="${RDEPEND}
