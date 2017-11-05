@@ -5,7 +5,7 @@ inherit bjam
 DESCRIPTION="Ad-hoc collection of utility functions, classes, helpers"
 HOMEPAGE="http://docs.randomdan.homeip.net/libadhocutil"
 
-SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
+SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0/0.4.3"
 KEYWORDS="x86 amd64"

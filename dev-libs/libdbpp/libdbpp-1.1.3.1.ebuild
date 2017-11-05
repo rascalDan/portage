@@ -5,7 +5,7 @@ inherit bjam eutils
 DESCRIPTION="C++ database connectivity common components"
 HOMEPAGE="http://libdbpp.randomdan.homeip.net/"
 
-SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
+SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0/7"
 KEYWORDS="x86 amd64"

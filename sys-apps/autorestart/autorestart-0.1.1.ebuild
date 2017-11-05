@@ -5,8 +5,8 @@
 EAPI=5
 
 DESCRIPTION="Automatically restart systemd units as required."
-HOMEPAGE="http://git.randomdan.homeip.net/cgit.cgi/util/tree/autorestart"
-SRC_URI="http://git.randomdan.homeip.net/cgit.cgi/util/snapshot/${P}.tar.xz"
+HOMEPAGE="https://git.randomdan.homeip.net/cgit.cgi/util/tree/autorestart"
+SRC_URI="https://git.randomdan.homeip.net/cgit.cgi/util/snapshot/${P}.tar.xz"
 
 LICENSE="gpl"
 SLOT="0"

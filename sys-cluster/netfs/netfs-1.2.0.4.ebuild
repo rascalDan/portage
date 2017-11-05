@@ -5,7 +5,7 @@ inherit eutils bjam
 DESCRIPTION="Cluster capable network filesytem"
 HOMEPAGE="http://netfs.randomdan.homeip.net/"
 
-SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
+SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"

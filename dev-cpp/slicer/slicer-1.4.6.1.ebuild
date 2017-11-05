@@ -5,7 +5,7 @@ inherit bjam
 DESCRIPTION="Zeroc ICE helper to create generic serialization code for slice types"
 HOMEPAGE="http://slicer.randomdan.homeip.net/"
 
-SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
+SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0/1.4.3"
 KEYWORDS="x86 amd64"

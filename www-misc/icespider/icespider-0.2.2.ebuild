@@ -5,7 +5,7 @@ inherit bjam
 DESCRIPTION="Tools and libraries for building web services/sites that are clients of ICE services"
 HOMEPAGE="http://icespider.randomdan.homeip.net/"
 
-SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
+SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0/0.1"
 KEYWORDS="~x86 ~amd64"
