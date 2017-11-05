@@ -5,7 +5,7 @@ inherit user
 DESCRIPTION="Project2 based lightweight PVR"
 HOMEPAGE="http://p2pvr.randomdan.homeip.net"
 
-SRC_URI="http://releases.randomdan.homeip.net/git/${P}.tar.bz2"
+SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x64"
