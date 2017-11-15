@@ -18,6 +18,7 @@ RDEPEND="
 	net-fs/samba
 	net-misc/dhcp
 	net-proxy/squid
+	net-proxy/haproxy
 	net-nds/smbldap-tools
 	net-nds/shelldap
 	virtual/miller-base
