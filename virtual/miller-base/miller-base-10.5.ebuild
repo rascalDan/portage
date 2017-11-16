@@ -6,7 +6,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
 minimal autoupdate autoshutdown autoservicerestart sw-suspend raid
-video_cards_nvidia firmware ischroot systemd"
+video_cards_nvidia video_cards_nouveau firmware ischroot systemd"
 
 RDEPEND="
 	app-misc/simplify
@@ -39,6 +39,7 @@ RDEPEND="
 		app-admin/syslog-ng
 		app-admin/logrotate
 		video_cards_nvidia? ( sys-apps/v86d )
+		video_cards_nvidia? ( sys-firmware/nvidia-firmware )
 	)
 	>=app-portage/gentoolkit-0.2.1
 	app-admin/sudo
