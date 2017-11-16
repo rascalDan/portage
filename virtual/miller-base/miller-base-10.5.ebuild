@@ -95,7 +95,6 @@ src_install() {
 		dodir /etc/systemd/system/multi-user.target.wants
 		dosym /usr/lib/systemd/system/freshclamd.service /etc/systemd/system/multi-user.target.wants/freshclamd.service
 		dosym /lib/systemd/system/nscd.service /etc/systemd/system/multi-user.target.wants/nscd.service
-		dosym /lib/systemd/system/ntpd.service /etc/systemd/system/multi-user.target.wants/ntpd.service
 		dosym /usr/lib/systemd/system/sshd.service /etc/systemd/system/multi-user.target.wants/sshd.service
 		dosym /usr/lib/systemd/system/syslog-ng.service /etc/systemd/system/multi-user.target.wants/syslog-ng.service
 		dosym /usr/lib/systemd/system/vixie-cron.service /etc/systemd/system/multi-user.target.wants/vixie-cron.service
