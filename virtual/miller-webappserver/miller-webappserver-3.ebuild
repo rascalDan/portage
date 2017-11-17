@@ -10,6 +10,7 @@ RDEPEND="
 	www-apps/gentoobrowse
 	www-apps/bugzilla
 	www-apps/mythweb
+	|| ( media-tv/mythtv media-tv/mythtv-bindings )
 	virtual/httpd-php:7.1
 	www-apps/cgit
 "
