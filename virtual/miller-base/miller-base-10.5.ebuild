@@ -39,7 +39,7 @@ RDEPEND="
 		app-admin/syslog-ng
 		app-admin/logrotate
 		video_cards_nvidia? ( sys-apps/v86d )
-		video_cards_nvidia? ( sys-firmware/nvidia-firmware )
+		video_cards_nouveau? ( sys-firmware/nvidia-firmware )
 	)
 	>=app-portage/gentoolkit-0.2.1
 	app-admin/sudo
