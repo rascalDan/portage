@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python3_4 )
+PYTHON_COMPAT=( python3_{4,5,6} )
 inherit multilib python-single-r1 cmake-utils vim-plugin
 
 youcompletemev="65765ef32b0288b35a022373f8e04c66b7764b2b"
@@ -13,7 +13,7 @@ pfdv="b27053e4d11f5891319fd29eda561c130ba3112a"
 ossv="e1902915c6790bcec00b8d551199c8a3537d33c9"
 gocodev="843b7a63f621bb441274849d58671870adf1a5ce"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SRC_URI="
 	https://github.com/Valloric/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/Valloric/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
@@ -80,7 +80,7 @@ src_configure() {
 		$(cmake-utils_use_use clang CLANG_COMPLETER)
 		$(cmake-utils_use_use clang SYSTEM_LIBCLANG)
 		-DUSE_PYTHON2=OFF
-		-DBoost_PYTHON3_LIBRARY_RELEASE=/usr/lib/libboost_python-3.4.so
+		-DBoost_PYTHON3_LIBRARY_RELEASE=/usr/lib/libboost_${EPYTHON/3/-3}.so
 		-DPATH_TO_LLVM_ROOT=/usr/lib/llvm/4
 		-DUSE_SYSTEM_BOOST=ON
 		-DUSE_SYSTEM_GMOCK=ON
