@@ -20,7 +20,7 @@ RDEPEND="
 		sys-apps/ethtool
 		sys-cluster/netfs
 		sys-apps/kexec-tools
-		app-admin/eclean-kernel
+		>=app-admin/eclean-kernel-1.99
 		raid? ( sys-fs/mdadm )
 		cdr? ( kde-apps/k3b )
 		sys-apps/hdparm

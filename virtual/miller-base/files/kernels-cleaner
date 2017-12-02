@@ -2,7 +2,7 @@
 
 if [ $(ls /boot/kernel* | wc -w) -gt 2 ] ; then
 	echo "Cleaning old kernels..."
-	eclean-kernel -dn2
+	eclean-kernel -n2
 	grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
