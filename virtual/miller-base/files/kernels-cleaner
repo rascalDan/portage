@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $(ls /boot/kernel* | wc -w) -gt 2 ] ; then
+if [ $(find /boot/ -name kernel* -type f | wc -w) -gt 2 ] ; then
 	echo "Cleaning old kernels..."
 	eclean-kernel -n2
 	grub-mkconfig -o /boot/grub/grub.cfg
