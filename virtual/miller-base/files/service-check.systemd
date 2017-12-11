@@ -1,4 +1,4 @@
 #!/bin/bash
 
-systemctl list-unit-files | grep failed
+!(systemctl list-unit-files | grep failed)
 
