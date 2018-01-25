@@ -20,6 +20,7 @@ RDEPEND="
 			)
 	media-sound/alsa-utils
 	kde? ( kde-apps/kmix )
+	plasma? ( kde-apps/kmix )
 	!networkmanager? (
 		net-misc/dhcp )
 	sys-power/acpid
