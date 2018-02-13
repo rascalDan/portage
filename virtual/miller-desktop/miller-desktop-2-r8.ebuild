@@ -39,6 +39,7 @@ RDEPEND="
 		b43? ( sys-firmware/b43-firmware )
 		)
 	sys-fs/dosfstools
+	sys-block/kvpm
 	sys-boot/syslinux
 "
 
