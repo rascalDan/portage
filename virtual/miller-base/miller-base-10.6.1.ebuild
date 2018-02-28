@@ -33,7 +33,6 @@ RDEPEND="
 		sys-process/vixie-cron
 		sys-apps/pciutils
 		sys-apps/usbutils
-		|| ( net-misc/openntpd net-misc/ntp )
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
 		firmware? ( sys-kernel/linux-firmware )
 		app-admin/logrotate
