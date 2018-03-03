@@ -7,7 +7,7 @@ HOMEPAGE="http://icespider.randomdan.homeip.net/"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="GPL"
-SLOT="0/0.1"
+SLOT="0/0.2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
