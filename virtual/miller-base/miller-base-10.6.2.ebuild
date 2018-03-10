@@ -5,7 +5,7 @@ DESCRIPTION="Virtual for base systems"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="cdr hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
-minimal autoupdate autoshutdown autoservicerestart sw-suspend raid
+minimal autoupdate autoshutdown autoservicerestart sw-suspend mdadm
 video_cards_nvidia video_cards_nouveau firmware ischroot"
 
 RDEPEND="
@@ -21,7 +21,7 @@ RDEPEND="
 		sys-cluster/netfs
 		sys-apps/kexec-tools
 		>=app-admin/eclean-kernel-1.99
-		raid? ( sys-fs/mdadm )
+		mdadm? ( sys-fs/mdadm )
 		cdr? ( kde-apps/k3b )
 		sys-apps/hdparm
 		xfs? ( sys-fs/xfsdump )
