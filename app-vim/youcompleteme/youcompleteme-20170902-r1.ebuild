@@ -32,7 +32,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	clang? ( sys-devel/clang:4 )
+	clang? ( sys-devel/clang:6 )
 	dev-libs/boost[python,threads,${PYTHON_USEDEP}]
 	|| (
 		app-editors/vim[python,${PYTHON_USEDEP}]
@@ -81,7 +81,7 @@ src_configure() {
 		$(cmake-utils_use_use clang SYSTEM_LIBCLANG)
 		-DUSE_PYTHON2=OFF
 		-DBoost_PYTHON3_LIBRARY_RELEASE=/usr/lib/libboost_${EPYTHON/3/-3}.so
-		-DPATH_TO_LLVM_ROOT=/usr/lib/llvm/4
+		-DPATH_TO_LLVM_ROOT=/usr/lib/llvm/6
 		-DUSE_SYSTEM_BOOST=ON
 		-DUSE_SYSTEM_GMOCK=ON
 	)
