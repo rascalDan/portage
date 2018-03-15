@@ -30,6 +30,7 @@ RDEPEND="
 	sys-apps/logwatch
 	sys-apps/glacier2-service
 	net-misc/gentoobrowse-api
+	www-apps/mirrorsearch
 	dev-util/ccache
 	>=sys-cluster/heartbeat-3.0.6
 	net-analyzer/fail2ban
