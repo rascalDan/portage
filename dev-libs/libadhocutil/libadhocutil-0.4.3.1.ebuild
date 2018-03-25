@@ -13,7 +13,7 @@ IUSE="man test"
 
 RDEPEND="
 	net-misc/curl
-	dev-libs/Ice
+	=dev-libs/Ice-3.6*
 	dev-libs/boost
 	dev-cpp/glibmm
 "

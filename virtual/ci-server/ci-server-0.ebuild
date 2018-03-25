@@ -30,7 +30,7 @@ RDEPEND="
 	dev-libs/cgicc
 	dev-libs/fcgi
 	dev-libs/glib
-	dev-libs/Ice
+	=dev-libs/Ice-3.6*
 	dev-libs/icetray
 	dev-libs/libadhocutil
 	dev-libs/libdbpp

@@ -11,7 +11,7 @@ SLOT="0/0.2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="dev-libs/Ice
+RDEPEND="=dev-libs/Ice-3.6*
 	dev-libs/libadhocutil:=
 	dev-cpp/libxmlpp:3.0
 	>=dev-cpp/slicer-1.7:=

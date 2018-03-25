@@ -19,7 +19,7 @@ RDEPEND="
 	sys-libs/zlib
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
-	>=dev-libs/Ice-3.5
+	=dev-libs/Ice-3.6*
 	web? (
 			fastcgi? (
 				dev-libs/cgicc

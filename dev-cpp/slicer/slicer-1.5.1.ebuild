@@ -11,7 +11,7 @@ SLOT="0/1.5.0"
 KEYWORDS="x86 amd64"
 IUSE="db xml json"
 
-RDEPEND="dev-libs/Ice
+RDEPEND="=dev-libs/Ice-3.6*
 	xml? ( dev-cpp/libxmlpp:3.0 )
 	json? ( dev-cpp/libjsonpp )
 	db? ( =dev-libs/libdbpp-1*:= )

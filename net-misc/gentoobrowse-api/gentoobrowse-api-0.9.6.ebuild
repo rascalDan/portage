@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="client server"
 
-RDEPEND="dev-libs/Ice
+RDEPEND="=dev-libs/Ice-3.6*
 	server? (
 		=dev-cpp/slicer-1.7*:=[db]
 		sys-apps/icebox-service

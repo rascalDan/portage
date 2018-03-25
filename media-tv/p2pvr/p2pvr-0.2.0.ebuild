@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND="
 >=dev-cpp/slicer-1.6.0.1:=[db]
->=dev-libs/Ice-3.5
+=dev-libs/Ice-3.6*
 dev-libs/libdbpp-postgresql
 "
 DEPEND="${RDEPEND}

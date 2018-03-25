@@ -13,7 +13,7 @@ IUSE="ut tools"
 
 RDEPEND="
 	dev-libs/boost
-	dev-libs/Ice
+	=dev-libs/Ice-3.6*
 	>=dev-libs/libdbpp-1.1.4:=
 	>=dev-libs/libadhocutil-0.3.3:=
 	dev-cpp/slicer:=[db]
