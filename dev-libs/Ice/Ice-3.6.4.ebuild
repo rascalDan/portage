@@ -63,7 +63,6 @@ PHP_EXT_S="${S}/php"
 PATCHES=(
 	"${FILESDIR}/${PN}-$ICEVERSION-no-arch-opts.patch"
 	"${FILESDIR}/${PN}-$ICEVERSION-csharp.patch"
-	"${FILESDIR}/${PN}-$ICEVERSION-libressl.patch"
 	"${FILESDIR}/${PN}-$ICEVERSION-dont-append-c++11-to-libs.patch"
 	"${FILESDIR}/${PN}-$ICEVERSION-dont-separate-c++11-libs.patch"
 	"${FILESDIR}/${PN}-$ICEVERSION-slice.patch"
