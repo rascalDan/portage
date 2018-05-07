@@ -19,6 +19,7 @@ RDEPEND="
 	www-client/lynx
 	dev-cpp/libxmlpp:3.0
 	sys-libs/zlib
+	=dev-cpp/libjsonpp-0.10*
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
 	=dev-libs/Ice-3.7*

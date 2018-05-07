@@ -15,7 +15,7 @@ IUSE="db xml json"
 
 RDEPEND="=dev-libs/Ice-3.7*
 	xml? ( dev-cpp/libxmlpp:3.0 )
-	json? ( =dev-cpp/libjsonpp-0.10* )
+	json? ( >=dev-cpp/libjsonpp-0.11 )
 	db? ( =dev-libs/libdbpp-1.2*:= )
 	>=dev-libs/libadhocutil-0.5:=
 	dev-libs/boost"

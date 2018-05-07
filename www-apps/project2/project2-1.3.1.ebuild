@@ -4,7 +4,9 @@ inherit bjam
 DESCRIPTION="User configured application engine"
 HOMEPAGE="http://project2.randomdan.homeip.net"
 
-SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
+ICE_VERSION=3.7.1
+SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz
+	https://github.com/zeroc-ice/ice/archive/v${ICE_VERSION}.tar.gz -> Ice-${ICE_VERSION}.tar.gz"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
@@ -12,15 +14,15 @@ IUSE="+docs unittest +console +web +fastcgi +daemon"
 
 RDEPEND="
 	net-libs/libesmtp
-	>=dev-libs/libadhocutil-0.2:=
+	>=dev-libs/libadhocutil-0.5:=
 	=dev-libs/libdbpp-1*:=
 	www-client/lynx
 	dev-cpp/libxmlpp:3.0
 	sys-libs/zlib
-	<dev-cpp/libjsonpp-0.10
+	>=dev-cpp/libjsonpp-0.11
 	>=dev-cpp/glibmm-2.28
 	>=dev-libs/boost-1.45
-	=dev-libs/Ice-3.6*
+	=dev-libs/Ice-3.7*
 	web? (
 			fastcgi? (
 				dev-libs/cgicc
@@ -28,7 +30,7 @@ RDEPEND="
 				dev-libs/fcgi
 				)
 		 )
-	>=dev-cpp/slicer-1.7:=
+	>=dev-cpp/slicer-1.8:=
 	"
 
 DEPEND="${RDEPEND}
@@ -36,6 +38,10 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	docs? ( app-doc/doxygen )
 "
+src_unpack() {
+	default
+	ln -s ${WORKDIR}/ice-${ICE_VERSION}/cpp ${S}/ice/cpp
+}
 
 src_prepare() {
 	sed -ie "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
