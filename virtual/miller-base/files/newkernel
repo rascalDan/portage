@@ -2,11 +2,17 @@
 
 [ -s "$PORTAGE_TMPDIR" ] && exec -c /bin/bash -l -c $0
 
+TMPDIR=/var/tmp/kernel
+OUTDIR=$TMPDIR/build
+export CCACHE_DIR=$TMPDIR/.ccache
+export CCACHE_HARDLINK=true
+
 if [ /usr/src/linux -nt /boot ] ; then
-	if [ ! -f /usr/src/linux/.config -a -f /proc/config.gz ] ; then
-		zcat /proc/config.gz > /usr/src/linux/.config
+	mkdir -p $OUTDIR $CCACHE_DIR
+	if [ ! -f $OUTDIR/.config -a -f /proc/config.gz ] ; then
+		zcat /proc/config.gz > $OUTDIR/.config
 	fi
-	genkernel all && \
+	genkernel --clean --kernel-outputdir=$OUTDIR all && \
 		grub-mkconfig -o /boot/grub/grub.cfg
 	touch /boot
 fi

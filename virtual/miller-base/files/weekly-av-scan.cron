@@ -9,26 +9,47 @@ if [ -f /etc/conf.d/av-scan ] ; then
 	set +o allexport
 fi
 
-declare -a EXCL
-declare -A M
-EXCL=(
-		$(portageq distdir)
-		$(portageq pkgdir)
-		$(portageq get_repo_path / $(portageq get_repos /))
-		$(mount | grep -v ^/dev/ | sort -u -k3,3 | cut -d ' ' -f 3 | sort -u)
-		$(mount | grep ^/dev | while read dev on path type fs opts ; do
-			devhash=${dev//\//_}
-			if [ ${M[$devhash]} ] ; then
-				echo $path
-			else
-				M[$devhash]=$path
-			fi
-		done)
-)
-echo "Excluding:"
-echo ${EXCL[@]}
-echo
-EXCLARGS=("${EXCL[@]/#/-x }")
+if [ $$ == 1 ]; then
+	echo "Running in private namespace."
+	echo
+	echo "Unmounting non-device file systems..."
+	grep -v '^\(/dev\|proc\|udev\|none\|systemd-\)' /proc/mounts | cut -d ' ' -f 2 | sort -ru | xargs umount -n
+
+	echo "Remounting remaining devices with noatime..."
+	grep '^/dev/' /proc/mounts | cut -d ' ' -f 2 | xargs -n1 mount -n -o remount,noatime
+	echo
+
+	declare -a EXCL
+	declare -A M
+	EXCL=(
+			$(portageq distdir)
+			$(portageq pkgdir)
+			$(portageq get_repo_path / $(portageq get_repos /))
+			$(mount | grep -v ^/dev/ | sort -u -k3,3 | cut -d ' ' -f 3 | sort -u)
+			$(mount | grep ^/dev | while read dev on path type fs opts ; do
+				devhash=${dev//\//_}
+				if [ ${M[$devhash]} ] ; then
+					echo $path
+				else
+					M[$devhash]=$path
+				fi
+			done)
+	)
+	echo "Excluding:"
+	echo ${EXCL[@]}
+	echo
+	EXCLARGS=("${EXCL[@]/#/-x }")
+
+	if [ -S ${CLAMDSOCK} -a ${CLAMD} != "no" ] ; then
+		echo "Using clamd"
+		clamdscan -i --fdpass -f <(simplifind -r / ${EXCLARGS[@]}) -m -l /var/log/av-scan.log
+	else
+		echo "Using clamscan"
+		simplifind -r / ${EXCLARGS[@]} | xargs nice clamscan -ri -l /var/log/av-scan.log
+	fi
+
+	exit
+fi
 
 if [ ! -S ${CLAMDSOCK} -a ${CLAMD} = "yes" ] ; then
 	echo "Starting clamd..."
@@ -36,17 +57,7 @@ if [ ! -S ${CLAMDSOCK} -a ${CLAMD} = "yes" ] ; then
 	CLAMD="started"
 fi
 
-if [ -S ${CLAMDSOCK} -a ${CLAMD} != "no" ] ; then
-	echo "Using clamd"
-	rm -f /tmp/scan
-	mkfifo /tmp/scan
-	simplifind -r / ${EXCLARGS[@]} > /tmp/scan &
-	clamdscan -i --fdpass -f /tmp/scan -m -l /var/log/av-scan.log
-	rm -f /tmp/scan
-else
-	echo "Using clamscan"
-	simplifind -r / ${EXCLARGS[@]} | xargs nice clamscan -ri -l /var/log/av-scan.log
-fi
+unshare --pid --mount --mount-proc --fork $0
 
 if [ -S ${CLAMDSOCK} -a ${CLAMD} = "started" ] ; then
 	echo "Stopping clamd..."
