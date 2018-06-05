@@ -9,12 +9,17 @@ RDEPEND="
 	=net-misc/unison-2.48*
 	=dev-lang/ocaml-4.04*
 	virtual/miller-base
+	app-text/cutemarked
 	app-vim/nerdtree
+	app-vim/json
+	app-vim/vim-javascript
+	app-vim/vim-spell-en
 	app-vim/nerdcommenter
 	app-vim/youcompleteme
 	app-vim/syntastic
 	app-vim/gitgutter
 	app-vim/alternate
+	app-vim/xsl-syntax
 	www-client/lynx
 	app-admin/webapp-config
 	postgres? (
