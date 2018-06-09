@@ -13,6 +13,7 @@ RDEPEND="
 	dev-libs/boost
 	=dev-libs/libdbpp-1.2*:=
 	dev-db/unixODBC
+	dev-libs/libadhocutil:=
 "
 DEPEND="
 	${RDEPEND}
