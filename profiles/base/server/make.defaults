@@ -1,0 +1,12 @@
+CFLAGS="-O3 -march=native -pipe"
+CXXFLAGS="${CFLAGS}"
+LDFLAGS="$LDFLAGS -O3 -march=native -pipe"
+ACCEPT_KEYWORDS="~amd64"
+APACHE2_MODULES="-* alias headers filter authz_core auth_basic authz_user authn_core unixd authz_host cgid mime_magic mime autoindex vhost_alias dav dir deflate log_config env rewrite cache socache_shmcb cache_disk status expires http2 proxy proxy_http remoteip"
+ALSA_PCM_PLUGINS="none"
+USE="
+	autoservicerestart nohourlyupdate cron exiscan-acl extras -gallium -gdbm logrotate
+	maildir modperl mysql ocfs2 proxy -python -sqlite -tcpd truetype
+"
+FEATURES="unmerge-backup"
+

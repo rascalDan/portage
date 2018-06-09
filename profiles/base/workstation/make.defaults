@@ -1,0 +1,15 @@
+ACCEPT_KEYWORDS="~amd64"
+APACHE2_MODULES="-* filter authz_host cgid mime_magic mime autoindex vhost_alias dav dir deflate log_config env rewrite cache mem_cache unixd socache authz_core authn_core socache_shmcb http2 alias"
+CFLAGS="-O3 -march=native -pipe -fno-stack-protector"
+CXXFLAGS="${CFLAGS}"
+LDFLAGS="$LDFLAGS -O3 -march=native -pipe"
+RUBY_TARGETS="-* ruby25"
+USE="
+	apng autoshutdown cddb -cdio clang -crypt cscope custom-cflags
+	custom-optimization dv ffmpeg fontconfig frei0r gallium gcrypt glib
+	gnome-keyring gtk3 -handbook -hangouts imagemagick javascript jemalloc
+	-kde lame -lastfm lightning lm_sensors man markdown -modemmanager mtp mysql -nsplugin
+	offensive openexr pango plymouth -postscript -sdl -semantic-desktop -server
+	silc taglib thumbnail user-session vaapi vlc -vnc -wallpapers -webstart xa
+	xmp xvmc zip
+"
