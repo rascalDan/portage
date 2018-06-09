@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ut tools"
 
 RDEPEND="
-	dev-libs/boost
+	dev-libs/boost:=
 	=dev-libs/Ice-3.7*
 	>=dev-libs/libdbpp-1.2:=
 	>=dev-libs/libadhocutil-0.5:=

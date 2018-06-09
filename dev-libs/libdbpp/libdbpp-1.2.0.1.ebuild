@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="man ut"
 
 RDEPEND="
-	dev-libs/boost
+	dev-libs/boost:=
 	>=dev-libs/libadhocutil-0.5:=
 "
 DEPEND="

@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 RDEPEND="
-	dev-libs/boost
+	dev-libs/boost:=
 	=dev-libs/libdbpp-1.2*:=
 	virtual/libmysqlclient
 	>=dev-libs/libadhocutil-0.5:=

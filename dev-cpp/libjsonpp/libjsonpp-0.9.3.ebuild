@@ -12,7 +12,7 @@ IUSE=""
 
 RDEPEND="dev-cpp/glibmm
 	sys-devel/flex
-	dev-libs/boost"
+	dev-libs/boost:="
 RDEPEND="${DEPEND}
 	dev-util/boost-build"
 

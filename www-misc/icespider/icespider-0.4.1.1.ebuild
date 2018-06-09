@@ -18,7 +18,7 @@ RDEPEND="=dev-libs/Ice-3.7*
 	dev-cpp/libxmlpp:3.0
 	>=dev-cpp/slicer-1.8:=
 	dev-libs/fcgi
-	>=dev-libs/boost-1.66"
+	>=dev-libs/boost-1.66:="
 DEPEND="${DEPEND}
 	dev-util/boost-build"
 

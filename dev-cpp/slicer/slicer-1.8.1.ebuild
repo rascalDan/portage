@@ -18,7 +18,7 @@ RDEPEND="=dev-libs/Ice-3.7*
 	json? ( >=dev-cpp/libjsonpp-0.11 )
 	db? ( =dev-libs/libdbpp-1.2*:= )
 	>=dev-libs/libadhocutil-0.5:=
-	dev-libs/boost"
+	dev-libs/boost:="
 DEPEND="${RDEPEND}
 	dev-util/boost-build"
 

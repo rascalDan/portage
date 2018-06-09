@@ -26,7 +26,7 @@ RDEPEND="
 	dev-db/sqlite
 	dev-db/unixODBC
 	dev-db/psqlodbc
-	dev-libs/boost
+	dev-libs/boost:=
 	dev-libs/cgicc
 	dev-libs/fcgi
 	dev-libs/glib

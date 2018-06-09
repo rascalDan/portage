@@ -17,11 +17,11 @@ RDEPEND="=dev-libs/Ice-3.6*
 		>=dev-libs/libdbpp-1:=
 		>=dev-libs/libdbpp-postgresql-1.1.2
 		>=dev-libs/icetray-0.1.4[tools]
-		>=dev-libs/boost-1.60
+		>=dev-libs/boost-1.60:=
 		>=dev-libs/libgit2-0.24.0
 	)
 	>=dev-libs/libadhocutil-0.3.6:=
-	dev-libs/boost"
+	dev-libs/boost:="
 DEPEND="${DEPEND}
 	sys-devel/flex
 	dev-util/boost-build"

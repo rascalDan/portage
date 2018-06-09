@@ -19,7 +19,7 @@ RDEPEND="
 	sys-libs/zlib
 	<dev-cpp/libjsonpp-0.10
 	>=dev-cpp/glibmm-2.28
-	>=dev-libs/boost-1.45
+	>=dev-libs/boost-1.45:=
 	=dev-libs/Ice-3.6*
 	web? (
 			fastcgi? (

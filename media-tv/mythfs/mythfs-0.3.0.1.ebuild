@@ -16,7 +16,7 @@ DEPEND="
 	=sys-apps/icebox-service-1.11
 	>=dev-cpp/slicer-1.8:=[db]
 	dev-libs/libdbpp-mysql
-	dev-libs/boost
+	dev-libs/boost:=
 	>=dev-libs/icetray-0.2:=
 	>=sys-cluster/netfs-1.3
 	dev-libs/libadhocutil:=

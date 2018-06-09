@@ -11,7 +11,7 @@ KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND="dev-cpp/glibmm
-	dev-libs/boost"
+	dev-libs/boost:="
 RDEPEND="${DEPEND}
 	sys-devel/flex
 	dev-util/boost-build"
