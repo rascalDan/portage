@@ -2,14 +2,14 @@ EAPI=6
 PYTHON_COMPAT=( python3_{4,5,6} )
 inherit multilib python-single-r1 cmake-utils vim-plugin
 
-youcompletemev="788c293aee78c6ab60cbc06bbc3339e7b2bff98f"
-ycmdv="ee23a7ca17aafbcf344f51334d115e9bb89ea844"
+youcompletemev="c9ff2177377a85515b7e081966685f3c46a33eca"
+ycmdv="3db4f3b2d723007c46891c11fce53a0dc4363493"
 reqfuv="d9d21ac63904dc0a668e0f073503f85a534460f4"
 pfdv="b27053e4d11f5891319fd29eda561c130ba3112a"
 ossv="e1902915c6790bcec00b8d551199c8a3537d33c9"
 gocodev="416643789f088aa5077f667cecde7f966131f6be"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SRC_URI="
 	https://github.com/Valloric/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/Valloric/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
@@ -69,12 +69,14 @@ src_prepare() {
 	mv ${WORKDIR}/python-frozendict-$pfdv ${S}/third_party/ycmd/third_party/python-frozendict
 	use go && mv ${WORKDIR}/gocode-$gocodev ${S}/third_party/ycmd/third_party/gocode
 	mv ${WORKDIR}/requests-futures-$reqfuv ${S}/third_party/request-futures
+	cmake-utils_src_prepare
 	default
 }
 
 src_configure() {
 	local mycmakeargs=(
 		-DUSE_CLANG_COMPLETER=$(usex clang)
+		-DUSE_CLANG_TIDY=$(usex clang)
 		-DUSE_SYSTEM_LIBCLANG=$(usex clang)
 		-DUSE_PYTHON2=OFF
 		-DPATH_TO_LLVM_ROOT=/usr/lib/llvm/6
