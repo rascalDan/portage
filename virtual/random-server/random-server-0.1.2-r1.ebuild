@@ -46,6 +46,7 @@ RDEPEND="
 	mediaserver? (
 			net-misc/minidlna
 			media-tv/mythtv
+			x11-misc/xkeyboard-config
 			media-tv/mythfs
 			media-tv/p2pvr
 			net-misc/youtube-dl
