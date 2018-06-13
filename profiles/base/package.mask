@@ -1,3 +1,6 @@
+# OpenSSH without LDAP
+=net-misc/openssh-7.7_p1-r4
+
 app-admin/logstash-bin
 app-arch/upx-bin
 app-backup/spideroak-bin
