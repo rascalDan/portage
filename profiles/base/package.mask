@@ -1,5 +1,6 @@
 # OpenSSH without LDAP
 =net-misc/openssh-7.7_p1-r4
+=net-misc/openssh-7.7_p1-r5
 
 app-admin/logstash-bin
 app-arch/upx-bin
