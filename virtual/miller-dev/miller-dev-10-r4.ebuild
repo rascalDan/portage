@@ -85,7 +85,7 @@ RDEPEND="
 			net-analyzer/wireshark
 			x11-apps/xhost
 			dev-db/squirrel-sql
-			apps-editors/okteta
+			app-editors/okteta
 			kde-apps/dolphin-plugins
 			net-analyzer/nmap
 			dotnet? (
