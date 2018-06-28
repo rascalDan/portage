@@ -23,5 +23,5 @@ USE="
 	system-heimdal system-icu system-jpeg system-jsoncpp system-libevent system-libmspack
 	system-libs system-libvpx system-libyaml system-lua -system-mitkrb5 system-qemu system-seabios
 	system-sqlite system-uulib system-wide -themes -thin threads uuid vim-pager vim-syntax
-	-winbind xml
+	-winbind xml -resolvconf
 "
