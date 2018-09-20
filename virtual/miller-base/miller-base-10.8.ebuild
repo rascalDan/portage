@@ -30,7 +30,7 @@ RDEPEND="
 		>=sys-boot/grub-2
 		sys-apps/busybox
 		sys-kernel/genkernel-next
-		sys-process/vixie-cron
+		sys-process/cronie
 		sys-apps/pciutils
 		sys-apps/usbutils
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
@@ -92,7 +92,7 @@ src_install() {
 	dosym /lib/systemd/system/freshclamd.service /etc/systemd/system/multi-user.target.wants/freshclamd.service
 	dosym /lib/systemd/system/nscd.service /etc/systemd/system/multi-user.target.wants/nscd.service
 	dosym /lib/systemd/system/sshd.service /etc/systemd/system/multi-user.target.wants/sshd.service
-	dosym /lib/systemd/system/vixie-cron.service /etc/systemd/system/multi-user.target.wants/vixie-cron.service
+	dosym /lib/systemd/system/cronie.service /etc/systemd/system/multi-user.target.wants/cronie.service
 
 	exeinto /etc/cron.weekly
 	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
