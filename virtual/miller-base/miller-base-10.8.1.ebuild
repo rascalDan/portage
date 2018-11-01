@@ -71,6 +71,7 @@ RDEPEND="
 	app-vim/gentoo-syntax
 	sys-auth/pam_ldap
 	sys-auth/nss_ldap
+	app-editors/vim
 	app-editors/gvim
 	git? ( dev-vcs/git )
 	bash-completion? ( app-shells/bash-completion )
