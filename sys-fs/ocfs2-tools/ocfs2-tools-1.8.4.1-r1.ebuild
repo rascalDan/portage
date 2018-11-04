@@ -18,7 +18,6 @@ IUSE="debug external gtk"
 RDEPEND="
 	dev-libs/libaio
 	sys-apps/util-linux
-	sys-cluster/libcman
 	external? (
 		sys-cluster/libdlm
 		sys-cluster/pacemaker[-heartbeat]
