@@ -21,7 +21,7 @@ USE="
 	-ppp python rtmp savedconfig secure-delete smp sndfile -source sqlite symlink syslog
 	system-boost system-cairo system-cmark system-crontab systemd system-ffmpeg system-harfbuzz
 	system-heimdal system-icu system-jpeg system-jsoncpp system-libevent system-libmspack
-	system-libs system-libvpx system-libyaml system-lua -system-mitkrb5 system-qemu system-seabios
+	system-libs system-libvpx system-libyaml system-llvm system-lua -system-mitkrb5 system-qemu system-seabios
 	system-sqlite system-uulib system-wide -themes -thin threads uuid vim-pager vim-syntax
 	-winbind xml -resolvconf -printsupport
 "
