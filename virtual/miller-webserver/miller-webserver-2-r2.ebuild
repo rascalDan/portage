@@ -9,6 +9,7 @@ RDEPEND="
 	www-servers/apache
 	www-apache/Apache2-Filter-Minifier-CSS
 	www-apache/Apache2-Filter-Minifier-JavaScript
+	www-apache/apache-mod-markdown
 	www-apache/mod_fcgid
 	app-crypt/certbot
 "
