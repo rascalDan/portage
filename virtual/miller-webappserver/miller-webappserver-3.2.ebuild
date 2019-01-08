@@ -11,7 +11,7 @@ RDEPEND="
 	www-apps/bugzilla
 	www-apps/mythweb
 	|| ( media-tv/mythtv media-tv/mythtv-bindings )
-	virtual/httpd-php:7.1
+	virtual/httpd-php:7.2
 	www-apps/cgit
 	dev-python/markdown
 "
