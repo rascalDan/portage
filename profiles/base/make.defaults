@@ -14,8 +14,8 @@ PORTAGE_RO_DISTDIRS="/home/randomdan/files/ /var/store/Installers/"
 PORTAGE_WORKDIR_MODE="0770"
 UPDATESTATEDIR=/var/www/shared/files/localhost
 USE="
-	-authdaemond autoupdate bash-completion btrfs c++0x caps -consolekit css -cups curl -debug
-	device-mapper dvb -embedded fam -fortran fontconfig fuse git gnutls gold graphviz grub hpn http2 icu
+	-authdaemond autoupdate bash-completion btrfs c++0x caps clang -consolekit css -cups curl -debug
+	device-mapper dot dvb -embedded fam -fortran fontconfig fuse git gnutls gold graphviz grub hpn http2 icu
 	inspector -introspection ithreads jit jpeg jpeg2k json ldap llvm lvm -lvm1 lzma lzo minizip mpm-prefork
 	-nettle network network-cron nscd -nss nuv offload pch pcre16 pcre32 pcre-jit png postgres postproc
 	-ppp python rtmp savedconfig secure-delete smp sndfile -source sqlite symlink syslog
