@@ -19,8 +19,9 @@ RDEPEND="=dev-libs/Ice-3.7*
 	>=dev-libs/libadhocutil-0.5:=
 	client? (
 			sys-fs/fuse
-	   )
-	>=dev-libs/boost-1.66:="
+			>=dev-libs/boost-1.66:=
+			)
+	dev-libs/boost:="
 DEPEND="${DEPEND}
 	dev-util/boost-build"
 
