@@ -40,6 +40,5 @@ RDEPEND="
 		)
 	sys-fs/dosfstools
 	sys-block/kvpm
-	sys-boot/syslinux
 "
 
