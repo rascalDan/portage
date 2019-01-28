@@ -14,7 +14,7 @@ IUSE="+docs unittest +console +web +fastcgi +daemon"
 
 RDEPEND="
 	net-libs/libesmtp
-	>=dev-libs/libadhocutil-0.5:=
+	=dev-libs/libadhocutil-0.5*:=
 	=dev-libs/libdbpp-1*:=
 	www-client/lynx
 	dev-cpp/libxmlpp:3.0
