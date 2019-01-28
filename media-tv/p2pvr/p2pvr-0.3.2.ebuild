@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND="
 >=dev-cpp/slicer-1.8:=[db]
 =dev-libs/Ice-3.7*
-=dev-libs/libadhocutil-0.5*:=
+=dev-libs/libadhocutil-0.6*:=
 dev-libs/icetray
 dev-libs/libdbpp-postgresql
 "
