@@ -21,7 +21,7 @@ src_test() {
 }
 
 bjambuild() {
-	setarch $(uname -m) -RL b2 -l60 ${BJAMOPTS} variant=release -q $@ || die
+	setarch $(uname -m) -RL b2 -l600 ${BJAMOPTS} variant=release -q $@ || die
 }
 
 bjaminstall() {
