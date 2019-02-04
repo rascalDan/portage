@@ -1,4 +1,4 @@
-EAPI="2"
+EAPI="6"
 DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
@@ -18,6 +18,8 @@ RDEPEND="
 	x11-plugins/pidgin-skypeweb
 	xscreensaver? ( x11-misc/xscreensaver )
 	media-fonts/corefonts
+	media-fonts/noto
+	media-fonts/noto-emoji
 	kde-misc/basket
 	virtual/jre
 	rdp? ( kde-apps/krdc[rdp] )

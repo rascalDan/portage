@@ -1,4 +1,4 @@
-EAPI="4"
+EAPI="6"
 DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
@@ -61,6 +61,7 @@ RDEPEND="
 	dev-libs/cgicc
 	net-libs/libesmtp
 	www-apache/mod_fcgid
+	www-apache/apache-mod-markdown
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
 	app-arch/rar
