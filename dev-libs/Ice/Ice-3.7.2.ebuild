@@ -26,7 +26,7 @@ inherit db-use eutils mono-env php-ext-source-r2 python-r1 ruby-ng toolchain-fun
 DESCRIPTION="ICE middleware C++ library and generator tools"
 HOMEPAGE="http://www.zeroc.com/"
 ICEVERSION="$(get_version_component_range 1-2)"
-SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV/_/-}.tar.gz -> ${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0/37"
 KEYWORDS="~amd64 ~x86"
