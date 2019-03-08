@@ -45,6 +45,7 @@ RDEPEND="
 	app-vim/vcscommand
 	dev-vcs/git
 	dev-vcs/git-extras
+	sys-devel/distcc
 	dev-util/patchutils
 	|| (
 		net-misc/iputils[arping]
