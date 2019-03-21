@@ -77,7 +77,6 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DUSE_CLANG_COMPLETER=$(usex clang)
-		-DUSE_CLANG_TIDY=$(usex clang)
 		-DUSE_SYSTEM_LIBCLANG=$(usex clang)
 		-DUSE_PYTHON2=OFF
 		-DPATH_TO_LLVM_ROOT=/usr/lib/llvm/7
