@@ -88,7 +88,7 @@ RDEPEND="
 			x11-apps/xhost
 			dev-db/squirrel-sql
 			app-editors/okteta
-			kde-apps/dolphin-plugins
+			kde-apps/dolphin-plugins-git
 			net-analyzer/nmap
 			dotnet? (
 				dev-util/monodevelop
