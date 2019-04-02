@@ -2,8 +2,8 @@ EAPI=6
 PYTHON_COMPAT=( python3_{4,5,6} )
 inherit multilib python-single-r1 cmake-utils vim-plugin
 
-youcompletemev="ccc06c2c423e7ee7008f7439ff99c604d474cec1"
-ycmdv="0e999dbee209ea79a522259816ce3a68b7d6cddc"
+youcompletemev="25ebc0b9abb1b135c809ee850085a0305cbc5533"
+ycmdv="4dfa50eb5873c071b446f25b17cbad066164b339"
 reqfuv="98712e7d0f6be2a090b6fda2a925f85e63656b58"
 pfdv="b27053e4d11f5891319fd29eda561c130ba3112a"
 ossv="e1902915c6790bcec00b8d551199c8a3537d33c9"
@@ -104,7 +104,7 @@ src_install() {
 	rm -r third_party/ycmd/{*.md,*.sh} || die
 	find python third_party/ycmd -depth -name '*test*' -exec rm -r {} + || die
 	find python third_party/ycmd -depth -name '*examples*' -exec rm -r {} + || die
-	rm third_party/ycmd/libclang.so.* || die
+	rm third_party/ycmd/third_party/clang/lib/libclang.so.* || die
 
 	vim-plugin_src_install
 
