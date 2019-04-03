@@ -17,6 +17,7 @@ RDEPEND="
 =dev-libs/libadhocutil-0.7*:=
 dev-libs/icetray
 dev-libs/libdbpp-postgresql
+>=dev-libs/libdbpp-1.4.1
 "
 DEPEND="${RDEPEND}
 dev-util/boost-build"
