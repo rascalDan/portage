@@ -2,4 +2,6 @@
 dev-libs/elfutils static-libs
 # generally problematic
 www-client/chromium -custom-cflags
+# exactly one crypt implementation
+>=sys-fs/cryptsetup-2.1 -openssl
 
