@@ -34,6 +34,7 @@ RDEPEND="
 	app-doc/doxygen
 	app-benchmarks/wrk
 	sys-fs/inotify-tools
+	net-misc/pssh
 	cxx? (
 			dev-util/ccache
 			dev-util/cppcheck
