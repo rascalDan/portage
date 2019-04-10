@@ -1,3 +1,5 @@
 # required by sys-devel/prelink-20151030::gentoo
 dev-libs/elfutils static-libs
+# generally problematic
+www-client/chromium -custom-cflags
 
