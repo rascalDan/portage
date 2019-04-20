@@ -2,7 +2,7 @@ CFLAGS="-O3 -march=native -pipe"
 CXXFLAGS="${CFLAGS}"
 LDFLAGS="$LDFLAGS -O3 -march=native -pipe"
 ACCEPT_KEYWORDS="~amd64"
-APACHE2_MODULES="-* alias headers filter authz_core auth_basic authz_user authn_core unixd authz_host cgid mime_magic mime autoindex vhost_alias dav dir deflate log_config env rewrite cache socache_shmcb cache_disk status expires http2 proxy proxy_http remoteip"
+APACHE2_MODULES="-* alias auth_basic authn_core authz_core authz_host authz_user autoindex cache cache_disk cgid dav deflate dir env expires filter headers http2 log_config macro mime mime_magic proxy proxy_http remoteip rewrite socache_shmcb status unixd vhost_alias"
 ALSA_PCM_PLUGINS="none"
 USE="
 	autoservicerestart nohourlyupdate berkdb cron exiscan-acl extras -gdbm -gallium logrotate
