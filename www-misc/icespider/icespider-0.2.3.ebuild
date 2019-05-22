@@ -6,7 +6,7 @@ DESCRIPTION="Tools and libraries for building web services/sites that are client
 HOMEPAGE="http://icespider.randomdan.homeip.net/"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
-LICENSE="GPL"
+LICENSE="MIT"
 SLOT="0/0.1"
 KEYWORDS="~x86 ~amd64"
 IUSE=""

@@ -6,7 +6,7 @@ DESCRIPTION="Project2 based lightweight PVR"
 HOMEPAGE="http://p2pvr.randomdan.homeip.net"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
-LICENSE="GPL"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x64"
 IUSE=""

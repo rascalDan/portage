@@ -5,7 +5,7 @@ DESCRIPTION="User configured application engine"
 HOMEPAGE="http://project2.randomdan.homeip.net"
 
 SRC_URI="http://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
-LICENSE="GPL"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="+docs unittest +console +web +fastcgi +daemon"

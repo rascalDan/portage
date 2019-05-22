@@ -5,7 +5,7 @@ DESCRIPTION="ICE and web service for locating files for download."
 HOMEPAGE="https://git.randomdan.homeip.net/repo/mirrorsearch/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 
-LICENSE="GPL"
+LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 

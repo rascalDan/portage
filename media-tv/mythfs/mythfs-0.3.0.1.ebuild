@@ -8,7 +8,7 @@ inherit bjam systemd
 DESCRIPTION="NetFS daemon module for MythTV"
 HOMEPAGE="http://mythfs.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
-LICENSE="GPL"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 

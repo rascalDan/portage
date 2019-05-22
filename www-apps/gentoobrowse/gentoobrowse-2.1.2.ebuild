@@ -6,7 +6,7 @@ DESCRIPTION="Gentoo Browse is an IceSpider based web site for viewing Gentoo con
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 HOMEPAGE="http://gentoobrowse.randomdan.homip.net/"
 
-LICENSE="GPL"
+LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 
 IUSE=""

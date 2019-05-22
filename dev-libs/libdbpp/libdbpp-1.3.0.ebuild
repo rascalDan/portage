@@ -6,7 +6,7 @@ DESCRIPTION="C++ database connectivity common components"
 HOMEPAGE="http://libdbpp.randomdan.homeip.net/"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
-LICENSE="GPL"
+LICENSE="MIT"
 SLOT="0/8"
 KEYWORDS="~x86 ~amd64"
 IUSE="man ut"

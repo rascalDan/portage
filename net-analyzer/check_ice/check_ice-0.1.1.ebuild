@@ -8,7 +8,7 @@ DESCRIPTION="Monitoring plugin for checking availability of ZeroC ICE service"
 HOMEPAGE="https://github.com/rascalDan/check_ice"
 SRC_URI="https://github.com/rascalDan/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE=""
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

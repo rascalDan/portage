@@ -6,7 +6,7 @@ DESCRIPTION="IceTray and DryIce for bootstrapping and dry running IceBox service
 HOMEPAGE="http://icetray.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 
-LICENSE="GPL"
+LICENSE="MIT"
 SLOT="0/b9"
 KEYWORDS="~amd64 ~x86"
 IUSE="ut tools"

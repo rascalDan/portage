@@ -6,7 +6,7 @@ DESCRIPTION="Ad-hoc collection of utility functions, classes, helpers"
 HOMEPAGE="http://docs.randomdan.homeip.net/libadhocutil"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
-LICENSE="GPL"
+LICENSE="MIT"
 SLOT="0/0.5"
 KEYWORDS="~x86 ~amd64"
 IUSE="man test"
