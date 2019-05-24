@@ -8,7 +8,7 @@ DESCRIPTION="Automatically restart systemd units as required."
 HOMEPAGE="https://git.randomdan.homeip.net/cgit.cgi/util/tree/autorestart"
 SRC_URI="https://git.randomdan.homeip.net/cgit.cgi/util/snapshot/${P}.tar.xz"
 
-LICENSE="gpl"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

@@ -12,7 +12,7 @@ HOMEPAGE="http://git.randomdan.homeip.net/cgit.cgi/util/tree/systemd-units"
 SRC_URI="http://git.randomdan.homeip.net/cgit.cgi/util/plain/systemd-units/${PN/-/.}?id=${P} -> ${PN/-/.}"
 RESTRICT="mirror"
 
-LICENSE="gpl"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
