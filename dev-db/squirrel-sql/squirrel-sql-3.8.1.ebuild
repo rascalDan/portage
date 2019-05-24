@@ -4,7 +4,7 @@ DESCRIPTION="SQuirreL SQL Client is a graphical Java program that will allow you
 HOMEPAGE="http://www.squirrelsql.org/"
 SRC_URI="https://sourceforge.net/projects/squirrel-sql/files/1-stable/${PV}-plainzip/squirrelsql-${PV}-optional.zip"
 
-LICENSE="lgpl"
+LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="oracle informix postgres mysql mssql jaybird"
