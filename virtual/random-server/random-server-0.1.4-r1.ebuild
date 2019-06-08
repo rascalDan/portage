@@ -48,7 +48,6 @@ RDEPEND="
 			sys-fs/dosfstools
 	)
 	ocfs2? (
-			sys-apps/drbd-service
 			sys-cluster/drbd-utils
 			sys-apps/ocfs2-service
 			sys-fs/ocfs2-tools )
