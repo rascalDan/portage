@@ -15,7 +15,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="
 	dev-util/lcov
-
+	dev-util/cproto
 	app-arch/xz-utils
 	app-text/tidy-html5
 	dev-cpp/glibmm

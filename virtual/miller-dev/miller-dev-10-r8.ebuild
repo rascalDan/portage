@@ -26,6 +26,8 @@ RDEPEND="
 			dev-db/apgdiff
 			dev-db/postgresql_autodoc )
 	dev-util/uncrustify
+	dev-util/cproto
+	dev-util/ctags
 	net-nds/shelldap
 	sys-devel/gdb
 	dev-util/valgrind
