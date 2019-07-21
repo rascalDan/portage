@@ -13,7 +13,7 @@ RDEPEND="
 		sys-boot/plymouth-openrc-plugin )
 	virtual/miller-base
 	x11-base/xorg-server
-	kde-misc/yakuake
+	kde-apps/yakuake
 	fbsplash? (
 			media-gfx/splash-themes-gentoo
 			media-gfx/splash-themes-livecd
