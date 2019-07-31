@@ -1,8 +1,8 @@
 EAPI="5"
 inherit bjam
 
-DESCRIPTION="C++ database connectivity SQLite components"
-HOMEPAGE="http://libdbpp.randomdan.homeip.net/sqlite"
+DESCRIPTION="C++ database connectivity MySQL components"
+HOMEPAGE="http://libdbpp.randomdan.homeip.net/mysql"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
@@ -12,20 +12,21 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/libdbpp-1.4*:=
-	dev-db/sqlite
-	dev-libs/libadhocutil:=
+	virtual/libmysqlclient
+	>=dev-libs/libadhocutil-0.7:=
 "
 DEPEND="
 	${RDEPEND}
+	dev-util/pkgconfig
 	dev-util/boost-build
 "
 
 src_compile() {
-	bjambuild libsqlitepp//dbpp-sqlite
+	bjambuild libmysqlpp//dbpp-mysql
 }
 
 src_install() {
-	bjaminstall libsqlitepp//install \
-		-i /dbpp-sqlite
+	bjaminstall libmysqlpp//install \
+		-i dbpp-mysql
 }
 

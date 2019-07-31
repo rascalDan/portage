@@ -1,8 +1,9 @@
 EAPI="5"
+
 inherit bjam
 
-DESCRIPTION="C++ database connectivity ODBC components"
-HOMEPAGE="http://libdbpp.randomdan.homeip.net/odbc"
+DESCRIPTION="C++ database connectivity PostgreSQL components"
+HOMEPAGE="http://libdbpp.randomdan.homeip.net/postgresql"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
@@ -12,20 +13,21 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/libdbpp-1.4*:=
-	dev-db/unixODBC
-	dev-libs/libadhocutil:=
+	dev-db/postgresql
+	>=dev-libs/libadhocutil-0.7:=
 "
 DEPEND="
 	${RDEPEND}
+	dev-util/pkgconfig
 	dev-util/boost-build
 "
 
 src_compile() {
-	bjambuild libodbcpp//dbpp-odbc
+	bjambuild libpqpp//dbpp-postgresql
 }
 
 src_install() {
-	bjaminstall libodbcpp//install \
-		-i dbpp-odbc
+	bjaminstall libpqpp//install \
+		-i /dbpp-postgresql
 }
 

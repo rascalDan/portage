@@ -1,8 +1,8 @@
 EAPI="5"
 inherit bjam
 
-DESCRIPTION="C++ database connectivity MySQL components"
-HOMEPAGE="http://libdbpp.randomdan.homeip.net/mysql"
+DESCRIPTION="C++ database connectivity ODBC components"
+HOMEPAGE="http://libdbpp.randomdan.homeip.net/odbc"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
@@ -12,20 +12,21 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/libdbpp-1.4*:=
-	virtual/libmysqlclient
-	>=dev-libs/libadhocutil-0.7:=
+	dev-db/unixODBC
+	dev-libs/libadhocutil:=
 "
 DEPEND="
 	${RDEPEND}
+	dev-util/pkgconfig
 	dev-util/boost-build
 "
 
 src_compile() {
-	bjambuild libmysqlpp//dbpp-mysql
+	bjambuild libodbcpp//dbpp-odbc
 }
 
 src_install() {
-	bjaminstall libmysqlpp//install \
-		-i dbpp-mysql
+	bjaminstall libodbcpp//install \
+		-i dbpp-odbc
 }
 

@@ -20,6 +20,7 @@ RDEPEND="=dev-libs/Ice-3.7*
 	dev-libs/fcgi
 	>=dev-libs/boost-1.66:="
 DEPEND="${DEPEND}
+	dev-util/pkgconfig
 	dev-util/boost-build"
 
 src_unpack() {
