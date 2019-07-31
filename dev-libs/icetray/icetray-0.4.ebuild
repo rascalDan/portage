@@ -15,7 +15,7 @@ RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/Ice-3.7*
 	>=dev-libs/libdbpp-1.4:=
-	>=dev-libs/libadhocutil-0.7:=
+	>=dev-libs/libadhocutil-0.7.5:=
 	dev-cpp/slicer:=[db]
 	net-libs/libesmtp
 	tools? ( dev-util/boost-build )
