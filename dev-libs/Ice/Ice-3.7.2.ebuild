@@ -29,7 +29,7 @@ ICEVERSION="$(get_version_component_range 1-2)"
 SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV/_/-}.tar.gz -> ${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0/37"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples libressl +ncurses mono php python ruby c++0x test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1
