@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/libdbpp-1.4*:=
-	virtual/libmysqlclient
+	<virtual/libmysqlclient-21
 	>=dev-libs/libadhocutil-0.7:=
 "
 DEPEND="
