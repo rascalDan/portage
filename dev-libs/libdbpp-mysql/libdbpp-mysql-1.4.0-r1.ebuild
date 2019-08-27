@@ -12,12 +12,11 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/libdbpp-1.4*:=
-	<virtual/libmysqlclient-21
+	<dev-db/mysql-connector-c-8
 	>=dev-libs/libadhocutil-0.7:=
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
 	dev-util/boost-build
 "
 
