@@ -7,7 +7,7 @@ IUSE=""
 
 RDEPEND="
 	virtual/miller-base
-	sys-fs/gitfs
+	sys-fs/netfs-gitfs
 	www-apps/gentoobrowse
 	www-apps/bugzilla
 	www-apps/mythweb
