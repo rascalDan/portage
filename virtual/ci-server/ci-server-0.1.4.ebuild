@@ -50,5 +50,6 @@ RDEPEND="
 	sys-libs/glibc
 	sys-libs/zlib
 	www-misc/icespider
+	app-doc/doxygen
 "
 
