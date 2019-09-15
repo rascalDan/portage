@@ -25,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	bjaminstall install --bindir="${D}/usr/lib/nagios/plugins/"
+	bjaminstall install --bindir="${D}/usr/$(get_libdir)/nagios/plugins/"
 }
 
