@@ -10,12 +10,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
+	dev-libs/boost:=
 	>=www-misc/icespider-0.4:=
 	dev-libs/icetray[tools]
 	dev-libs/libdbpp-postgresql
 	=sys-apps/icebox-service-1.11
 "
-RDEPEND="${DEPEND}"
+BDEPEND="${DEPEND}
+	dev-util/pkgconfig
+	dev-util/boost-build
+"
 
 pkg_setup() {
 	webapp_pkg_setup
