@@ -62,7 +62,6 @@ RDEPEND="
 	dev-libs/Ice
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp:3.0
-	dev-libs/cgicc
 	net-libs/libesmtp
 	www-apache/mod_fcgid
 	www-apache/apache-mod-markdown
