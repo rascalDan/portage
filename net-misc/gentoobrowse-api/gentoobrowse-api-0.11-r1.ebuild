@@ -10,10 +10,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="client server"
 
-RDEPEND="=dev-libs/Ice-3.7*
+DEPEND="=dev-libs/Ice-3.7*
 	server? (
 		=dev-cpp/slicer-1.9*:=[db]
-		=sys-apps/icebox-service-1.11
 		>=dev-libs/libdbpp-1.4:=
 		>=dev-libs/libdbpp-postgresql-1.4
 		>=dev-libs/icetray-0.4[tools]
@@ -22,10 +21,15 @@ RDEPEND="=dev-libs/Ice-3.7*
 	)
 	>=dev-libs/libadhocutil-0.7:=
 	dev-libs/boost:="
-DEPEND="${DEPEND}
+BDEPEND="${DEPEND}
 	sys-devel/flex
 	dev-util/pkgconfig
 	dev-util/boost-build"
+RDEPEND="${DEPEND}
+	server? (
+		=sys-apps/icebox-service-1.11
+	)
+	www-client/lynx"
 
 src_compile() {
 	bjambuild \
