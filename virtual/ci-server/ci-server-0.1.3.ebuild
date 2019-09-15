@@ -27,7 +27,6 @@ RDEPEND="
 	dev-db/unixODBC
 	dev-db/psqlodbc
 	dev-libs/boost
-	dev-libs/cgicc
 	dev-libs/fcgi
 	dev-libs/glib
 	=dev-libs/Ice-3.7*
@@ -50,7 +49,6 @@ RDEPEND="
 	sys-kernel/linux-headers
 	sys-libs/glibc
 	sys-libs/zlib
-	www-apps/project2
 	www-misc/icespider
 "
 
