@@ -13,15 +13,17 @@ SLOT="0/0.6.1"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="=dev-libs/Ice-3.7*
+DEPEND="=dev-libs/Ice-3.7*
 	>=dev-libs/libadhocutil-0.7:=
 	dev-cpp/libxmlpp:3.0
 	>=dev-cpp/slicer-1.9.0:=
 	dev-libs/fcgi
 	>=dev-libs/boost-1.66:="
-DEPEND="${DEPEND}
+BDEPEND="${DEPEND}
 	dev-util/pkgconfig
 	dev-util/boost-build"
+RDEPEND="${DEPEND}
+	virtual/httpd-fastcgi"
 
 src_unpack() {
 	default
