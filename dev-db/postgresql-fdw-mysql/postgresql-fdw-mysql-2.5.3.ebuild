@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=7
+EAPI=5
 
 DESCRIPTION="PostgreSQL foreign data wrapper for MySQL"
 HOMEPAGE="https://github.com/EnterpriseDB/mysql_fdw"
@@ -16,16 +16,16 @@ IUSE=""
 S="${WORKDIR}/mysql_fdw-REL-${PV//./_}"
 
 DEPEND="
-	dev-db/mysql-connector-c
+	virtual/libmysqlclient
 	>=dev-db/postgresql-9.4
 	"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	emake USE_PGXS=1
+	make USE_PGXS=1
 }
 
 src_install() {
-	emake USE_PGXS=1 install DESTDIR="${D}"
+	make USE_PGXS=1 install DESTDIR="${D}"
 }
 
