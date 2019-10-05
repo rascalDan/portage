@@ -7,6 +7,6 @@ IUSE=""
 
 RDEPEND="
 	virtual/miller-base
-	=dev-db/postgresql-11*[server]
+	=dev-db/postgresql-12*[server]
 "
 
