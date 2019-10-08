@@ -19,7 +19,6 @@ RDEPEND="
 	net-firewall/iptables
 	net-fs/samba
 	net-misc/dhcp
-	net-proxy/squid
 	net-proxy/haproxy
 	net-nds/smbldap-tools
 	net-nds/shelldap
@@ -28,6 +27,7 @@ RDEPEND="
 	virtual/miller-postgresql
 	virtual/miller-webappserver
 	virtual/miller-webserver
+	virtual/miller-proxy
 	sys-apps/logwatch
 	sys-apps/glacier2-service
 	net-misc/gentoobrowse-api
