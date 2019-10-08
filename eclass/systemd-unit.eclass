@@ -9,7 +9,7 @@
 inherit "systemd"
 DESCRIPTION="${PN}"
 HOMEPAGE="http://git.randomdan.homeip.net/cgit.cgi/util/tree/systemd-units"
-SRC_URI="http://git.randomdan.homeip.net/cgit.cgi/util/plain/systemd-units/${PN/-/.}?id=${P} -> ${PN/-/.}"
+SRC_URI="http://git.randomdan.homeip.net/cgit.cgi/util/plain/systemd-units/${PN/-/.}?id=${P} -> ${P/-/.}"
 RESTRICT="mirror"
 
 LICENSE="MIT"
@@ -20,11 +20,11 @@ IUSE=""
 src_unpack()
 {
 	mkdir ${S}
-	cp ${DISTDIR}/${A} ${S}/${TARGETNAME:=${A}}
+	cp ${DISTDIR}/${A} ${S}/${TARGETNAME:=${PN/-/.}}
 }
 
 src_install()
 {
-	systemd_dounit ${S}/${TARGETNAME:=${A}}
+	systemd_dounit ${S}/${TARGETNAME:=${PN/-/.}}
 }
 
