@@ -25,6 +25,7 @@ RDEPEND="
 	virtual/miller-base
 	virtual/miller-mailserver
 	virtual/miller-postgresql
+	virtual/miller-mysql
 	virtual/miller-webappserver
 	virtual/miller-webserver
 	virtual/miller-proxy
