@@ -22,7 +22,7 @@ RDEPEND="
 	dev-cpp/libjsonpp
 	dev-cpp/libxmlpp
 	dev-cpp/slicer
-	virtual/mysql[server]
+	virtual/miller-mysql
 	dev-db/sqlite
 	dev-db/unixODBC
 	dev-db/psqlodbc
