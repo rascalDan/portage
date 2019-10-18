@@ -1,3 +1,4 @@
+EAPI="7"
 DESCRIPTION="Virtual for Miller MySQL servers"
 
 SLOT="0"
@@ -6,5 +7,5 @@ IUSE=""
 
 RDEPEND="
 	virtual/miller-base
-	dev-db/mysql
+	dev-db/mysql[server]
 "
