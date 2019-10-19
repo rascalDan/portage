@@ -14,6 +14,7 @@ if [ /usr/src/linux -nt /boot ] ; then
 	fi
 	genkernel --clean --kernel-outputdir=$OUTDIR all && \
 		grub-mkconfig -o /boot/grub/grub.cfg
+	qfile /lib/modules && emerge @module-rebuild
 	touch /boot
 fi
 
