@@ -8,7 +8,7 @@ IUSE="systemd plasma rdp vnc xscreensaver vlc"
 RDEPEND="
 	=net-misc/unison-2.48*
 	=dev-lang/ocaml-4.04*
-	systemd? ( kde-misc/systemd-kcm )
+	systemd? ( app-admin/systemdgenie )
 	virtual/miller-base
 	kde-apps/kcalc
 	vlc? ( media-video/vlc )
