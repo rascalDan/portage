@@ -43,12 +43,12 @@ DOCS=(
 MAKEOPTS+=" -j1"
 
 src_prepare() {
+	default
 	# gentoo uses /sys/kernel/dlm as dlmfs mountpoint
 	sed -e 's:"/dlm/":"/sys/kernel/dlm":g' \
 		-i libo2dlm/o2dlm_test.c \
 		-i libocfs2/dlm.c || die "sed failed"
 	AT_M4DIR=. eautoreconf
-	default
 }
 
 src_configure() {
