@@ -8,7 +8,7 @@ HOMEPAGE="http://docs.randomdan.homeip.net/libadhocutil"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0/0.7.2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="man test"
 
 RDEPEND="
