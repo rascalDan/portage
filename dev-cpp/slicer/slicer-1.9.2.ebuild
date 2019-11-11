@@ -10,7 +10,7 @@ SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz
 	https://github.com/zeroc-ice/ice/archive/v${ICE_VERSION}.tar.gz -> Ice-${ICE_VERSION}.tar.gz"
 LICENSE="MIT"
 SLOT="0/1.9.0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="db xml json"
 
 RDEPEND="=dev-libs/Ice-3.7*
