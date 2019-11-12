@@ -12,6 +12,7 @@ IUSE="client server"
 
 DEPEND="=dev-libs/Ice-3.7*
 	server? (
+		dev-util/cproto
 		=dev-cpp/slicer-1.9*:=[db]
 		>=dev-libs/libdbpp-1.4:=
 		>=dev-libs/libdbpp-postgresql-1.4
