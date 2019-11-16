@@ -36,7 +36,6 @@ RDEPEND="
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
 		firmware? ( sys-kernel/linux-firmware )
 		app-admin/logrotate
-		video_cards_nvidia? ( sys-apps/v86d )
 		video_cards_nouveau? ( sys-firmware/nvidia-firmware )
 	)
 	>=app-portage/gentoolkit-0.2.1
