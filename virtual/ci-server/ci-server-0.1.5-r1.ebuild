@@ -45,7 +45,7 @@ RDEPEND="
 	net-misc/gentoobrowse-api
 	sys-cluster/netfs
 	sys-devel/flex
-	sys-fs/fuse
+	sys-fs/fuse:0
 	sys-kernel/linux-headers
 	sys-libs/glibc
 	sys-libs/zlib

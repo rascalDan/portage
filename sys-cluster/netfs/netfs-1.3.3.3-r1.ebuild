@@ -18,7 +18,7 @@ RDEPEND="=dev-libs/Ice-3.7*
 		)
 	>=dev-libs/libadhocutil-0.7:=
 	client? (
-			sys-fs/fuse
+			sys-fs/fuse:0
 			>=dev-libs/boost-1.66:=
 			)
 	dev-libs/boost:="
