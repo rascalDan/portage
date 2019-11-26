@@ -12,6 +12,7 @@ IUSE=""
 DEPEND="
 	dev-libs/boost:=
 	>=www-misc/icespider-0.4:=
+	dev-cpp/slicer:=[db]
 	dev-libs/icetray[tools]
 	dev-libs/libdbpp-postgresql
 	=sys-apps/icebox-service-1.11
