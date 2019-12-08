@@ -25,7 +25,10 @@ RDEPEND="
 		cdr? ( kde-apps/k3b )
 		sys-apps/hdparm
 		xfs? ( sys-fs/xfsdump )
-		btrfs? ( sys-fs/btrfs-progs )
+		btrfs? (
+			sys-fs/btrfs-progs
+			sys-fs/btrfsmaintenance
+			)
 		sys-fs/lvm2
 		>=sys-boot/grub-2
 		sys-apps/busybox
