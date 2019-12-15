@@ -23,7 +23,7 @@ DEPEND="
 "
 
 src_compile() {
-	bjambuild simplify
+	bjambuild simplify simplifind
 }
 
 src_install() {
