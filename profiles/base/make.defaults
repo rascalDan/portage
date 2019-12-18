@@ -17,7 +17,7 @@ ACCEPT_LICENSE="$ACCEPT_LICENSE linux-fw-redistributable no-source-code vim.org 
 USE="
 	-aac -authdaemond autoupdate bash-completion btrfs c++0x caps clang -consolekit css -cups curl -debug
 	device-mapper dot dvb -elogind -embedded fam -fortran fontconfig fuse git gnutls gold graphviz grub hpn http2 icu
-	-idn inspector -introspection ithreads jit jpeg jpeg2k json ldap llvm lvm -lvm1 lzma lzo minizip mpm-prefork
+	-idn inspector -introspection ithreads jit jpeg jpeg2k json ldap llvm lvm -lvm1 lzma lzo minizip mp3 mpm-prefork
 	-nettle network network-cron nscd -nss nuv offload pch pcre16 pcre32 pcre-jit png postgres postproc
 	-ppp python rtmp savedconfig secure-delete smp sndfile -source sqlite symlink syslog
 	system-boost system-cairo system-cmark system-crontab systemd system-ffmpeg system-harfbuzz
