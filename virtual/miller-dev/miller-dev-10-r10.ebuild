@@ -37,6 +37,7 @@ RDEPEND="
 	app-benchmarks/wrk
 	sys-fs/inotify-tools
 	net-misc/pssh
+	app-misc/jq
 	cxx? (
 			dev-util/ccache
 			dev-util/cppcheck
