@@ -1,0 +1,18 @@
+#!/bin/bash
+
+RO_DIRS=$(portageq envvar PORTAGE_RO_DISTDIRS)
+DISTDIR=$(portageq envvar DISTDIR)
+
+if [[ -z $RO_DIRS ]] ; then
+	echo "No PORTAGE_RO_DISTDIRS"
+	exit 1;
+fi
+
+find -L $DISTDIR -maxdepth 1 -type l -delete
+
+find $RO_DIRS -maxdepth 1 -type f -printf '%f %p\n' \
+			 | sort -u -k1,1 \
+			 | cut -d ' ' -f 2 \
+			 | grep -Ff <(find $DISTDIR -maxdepth 1 -type f -printf '/%f\n') \
+			 | xargs -r ln -s -v -f -r -t $DISTDIR
+

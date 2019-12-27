@@ -100,6 +100,7 @@ src_install() {
 	exeinto /etc/cron.weekly
 	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
 	use !minimal && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
+	use !minimal && newexe "${FILESDIR}"/hardlink-ccache hardlink-ccache
 
 	if [ -n "${UPDATETIME}" ]; then
 		mkdir -p ${D}/etc/cron.d
@@ -117,6 +118,7 @@ src_install() {
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates
 	newexe "${FILESDIR}"/newkernel 80-newkernel
 	newexe "${FILESDIR}"/systemd-reload 90-systemd-reload
+	newexe "${FILESDIR}"/linkfiles 98-linkfiles
 	if use autoupdate ; then
 		dosym /sbin/update-install /etc/portage/postsync.d/75-update-install
 		if use autoshutdown ; then
