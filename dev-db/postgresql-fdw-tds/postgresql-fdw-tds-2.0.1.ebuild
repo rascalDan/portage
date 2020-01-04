@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="7"
 
 DESCRIPTION="PostgreSQL foreign data wrapper for TDS"
 HOMEPAGE="https://github.com/GeoffMontee/tds_fdw"
@@ -17,15 +17,15 @@ S="${WORKDIR}/tds_fdw-${PV}"
 
 DEPEND="
 	dev-db/freetds
-	>=dev-db/postgresql-9.1
+	>=dev-db/postgresql-9.2
 	"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	make USE_PGXS=1
+	emake USE_PGXS=1
 }
 
 src_install() {
-	make USE_PGXS=1 install DESTDIR="${D}"
+	emake USE_PGXS=1 install DESTDIR="${D}"
 }
 

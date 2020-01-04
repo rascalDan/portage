@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="7"
 inherit bjam systemd
 
 DESCRIPTION="NetFS daemon module for MythTV"
@@ -12,7 +12,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-DEPEND="
+RDEPEND="
 	=sys-apps/icebox-service-1.11
 	>=dev-cpp/slicer-1.9:=[db]
 	dev-libs/libdbpp-mysql
@@ -21,7 +21,8 @@ DEPEND="
 	>=sys-cluster/netfs-1.3
 	dev-libs/libadhocutil:=
 "
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	dev-util/boost-build"
 
 src_compile() {

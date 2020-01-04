@@ -1,4 +1,4 @@
-EAPI="6"
+EAPI="7"
 inherit bjam
 
 DESCRIPTION="Lightweight native C++ JSON library"

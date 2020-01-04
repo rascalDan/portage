@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI="7"
 
 BACKPORTS="03f44039848bd09444ff4baa8dc158bd61454079"
 MY_P=${P%_p*}

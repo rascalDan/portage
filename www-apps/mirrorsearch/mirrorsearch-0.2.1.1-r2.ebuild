@@ -1,5 +1,5 @@
-EAPI=6
-inherit webapp depend.apache eutils bjam
+EAPI="7"
+inherit webapp eutils bjam
 
 DESCRIPTION="ICE and web service for locating files for download."
 HOMEPAGE="https://git.randomdan.homeip.net/repo/mirrorsearch/"

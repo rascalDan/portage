@@ -1,4 +1,4 @@
-EAPI=6
+EAPI="7"
 
 DESCRIPTION="SQuirreL SQL Client is a graphical Java program that will allow you to view the structure of a JDBC compliant database, browse the data in tables, issue SQL commands etc"
 HOMEPAGE="http://www.squirrelsql.org/"

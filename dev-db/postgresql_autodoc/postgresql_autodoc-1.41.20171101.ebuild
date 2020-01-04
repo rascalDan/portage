@@ -2,10 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvs/lportage/dev-db/postgresql_autodoc/postgresql_autodoc-1.31.ebuild,v 1.1 2008-11-13 19:20:50 dan.goodliffe Exp $
 
+EAPI="7"
 DESCRIPTION="PostgreSQL Autodoc"
 HOMEPAGE="https://github.com/cbbrowne/autodoc"
 COMMIT_HASH="11c3c47ae009360d7633ba24c130285fbca18277"
-SRC_URI="https://github.com/cbbrowne/autodoc/archive/${COMMIT_HASH}.tar.gz"
+SRC_URI="https://github.com/cbbrowne/autodoc/archive/${COMMIT_HASH}.tar.gz -> ${P}.tar.gz"
 
 LICENSE=""
 SLOT="0"
@@ -20,9 +21,10 @@ DEPEND="
 	sys-apps/sed
 	dev-lang/perl"
 RDEPEND="${DEPEND}"
+S="$WORKDIR/autodoc-$COMMIT_HASH"
 
 src_install() {
-	make \
+	emake \
 		PREFIX="/usr" \
 		DESTDIR="${D}" \
 		install -C "${WORKDIR}/autodoc-${COMMIT_HASH}"

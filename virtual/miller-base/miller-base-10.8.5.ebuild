@@ -1,4 +1,4 @@
-EAPI="6"
+EAPI="7"
 inherit systemd
 DESCRIPTION="Virtual for base systems"
 

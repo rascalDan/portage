@@ -1,4 +1,4 @@
-EAPI=6
+EAPI="7"
 PYTHON_COMPAT=( python3_{4,5,6} )
 inherit multilib python-single-r1 cmake-utils vim-plugin
 

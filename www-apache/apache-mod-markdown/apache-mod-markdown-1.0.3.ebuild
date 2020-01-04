@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 inherit apache-module autotools
 
 DESCRIPTION="mod_markdown is Markdown filter module for Apache HTTPD Server."
@@ -21,6 +21,7 @@ need_apache2
 
 src_prepare() {
 	eautoreconf
+	default
 }
 
 src_configure() {

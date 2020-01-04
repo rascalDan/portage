@@ -1,4 +1,4 @@
-EAPI="6"
+EAPI="7"
 DESCRIPTION="Virtual for Miller webapp servers"
 
 SLOT="0"

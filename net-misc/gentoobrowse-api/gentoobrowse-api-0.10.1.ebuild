@@ -1,4 +1,4 @@
-EAPI="5"
+EAPI="7"
 inherit systemd eutils bjam
 
 DESCRIPTION="ICE API and client for Gentoo Browse"

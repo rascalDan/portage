@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="7"
 
 PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
 
@@ -21,11 +21,10 @@ USE_PHP="php7-0"
 # db:6.2 breaks the build process
 BERKDB_SLOTS=( 6.1 5.3 5.1 4.8 )
 
-inherit db-use eutils mono-env php-ext-source-r2 python-r1 ruby-ng toolchain-funcs versionator
+inherit db-use eutils mono-env php-ext-source-r3 python-r1 ruby-ng toolchain-funcs
 
 DESCRIPTION="ICE middleware C++ library and generator tools"
 HOMEPAGE="http://www.zeroc.com/"
-ICEVERSION="$(get_version_component_range 1-2)"
 SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV/_/-}.tar.gz -> ${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0/37"

@@ -1,4 +1,4 @@
-EAPI="4"
+EAPI="7"
 DESCRIPTION="Virtual for Miller PostgreSQL servers"
 
 SLOT="0"
