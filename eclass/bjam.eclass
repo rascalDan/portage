@@ -14,6 +14,13 @@ src_configure() {
 	ebegin "Setting portage CXX and LD flags"
 	sed -i "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
 	eend $?
+
+	ebegin "Applying macro replacements"
+	env | sed "s/^/-D'/;s/$/'/" | xargs m4 /dev/null -F "${TMPDIR}/m4.env"
+	find "${S}" -name "*.in" | while read infile ; do
+		m4 -R "${TMPDIR}/m4.env" "${infile}" > "${infile%.in}"
+	done
+	eend $?
 }
 
 src_test() {
@@ -46,6 +53,11 @@ bjaminstall() {
 		--libdir="${D}/usr/$(get_libdir)" \
 		--includedir="${D}/usr/include/$include" \
 		${other[@]}
+
+	insinto ${PKG_CONFIG_PATH}
+	find "${S}" -name "*.pc" | while read infile ; do
+		doins ${infile}
+	done
 }
 
 doxygenbuild() {
