@@ -38,6 +38,7 @@ RDEPEND="
 	net-analyzer/fail2ban
 	net-misc/openntpd
 	net-analyzer/nagios
+	net-analyzer/nagios-plugin-check_raid
 	net-analyzer/nrpe
 	net-analyzer/check_drbd
 	net-analyzer/check_haproxy_stats
