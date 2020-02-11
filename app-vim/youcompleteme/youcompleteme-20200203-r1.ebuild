@@ -1,6 +1,6 @@
 EAPI="7"
 PYTHON_COMPAT=( python3_{4,5,6,7,8} )
-inherit multilib python-single-r1 cmake-utils vim-plugin
+inherit multilib python-any-r1 cmake-utils vim-plugin
 
 youcompletemev="124661f218e80b96c1f9f3d124e99f9a2fd2d83b"
 ycmdv="d3378ca3a3103535c14b104cb916dcbcdaf93eeb"
@@ -22,33 +22,39 @@ HOMEPAGE="http://valloric.github.io/YouCompleteMe/"
 
 LICENSE="GPL-3"
 IUSE="+clang test go csharp"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+#REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	clang? ( sys-devel/clang:9 )
+        $(python_gen_any_dep '
 	>=dev-libs/boost-1.65:=[python,threads,${PYTHON_USEDEP}]
 	|| (
 		app-editors/vim[python,${PYTHON_USEDEP}]
 		app-editors/gvim[python,${PYTHON_USEDEP}]
 	)
+        ')
 "
 RDEPEND="
 	${COMMON_DEPEND}
+        $(python_gen_any_dep '
 	dev-python/bottle[${PYTHON_USEDEP}]
 	dev-python/future[${PYTHON_USEDEP}]
 	dev-python/jedi[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/sh[${PYTHON_USEDEP}]
 	dev-python/waitress[${PYTHON_USEDEP}]
+        ')
 "
 DEPEND="
 	${COMMON_DEPEND}
 	test? (
+        $(python_gen_any_dep '
 		>=dev-python/mock-1.0.1[${PYTHON_USEDEP}]
 		>=dev-python/nose-1.3.0[${PYTHON_USEDEP}]
 		dev-cpp/gmock
 		dev-cpp/gtest
+        ')
 	)
 "
 
