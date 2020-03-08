@@ -1,6 +1,6 @@
 EAPI="7"
 PYTHON_COMPAT=( python3_{4,5,6,7,8} )
-inherit multilib python-any-r1 cmake-utils vim-plugin
+inherit multilib python-single-r1 cmake-utils vim-plugin
 
 youcompletemev="124661f218e80b96c1f9f3d124e99f9a2fd2d83b"
 ycmdv="d3378ca3a3103535c14b104cb916dcbcdaf93eeb"
@@ -27,34 +27,34 @@ IUSE="+clang test go csharp"
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	clang? ( sys-devel/clang:9 )
-        $(python_gen_any_dep '
-	>=dev-libs/boost-1.65:=[python,threads,${PYTHON_USEDEP}]
-	|| (
-		app-editors/vim[python,${PYTHON_USEDEP}]
-		app-editors/gvim[python,${PYTHON_USEDEP}]
-	)
-        ')
+	$(python_gen_cond_dep '
+			>=dev-libs/boost-1.65:=[python,threads,${PYTHON_MULTI_USEDEP}]
+			|| (
+				app-editors/vim[python,${PYTHON_SINGLE_USEDEP}]
+				app-editors/gvim[python,${PYTHON_SINGLE_USEDEP}]
+			   )
+	')
 "
 RDEPEND="
 	${COMMON_DEPEND}
-        $(python_gen_any_dep '
-	dev-python/bottle[${PYTHON_USEDEP}]
-	dev-python/future[${PYTHON_USEDEP}]
-	dev-python/jedi[${PYTHON_USEDEP}]
-	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/sh[${PYTHON_USEDEP}]
-	dev-python/waitress[${PYTHON_USEDEP}]
-        ')
+	$(python_gen_cond_dep '
+			dev-python/bottle[${PYTHON_MULTI_USEDEP}]
+			dev-python/future[${PYTHON_MULTI_USEDEP}]
+			dev-python/jedi[${PYTHON_MULTI_USEDEP}]
+			dev-python/requests[${PYTHON_MULTI_USEDEP}]
+			dev-python/sh[${PYTHON_MULTI_USEDEP}]
+			dev-python/waitress[${PYTHON_MULTI_USEDEP}]
+	')
 "
 DEPEND="
 	${COMMON_DEPEND}
 	test? (
-        $(python_gen_any_dep '
-		>=dev-python/mock-1.0.1[${PYTHON_USEDEP}]
-		>=dev-python/nose-1.3.0[${PYTHON_USEDEP}]
-		dev-cpp/gmock
-		dev-cpp/gtest
-        ')
+			$(python_gen_cond_dep '
+				>=dev-python/mock-1.0.1[${PYTHON_MULTI_USEDEP}]
+				>=dev-python/nose-1.3.0[${PYTHON_MULTI_USEDEP}]
+				dev-cpp/gmock
+				dev-cpp/gtest
+			')
 	)
 "
 
@@ -65,6 +65,9 @@ CMAKE_USE_DIR=${S}/third_party/ycmd/cpp
 VIM_PLUGIN_HELPFILES="${PN}"
 
 src_prepare() {
+	echo $RDEPEND
+		echo $DEPEND
+
 	eapply ${FILESDIR}/remove-python2-support.patch
 	for third_party_module in ycmd requests-futures; do
 		rm -r "${S}"/third_party/${third_party_module} || die "Failed to remove third party module ${third_party_module}"
