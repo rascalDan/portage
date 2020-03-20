@@ -7,7 +7,7 @@ RUBY_TARGETS="-* ruby25"
 USE="
 	apng autoshutdown cddb -cdio -crypt cscope custom-cflags
 	custom-optimization -desktop-portal dv ffmpeg frei0r gallium gcrypt glib
-	gnome-keyring gtk3 -handbook -hangouts imagemagick javascript jemalloc
+	gnome-keyring -handbook -hangouts imagemagick javascript jemalloc
 	-kde lame -lastfm lightning lm-sensors man markdown -modemmanager mtp mysql -nsplugin
 	offensive openexr pango plymouth -postscript -sdl -semantic-desktop -server
 	silc taglib thumbnail user-session vaapi vlc -vnc -wallpapers -webstart xa
