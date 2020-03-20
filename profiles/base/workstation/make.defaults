@@ -6,7 +6,7 @@ LDFLAGS="$LDFLAGS -O3 -march=native -pipe"
 RUBY_TARGETS="-* ruby25"
 USE="
 	apng autoshutdown cddb -cdio -crypt cscope custom-cflags
-	custom-optimization -desktop-portal dv ffmpeg frei0r gallium gcrypt glib
+	custom-optimization cxx -desktop-portal dv ffmpeg frei0r gallium gcrypt glib
 	gnome-keyring -handbook -hangouts imagemagick javascript jemalloc
 	-kde lame -lastfm lightning lm-sensors man markdown -modemmanager mtp mysql -nsplugin
 	offensive openexr pango plymouth -postscript -sdl -semantic-desktop -server
