@@ -33,6 +33,6 @@ RDEPEND="
 		net-vpn/forticlientsslvpn
 		)
 	sys-fs/dosfstools
-	sys-block/kvpm
+	sys-block/partitionmanager
 "
 
