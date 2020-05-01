@@ -1,0 +1,5 @@
+USE="ischroot minimal -vim-pager -ldap -cron -caps -tools -icu resolvconf"
+PORTAGE_TMPDIR="/tmp"
+DISTDIR="/tmp"
+PORTAGE_RO_DISTDIRS="${PORTDIR}/distfiles"
+UPDATESTATEDIR=/tmp
