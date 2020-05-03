@@ -1,3 +1,7 @@
+ACCEPT_KEYWORDS="~amd64"
+CFLAGS="-O3 -march=native -pipe"
+CXXFLAGS="${CFLAGS}"
+LDFLAGS="$LDFLAGS -O3 -march=native -pipe"
 CCACHE_HARDLINK="true"
 CCACHE_MAXSIZE="10G"
 CLEAN_DELAY="0"

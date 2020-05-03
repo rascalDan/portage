@@ -1,8 +1,4 @@
-ACCEPT_KEYWORDS="~amd64"
 APACHE2_MODULES="-* filter authz_host cgid mime_magic mime autoindex vhost_alias dav dir deflate log_config env rewrite cache mem_cache unixd socache authz_core authn_core socache_shmcb http2 alias"
-CFLAGS="-O3 -march=native -pipe -fno-stack-protector"
-CXXFLAGS="${CFLAGS}"
-LDFLAGS="$LDFLAGS -O3 -march=native -pipe"
 RUBY_TARGETS="-* ruby25"
 USE="
 	apng autoshutdown cddb -cdio -crypt cscope custom-cflags
