@@ -33,7 +33,6 @@ RDEPEND="
 		>=sys-boot/grub-2
 		sys-apps/busybox
 		sys-kernel/genkernel-next
-		sys-process/cronie
 		sys-apps/pciutils
 		sys-apps/usbutils
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
@@ -41,6 +40,7 @@ RDEPEND="
 		app-admin/logrotate
 		video_cards_nouveau? ( sys-firmware/nvidia-firmware )
 	)
+	sys-process/cronie
 	>=app-portage/gentoolkit-0.2.1
 	app-admin/sudo
 	mail-client/mailx
