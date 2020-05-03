@@ -4,7 +4,7 @@ DESCRIPTION="Virtual for base systems"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
+IUSE="hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
 minimal autoupdate autoshutdown autoservicerestart sw-suspend mdadm
 video_cards_nvidia video_cards_nouveau firmware ischroot"
 
@@ -22,7 +22,6 @@ RDEPEND="
 		sys-apps/kexec-tools
 		>=app-admin/eclean-kernel-1.99
 		mdadm? ( sys-fs/mdadm )
-		cdr? ( kde-apps/k3b )
 		sys-apps/hdparm
 		xfs? ( sys-fs/xfsdump )
 		btrfs? (
@@ -54,10 +53,6 @@ RDEPEND="
 			net-ftp/ncftp
 			app-text/dos2unix
 			net-dns/bind-tools
-			!ischroot? (
-				www-servers/apache
-				app-antivirus/clamav
-				)
 			)
 	sys-process/lsof
 	app-portage/layman[git]
@@ -65,6 +60,7 @@ RDEPEND="
 		sys-devel/prelink
 	)
 	!ischroot? (
+		app-antivirus/clamav
 		!sw-suspend? ( sys-kernel/gentoo-sources )
 		sw-suspend? ( sys-apps/tuxonice-userui
 			|| ( sys-kernel/tuxonice-sources
@@ -92,14 +88,14 @@ src_install() {
 	newexe "${FILESDIR}"/service-check.systemd service-check
 	systemd_newtmpfilesd "${FILESDIR}/tmpfiles-d-portage.conf" "portage.conf"
 	dodir /etc/systemd/system/multi-user.target.wants
-	dosym /lib/systemd/system/freshclamd.service /etc/systemd/system/multi-user.target.wants/freshclamd.service
+	use !ischroot && dosym /lib/systemd/system/freshclamd.service /etc/systemd/system/multi-user.target.wants/freshclamd.service
 	dosym /lib/systemd/system/nscd.service /etc/systemd/system/multi-user.target.wants/nscd.service
-	dosym /lib/systemd/system/sshd.service /etc/systemd/system/multi-user.target.wants/sshd.service
+	use !ischroot && dosym /lib/systemd/system/sshd.service /etc/systemd/system/multi-user.target.wants/sshd.service
 	dosym /lib/systemd/system/cronie.service /etc/systemd/system/multi-user.target.wants/cronie.service
 
 	exeinto /etc/cron.weekly
-	use !minimal && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
-	use !minimal && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
+	use !ischroot && newexe "${FILESDIR}"/weekly-av-scan.cron av-scan
+	use !ischroot && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
 	use !minimal && newexe "${FILESDIR}"/hardlink-ccache hardlink-ccache
 
 	if [ -n "${UPDATETIME}" ]; then
@@ -116,7 +112,7 @@ src_install() {
 	newexe "${FILESDIR}"/sync-distclean-exec.cron 60-portage-distclean-exec
 	use !autoupdate && newexe "${FILESDIR}"/auto-download-packages 70-auto-download-package
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates
-	newexe "${FILESDIR}"/newkernel 80-newkernel
+	use !ischroot && newexe "${FILESDIR}"/newkernel 80-newkernel
 	newexe "${FILESDIR}"/systemd-reload 90-systemd-reload
 	newexe "${FILESDIR}"/linkfiles 98-linkfiles
 	if use autoupdate ; then

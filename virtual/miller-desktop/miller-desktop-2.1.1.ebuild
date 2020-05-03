@@ -2,13 +2,14 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="vpnc pptp forticlient wifi b43 networkmanager plymouth"
+IUSE="cdr vpnc pptp forticlient wifi b43 networkmanager plymouth"
 
 RDEPEND="
 	virtual/eject
 	plymouth? (
 			media-gfx/MIB-Ossigeno-Ultimate-Plymouth
 	)
+	cdr? ( kde-apps/k3b )
 	virtual/miller-base
 	x11-base/xorg-server
 	kde-apps/yakuake
