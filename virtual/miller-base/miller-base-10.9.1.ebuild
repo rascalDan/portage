@@ -98,10 +98,14 @@ src_install() {
 	use !ischroot && newexe "${FILESDIR}"/kernels-cleaner kernels-cleaner
 	use !minimal && newexe "${FILESDIR}"/hardlink-ccache hardlink-ccache
 
-	if [ -n "${UPDATETIME}" ]; then
-		mkdir -p ${D}/etc/cron.d
-		echo "${UPDATETIME} root /sbin/gentoo-portage-update" > ${D}/etc/cron.d/gentoo-portage-update
-		exeinto /sbin
+	if [[ -n ${UPDATETIME} ]]; then
+		if [[ ${UPDATETIME} = @* ]]; then
+			exeinto /etc/cron.${UPDATETIME#"@"}
+		else
+			mkdir -p ${D}/etc/cron.d
+			echo "${UPDATETIME} root /sbin/gentoo-portage-update" > ${D}/etc/cron.d/gentoo-portage-update
+			exeinto /sbin
+		fi
 	else
 		use nohourlyupdate && exeinto /etc/cron.daily
 		use !nohourlyupdate && exeinto /etc/cron.hourly
