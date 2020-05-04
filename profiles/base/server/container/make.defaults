@@ -1,5 +1,8 @@
-USE="ischroot minimal -vim-pager -ldap -cron -caps -tools -icu resolvconf"
+USE="ischroot minimal -vim-pager -ldap -cron -caps -tools -icu resolvconf cxx sasl -rsync-verify"
 PORTAGE_TMPDIR="/tmp"
-DISTDIR="/tmp"
+DISTDIR="/tmp/distfiles"
 PORTAGE_RO_DISTDIRS="${PORTDIR}/distfiles"
 UPDATESTATEDIR=/tmp
+PYTHON_TARGETS="-python2_7"
+I_KNOW_WHAT_I_AM_DOING="yes"
+UPDATETIME="@monthly"
