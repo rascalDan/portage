@@ -35,6 +35,7 @@ RDEPEND="
 	www-apps/mirrorsearch
 	dev-util/ccache
 	sys-cluster/pacemaker
+	sys-cluster/crmsh
 	net-analyzer/fail2ban
 	net-misc/openntpd
 	net-analyzer/nagios
