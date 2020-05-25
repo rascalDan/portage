@@ -13,7 +13,7 @@ IUSE="man ut"
 
 RDEPEND="
 	dev-libs/boost:=
-	>=dev-libs/libadhocutil-0.7:=
+	>=dev-libs/libadhocutil-0.8:=
 "
 DEPEND="
 	${RDEPEND}

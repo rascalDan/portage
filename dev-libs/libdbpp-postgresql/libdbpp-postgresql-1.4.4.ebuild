@@ -14,7 +14,7 @@ RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/libdbpp-1.4*:=
 	dev-db/postgresql
-	>=dev-libs/libadhocutil-0.7:=
+	>=dev-libs/libadhocutil-0.8:=
 "
 DEPEND="
 	${RDEPEND}
