@@ -54,7 +54,7 @@ bjaminstall() {
 		--includedir="${D}/usr/include/$include" \
 		${other[@]}
 
-	insinto ${PKG_CONFIG_PATH}
+	insinto /usr/share/pkgconfig
 	find "${S}" -name "*.pc" | while read infile ; do
 		doins ${infile}
 	done
