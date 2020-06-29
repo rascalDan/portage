@@ -58,7 +58,6 @@ src_configure() {
 		--module-prefix=${D}
 		--no-save-config
 		--no-clean
-		--no-oldconfig
 		$(enableif lvm)
 		$(enableif mdadm)
 		$(enableif dmraid)
@@ -73,12 +72,10 @@ src_configure() {
 		"
 	einfo "Base genkernel options ${GENKERNELOPTS}"
 	set_arch_to_kernel
-	emake -C ${KERNEL_DIR} O=${S} oldconfig
 }
 
 src_compile() {
-	emake -C ${KERNEL_DIR} O=${S} ARCH=${ARCH} prepare
-	emake -C ${KERNEL_DIR} O=${S} ARCH=${ARCH} bzImage modules
+	genkernel $GENKERNELOPTS --no-install kernel || die genkernel failed
 }
 
 src_install() {
@@ -88,7 +85,7 @@ src_install() {
 	addwrite /etc/ld.so.cache~
 	addwrite /etc/ld.so.cache
 	mkdir ${D}/boot
-	genkernel $GENKERNELOPTS all || die genkernel failed
+	genkernel $GENKERNELOPTS --install all || die genkernel failed
 	emake -C ${KERNEL_DIR} O=${S} clean
 
 	dosym ${KBUILD_OUTPUT} /lib/modules/${KV_FULL}/build
