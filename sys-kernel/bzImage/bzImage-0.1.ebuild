@@ -54,9 +54,11 @@ src_configure() {
 		--logfile=${TMP}/genkernel.log
 		--tempdir=${TMP}/genkernel
 		--bootdir=${D}/boot
+		--firmware-dst=${D}/lib/firmware
 		--module-prefix=${D}
 		--no-save-config
 		--no-clean
+		--no-oldconfig
 		$(enableif lvm)
 		$(enableif mdadm)
 		$(enableif dmraid)
@@ -75,7 +77,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake -C ${KERNEL_DIR} O=${S} bzImage modules
+	emake -C ${KERNEL_DIR} O=${S} ARCH=${ARCH} prepare
+	emake -C ${KERNEL_DIR} O=${S} ARCH=${ARCH} bzImage modules
 }
 
 src_install() {
