@@ -84,7 +84,7 @@ src_install() {
 
 	addwrite /etc/ld.so.cache~
 	addwrite /etc/ld.so.cache
-	mkdir ${D}/boot
+	mkdir -p ${D}/boot ${D}/lib/firmware
 	genkernel $GENKERNELOPTS --install all || die genkernel failed
 	emake -C ${KERNEL_DIR} O=${S} clean
 
