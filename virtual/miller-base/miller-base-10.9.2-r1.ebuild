@@ -63,9 +63,10 @@ RDEPEND="
 		app-antivirus/clamav
 		!sw-suspend? ( sys-kernel/gentoo-sources )
 		sw-suspend? ( sys-apps/tuxonice-userui
-			|| ( sys-kernel/tuxonice-sources
-				sys-kernel/pf-sources ) ) )
+			|| ( sys-kernel/tuxonice-sources sys-kernel/pf-sources )
+		)
 		sys-kernel/bzImage
+	)
 	app-misc/screen
 	app-vim/gentoo-syntax
 	sys-auth/pam_ldap
