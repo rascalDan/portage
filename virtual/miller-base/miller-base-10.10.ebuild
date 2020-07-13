@@ -5,7 +5,7 @@ DESCRIPTION="Virtual for base systems"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
-minimal autoupdate autoshutdown autoservicerestart sw-suspend mdadm
+minimal autoupdate autoshutdown autoservicerestart mdadm
 video_cards_nvidia video_cards_nouveau firmware ischroot"
 
 RDEPEND="
@@ -31,13 +31,14 @@ RDEPEND="
 		sys-fs/lvm2
 		>=sys-boot/grub-2
 		sys-apps/busybox
-		sys-kernel/genkernel-next
 		sys-apps/pciutils
 		sys-apps/usbutils
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
 		firmware? ( sys-kernel/linux-firmware )
 		app-admin/logrotate
 		video_cards_nouveau? ( sys-firmware/nvidia-firmware )
+		app-antivirus/clamav
+		sys-kernel/gentoo-kernel
 	)
 	sys-process/cronie
 	>=app-portage/gentoolkit-0.2.1
@@ -58,14 +59,6 @@ RDEPEND="
 	app-portage/layman[git]
 	!hardened? (
 		sys-devel/prelink
-	)
-	!ischroot? (
-		app-antivirus/clamav
-		!sw-suspend? ( sys-kernel/gentoo-sources )
-		sw-suspend? ( sys-apps/tuxonice-userui
-			|| ( sys-kernel/tuxonice-sources sys-kernel/pf-sources )
-		)
-		sys-kernel/bzImage
 	)
 	app-misc/screen
 	app-vim/gentoo-syntax
