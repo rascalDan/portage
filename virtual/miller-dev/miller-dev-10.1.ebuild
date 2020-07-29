@@ -72,7 +72,7 @@ RDEPEND="
 	net-ftp/ftp
 	media-video/ffmpeg
 	odbc? (
-			mysql? ( dev-db/myodbc )
+			mysql? ( dev-db/mariadb-connector-odbc )
 			postgres? ( dev-db/psqlodbc )
 		  )
 	net-misc/youtube-dl
