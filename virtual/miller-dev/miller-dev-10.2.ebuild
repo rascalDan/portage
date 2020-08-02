@@ -36,7 +36,7 @@ RDEPEND="
 	app-doc/doxygen
 	app-benchmarks/wrk
 	sys-fs/inotify-tools
-	net-misc/pssh
+	net-misc/shmux
 	app-misc/jq
 	cxx? (
 			dev-util/ccache
