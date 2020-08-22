@@ -61,6 +61,7 @@ RDEPEND="
 	dev-libs/icetray[ut]
 	dev-libs/fcgi
 	dev-libs/Ice
+	dev-libs/slice-parser
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp:3.0
 	net-libs/libesmtp

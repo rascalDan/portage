@@ -43,6 +43,7 @@ RDEPEND="
 	dev-libs/fcgi
 	dev-libs/glib
 	=dev-libs/Ice-3.7*
+	dev-libs/slice-parser
 	dev-libs/libevent
 	dev-libs/libgcrypt
 	dev-libs/libgit2
