@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="=dev-libs/Ice-${ICE_VERSION}*
 	>=dev-libs/libadhocutil-0.7:=
 	dev-cpp/libxmlpp:3.0
-	>=dev-cpp/slicer-1.9.0:=
+	=dev-cpp/slicer-1.9*:=
 	dev-libs/fcgi
 	>=dev-libs/boost-1.66:="
 BDEPEND="${DEPEND}
