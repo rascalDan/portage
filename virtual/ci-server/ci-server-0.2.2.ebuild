@@ -52,7 +52,7 @@ RDEPEND="
 	net-libs/libesmtp
 	net-misc/curl
 	sys-devel/flex
-	sys-fs/fuse:0
+	sys-fs/fuse:3
 	sys-kernel/linux-headers
 	sys-libs/glibc
 	sys-libs/zlib
