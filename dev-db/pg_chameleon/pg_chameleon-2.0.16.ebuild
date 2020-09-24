@@ -19,9 +19,9 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}
 	>=dev-python/daemonize-2.4.7[${PYTHON_USEDEP}]
-	>=dev-python/mysql-replication-0.15[${PYTHON_USEDEP}]
+	>=dev-python/mysql-replication-0.22[${PYTHON_USEDEP}]
 	>=dev-python/psycopg-2.8.3[${PYTHON_USEDEP}]
-	<dev-python/pymysql-0.10[${PYTHON_USEDEP}]
+	>=dev-python/pymysql-0.10[${PYTHON_USEDEP}]
 	>=dev-python/pyyaml-5.1.2[${PYTHON_USEDEP}]
 	>=dev-python/rollbar-0.13.17[${PYTHON_USEDEP}]
 	>=dev-python/tabulate-0.8.1[${PYTHON_USEDEP}]"
