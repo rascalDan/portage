@@ -7,7 +7,7 @@ IUSE="rdp vnc xscreensaver vlc"
 
 RDEPEND="
 	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.04*
+	=dev-lang/ocaml-4.09*
 	app-admin/systemdgenie
 	virtual/miller-base
 	kde-apps/kcalc

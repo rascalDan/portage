@@ -12,7 +12,7 @@ IUSE="mediaserver dosfs ocfs2 ci"
 RDEPEND="
 	sys-apps/tuned
 	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.04*
+	=dev-lang/ocaml-4.09*
 	sys-devel/distcc
 	app-text/highlight
 	net-dns/bind
