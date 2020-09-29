@@ -1,12 +1,14 @@
 #!/bin/bash
 
-getent passwd | cut -d: -f6 | sort -u | while read h ; do
-	CCACHE_BASEDIR=$h/.ccache
-	if [[ -e $CCACHE_BASEDIR ]] ; then
-		realpath $CCACHE_BASEDIR
+getent passwd | cut -d: -f1,6 | while IFS=: read u h ; do
+	if [[ -d $h/.ccache ]] ;  then
+		CCACHE_BASEDIR=$(sudo -u $u ccache -k cache_dir)
+		if [[ -e $CCACHE_BASEDIR ]] ; then
+			realpath $CCACHE_BASEDIR
+		fi
 	fi
 done | sort -u | while read d ; do
-				echo "Hard linking $d..."
-				hardlink -mopt $d
+	echo "Hard linking $d..."
+	hardlink -mopt $d
 done
 
