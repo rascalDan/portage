@@ -12,16 +12,24 @@ fi
 if [ $$ == 1 ]; then
 	echo "Running in private namespace."
 	echo
-	echo "Unmounting non-device file systems..."
-	grep -v '^\(/dev\|proc\|udev\|none\|systemd-\)' /proc/mounts | cut -d ' ' -f 2 | sort -ru | xargs umount -n
-
-	echo "Remounting remaining devices with noatime..."
+	echo "Remounting devices with noatime..."
 	grep '^/dev/' /proc/mounts | cut -d ' ' -f 2 | xargs -n1 mount -n -o remount,noatime
+	echo
+
+	echo "Unmounting non-device file systems..."
+	grep -v '\(^/dev/\|/run \)' /proc/mounts | cut -d ' ' -f 2 | sort -ru | xargs umount -nrl
+	echo
+
+	df -Th
+	echo
+
+	grep -vw noatime /proc/mounts
 	echo
 
 	declare -a EXCL
 	declare -A M
 	EXCL=(
+			$(find /var/lib/machines/ -maxdepth 2 -name dev -type d)
 			$(portageq distdir)
 			$(portageq pkgdir)
 			$(portageq get_repo_path / $(portageq get_repos /))
