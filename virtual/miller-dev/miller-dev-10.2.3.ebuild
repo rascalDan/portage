@@ -9,7 +9,7 @@ RDEPEND="
 	=net-misc/unison-2.48*
 	=dev-lang/ocaml-4.09*
 	virtual/miller-base
-	app-text/cutemarked
+	app-editors/ghostwriter
 	app-vim/nerdtree
 	app-vim/json
 	app-vim/vim-javascript
