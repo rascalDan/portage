@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet odbc mysql postgres cxx"
+IUSE="X dotnet odbc mysql postgres cxx vnc"
 
 RDEPEND="
 	=net-misc/unison-2.48*
@@ -81,10 +81,10 @@ RDEPEND="
 	X? (
 			|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
 			|| ( www-client/firefox www-client/firefox-bin )
-			|| (
+			vnc? ( || (
 				net-misc/tigervnc
 				net-misc/vnc
-			   )
+				) )
 			net-misc/rdesktop
 			media-gfx/gimp
 			kde-apps/kruler
