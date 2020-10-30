@@ -17,6 +17,6 @@ BDEPEND=""
 S="${WORKDIR}/nagios_plugins-${PV}"
 
 src_install() {
-	exeinto /usr/lib/nagios/plugins/
+	exeinto /usr/$(get_libdir)/nagios/plugins/
 	newexe ${S}/plugins/${PN} ${PN}
 }

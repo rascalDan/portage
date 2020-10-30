@@ -23,7 +23,7 @@ src_unpack() {
 	cp ${DISTDIR}/${A} ${S}
 }
 src_install() {
-	exeinto /usr/lib/nagios/plugins/
+	exeinto /usr/$(get_libdir)/nagios/plugins/
 	newexe ${S}/${A} ${PN}
 }
 
