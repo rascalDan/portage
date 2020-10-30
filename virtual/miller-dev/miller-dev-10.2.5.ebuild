@@ -24,6 +24,7 @@ RDEPEND="
 	app-admin/webapp-config
 	postgres? (
 			dev-db/apgdiff
+			dev-db/pg_activity
 			dev-db/postgresql_autodoc )
 	dev-util/uncrustify
 	dev-util/cproto

@@ -13,7 +13,10 @@ RDEPEND="
 	=net-misc/unison-2.48*
 	=dev-lang/ocaml-4.09*
 	sys-devel/distcc
-	app-text/highlight
+	sys-devel/distcc
+	sys-devel/gcc:8.4.0[cxx]
+	sys-devel/gcc:10[cxx]
+	sys-devel/clang:11
 	net-dns/bind
 	net-firewall/iptables
 	net-fs/samba
@@ -39,10 +42,13 @@ RDEPEND="
 	net-misc/openntpd
 	net-analyzer/nagios
 	net-analyzer/nagios-plugin-check_raid
+	net-analyzer/nagios-plugin-check_lm_sensors
 	net-analyzer/nrpe
+	net-analyzer/check_crm
 	net-analyzer/check_drbd
 	net-analyzer/check_haproxy_stats
 	net-analyzer/check_ice
+	net-analyzer/check_service
 	ci? (
 			virtual/ci-server
 		)

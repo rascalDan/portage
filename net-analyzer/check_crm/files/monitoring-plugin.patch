@@ -1,0 +1,29 @@
+--- a/check_crm-0.7	2020-10-30 18:45:30.000000000 +0000
++++ a/check_crm-0.7	2020-10-30 19:02:12.967447548 +0000
+@@ -32,7 +32,7 @@
+ #		    constraints check (Boris Wesslowski). Adds fail count 
+ #		    threshold ( Zoran Bosnjak & Marko Hrastovec )
+ #
+-# NOTES: Requires Perl 5.8 or higher & the Perl Module Nagios::Plugin
++# NOTES: Requires Perl 5.8 or higher & the Perl Module Monitoring::Plugin
+ #        Nagios user will need sudo acces - suggest adding line below to
+ #        sudoers
+ #	     nagios  ALL=(ALL) NOPASSWD: /usr/sbin/crm_mon -1 -r -f
+@@ -47,7 +47,7 @@
+ 
+ use warnings;
+ use strict;
+-use Nagios::Plugin;
++use Monitoring::Plugin;
+ 
+ # Lines below may need changing if crm_mon or sudo installed in a
+ # different location.
+@@ -56,7 +56,7 @@
+ my $crm_mon            = '/usr/sbin/crm_mon -1 -r -f';
+ my $crm_configure_show = '/usr/sbin/crm configure show';
+ 
+-my $np = Nagios::Plugin->new(
++my $np = Monitoring::Plugin->new(
+     shortname => 'check_crm',
+     version   => '0.7',
+     usage     => "Usage: %s <ARGS>\n\t\t--help for help\n",
