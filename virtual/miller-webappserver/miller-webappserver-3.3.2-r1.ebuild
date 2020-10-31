@@ -14,6 +14,7 @@ RDEPEND="
 	|| ( media-tv/mythtv media-tv/mythtv-bindings )
 	virtual/httpd-php:7.2
 	www-apps/cgit
+	app-text/highlight
 	dev-python/pygments
 	dev-python/markdown
 "
