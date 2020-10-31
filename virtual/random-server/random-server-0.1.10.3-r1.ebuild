@@ -42,6 +42,7 @@ RDEPEND="
 	net-misc/openntpd
 	net-analyzer/nagios
 	net-analyzer/nagios-plugin-check_raid
+	sys-apps/lm-sensors
 	net-analyzer/nagios-plugin-check_lm_sensors
 	net-analyzer/nrpe
 	net-analyzer/check_crm
