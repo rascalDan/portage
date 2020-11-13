@@ -42,7 +42,6 @@ RDEPEND="
 			app-office/libreoffice
 	   )
 	media-gfx/gimp
-	www-plugins/adobe-flash
 	media-sound/clementine
 	kde-apps/spectacle
 	kde-apps/kwalletmanager
