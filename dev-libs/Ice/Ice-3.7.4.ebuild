@@ -4,7 +4,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
+PYTHON_COMPAT=( python{3_4,3_5,3_6,3_7,3_8,3_9} pypy )
 
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby22"
