@@ -3,17 +3,15 @@
 # $Id$
 
 EAPI="7"
-PYTHON_COMPAT=( python2_7 )
-inherit autotools eutils python-single-r1
 
 DESCRIPTION="Support programs for the Oracle Cluster Filesystem 2"
-HOMEPAGE="http://oss.oracle.com/projects/ocfs2-tools/ https://github.com/rascalDan/ocfs2-tools"
+HOMEPAGE="http://oss.oracle.com/projects/ocfs2-tools/ https://github.com/markfasheh/ocfs2-tools"
 SRC_URI="https://github.com/markfasheh/${PN}/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug external gtk"
+IUSE="debug external"
 
 RDEPEND="
 	dev-libs/libaio
@@ -26,9 +24,6 @@ RDEPEND="
 	sys-libs/ncurses
 	sys-libs/readline
 	sys-process/psmisc
-	gtk? (
-		dev-python/pygtk
-	)
 "
 # 99% of deps this thing has is automagic
 # specialy cluster things corosync/pacemaker
