@@ -50,7 +50,6 @@ src_configure() {
 	econf \
 		$(use_enable debug debug) \
 		$(use_enable debug debugexe) \
-		$(use_enable gtk ocfs2console) \
 		--enable-dynamic-fsck \
 		--enable-dynamic-ctl
 }
