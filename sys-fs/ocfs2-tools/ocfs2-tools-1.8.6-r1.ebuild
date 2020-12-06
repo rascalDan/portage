@@ -3,6 +3,7 @@
 # $Id$
 
 EAPI="7"
+inherit autotools
 
 DESCRIPTION="Support programs for the Oracle Cluster Filesystem 2"
 HOMEPAGE="http://oss.oracle.com/projects/ocfs2-tools/ https://github.com/markfasheh/ocfs2-tools"
