@@ -27,8 +27,11 @@ RDEPEND="
 		www-misc/icespider
 	)
 
+	sys-devel/gcc
+	sys-devel/clang[static-analyzer]
 	dev-util/lcov
 	dev-util/cproto
+	dev-util/cppcheck
 	app-arch/xz-utils
 	app-text/tidy-html5
 	dev-cpp/glibmm
