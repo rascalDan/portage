@@ -1,6 +1,6 @@
 EAPI="7"
 
-inherit bjam
+inherit bjam unpacker
 
 DESCRIPTION="Zeroc ICE slice parser as a standalone dynamic library"
 HOMEPAGE="https://zeroc.com/products/ice"
@@ -16,8 +16,9 @@ DEPEND="${RDEPEND}
 	dev-util/boost-build"
 
 src_unpack() {
-	default
-	ln -s ${WORKDIR}/ice-${PV}/cpp ${S}/ice/cpp
+	unpack ${P}.tar.xz
+	unpack_banner Ice-${P}.tar.xz
+	tar -xzf ${DISTDIR}/Ice-${PV}.tar.gz -C "${S}"/ice --strip-components=1 ice-${PV}/cpp || die
 }
 
 src_compile() {
