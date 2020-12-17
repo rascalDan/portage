@@ -15,6 +15,7 @@ DEPEND="
 	dev-util/pkgconfig
 	>=www-misc/icespider-0.6:=
 	>=net-misc/gentoobrowse-api-0.10
+	dev-cpp/slicer:=
 "
 
 pkg_setup() {
