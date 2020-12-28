@@ -1,5 +1,3 @@
-=sys-apps/systemd-245*
-
 app-admin/logstash-bin
 app-arch/upx-bin
 app-backup/spideroak-bin
