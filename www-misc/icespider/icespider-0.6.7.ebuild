@@ -8,7 +8,7 @@ HOMEPAGE="http://icespider.randomdan.homeip.net/"
 ICE_VERSION=3.7.4
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
-SLOT="0/0.6.5"
+SLOT="0/0.6.7"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
