@@ -1,2 +1,2 @@
 # Never enter SYNCED state https://github.com/openntpd-portable/openntpd-portable/issues/65
-=net-misc/openntpd-6.8_p1
+=net-misc/openntpd-6.8_p1*
