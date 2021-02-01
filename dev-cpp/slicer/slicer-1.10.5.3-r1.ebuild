@@ -5,15 +5,14 @@ inherit bjam
 DESCRIPTION="Zeroc ICE helper to create generic serialization code for slice types"
 HOMEPAGE="http://slicer.randomdan.homeip.net/"
 
-ICE_VERSION=3.7.4
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0/1.10.5.1"
 KEYWORDS="~x86 ~amd64"
 IUSE="db xml json"
 
-RDEPEND="=dev-libs/Ice-${ICE_VERSION}*
-	=dev-libs/slice-parser-${ICE_VERSION}*
+RDEPEND=">=dev-libs/Ice-3.7
+	>=dev-libs/slice-parser-3.7:=
 	xml? ( dev-cpp/libxmlpp:3.0 )
 	json? ( >=dev-cpp/libjsonpp-0.11 )
 	db? ( =dev-libs/libdbpp-1.4*:= )

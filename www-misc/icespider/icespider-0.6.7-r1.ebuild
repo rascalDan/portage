@@ -5,16 +5,15 @@ inherit bjam
 DESCRIPTION="Tools and libs for building web services/sites that are clients of ICE services"
 HOMEPAGE="http://icespider.randomdan.homeip.net/"
 
-ICE_VERSION=3.7.4
-SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz
-	https://github.com/zeroc-ice/ice/archive/v${ICE_VERSION}.tar.gz -> Ice-${ICE_VERSION}.tar.gz"
+SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
-SLOT="0/0.6.3"
+SLOT="0/0.6.7"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="=dev-libs/Ice-${ICE_VERSION}*
-	>=dev-libs/libadhocutil-0.7:=
+DEPEND=">=dev-libs/Ice-3.7
+	>=dev-libs/slice-parser-3.7:=
+	>=dev-libs/libadhocutil-0.8.3:=
 	dev-cpp/libxmlpp:3.0
 	=dev-cpp/slicer-1.10*:=
 	dev-libs/fcgi
@@ -24,11 +23,6 @@ BDEPEND="${DEPEND}
 	dev-util/boost-build"
 RDEPEND="${DEPEND}
 	virtual/httpd-fastcgi"
-
-src_unpack() {
-	default
-	ln -s ${WORKDIR}/ice-${ICE_VERSION}/cpp ${S}/ice/cpp
-}
 
 src_compile() {
 	bjambuild \

@@ -4,7 +4,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
+PYTHON_COMPAT=( python{3_4,3_5,3_6,3_7,3_8,3_9} pypy )
 
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby22"
@@ -35,6 +35,7 @@ RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.5
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl:0= )
+	dev-libs/libedit
 	|| (
 		$(for slot in ${BERKDB_SLOTS[@]} ; do printf '%s\n' "sys-libs/db:${slot}[cxx]" ; done)
 	)
