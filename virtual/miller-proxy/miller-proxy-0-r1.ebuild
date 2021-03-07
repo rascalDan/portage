@@ -6,6 +6,6 @@ IUSE=""
 
 RDEPEND="
 	virtual/miller-base
-	sys-apps/squid-service
+	!sys-apps/squid-service
 	net-proxy/squid
 "
