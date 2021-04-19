@@ -23,9 +23,9 @@ USE="
 	-idn inspector -introspection ithreads jit jpeg jpeg2k json ldap llvm lvm -lvm1 lzma lzo minizip mp3 mpm-prefork
 	-nettle network network-cron nscd -nss nuv offload pch pcre16 pcre32 pcre-jit png postgres postproc
 	-ppp python rtmp savedconfig secure-delete smp sndfile -source sqlite symlink syslog
-	system-boost system-cairo system-cmark system-crontab systemd system-ffmpeg system-harfbuzz
-	system-heimdal system-icu system-jpeg system-jsoncpp system-libevent system-libmspack
-	system-libs system-libvpx system-libyaml system-llvm system-lua -system-mitkrb5 system-qemu system-seabios
-	system-sqlite system-uulib system-wide -themes -thin threads uuid -vala vim-pager vim-syntax
+	system-av1 system-bootstrap system-boost system-cairo system-cmark system-crontab systemd system-ffmpeg system-harfbuzz
+	system-heimdal system-icu system-jpeg system-jsoncpp system-lcms system-libevent system-libmspack
+	system-libs system-libvpx system-libyaml system-llvm system-lua system-mitkrb5 system-numpy system-python system-qemu system-seabios
+	system-sqlite system-ssl system-uulib system-webp system-wide system-zlib -themes -thin threads uuid -vala vim-pager vim-syntax
 	-winbind xml -resolvconf -printsupport
 "
