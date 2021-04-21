@@ -10,8 +10,7 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="mediaserver dosfs ocfs2 ci"
 
 RDEPEND="
-	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.09*
+	=net-misc/unison-2.51*
 	sys-devel/distcc
 	sys-devel/distcc
 	sys-devel/gcc:8.4.0[cxx]

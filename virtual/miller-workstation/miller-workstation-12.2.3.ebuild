@@ -6,8 +6,7 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="rdp vnc xscreensaver vlc"
 
 RDEPEND="
-	=net-misc/unison-2.48*
-	=dev-lang/ocaml-4.09*
+	=net-misc/unison-2.51*
 	app-admin/systemdgenie
 	virtual/miller-base
 	kde-apps/kcalc
