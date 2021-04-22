@@ -42,7 +42,7 @@ src_configure() {
 		-DBUILD_GUI="$(usex qt5)"
 		-DUSE_Z3="$(usex z3)"
 		-DFILESDIR="/usr/share/${PN}/"
-		-ENABLE_OSS_FUZZ=OFF
+		-DENABLE_OSS_FUZZ=OFF
 	)
 	cmake_src_configure
 }
