@@ -74,6 +74,8 @@ RDEPEND="
 	autoservicerestart? (
 			sys-apps/autorestart
 		)
+	app-portage/cpuid2cpuflags
+	app-text/ansifilter
 	"
 
 src_unpack() {

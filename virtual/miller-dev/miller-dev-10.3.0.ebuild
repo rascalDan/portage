@@ -22,9 +22,10 @@ RDEPEND="
 	www-client/lynx
 	app-admin/webapp-config
 	postgres? (
-			dev-db/apgdiff
-			dev-db/pg_activity
-			dev-db/postgresql_autodoc )
+		dev-db/apgdiff
+		dev-db/pg_activity
+		dev-db/postgresql_autodoc
+	)
 	dev-util/uncrustify
 	dev-util/cproto
 	dev-util/ctags
@@ -35,15 +36,20 @@ RDEPEND="
 	app-text/tidy-html5
 	app-doc/doxygen
 	app-benchmarks/wrk
+	dev-libs/stb
 	sys-fs/inotify-tools
 	net-misc/shmux
 	app-misc/jq
 	cxx? (
-			dev-util/ccache
-			dev-util/cppcheck
-			sys-devel/clang[static-analyzer]
-			dev-util/splint
-		 )
+		dev-util/ccache
+		dev-util/cppcheck
+		sys-devel/clang[static-analyzer]
+		dev-util/splint
+		=sys-devel/gcc-10*
+		=sys-devel/gcc-11*
+		dev-util/bloaty
+		dev-util/include-what-you-use
+	)
 	media-fonts/freefont
 	media-fonts/hack
 	app-vim/vcscommand
@@ -75,7 +81,7 @@ RDEPEND="
 	odbc? (
 			mysql? ( dev-db/mariadb-connector-odbc )
 			postgres? ( dev-db/psqlodbc )
-		  )
+	)
 	net-misc/youtube-dl
 	www-servers/apache
 	X? (

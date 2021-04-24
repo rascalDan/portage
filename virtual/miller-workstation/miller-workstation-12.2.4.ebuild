@@ -24,22 +24,22 @@ RDEPEND="
 	rdp? ( kde-apps/krdc[rdp] )
 	vnc? ( kde-apps/krdc[vnc] )
 	|| (
-			www-client/firefox
-			( www-client/chromium www-plugins/chrome-binary-plugins )
-			www-client/firefox-bin
-			www-client/google-chrome
-			www-client/opera
-	   )
+		www-client/firefox
+		( www-client/chromium www-plugins/chrome-binary-plugins )
+		www-client/firefox-bin
+		www-client/google-chrome
+		www-client/opera
+	)
 	kde-apps/filelight
 	|| (
-			mail-client/thunderbird-bin
-			mail-client/thunderbird
-	   )
+		mail-client/thunderbird-bin
+		mail-client/thunderbird
+	)
 	games-misc/fortune-mod
 	|| (
-			app-office/libreoffice-bin
-			app-office/libreoffice
-	   )
+		app-office/libreoffice-bin
+		app-office/libreoffice
+	)
 	media-gfx/gimp
 	media-sound/clementine
 	kde-apps/spectacle
@@ -53,5 +53,6 @@ RDEPEND="
 	media-gfx/geeqie
 	kde-apps/ark
 	x11-themes/oxygen-gtk
+	x11-apps/xrandr
 	"
 
