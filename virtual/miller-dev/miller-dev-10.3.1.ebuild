@@ -37,6 +37,7 @@ RDEPEND="
 	app-doc/doxygen
 	app-benchmarks/wrk
 	dev-libs/stb
+	media-libs/libsdl2
 	sys-fs/inotify-tools
 	net-misc/shmux
 	app-misc/jq
@@ -85,37 +86,39 @@ RDEPEND="
 	net-misc/youtube-dl
 	www-servers/apache
 	X? (
-			|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
-			|| ( www-client/firefox www-client/firefox-bin )
-			vnc? ( || (
-				net-misc/tigervnc
-				net-misc/vnc
-				) )
-			net-misc/rdesktop
-			media-gfx/gimp
-			kde-apps/kruler
-			net-analyzer/wireshark
-			x11-apps/xhost
-			dev-db/squirrel-sql
-			app-editors/okteta
-			kde-apps/dolphin-plugins-git
-			net-analyzer/nmap
-			dotnet? (
-				dev-util/monodevelop
-				|| (
-					>=dev-util/monodevelop-4
-					(
-					 dev-util/monodevelop-database
-					 dev-util/monodevelop-debugger-gdb
-					)
-				   )
-				)
-	postgres? (
+		|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
+		|| ( www-client/firefox www-client/firefox-bin )
+		vnc? ( || (
+			net-misc/tigervnc
+			net-misc/vnc
+			) )
+		net-misc/rdesktop
+		media-gfx/gimp
+		kde-apps/kruler
+		net-analyzer/wireshark
+		x11-apps/xhost
+		dev-db/squirrel-sql
+		app-editors/okteta
+		dev-util/kdbg
+		kde-apps/dolphin-plugins-git
+		net-analyzer/nmap
+		dotnet? (
+			dev-util/monodevelop
 			|| (
-				dev-db/pgadmin4
-				dev-db/pgadmin3
-			   ) )
+				>=dev-util/monodevelop-4
+				(
+					dev-util/monodevelop-database
+					dev-util/monodevelop-debugger-gdb
+				)
+			)
+		)
+	postgres? (
+		|| (
+			dev-db/pgadmin4
+			dev-db/pgadmin3
+		)
+	)
 	kde-apps/kcachegrind
 	app-editors/gvim
-	)"
+)"
 
