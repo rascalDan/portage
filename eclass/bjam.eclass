@@ -28,7 +28,7 @@ src_test() {
 }
 
 bjambuild() {
-	setarch $(uname -m) -RL b2 -l600 ${BJAMOPTS} variant=release -q $@ || die
+	setarch $(uname -m) -RL b2 -sBOOST_ROOT="${BROOT}/usr/share/boost-build/kernel" -l600 ${BJAMOPTS} variant=release -q $@ || die
 }
 
 bjaminstall() {
