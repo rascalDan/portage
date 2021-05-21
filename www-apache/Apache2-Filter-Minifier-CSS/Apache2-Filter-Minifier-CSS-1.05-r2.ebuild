@@ -19,7 +19,7 @@ RDEPEND="dev-perl/CSS-Minifier
 	dev-perl/CSS-Minifier-XS
 	dev-lang/perl
 	>=www-apache/mod_perl-2.0.8"
-DEPEND="${RDEPEND}
+BDEPEND="${RDEPEND}
 	dev-perl/Module-Build
 	>=dev-perl/Apache-Test-1.38"
 
