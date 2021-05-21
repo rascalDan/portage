@@ -26,7 +26,7 @@ IUSE="+clang test go csharp"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	clang? ( sys-devel/clang:9 )
+	clang? ( sys-devel/clang )
 	$(python_gen_cond_dep '
 			>=dev-libs/boost-1.65:=[python,threads,${PYTHON_MULTI_USEDEP}]
 			|| (
@@ -84,7 +84,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DUSE_CLANG_COMPLETER=$(usex clang)
 		-DUSE_SYSTEM_LIBCLANG=$(usex clang)
-		-DPATH_TO_LLVM_ROOT=/usr/lib/llvm/9
+		-DPATH_TO_LLVM_ROOT=$(clang --version  | grep ^InstalledDir: | cut -d: -f2 | xargs dirname)
 		-DUSE_SYSTEM_BOOST=ON
 	)
 	cmake-utils_src_configure
