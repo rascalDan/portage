@@ -92,6 +92,7 @@ RDEPEND="
 			net-misc/tigervnc
 			net-misc/vnc
 			) )
+		x11-misc/xdotool
 		net-misc/rdesktop
 		media-gfx/gimp
 		kde-apps/kruler
