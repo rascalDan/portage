@@ -32,6 +32,7 @@ RDEPEND="
 	dev-util/lcov
 	dev-util/cproto
 	dev-util/cppcheck
+	dev-util/include-what-you-use
 	app-arch/xz-utils
 	app-text/tidy-html5
 	dev-cpp/glibmm
@@ -42,6 +43,7 @@ RDEPEND="
 	dev-db/sqlite
 	dev-db/unixODBC
 	dev-db/psqlodbc
+	dev-db/mariadb-connector-c
 	dev-libs/boost
 	dev-libs/fcgi
 	dev-libs/glib
@@ -52,6 +54,7 @@ RDEPEND="
 	dev-libs/libgit2
 	dev-libs/libxml2
 	dev-libs/libxslt
+	media-libs/libsdl2
 	net-libs/libesmtp
 	net-misc/curl
 	sys-devel/flex
