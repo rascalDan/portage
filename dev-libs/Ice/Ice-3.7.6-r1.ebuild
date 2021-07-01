@@ -17,10 +17,6 @@ PHP_EXT_OPTIONAL_USE=php
 
 USE_PHP="php7-0"
 
-# This variable does not belong to any eclass. It is solely used in this ebuild
-# db:6.2 breaks the build process
-BERKDB_SLOTS=( 6.1 5.3 5.1 4.8 )
-
 inherit db-use eutils mono-env php-ext-source-r3 python-r1 ruby-ng toolchain-funcs
 
 DESCRIPTION="ICE middleware C++ library and generator tools"
@@ -29,16 +25,12 @@ SRC_URI="https://github.com/zeroc-ice/ice/archive/v${PV/_/-}.tar.gz -> ${P/_/-}.
 LICENSE="GPL-2"
 SLOT="0/37"
 KEYWORDS="amd64 x86"
-IUSE="doc examples libressl +ncurses mono php python ruby c++0x test debug"
+IUSE="doc examples +ncurses mono php python ruby c++0x test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.5
-	!libressl? ( dev-libs/openssl:0= )
-	libressl? ( dev-libs/libressl:0= )
+	dev-libs/openssl:0=
 	dev-libs/libedit
-	|| (
-		$(for slot in ${BERKDB_SLOTS[@]} ; do printf '%s\n' "sys-libs/db:${slot}[cxx]" ; done)
-	)
 	>=dev-cpp/libmcpp-2.7.2-r3
 	=dev-db/lmdb-0.9*
 	python? ( ${PYTHON_DEPS} )
@@ -77,17 +69,6 @@ src_prepare() {
 }
 
 src_configure() {
-	suitable_db_version() {
-		local ver
-		for ver in "${BERKDB_SLOTS[@]}"; do
-			if [[ -n $(db_findver sys-libs/db:${ver}) ]]; then
-				echo "${ver}"
-				return 0
-			fi
-		done
-		die "No suitable BerkDB versions found, aborting"
-	}
-
 	CONFIGS=("shared")
 	use c++0x && CONFIGS+=("cpp11-shared")
 	MAKE_RULES=(
@@ -103,14 +84,11 @@ src_configure() {
 		"OPTIMIZE=$(usex !debug)"
 	)
 
-	local BERKDB_VERSION="$(suitable_db_version)"
-	MAKE_RULES+=("DB_FLAGS=-I$(db_includedir ${BERKDB_VERSION})")
 	sed -i \
 		-e "s|g++|$(tc-getCXX)|" \
 		-e "s|\(CFLAGS[[:space:]]*=\)|\1 ${CFLAGS}|" \
 		-e "s|\(CXXFLAGS[[:space:]]*=\)|\1 ${CXXFLAGS}|" \
 		-e "s|\(LDFLAGS[[:space:]]*=\)|\1 ${LDFLAGS}|" \
-		-e "s|\(DB_LIBS[[:space:]]*=\) \-ldb_cxx|\1 -ldb_cxx-$(db_findver sys-libs/db:${BERKDB_VERSION})|" \
 		cpp/config/Make.rules python/config/Make.rules || die "sed failed"
 
 	if use python; then
