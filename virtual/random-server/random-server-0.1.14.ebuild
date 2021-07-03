@@ -50,6 +50,7 @@ RDEPEND="
 	net-analyzer/check_haproxy_stats
 	net-analyzer/check_ice
 	net-analyzer/check_service
+	net-p2p/transmission
 	ci? (
 			virtual/ci-server
 		)
@@ -63,5 +64,5 @@ RDEPEND="
 	mediaserver? (
 			net-misc/minidlna
 			net-misc/youtube-dl
-			net-p2p/transmission )
+			)
 "
