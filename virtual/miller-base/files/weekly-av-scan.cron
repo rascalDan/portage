@@ -12,6 +12,11 @@ fi
 if [ $$ == 1 ]; then
 	echo "Running in private namespace."
 	echo
+
+	echo "Umounting by request..."
+	umount -nrl ${UNMOUNT}
+	echo
+
 	echo "Remounting devices with noatime..."
 	grep '^/dev/' /proc/mounts | cut -d ' ' -f 2 | xargs -n1 mount -n -o remount,noatime
 	echo
@@ -20,15 +25,17 @@ if [ $$ == 1 ]; then
 	grep -v '\(^/dev/\|/run \)' /proc/mounts | cut -d ' ' -f 2 | sort -ru | xargs umount -nrl
 	echo
 
-	df -Th
+	df -Th --total
 	echo
 
-	grep -vw noatime /proc/mounts
+	grep -vw noatime /proc/mounts | column -t
 	echo
 
 	declare -a EXCL
 	declare -A M
 	EXCL=(
+			/dev
+			${EXCLUDE}
 			$(find /var/lib/machines/ -maxdepth 2 -name dev -type d)
 			$(portageq distdir)
 			$(portageq pkgdir)
