@@ -20,7 +20,7 @@ DEPEND="
 	${RDEPEND}
 	sys-devel/flex
 	dev-util/boost-build
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	man? ( app-doc/doxygen )
 "
 

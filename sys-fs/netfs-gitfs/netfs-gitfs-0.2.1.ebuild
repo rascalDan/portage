@@ -19,7 +19,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/boost-build
 "
 

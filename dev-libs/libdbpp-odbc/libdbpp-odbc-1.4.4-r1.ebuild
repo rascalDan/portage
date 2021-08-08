@@ -7,17 +7,17 @@ HOMEPAGE="http://libdbpp.randomdan.homeip.net/odbc"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/libdbpp-1.4*:=
 	dev-db/unixODBC
-	dev-libs/libadhocutil:=
+	>=dev-libs/libadhocutil-0.8:=
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/boost-build
 "
 

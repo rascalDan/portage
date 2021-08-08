@@ -7,18 +7,19 @@ HOMEPAGE="http://libdbpp.randomdan.homeip.net/"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
-SLOT="0/1.4"
-KEYWORDS="~x86 ~amd64"
+SLOT="0/1.4.3"
+KEYWORDS="x86 amd64"
 IUSE="man ut"
 
 RDEPEND="
 	dev-libs/boost:=
-	>=dev-libs/libadhocutil-0.7:=
+	>=dev-libs/libadhocutil-0.8:=
 "
 DEPEND="
 	${RDEPEND}
 	sys-devel/flex
 	dev-util/boost-build
+	virtual/pkgconfig
 	man? ( app-doc/doxygen )
 "
 

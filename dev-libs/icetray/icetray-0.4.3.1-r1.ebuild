@@ -8,7 +8,7 @@ SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0/0.3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ut tools"
 
 RDEPEND="
@@ -22,7 +22,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/boost-build-1.71
 "
 

@@ -6,7 +6,7 @@ HOMEPAGE="https://git.randomdan.homeip.net/repo/mirrorsearch/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 
 LICENSE="MIT"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="

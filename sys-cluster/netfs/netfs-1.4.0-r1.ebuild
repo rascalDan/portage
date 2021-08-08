@@ -23,7 +23,7 @@ RDEPEND="=dev-libs/Ice-3.7*
 			)
 	dev-libs/boost:="
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/boost-build"
 
 src_compile() {

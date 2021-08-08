@@ -8,7 +8,7 @@ HOMEPAGE="http://icespider.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0/0.6.7"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND=">=dev-libs/Ice-3.7
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/Ice-3.7
 	dev-libs/fcgi
 	>=dev-libs/boost-1.66:="
 BDEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/boost-build"
 RDEPEND="${DEPEND}
 	virtual/httpd-fastcgi"

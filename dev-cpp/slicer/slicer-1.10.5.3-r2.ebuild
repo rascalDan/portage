@@ -8,7 +8,7 @@ HOMEPAGE="http://slicer.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0/1.10.5.1"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="db xml json"
 
 RDEPEND=">=dev-libs/Ice-3.7
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/Ice-3.7
 	>=dev-libs/libadhocutil-0.8.3:=
 	dev-libs/boost:="
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/boost-build"
 
 src_compile() {

@@ -7,24 +7,24 @@ HOMEPAGE="http://gentoobrowse.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="client server"
 
 DEPEND="=dev-libs/Ice-3.7*
 	server? (
 		dev-util/cproto
-		=dev-cpp/slicer-1.9*:=[db]
+		>=dev-cpp/slicer-1.9:=[db]
 		>=dev-libs/libdbpp-1.4:=
 		>=dev-libs/libdbpp-postgresql-1.4
 		>=dev-libs/icetray-0.4[tools]
 		>=dev-libs/boost-1.60:=
 		>=dev-libs/libgit2-0.24.0
 	)
-	>=dev-libs/libadhocutil-0.7:=
+	>=dev-libs/libadhocutil-0.7.7:=
 	dev-libs/boost:="
 BDEPEND="${DEPEND}
 	sys-devel/flex
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/boost-build"
 RDEPEND="${DEPEND}
 	server? (

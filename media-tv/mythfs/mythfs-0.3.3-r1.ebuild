@@ -10,7 +10,7 @@ HOMEPAGE="http://mythfs.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 RDEPEND="
 	=sys-apps/icebox-service-1.11
@@ -18,11 +18,11 @@ RDEPEND="
 	dev-libs/libdbpp-mysql
 	dev-libs/boost:=
 	>=dev-libs/icetray-0.3:=
-	=sys-cluster/netfs-1.3*
+	=sys-cluster/netfs-1.4*
 	dev-libs/libadhocutil:=
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/boost-build"
 
 src_compile() {

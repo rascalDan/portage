@@ -7,12 +7,12 @@ SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 HOMEPAGE="http://gentoobrowse.randomdan.homip.net/"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
 DEPEND="
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=www-misc/icespider-0.6:=
 	>=net-misc/gentoobrowse-api-0.10
 	dev-cpp/slicer:=
