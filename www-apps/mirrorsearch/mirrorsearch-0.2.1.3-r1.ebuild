@@ -8,6 +8,8 @@ SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+SLOT="0"
+WEBAPP_MANUAL_SLOT="yes"
 
 DEPEND="
 	dev-libs/boost:=
