@@ -10,7 +10,7 @@ video_cards_nvidia video_cards_nouveau firmware ischroot"
 
 RDEPEND="
 	app-misc/simplify
-	app-arch/hardlink
+	|| ( app-arch/hardlink sys-apps/util-linux[hardlink] )
 	sys-process/htop
 	sys-process/iotop
 	sys-process/time
