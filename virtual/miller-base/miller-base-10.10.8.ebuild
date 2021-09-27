@@ -1,5 +1,5 @@
 EAPI="7"
-inherit systemd
+inherit systemd tmpfiles
 DESCRIPTION="Virtual for base systems"
 
 SLOT="0"
@@ -33,7 +33,6 @@ RDEPEND="
 			)
 		sys-fs/lvm2
 		>=sys-boot/grub-2
-		sys-apps/busybox
 		sys-apps/pciutils
 		sys-apps/usbutils
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
@@ -86,7 +85,7 @@ src_unpack() {
 src_install() {
 	exeinto /etc/cron.hourly
 	newexe "${FILESDIR}"/service-check.systemd service-check
-	systemd_newtmpfilesd "${FILESDIR}/tmpfiles-d-portage.conf" "portage.conf"
+	newtmpfiles "${FILESDIR}/tmpfiles-d-portage.conf" "portage.conf"
 	dodir /etc/systemd/system/multi-user.target.wants
 	use !ischroot && dosym /lib/systemd/system/freshclamd.service /etc/systemd/system/multi-user.target.wants/freshclamd.service
 	dosym /lib/systemd/system/nscd.service /etc/systemd/system/multi-user.target.wants/nscd.service
@@ -127,4 +126,8 @@ src_install() {
 
 	exeinto /sbin
 	newexe "${FILESDIR}"/update-install2 update-install
+}
+
+pkg_postinst() {
+	tmpfiles_process "portage.conf"
 }
