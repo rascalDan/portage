@@ -17,4 +17,4 @@ DEPEND=""
 RDEPEND="${DEPEND}
 >=sys-cluster/pacemaker-1.1
 >=dev-db/postgresql-9.3"
-BDEPEND=""
+BDEPEND="dev-perl/Module-Build"
