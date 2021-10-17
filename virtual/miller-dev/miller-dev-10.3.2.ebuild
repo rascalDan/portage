@@ -33,7 +33,7 @@ RDEPEND="
 	sys-devel/gdb
 	dev-util/valgrind
 	dev-util/lcov
-	app-text/htmltidy
+	app-text/tidy-html5
 	app-doc/doxygen
 	app-benchmarks/wrk
 	dev-libs/stb
