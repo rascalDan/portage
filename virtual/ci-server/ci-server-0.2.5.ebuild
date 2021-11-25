@@ -34,7 +34,7 @@ RDEPEND="
 	dev-util/cppcheck
 	dev-util/include-what-you-use
 	app-arch/xz-utils
-	app-text/tidy-html5
+	app-text/htmltidy
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp
 	virtual/miller-mysql
