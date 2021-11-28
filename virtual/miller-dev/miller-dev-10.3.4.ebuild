@@ -53,6 +53,7 @@ RDEPEND="
 	)
 	media-fonts/freefont
 	media-fonts/hack
+	media-fonts/roboto-mono
 	app-vim/vcscommand
 	dev-vcs/git
 	dev-vcs/git-extras
