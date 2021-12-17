@@ -4,4 +4,6 @@ dev-libs/elfutils static-libs
 www-client/chromium -custom-cflags
 # exactly one crypt implementation
 >=sys-fs/cryptsetup-2.1 -openssl
-
+# system-png[apng] differences
+www-client/firefox -system-png
+mail-client/thunderbird -system-png
