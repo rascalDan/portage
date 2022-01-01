@@ -13,7 +13,6 @@ RDEPEND="
 	vlc? ( media-video/vlc )
 	net-im/pidgin
 	x11-plugins/pidgin-mbpurple
-	x11-plugins/purple-facebook
 	x11-plugins/pidgin-skypeweb
 	xscreensaver? ( x11-misc/xscreensaver )
 	media-fonts/corefonts
