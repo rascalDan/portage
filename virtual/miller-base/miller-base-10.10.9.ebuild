@@ -59,9 +59,6 @@ RDEPEND="
 			)
 	sys-process/lsof
 	app-portage/layman[git]
-	!hardened? (
-		sys-devel/prelink
-	)
 	app-misc/screen
 	app-vim/gentoo-syntax
 	sys-auth/pam_ldap
