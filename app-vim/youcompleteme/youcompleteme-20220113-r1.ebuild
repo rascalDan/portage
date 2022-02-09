@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	dev-cpp/abseil-cpp
 	clang? ( sys-devel/clang:13 )
 	$(python_gen_cond_dep '
-			>=dev-libs/boost-1.65:=[python,${PYTHON_MULTI_USEDEP}]
+			>=dev-libs/boost-1.65:=[python,${PYTHON_USEDEP}]
 			|| (
 				app-editors/vim[python,${PYTHON_SINGLE_USEDEP}]
 				app-editors/gvim[python,${PYTHON_SINGLE_USEDEP}]
@@ -32,10 +32,10 @@ COMMON_DEPEND="
 RDEPEND="
 	${COMMON_DEPEND}
 	$(python_gen_cond_dep '
-			>=dev-python/bottle-0.12.18[${PYTHON_MULTI_USEDEP}]
-			>=dev-python/regex-2020.2.20[${PYTHON_MULTI_USEDEP}]
-			>=dev-python/jedi-0.16.0[${PYTHON_MULTI_USEDEP}]
-			>=dev-python/watchdog-0.10.2[${PYTHON_MULTI_USEDEP}]
+			>=dev-python/bottle-0.12.18[${PYTHON_USEDEP}]
+			>=dev-python/regex-2020.2.20[${PYTHON_USEDEP}]
+			>=dev-python/jedi-0.16.0[${PYTHON_USEDEP}]
+			>=dev-python/watchdog-0.10.2[${PYTHON_USEDEP}]
 	')
 "
 DEPEND="
