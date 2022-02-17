@@ -1,0 +1,12 @@
+[Unit]
+Description=Nagios Service Check Acceptor
+
+[Service]
+Type=forking
+Restart=always
+ExecStart=/usr/libexec/nsca -c /etc/nagios/nsca.cfg
+PIDFile=/run/nsca.pid
+
+[Install]
+WantedBy=multi-user.target
+
