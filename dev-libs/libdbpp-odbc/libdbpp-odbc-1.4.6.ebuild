@@ -1,9 +1,8 @@
 EAPI="7"
-
 inherit bjam
 
-DESCRIPTION="NetFS daemon for exposing Git repositories"
-HOMEPAGE="http://netfs.randomdan.homeip.net/git"
+DESCRIPTION="C++ database connectivity ODBC components"
+HOMEPAGE="http://libdbpp.randomdan.homeip.net/odbc"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
@@ -12,10 +11,9 @@ KEYWORDS="x86 amd64"
 
 RDEPEND="
 	dev-libs/boost:=
-	>=dev-libs/icetray-0.4:=
-	dev-libs/libgit2
-	=sys-cluster/netfs-1.4*
-	>=dev-libs/libadhocutil-0.7.5:=
+	>=dev-libs/libdbpp-1.4.8:=
+	dev-db/unixODBC
+	>=dev-libs/libadhocutil-0.8:=
 "
 DEPEND="
 	${RDEPEND}
@@ -24,10 +22,11 @@ DEPEND="
 "
 
 src_compile() {
-	bjambuild src
+	bjambuild libodbcpp//dbpp-odbc
 }
 
 src_install() {
-	bjaminstall install
+	bjaminstall libodbcpp//install \
+		-i dbpp-odbc
 }
 

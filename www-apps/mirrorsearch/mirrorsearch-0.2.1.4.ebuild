@@ -6,14 +6,16 @@ HOMEPAGE="https://git.randomdan.homeip.net/repo/mirrorsearch/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 
 LICENSE="MIT"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
+SLOT="0"
+WEBAPP_MANUAL_SLOT="yes"
 
 DEPEND="
 	dev-libs/boost:=
 	>=www-misc/icespider-0.4:=
 	dev-cpp/slicer:=[db]
-	dev-libs/icetray[tools]
+	dev-libs/icetray:=[tools]
 	dev-libs/libdbpp-postgresql
 	=sys-apps/icebox-service-1.11
 "
