@@ -22,6 +22,7 @@ RDEPEND="
 	)
 	virtualbox? (
 		app-emulation/virtualbox
+		app-emulation/virtualbox-additions
 		app-emulation/virtualbox-extpack-oracle
 	)
 "
