@@ -1,3 +1,4 @@
-/usr/portage/profiles/default/linux/amd64/17.1/desktop/plasma/systemd
-/usr/portage/profiles/default/linux/amd64/17.1/no-multilib
-..
+gentoo:default/linux/amd64/17.1/desktop/plasma/systemd
+gentoo:default/linux/amd64/17.1/no-multilib
+gentoo:targets/desktop/plasma
+RandomLAN:base
