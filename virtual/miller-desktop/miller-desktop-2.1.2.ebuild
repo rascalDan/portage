@@ -2,7 +2,7 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr vpnc pptp forticlient wifi b43 networkmanager plymouth"
+IUSE="cdr vpnc pptp forticlient openconnect wifi b43 networkmanager plymouth"
 
 RDEPEND="
 	virtual/eject
@@ -32,6 +32,9 @@ RDEPEND="
 		)
 	forticlient? (
 		net-vpn/forticlientsslvpn
+		)
+	openconnect? (
+		net-vpn/openconnect
 		)
 	sys-fs/dosfstools
 	sys-block/partitionmanager
