@@ -23,10 +23,21 @@ RDEPEND="
 	www-client/lynx
 	app-admin/webapp-config
 	postgres? (
+		virtual/miller-postgresql
 		dev-db/apgdiff
 		dev-db/pg_activity
 		dev-db/postgresql_autodoc
+		dev-libs/libdbpp-postgresql
 		mysql? ( dev-db/postgresql-fdw-mysql )
+		odbc? (
+			dev-db/psqlodbc
+			dev-libs/libdbpp-odbc
+		)
+	)
+	mysql? (
+		virtual/miller-mysql
+		dev-libs/libdbpp-mysql
+		odbc? ( dev-db/mariadb-connector-odbc )
 	)
 	dev-util/uncrustify
 	dev-util/cproto
@@ -68,8 +79,6 @@ RDEPEND="
 		net-analyzer/arping
 	)
 	dev-libs/libadhocutil
-	dev-libs/libdbpp-postgresql
-	dev-libs/libdbpp-mysql
 	dev-libs/icetray[ut]
 	www-misc/icespider
 	net-misc/gentoobrowse-api
@@ -88,10 +97,6 @@ RDEPEND="
 	app-arch/rar
 	net-ftp/ftp
 	media-video/ffmpeg
-	odbc? (
-			mysql? ( dev-db/mariadb-connector-odbc )
-			postgres? ( dev-db/psqlodbc )
-	)
 	net-misc/youtube-dl
 	www-servers/apache
 	X? (
