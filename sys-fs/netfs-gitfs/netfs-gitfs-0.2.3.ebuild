@@ -14,7 +14,7 @@ RDEPEND="
 	dev-libs/boost:=
 	>=dev-libs/icetray-0.4:=
 	dev-libs/libgit2
-	=sys-cluster/netfs-1.4*
+	=sys-cluster/netfs-1.5*
 	>=dev-libs/libadhocutil-0.7.5:=
 "
 DEPEND="
