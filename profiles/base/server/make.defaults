@@ -1,4 +1,4 @@
-APACHE2_MODULES="-* access_compat alias auth_basic authn_core authz_core authz_host authz_user autoindex cache cache_disk cgid dav deflate dir env expires filter headers http2 log_config macro mime mime_magic proxy proxy_http remoteip rewrite socache_shmcb status unixd vhost_alias"
+APACHE2_MODULES="-* access_compat alias auth_basic authn_core authz_core authz_host authz_user autoindex brotli cache cache_disk cgid dav deflate dir env expires filter headers http2 log_config macro mime mime_magic proxy proxy_http remoteip rewrite socache_shmcb status unixd vhost_alias"
 ALSA_PCM_PLUGINS="none"
 USE="
 	autoservicerestart nohourlyupdate berkdb cron exiscan-acl extras -gdbm -gallium logrotate -joystick
