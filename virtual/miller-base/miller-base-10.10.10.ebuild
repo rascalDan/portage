@@ -6,7 +6,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
 minimal autoupdate autoshutdown autoservicerestart mdadm ssd
-video_cards_nvidia video_cards_nouveau firmware ischroot"
+video_cards_nvidia video_cards_nouveau firmware ischroot ldap"
 
 RDEPEND="
 	app-misc/simplify
@@ -61,8 +61,10 @@ RDEPEND="
 	app-portage/layman[git]
 	app-misc/screen
 	app-vim/gentoo-syntax
-	sys-auth/pam_ldap
-	sys-auth/nss_ldap
+	ldap? (
+		sys-auth/pam_ldap
+		sys-auth/nss_ldap
+	)
 	app-editors/vim
 	app-editors/gvim
 	git? ( dev-vcs/git )
