@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet odbc mysql postgres cxx vnc"
+IUSE="X dotnet odbc mysql postgres cxx vnc java"
 
 RDEPEND="
 	=net-misc/unison-2.51*
@@ -15,6 +15,7 @@ RDEPEND="
 	app-vim/vim-spell-en
 	app-vim/nerdcommenter
 	app-vim/youcompleteme
+	app-vim/surround
 	app-vim/syntastic
 	app-vim/gitgutter
 	app-vim/alternate
@@ -22,13 +23,30 @@ RDEPEND="
 	www-client/lynx
 	app-admin/webapp-config
 	postgres? (
+		virtual/miller-postgresql
 		dev-db/apgdiff
 		dev-db/pg_activity
 		dev-db/postgresql_autodoc
+		dev-libs/libdbpp-postgresql
+		mysql? ( dev-db/postgresql-fdw-mysql )
+		odbc? (
+			dev-db/psqlodbc
+			dev-libs/libdbpp-odbc
+		)
+	)
+	mysql? (
+		virtual/miller-mysql
+		dev-libs/libdbpp-mysql
+		odbc? ( dev-db/mariadb-connector-odbc )
+	)
+	java? (
+		dev-java/maven-bin
+		dev-util/idea-community
 	)
 	dev-util/uncrustify
 	dev-util/cproto
 	dev-util/ctags
+	dev-db/pgFormatter
 	net-nds/shelldap
 	sys-devel/gdb
 	dev-util/valgrind
@@ -50,6 +68,7 @@ RDEPEND="
 		=sys-devel/gcc-11*
 		dev-util/bloaty
 		dev-util/include-what-you-use
+		dev-cpp/benchmark
 	)
 	media-fonts/freefont
 	media-fonts/hack
@@ -64,14 +83,16 @@ RDEPEND="
 		net-analyzer/arping
 	)
 	dev-libs/libadhocutil
-	dev-libs/libdbpp-postgresql
-	dev-libs/libdbpp-mysql
 	dev-libs/icetray[ut]
+	www-misc/icespider
+	net-misc/gentoobrowse-api
 	dev-libs/fcgi
 	dev-libs/Ice
 	dev-libs/slice-parser
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp:3.0
+	dev-util/libabigail
+	dev-util/unifdef
 	net-libs/libesmtp
 	www-apache/mod_fcgid
 	www-apache/apache-mod-markdown
@@ -80,11 +101,7 @@ RDEPEND="
 	app-arch/rar
 	net-ftp/ftp
 	media-video/ffmpeg
-	odbc? (
-			mysql? ( dev-db/mariadb-connector-odbc )
-			postgres? ( dev-db/psqlodbc )
-	)
-	net-misc/youtube-dl
+	net-misc/yt-dlp
 	www-servers/apache
 	X? (
 		|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
@@ -114,13 +131,8 @@ RDEPEND="
 				)
 			)
 		)
-	postgres? (
-		|| (
-			dev-db/pgadmin4
-			dev-db/pgadmin3
-		)
-	)
-	kde-apps/kcachegrind
-	app-editors/gvim
-)"
+		kde-apps/kcachegrind
+		app-editors/gvim
+		dev-util/hotspot
+	)"
 

@@ -64,6 +64,6 @@ RDEPEND="
 			sys-fs/ocfs2-tools )
 	mediaserver? (
 			net-misc/minidlna
-			net-misc/youtube-dl
+			net-misc/yt-dlp
 			)
 "
