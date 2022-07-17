@@ -1,0 +1,20 @@
+--- a/etc/ngshared.pm	2022-07-17 14:39:52.988032864 +0100
++++ b/etc/ngshared.pm	2022-07-17 14:39:40.553988303 +0100
+@@ -231,7 +231,7 @@
+     my ($cgi, $params) = getparams();
+     getdebug($app, $params->{host}, $params->{service});
+ 
+-    $errmsg = readi18nfile($cgi->param('language'));
++    $errmsg = readi18nfile($cgi->multi_param('language'));
+     if ($errmsg ne q()) {
+         debug(DBWRN, $errmsg);
+     }
+@@ -381,7 +381,7 @@
+                 my @rval = $cgi->param($ii);
+                 $rval{$ii} = \@rval;
+             } elsif ($ii eq 'db' || $ii eq 'label') {
+-                $rval{$ii} = [$cgi->param($ii),];
++                $rval{$ii} = [$cgi->multi_param($ii),];
+             } else {
+                 $rval{$ii} = $cgi->param($ii);
+             }

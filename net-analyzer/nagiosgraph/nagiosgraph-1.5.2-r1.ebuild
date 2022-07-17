@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="nagiosgraph extracts information from the Nagios output and inserts it into RRD files"
+DESCRIPTION="nagiosgraph extracts info from the Nagios output and inserts it into RRD files"
 HOMEPAGE="https://sourceforge.net/p/nagiosgraph"
 SRC_URI="https://netix.dl.sourceforge.net/project/${PN}/${PN}/${PV}/${P}.tar.gz"
 
@@ -14,10 +14,15 @@ KEYWORDS="~amd64"
 DEPEND=""
 RDEPEND="
 dev-lang/perl
-net-analyzer/rrdtool[perl]
+net-analyzer/rrdtool[perl,graph]
 dev-perl/GD
 "
 BDEPEND=""
+
+src_prepare() {
+	eapply ${FILESDIR}/multi_param.patch
+	eapply_user
+}
 
 src_configure() {
 	sed -i "s|/opt/nagiosgraph/etc|/etc/${PN}|g" ${S}/cgi/*.cgi  ${S}/lib/*.pl
