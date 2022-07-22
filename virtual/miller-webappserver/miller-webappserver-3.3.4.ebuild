@@ -14,4 +14,5 @@ RDEPEND="
 	app-text/highlight
 	dev-python/pygments
 	dev-python/markdown
+	www-misc/awstats
 "
