@@ -41,6 +41,7 @@ RDEPEND="
 	net-analyzer/fail2ban
 	net-misc/openntpd
 	net-analyzer/nagios
+	net-analyzer/nagiosgraph
 	net-analyzer/nsca
 	net-analyzer/nagios-plugin-check_raid
 	sys-apps/lm-sensors
