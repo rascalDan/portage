@@ -16,7 +16,7 @@ DEPEND="=dev-libs/Ice-3.7*
 		>=dev-cpp/slicer-1.9:=[db]
 		>=dev-libs/libdbpp-1.4:=
 		>=dev-libs/libdbpp-postgresql-1.4
-		>=dev-libs/icetray-0.4[tools]
+		>=dev-libs/icetray-0.5:=[tools]
 		>=dev-libs/boost-1.60:=
 		>=dev-libs/libgit2-0.24.0
 	)
