@@ -5,14 +5,13 @@ DESCRIPTION="Virtual for base systems"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="hardened nohourlyupdate fuse xfs btrfs bash-completion git samba
-minimal autoupdate autoshutdown autoservicerestart mdadm ssd
+minimal autoupdate autoshutdown autoservicerestart mdadm ssd X
 video_cards_nvidia video_cards_nouveau firmware ischroot ldap"
 
 RDEPEND="
 	app-misc/simplify
 	|| ( app-arch/hardlink sys-apps/util-linux[hardlink] )
 	sys-process/htop
-	sys-process/iotop
 	sys-process/time
 	sys-apps/less
 	fuse? ( net-fs/sshfs )
@@ -32,7 +31,7 @@ RDEPEND="
 			sys-fs/btrfsmaintenance
 			)
 		sys-fs/lvm2
-		>=sys-boot/grub-2
+		sys-boot/grub
 		sys-apps/pciutils
 		sys-apps/usbutils
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
@@ -43,20 +42,25 @@ RDEPEND="
 		sys-kernel/gentoo-kernel
 	)
 	sys-process/cronie
-	>=app-portage/gentoolkit-0.2.1
+	app-portage/gentoolkit
 	app-admin/sudo
 	mail-client/mailx
 	!minimal? (
-			app-shells/thefuck
-			app-shells/hstr
+		app-shells/thefuck
+		app-shells/hstr
+		X? (
 			x11-apps/xauth
-			sys-apps/moreutils
-			dev-util/strace
+		)
+		sys-apps/moreutils
+		dev-util/strace
+		|| (
 			net-analyzer/netcat
-			net-ftp/ncftp
-			app-text/dos2unix
-			net-dns/bind-tools
-			)
+			net-analyzer/nmap[ncat,symlink]
+		)
+		net-ftp/ncftp
+		app-text/dos2unix
+		net-dns/bind-tools
+	)
 	sys-process/lsof
 	app-portage/layman[git]
 	app-misc/screen
@@ -66,13 +70,15 @@ RDEPEND="
 		sys-auth/nss_ldap
 	)
 	app-editors/vim
-	app-editors/gvim
+	X? (
+		app-editors/gvim
+	)
 	git? ( dev-vcs/git )
 	bash-completion? ( app-shells/bash-completion )
 	sys-apps/systemd
 	autoservicerestart? (
-			sys-apps/autorestart
-		)
+		sys-apps/autorestart
+	)
 	app-portage/cpuid2cpuflags
 	app-text/ansifilter
 	"
