@@ -12,7 +12,7 @@ KEYWORDS="x86 amd64"
 
 RDEPEND="
 	dev-libs/boost:=
-	=dev-libs/libdbpp-1.4*:=
+	>=dev-libs/libdbpp-1.4.9:=
 	dev-db/postgresql
 	>=dev-libs/libadhocutil-0.8:=
 "

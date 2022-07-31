@@ -7,7 +7,7 @@ HOMEPAGE="http://libdbpp.randomdan.homeip.net/"
 
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
-SLOT="0/1.4.3"
+SLOT="0/1.4.9"
 KEYWORDS="x86 amd64"
 IUSE="man ut"
 
