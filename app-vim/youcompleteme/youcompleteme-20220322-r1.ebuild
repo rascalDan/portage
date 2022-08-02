@@ -1,6 +1,6 @@
-EAPI="7"
+EAPI="8"
 PYTHON_COMPAT=( python3_{9,10} )
-inherit multilib python-single-r1 cmake-utils vim-plugin
+inherit multilib python-single-r1 cmake vim-plugin
 
 youcompletemev="e32a82c322c680fa3aeef615874cf049669a360b"
 ycmdv="ba5814d3810c21ef9868d70ba7a8c7eef9c1d276"
@@ -53,7 +53,7 @@ src_prepare() {
 		rm -r "${S}"/third_party/${third_party_module} || die "Failed to remove third party module ${third_party_module}"
 	done
 	mv ${WORKDIR}/ycmd-$ycmdv ${S}/third_party/ycmd
-	cmake-utils_src_prepare
+	cmake_src_prepare
 	default
 }
 
@@ -67,7 +67,7 @@ src_configure() {
 		-DPython3_EXECUTABLE=$SYSROOT/usr/bin/$EPYTHON
 		-DPython3_INCLUDE_DIR=$SYSROOT/usr/include/$EPYTHON
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
@@ -78,7 +78,7 @@ src_install() {
 	find python third_party/ycmd -depth -name '*test*' -exec rm -r {} + || die
 	find python third_party/ycmd -depth -name '*examples*' -exec rm -r {} + || die
 
-	vim-plugin_src_install
+	vim-plugin_src_install third_party python
 
 	python_optimize "${ED}"
 	python_fix_shebang "${ED}"
