@@ -18,7 +18,7 @@ DEPEND="
 	dev-libs/libadhocutil
 	"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/boost-build"
+BDEPEND="dev-util/b2"
 
 src_compile() {
 	bjambuild

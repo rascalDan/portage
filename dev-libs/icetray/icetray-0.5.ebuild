@@ -18,12 +18,12 @@ RDEPEND="
 	>=dev-libs/libadhocutil-0.7.5:=
 	dev-cpp/slicer:=[db]
 	net-libs/libesmtp
-	tools? ( dev-util/boost-build )
+	tools? ( dev-util/b2 )
 "
 DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
-	>=dev-util/boost-build-1.71
+	dev-util/b2
 "
 
 src_compile() {

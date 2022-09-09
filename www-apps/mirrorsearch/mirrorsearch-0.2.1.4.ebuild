@@ -21,7 +21,7 @@ DEPEND="
 "
 BDEPEND="${DEPEND}
 	virtual/pkgconfig
-	dev-util/boost-build
+	dev-util/b2
 "
 
 pkg_setup() {

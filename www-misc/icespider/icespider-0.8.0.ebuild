@@ -20,7 +20,7 @@ DEPEND=">=dev-libs/Ice-3.7
 	>=dev-libs/boost-1.66:="
 BDEPEND="${DEPEND}
 	virtual/pkgconfig
-	dev-util/boost-build"
+	dev-util/b2"
 RDEPEND="${DEPEND}
 	virtual/httpd-fastcgi"
 

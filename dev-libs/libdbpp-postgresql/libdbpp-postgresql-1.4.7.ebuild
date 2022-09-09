@@ -19,7 +19,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
-	dev-util/boost-build
+	dev-util/b2
 "
 
 src_compile() {
