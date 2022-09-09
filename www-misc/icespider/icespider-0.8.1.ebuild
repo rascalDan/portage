@@ -15,7 +15,7 @@ DEPEND=">=dev-libs/Ice-3.7
 	>=dev-libs/slice-parser-3.7:=
 	>=dev-libs/libadhocutil-0.8.3:=
 	dev-cpp/libxmlpp:3.0
-	=dev-cpp/slicer-1.10*:=
+	=dev-cpp/slicer-1.11*:=
 	dev-libs/fcgi
 	>=dev-libs/boost-1.66:="
 BDEPEND="${DEPEND}

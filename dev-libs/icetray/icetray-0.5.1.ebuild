@@ -7,7 +7,7 @@ HOMEPAGE="http://icetray.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 
 LICENSE="MIT"
-SLOT="0/0.3"
+SLOT="0/0.5"
 KEYWORDS="amd64 x86"
 IUSE="ut tools"
 
