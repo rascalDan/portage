@@ -1,6 +1,6 @@
 EAPI="8"
 PYTHON_COMPAT=( python3_{9,10} )
-inherit multilib python-single-r1 cmake vim-plugin
+inherit llvm multilib python-single-r1 cmake vim-plugin
 
 youcompletemev="d4343e8384ffb25d70a9ebc966bbf1277735567c"
 ycmdv="2ee41000a28fb6b2ae00985c231896b6d072af86"
@@ -20,7 +20,7 @@ IUSE="+clang"
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	dev-cpp/abseil-cpp
-	clang? ( sys-devel/clang:15 )
+	clang? ( sys-devel/clang:= )
 	$(python_gen_cond_dep '
 			>=dev-libs/boost-1.65:=[python,${PYTHON_USEDEP}]
 			|| (
@@ -61,7 +61,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DUSE_CLANG_COMPLETER=$(usex clang)
 		-DUSE_SYSTEM_LIBCLANG=$(usex clang)
-		-DPATH_TO_LLVM_ROOT=$(clang-15 --version  | grep ^InstalledDir: | cut -d: -f2 | xargs dirname)
+		-DPATH_TO_LLVM_ROOT=$(get_llvm_prefix)
 		-DUSE_SYSTEM_ABSEIL=ON
 		-DPython3_LIBRARY=$SYSROOT/usr/$(get_libdir)/lib$EPYTHON.so
 		-DPython3_EXECUTABLE=$SYSROOT/usr/bin/$EPYTHON
