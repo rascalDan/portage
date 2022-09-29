@@ -1,3 +1,21 @@
-media-libs/mesa -llvm
-net-libs/gnutls tools
+dev-cpp/slicer db
+dev-lang/python sqlite
+dev-libs/icetray tools ut
+dev-libs/libdbpp ut
 dev-libs/libxml2 python
+mail-mta/exim -mysql -postgres -berkdb gdbm
+media-libs/mesa -llvm
+media-video/ffmpeg openssl
+net-analyzer/nagios-core -apache2
+net-analyzer/rrdtool perl graph
+net-dns/bind -mysql -postgres -ldap -berkdb
+net-libs/gnutls tools
+net-misc/gentoobrowse-api server
+net-nds/openldap samba
+net-proxy/haproxy -slz
+sys-cluster/netfs server client
+sys-devel/clang static-analyzer
+sys-kernel/linux-firmware savedconfig
+
+*/* PYTHON_TARGETS: -* python3_9
+*/* PYTHON_SINGLE_TARGET: -* python3_9
