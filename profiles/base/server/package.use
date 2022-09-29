@@ -16,7 +16,3 @@ net-proxy/haproxy -slz
 sys-cluster/netfs server client
 sys-devel/clang static-analyzer
 sys-kernel/linux-firmware savedconfig
-
-# Cos dev-python/parallax
-sys-cluster/crmsh PYTHON_TARGETS: -* python3_9
-sys-cluster/crmsh PYTHON_SINGLE_TARGET: -* python3_9
