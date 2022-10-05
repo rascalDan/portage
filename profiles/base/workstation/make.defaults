@@ -4,7 +4,7 @@ USE="
 	autoshutdown cddb -cdio -crypt cscope custom-cflags
 	custom-optimization cxx -desktop-portal dv ffmpeg frei0r gallium gcrypt glib
 	gnome-keyring -handbook -hangouts imagemagick javascript jemalloc
-	-kde lame -lastfm lightning lm-sensors man markdown -modemmanager mtp mysql -nsplugin
+	-kde lame -lastfm lightning lm-sensors markdown -modemmanager mtp mysql -nsplugin
 	offensive openexr pango plymouth -postscript -sdl -semantic-desktop -server
 	silc taglib thumbnail user-session vaapi vlc -vnc -wallpapers -webstart xa
 	xmp xvmc zip
