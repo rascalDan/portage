@@ -1,5 +1,4 @@
 APACHE2_MODULES="-* filter authz_host cgid mime_magic mime autoindex vhost_alias dav dir deflate log_config env rewrite cache mem_cache unixd socache authz_core authn_core socache_shmcb http2 alias"
-RUBY_TARGETS="-* ruby25"
 USE="
 	autoshutdown cddb -cdio -crypt cscope custom-cflags
 	custom-optimization cxx -desktop-portal dv ffmpeg frei0r gallium gcrypt glib
