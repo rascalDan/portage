@@ -14,7 +14,6 @@ RDEPEND="
 	sys-devel/distcc
 	sys-devel/gcc:8.5.0[cxx]
 	sys-devel/gcc:10[cxx]
-	sys-devel/gcc:11[cxx]
 	sys-devel/gcc:12[cxx]
 	sys-devel/clang:14
 	sys-devel/clang:15

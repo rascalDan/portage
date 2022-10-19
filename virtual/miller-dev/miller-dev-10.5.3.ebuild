@@ -64,8 +64,7 @@ RDEPEND="
 		dev-util/cppcheck
 		sys-devel/clang[static-analyzer]
 		dev-util/splint
-		=sys-devel/gcc-10*
-		=sys-devel/gcc-11*
+		=sys-devel/gcc-12*
 		dev-util/bloaty
 		dev-util/include-what-you-use
 		dev-cpp/benchmark
