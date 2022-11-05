@@ -44,6 +44,7 @@ RDEPEND="
 	sys-process/cronie
 	app-portage/gentoolkit
 	app-admin/sudo
+	app-admin/hddtemp
 	mail-client/mailx
 	!minimal? (
 		app-shells/thefuck
