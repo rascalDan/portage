@@ -56,6 +56,7 @@ RDEPEND="
 	app-benchmarks/wrk
 	dev-libs/stb
 	media-libs/libsdl2
+	media-libs/glew
 	sys-fs/inotify-tools
 	net-misc/shmux
 	app-misc/jq
