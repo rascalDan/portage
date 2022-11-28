@@ -24,6 +24,5 @@ src_install() {
 	insinto /opt/${PN}
 	doins -r ${S}/*
 	fperms +x /opt/${PN}/squirrel-sql.sh
-	fperms +x /opt/${PN}/restore.sh
 }
 
