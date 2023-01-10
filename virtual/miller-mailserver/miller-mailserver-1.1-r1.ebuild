@@ -10,7 +10,7 @@ RDEPEND="
 	virtual/cron
 	|| ( net-mail/courier-imap mail-mta/courier )
 	mail-mta/exim
-	mail-filter/spamassassin[berkdb]
+	mail-filter/spamassassin
 "
 
 src_install() {
