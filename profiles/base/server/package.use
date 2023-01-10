@@ -3,14 +3,13 @@ dev-lang/python sqlite
 dev-libs/icetray tools ut
 dev-libs/libdbpp ut
 dev-libs/libxml2 python
-mail-mta/exim -mysql -postgres gdbm
+mail-mta/exim -mysql -postgres
 media-libs/mesa -llvm
 media-video/ffmpeg openssl
 net-analyzer/nagios-core -apache2
 net-analyzer/rrdtool perl graph
 net-dns/bind -mysql -postgres -ldap
 net-libs/gnutls tools
-net-mail/courier-imap gdbm
 net-misc/gentoobrowse-api server
 net-nds/openldap samba
 net-proxy/haproxy -slz

@@ -1,7 +1,7 @@
 APACHE2_MODULES="-* access_compat alias auth_basic authn_core authz_core authz_host authz_user autoindex brotli cache cache_disk cgid dav deflate dir env expires filter headers http2 log_config macro mime mime_magic proxy proxy_http remoteip rewrite socache_shmcb status unixd vhost_alias"
 ALSA_PCM_PLUGINS="none"
 USE="
-	autoservicerestart nohourlyupdate cron exiscan-acl extras -gdbm -gallium logrotate -joystick
+	autoservicerestart nohourlyupdate cron exiscan-acl extras gdbm -gallium logrotate -joystick
 	-keyutils maildir modperl mysql ocfs2 proxy -python -sqlite -tcpd truetype fpm apache2 -static-analyzer
 	arc dmarc -gnutls spf -doc
 "
