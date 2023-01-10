@@ -24,9 +24,16 @@ RDEPEND="
 	vnc? ( kde-apps/krdc[vnc] )
 	|| (
 		www-client/firefox
-		( www-client/chromium www-plugins/chrome-binary-plugins )
+		(
+			|| (
+				www-client/chromium:0/stable
+				www-client/chromium-bin:0/stable
+			)
+			www-plugins/chrome-binary-plugins
+		)
 		www-client/firefox-bin
 		www-client/google-chrome
+		www-client/microsoft-edge
 		www-client/opera
 	)
 	kde-apps/filelight
