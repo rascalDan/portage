@@ -1,4 +1,4 @@
-EAPI="2"
+EAPI="8"
 DESCRIPTION="Virtual for Miller mail servers"
 
 SLOT="0"
@@ -12,6 +12,10 @@ RDEPEND="
 	mail-mta/exim
 	mail-filter/spamassassin
 "
+
+src_unpack() {
+	mkdir ${S}
+}
 
 src_install() {
 	exeinto /etc/cron.daily
