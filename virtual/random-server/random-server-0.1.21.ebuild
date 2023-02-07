@@ -12,7 +12,6 @@ IUSE="mediaserver dosfs ocfs2 ci"
 RDEPEND="
 	=net-misc/unison-2.51*
 	sys-devel/distcc
-	sys-devel/gcc:8.5.0[cxx]
 	sys-devel/gcc:10[cxx]
 	sys-devel/gcc:12[cxx]
 	sys-devel/clang:14
