@@ -12,14 +12,14 @@ SRC_URI="https://github.com/markfasheh/${PN}/archive/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug external"
+IUSE="debug pacemaker"
 
 RDEPEND="
 	dev-libs/libaio
 	sys-apps/util-linux
-	external? (
-		sys-cluster/libdlm
-		sys-cluster/pacemaker[-heartbeat]
+	pacemaker? (
+		sys-cluster/dlm
+		sys-cluster/pacemaker
 		)
 	sys-fs/e2fsprogs
 	sys-libs/ncurses
