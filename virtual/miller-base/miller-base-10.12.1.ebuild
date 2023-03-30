@@ -47,7 +47,6 @@ RDEPEND="
 	app-admin/hddtemp
 	mail-client/mailx
 	!minimal? (
-		app-shells/thefuck
 		app-shells/hstr
 		X? (
 			x11-apps/xauth
