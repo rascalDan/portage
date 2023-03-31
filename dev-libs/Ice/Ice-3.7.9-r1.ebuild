@@ -52,7 +52,6 @@ PHP_EXT_S="${S}/php"
 
 PATCHES=(
 	"${FILESDIR}/${P}-fix-musl-build.patch"
-	"${FILESDIR}/${P}-py3k11.patch"
 )
 
 pkg_setup() {
@@ -86,13 +85,14 @@ src_prepare() {
 }
 
 src_configure() {
+	CONFIGS+=("shared")
+	use c++0x && CONFIGS+=("cpp11-shared")
 	MAKE_RULES=(
 		"embedded_runpath_prefix=\"${EPREFIX}/usr\""
 		"OPTIMIZE=$(usex !debug)"
+		"configs=${CONFIGS[*]}"
 		"V=1"
 	)
-	MAKE_RULES+=("shared")
-	use c++0x && MAKE_RULES+=("cpp11-shared")
 
 	if use python; then
 		local S="${S}/python"
