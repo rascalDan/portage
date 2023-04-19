@@ -19,7 +19,7 @@ IUSE="+clang"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	dev-cpp/abseil-cpp
+	dev-cpp/abseil-cpp:=
 	clang? ( sys-devel/clang:= )
 	$(python_gen_cond_dep '
 			>=dev-libs/boost-1.65:=[python,${PYTHON_USEDEP}]
