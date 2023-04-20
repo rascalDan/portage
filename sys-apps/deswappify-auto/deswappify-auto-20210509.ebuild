@@ -14,6 +14,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 DEPEND="${PYTHON_DEPS}
 	dev-python/python-systemd[${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]"
@@ -26,7 +28,8 @@ src_prepare() {
 }
 
 src_install() {
-	python_doscript deswappify_auto.py
+	default
+	python_foreach_impl python_doscript deswappify_auto.py
 	systemd_dounit deswappify.service
 }
 
