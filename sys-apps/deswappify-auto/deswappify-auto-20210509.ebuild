@@ -3,7 +3,7 @@
 
 EAPI=8
 PYTHON_COMPAT=( python3_{5..11} )
-inherit python-single-r1 systemd
+inherit python-r1 systemd
 
 ID="edd256a886cdfcf04bab08559ba9e45464a59a20"
 DESCRIPTION="Automatically fetch swapped pages to physical memory when enough memory is available"
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="${PYTHON_DEPS}
-	dev-python/python-systemd[${PYTHON_SINGLE_USEDEP}]
-	dev-python/psutil[${PYTHON_SINGLE_USEDEP}]"
+	dev-python/python-systemd[${PYTHON_USEDEP}]
+	dev-python/psutil[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
