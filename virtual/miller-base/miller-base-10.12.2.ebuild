@@ -40,6 +40,7 @@ RDEPEND="
 		video_cards_nouveau? ( sys-firmware/nvidia-firmware )
 		app-antivirus/clamav
 		sys-kernel/gentoo-kernel
+		sys-apps/deswappify-auto
 	)
 	sys-process/cronie
 	app-portage/gentoolkit
