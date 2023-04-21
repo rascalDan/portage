@@ -12,7 +12,7 @@ SRC_URI="https://github.com/wiedemannc/deswappify-auto/archive/$ID.zip -> ${P}.z
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64 x86"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
