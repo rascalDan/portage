@@ -63,7 +63,7 @@ RDEPEND="
 		net-dns/bind-tools
 	)
 	sys-process/lsof
-	app-portage/layman[git]
+	app-eselect/eselect-repository
 	app-misc/screen
 	app-vim/gentoo-syntax
 	ldap? (
