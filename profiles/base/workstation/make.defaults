@@ -1,7 +1,7 @@
 APACHE2_MODULES="-* filter authz_host cgid mime_magic mime autoindex vhost_alias dav dir deflate log_config env rewrite cache mem_cache unixd socache authz_core authn_core socache_shmcb http2 alias"
 USE="
 	autoshutdown cddb -cdio -crypt cscope custom-cflags
-	custom-optimization cxx -desktop-portal dv ffmpeg frei0r gallium gcrypt glib
+	custom-optimization cxx -desktop-portal dv ffmpeg frei0r gallium gcrypt gles2 glib
 	gnome-keyring -handbook -hangouts imagemagick javascript jemalloc
 	-kde lame -lastfm lightning markdown -modemmanager mtp mysql -nsplugin
 	offensive openexr pango plymouth -postscript -sdl -semantic-desktop -server
