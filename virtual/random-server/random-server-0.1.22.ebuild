@@ -14,8 +14,9 @@ RDEPEND="
 	sys-devel/distcc
 	sys-devel/gcc:10[cxx]
 	sys-devel/gcc:12[cxx]
-	sys-devel/clang:14
+	sys-devel/gcc:13[cxx]
 	sys-devel/clang:15
+	sys-devel/clang:16
 	net-dns/bind
 	net-firewall/iptables
 	net-fs/samba
