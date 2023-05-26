@@ -13,7 +13,7 @@ KEYWORDS="~amd64"
 
 DEPEND="
 media-sound/pulseaudio
-media-sound/pulseaudio-ctl
+media-libs/libpulse
 dev-java/openjdk:17
 "
 RDEPEND="${DEPEND}"
