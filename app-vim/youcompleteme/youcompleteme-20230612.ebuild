@@ -2,10 +2,10 @@ EAPI="8"
 PYTHON_COMPAT=( python3_{9,10,11} )
 inherit llvm multilib python-single-r1 cmake vim-plugin
 
-youcompletemev="d4343e8384ffb25d70a9ebc966bbf1277735567c"
-ycmdv="2ee41000a28fb6b2ae00985c231896b6d072af86"
+youcompletemev="49ced5a30ad7778178fd44703665a8ef3329e592"
+ycmdv="45bc1c51ff28d66c510ad90388307e1f596a20a2"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SRC_URI="
 	https://github.com/ycm-core/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/ycm-core/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
