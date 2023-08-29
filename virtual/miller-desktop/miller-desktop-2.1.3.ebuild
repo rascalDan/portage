@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr vpnc pptp forticlient openconnect wifi b43 networkmanager plymouth video_cards_intel"
+IUSE="cdr vpnc pptp forticlient openconnect wifi b43 networkmanager plymouth vaapi video_cards_intel"
 
 RDEPEND="
 	virtual/eject
@@ -20,8 +20,10 @@ RDEPEND="
 		net-misc/dhcp )
 	sys-power/acpid
 	x11-apps/mesa-progs
-	video_cards_intel? (
-		media-libs/libva-intel-driver
+	vaapi? (
+		video_cards_intel? (
+			media-libs/libva-intel-driver
+		)
 	)
 	networkmanager? (
 		kde-plasma/plasma-nm
