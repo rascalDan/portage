@@ -3,12 +3,15 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet odbc mysql postgres cxx vnc java"
+IUSE="X dotnet odbc mysql postgres cxx vnc java ilt"
 
 RDEPEND="
 	=net-misc/unison-2.51*
 	virtual/miller-base
 	app-editors/ghostwriter
+	app-shells/powerline
+	app-shells/powerline-gitstatus
+	app-vim/ansiesc
 	app-vim/nerdtree
 	app-vim/json
 	app-vim/vim-javascript
@@ -43,6 +46,12 @@ RDEPEND="
 		dev-java/maven-bin
 		dev-util/idea-community
 	)
+	ilt? (
+		dev-libs/mxml
+		media-gfx/blender
+		media-gfx/openmesh
+		media-libs/assimp
+	)
 	dev-util/uncrustify
 	dev-util/cproto
 	dev-util/ctags
@@ -71,8 +80,7 @@ RDEPEND="
 		dev-cpp/benchmark
 	)
 	media-fonts/freefont
-	media-fonts/hack
-	media-fonts/roboto-mono
+	media-fonts/intel-one-mono
 	app-vim/vcscommand
 	dev-vcs/git
 	dev-vcs/git-extras
@@ -93,6 +101,7 @@ RDEPEND="
 	dev-cpp/libxmlpp:3.0
 	dev-util/libabigail
 	dev-util/unifdef
+	sys-devel/mold
 	net-libs/libesmtp
 	www-apache/mod_fcgid
 	www-apache/apache-mod-markdown
