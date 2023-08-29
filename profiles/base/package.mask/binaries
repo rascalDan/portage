@@ -40,6 +40,8 @@ dev-lang/julia-bin
 dev-lang/rust-bin
 dev-lang/scala-bin
 dev-lang/zig-bin
+dev-python/pypy3_10-exe-bin
+dev-python/pypy3_9-exe-bin
 dev-python/pypy3-exe-bin
 dev-python/pypy-exe-bin
 dev-util/jenkins-bin
@@ -54,6 +56,7 @@ games-fps/ezquake-bin
 games-fps/glxquake-bin
 games-fps/transfusion-bin
 games-rpg/vendetta-online-bin
+games-util/heroic-bin
 mail-client/thunderbird-bin
 media-libs/raspberrypi-userland-bin
 media-sound/subsonic-bin
@@ -97,5 +100,4 @@ www-apps/grafana-bin
 www-apps/karma-bin
 www-apps/kibana-bin
 www-apps/zeppelin-bin
-www-client/chromium-bin
 www-client/firefox-bin
