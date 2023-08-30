@@ -8,7 +8,7 @@
 # @BLURB: 
 # @DESCRIPTION:
 
-inherit eutils
+inherit
 
 src_configure() {
 	ebegin "Setting portage CXX and LD flags"

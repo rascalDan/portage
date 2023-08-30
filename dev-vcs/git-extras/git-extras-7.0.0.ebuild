@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=7
-inherit eutils
+inherit
 
 DESCRIPTION="GIT utilities -- repo summary, repl, changelog population, author commit percentages and more"
 HOMEPAGE="https://github.com/tj/git-extras"

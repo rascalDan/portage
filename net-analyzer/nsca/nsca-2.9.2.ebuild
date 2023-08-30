@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit multilib eutils systemd
+inherit multilib systemd
 
 DESCRIPTION="Nagios Service Check Acceptor"
 HOMEPAGE="http://www.nagios.org/"

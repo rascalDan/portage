@@ -3,7 +3,7 @@
 
 EAPI="7"
 JAVA_PKG_IUSE="doc source"
-inherit eutils java-pkg-2 java-ant-2
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A simple PostgreSQL diff tool that is useful for schema upgrades"
 HOMEPAGE="https://apgdiff.com"

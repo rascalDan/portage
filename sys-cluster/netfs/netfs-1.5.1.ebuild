@@ -1,6 +1,6 @@
 EAPI="7"
 
-inherit eutils bjam
+inherit bjam
 
 DESCRIPTION="Cluster capable network filesytem"
 HOMEPAGE="http://netfs.randomdan.homeip.net/"

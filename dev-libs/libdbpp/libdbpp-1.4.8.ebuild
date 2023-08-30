@@ -1,6 +1,6 @@
 EAPI="7"
 
-inherit bjam eutils
+inherit bjam
 
 DESCRIPTION="C++ database connectivity common components"
 HOMEPAGE="http://libdbpp.randomdan.homeip.net/"

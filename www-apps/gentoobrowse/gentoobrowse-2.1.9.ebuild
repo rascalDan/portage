@@ -1,6 +1,6 @@
 EAPI="7"
 
-inherit webapp eutils bjam
+inherit webapp bjam
 
 DESCRIPTION="Gentoo Browse is an IceSpider based web site for viewing Gentoo content"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"

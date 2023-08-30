@@ -7,7 +7,7 @@ BACKPORTS="03f44039848bd09444ff4baa8dc158bd61454079"
 MY_P=${P%_p*}
 MY_PV=${PV%_p*}
 
-inherit eutils vcs-snapshot
+inherit vcs-snapshot
 
 DESCRIPTION="Homebrew PVR project bindings"
 HOMEPAGE="https://www.mythtv.org"
