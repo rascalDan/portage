@@ -14,7 +14,7 @@ KEYWORDS="~amd64"
 DEPEND="
 media-sound/pulseaudio
 media-libs/libpulse
-dev-java/openjdk:17
+virtual/jre
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -30,6 +30,6 @@ src_install() {
 	doexe lib/runtime/bin/*
 	exeinto /opt/${PN}/lib
 	doexe lib/*.so
-	dosym /usr/lib64/openjdk-17/lib /opt/${PN}/lib/runtime/lib
+	dosym /etc/java-config-2/current-system-vm/lib /opt/${PN}/lib/runtime/lib
 	dolib.so lib/runtime/lib/libnative-*.so
 }
