@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="
 	virtual/pkgconfig
-	>=www-misc/icespider-0.6:=
+	<www-misc/icespider-0.9:=
 	>=net-misc/gentoobrowse-api-0.10
 	dev-cpp/slicer:=
 "
