@@ -51,6 +51,7 @@ RDEPEND="
 		media-gfx/blender
 		media-gfx/openmesh
 		media-libs/assimp
+		x11-apps/rgb
 	)
 	dev-util/uncrustify
 	dev-util/cproto
