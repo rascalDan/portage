@@ -5,16 +5,10 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{9,10} )
 
-if [[ ${PV} == *9999 ]]; then
-	EGIT_REPO_URI="https://github.com/crmsh/crmsh"
-	inherit git-3
-	S="${WORKDIR}/${PN}-${MY_TREE}"
-else
-	SRC_URI="https://github.com/crmsh/crmsh/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~hppa ~x86"
-fi
+SRC_URI="https://github.com/crmsh/crmsh/archive/${PV}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="~amd64 ~hppa ~x86"
 
-inherit autotools python-r1
+inherit autotools distutils-r1
 
 DESCRIPTION="Pacemaker command line interface for management and configuration"
 HOMEPAGE="https://crmsh.github.io/"
@@ -37,9 +31,15 @@ src_prepare() {
 	default
 
 	eautoreconf
+	distutils-r1_src_prepare
+}
+
+src_configure() {
+	econf
+	distutils-r1_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	python_foreach_impl python_optimize
+	distutils-r1_src_install
+	emake DESTDIR="${D}" install-{data,info,man}
 }
