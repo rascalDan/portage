@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet odbc mysql postgres cxx vnc java ilt"
+IUSE="X dotnet odbc mysql postgres cxx vnc java ilt +blender"
 
 RDEPEND="
 	=net-misc/unison-2.51*
@@ -47,8 +47,10 @@ RDEPEND="
 		dev-util/idea-community
 	)
 	ilt? (
+		blender? (
+			media-gfx/blender
+		)
 		dev-libs/mxml
-		media-gfx/blender
 		media-gfx/openmesh
 		media-libs/assimp
 		x11-apps/rgb
