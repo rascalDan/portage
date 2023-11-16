@@ -70,7 +70,7 @@ RDEPEND="
 	media-libs/libsdl2
 	media-libs/glew
 	sys-fs/inotify-tools
-	net-misc/shmux
+	net-misc/pssh
 	app-misc/jq
 	cxx? (
 		dev-util/ccache
