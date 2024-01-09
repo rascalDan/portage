@@ -15,7 +15,6 @@ RDEPEND="
 	x11-base/xorg-server
 	kde-apps/yakuake
 	media-sound/alsa-utils
-	kde-apps/kmix
 	!networkmanager? (
 		net-misc/dhcp )
 	sys-power/acpid
