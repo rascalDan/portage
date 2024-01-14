@@ -23,7 +23,7 @@ USE="
 	device-mapper dot dracut dvb -elogind -embedded fam -fortran fontconfig fuse git gold graphviz grub harfbuzz http2 icu
 	-idn inspector -introspection ithreads jit jpeg jpeg2k json ldap lm-sensors llvm lvm -lvm1 lzma lz4 lzo minizip mp3 mpm-prefork
 	-nettle network network-cron nscd -nss nuv offload pch pcre16 pcre32 pcre-jit png postgres postproc
-	-ppp python rtmp savedconfig secure-delete smp sndfile -source sqlite symlink syslog
+	-ppp python rtmp savedconfig secure-delete smp sndfile -source sqlite symlink syslog kernel-install
 	system-act system-av1 system-boost system-bootloader system-bootstrap system-cmark system-crontab
 	system-ffmpeg system-harfbuzz system-heimdal system-icu system-info system-ipxe system-jpeg system-lcms
 	system-leveldb system-libcxx system-libevent system-libs system-libvpx system-libyaml system-llvm
