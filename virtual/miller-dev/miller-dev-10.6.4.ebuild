@@ -60,11 +60,11 @@ RDEPEND="
 	dev-util/ctags
 	dev-db/pgFormatter
 	net-nds/shelldap
-	sys-devel/gdb
+	sys-debug/gdb
 	dev-util/valgrind
 	dev-util/lcov
 	app-text/htmltidy
-	app-doc/doxygen
+	app-text/doxygen
 	app-benchmarks/wrk
 	dev-libs/stb
 	media-libs/libsdl2

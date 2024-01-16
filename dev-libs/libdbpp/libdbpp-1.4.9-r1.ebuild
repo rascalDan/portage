@@ -20,7 +20,7 @@ DEPEND="
 	sys-devel/flex
 	dev-util/b2
 	virtual/pkgconfig
-	man? ( app-doc/doxygen )
+	man? ( app-text/doxygen )
 "
 
 src_compile() {

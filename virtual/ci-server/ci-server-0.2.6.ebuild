@@ -62,6 +62,6 @@ RDEPEND="
 	sys-kernel/linux-headers
 	sys-libs/glibc
 	sys-libs/zlib
-	app-doc/doxygen
+	app-text/doxygen
 "
 
