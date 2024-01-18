@@ -18,7 +18,7 @@ DEPEND="
 	dev-libs/libadhocutil
 	"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/b2"
+BDEPEND="dev-build/b2"
 
 src_compile() {
 	bjambuild

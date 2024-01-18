@@ -25,7 +25,7 @@ DEPEND="=dev-libs/Ice-3.7*
 BDEPEND="${DEPEND}
 	sys-devel/flex
 	virtual/pkgconfig
-	dev-util/b2"
+	dev-build/b2"
 RDEPEND="${DEPEND}
 	server? (
 		=sys-apps/icebox-service-1.11

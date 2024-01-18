@@ -24,7 +24,7 @@ RDEPEND="=dev-libs/Ice-3.7*
 	dev-libs/boost:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	dev-util/b2"
+	dev-build/b2"
 
 src_compile() {
 	bjambuild \

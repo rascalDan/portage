@@ -19,7 +19,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	sys-devel/flex
-	dev-util/b2
+	dev-build/b2
 	virtual/pkgconfig
 	man? ( app-text/doxygen )
 "

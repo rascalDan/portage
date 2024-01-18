@@ -19,7 +19,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/b2
+	dev-build/b2
 "
 
 src_compile() {

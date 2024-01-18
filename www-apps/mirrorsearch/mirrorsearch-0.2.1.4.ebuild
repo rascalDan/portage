@@ -21,7 +21,7 @@ DEPEND="
 "
 BDEPEND="${DEPEND}
 	virtual/pkgconfig
-	dev-util/b2
+	dev-build/b2
 "
 
 pkg_setup() {

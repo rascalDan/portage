@@ -13,7 +13,7 @@ IUSE=""
 DEPEND="dev-cpp/glibmm"
 RDEPEND="${DEPEND}
 	sys-devel/flex
-	dev-util/b2"
+	dev-build/b2"
 
 src_compile() {
 	bjambuild libjsonpp//jsonpp

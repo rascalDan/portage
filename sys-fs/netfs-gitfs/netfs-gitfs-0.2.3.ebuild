@@ -20,7 +20,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
-	dev-util/b2
+	dev-build/b2
 "
 
 src_compile() {

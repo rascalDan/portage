@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64"
 
 RDEPEND="=dev-libs/Ice-${PV}*"
 DEPEND="${RDEPEND}
-	dev-util/b2"
+	dev-build/b2"
 
 src_unpack() {
 	unpack ${P}.tar.xz
