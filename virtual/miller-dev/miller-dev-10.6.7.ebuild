@@ -131,7 +131,7 @@ RDEPEND="
 		x11-apps/xhost
 		dev-db/squirrel-sql
 		app-editors/okteta
-		dev-util/kdbg
+		dev-debug/kdbg
 		kde-apps/dolphin-plugins-git
 		net-analyzer/nmap
 		dotnet? (
