@@ -127,7 +127,7 @@ RDEPEND="
 		media-gfx/gimp
 		kde-apps/kruler
 		net-analyzer/wireshark
-		dev-util/apitrace
+		dev-debug/apitrace
 		x11-apps/xhost
 		dev-db/squirrel-sql
 		app-editors/okteta

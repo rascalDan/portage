@@ -53,7 +53,7 @@ RDEPEND="
 			x11-apps/xauth
 		)
 		sys-apps/moreutils
-		dev-util/strace
+		dev-debug/strace
 		|| (
 			net-analyzer/netcat
 			net-analyzer/nmap[ncat,symlink]
