@@ -77,7 +77,8 @@ RDEPEND="
 		dev-util/cppcheck
 		sys-devel/clang[static-analyzer]
 		dev-util/splint
-		=sys-devel/gcc-12*
+		sys-devel/gcc:13
+		sys-devel/mold
 		dev-util/bloaty
 		dev-util/include-what-you-use
 		dev-cpp/benchmark
@@ -104,7 +105,6 @@ RDEPEND="
 	dev-cpp/libxmlpp:3.0
 	dev-util/libabigail
 	dev-util/unifdef
-	sys-devel/mold
 	net-libs/libesmtp
 	www-apache/mod_fcgid
 	www-apache/apache-mod-markdown
