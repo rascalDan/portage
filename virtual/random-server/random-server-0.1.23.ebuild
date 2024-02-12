@@ -15,10 +15,10 @@ RDEPEND="
 	sys-devel/gcc:10[cxx]
 	sys-devel/gcc:12[cxx]
 	sys-devel/gcc:13[cxx]
-	sys-devel/clang:15
-	sys-devel/clang:16
+	sys-devel/clang:17
 	net-dns/bind
 	net-firewall/iptables
+	net-fs/autofs
 	net-fs/samba
 	net-misc/dhcp
 	net-proxy/haproxy
@@ -37,6 +37,7 @@ RDEPEND="
 	www-apps/mirrorsearch
 	dev-util/ccache
 	sys-cluster/pacemaker
+	sys-process/at
 	sys-cluster/crmsh
 	net-analyzer/fail2ban
 	net-misc/openntpd
