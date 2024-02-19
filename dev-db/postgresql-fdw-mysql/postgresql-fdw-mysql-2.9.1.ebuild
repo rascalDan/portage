@@ -10,14 +10,14 @@ SRC_URI="https://github.com/EnterpriseDB/mysql_fdw/archive/REL-${PV//./_}.tar.gz
 
 LICENSE="mysql_fdw"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 S="${WORKDIR}/mysql_fdw-REL-${PV//./_}"
 
 DEPEND="
 	dev-db/mysql-connector-c
-	>=dev-db/postgresql-9.4
+	>=dev-db/postgresql-11
 	"
 RDEPEND="${DEPEND}"
 
