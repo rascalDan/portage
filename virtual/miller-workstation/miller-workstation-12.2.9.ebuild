@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="rdp vnc xscreensaver vlc"
+IUSE="rdp vnc xscreensaver vlc screencast"
 
 RDEPEND="
 	=net-misc/unison-2.51*
@@ -60,5 +60,8 @@ RDEPEND="
 	kde-apps/ark
 	x11-themes/oxygen-gtk
 	x11-apps/xrandr
+	screencast? (
+		kde-plasma/xdg-desktop-portal-kde
+	)
 	"
 
