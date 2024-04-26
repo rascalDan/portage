@@ -50,7 +50,7 @@ RDEPEND="
 		blender? (
 			media-gfx/blender
 		)
-		dev-libs/mxml
+		dev-libs/mxml:0
 		media-gfx/openmesh
 		media-libs/assimp
 		x11-apps/rgb
