@@ -8,6 +8,6 @@ IUSE="pacemaker"
 RDEPEND="
 	virtual/miller-base
 	dev-db/pg_activity
-	=dev-db/postgresql-14*[server]
+	dev-db/postgresql:$(ver_cut 1)[server]
 	pacemaker? ( sys-cluster/resource-agents-paf )
 "
