@@ -5,7 +5,7 @@ inherit llvm multilib python-single-r1 cmake vim-plugin
 youcompletemev="49ced5a30ad7778178fd44703665a8ef3329e592"
 ycmdv="45bc1c51ff28d66c510ad90388307e1f596a20a2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SRC_URI="
 	https://github.com/ycm-core/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/ycm-core/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
