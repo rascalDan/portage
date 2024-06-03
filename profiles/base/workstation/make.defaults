@@ -5,6 +5,6 @@ USE="
 	gnome-keyring -handbook -hangouts imagemagick javascript jemalloc
 	-kde lame -lastfm lightning markdown -modemmanager mtp mysql -nsplugin
 	offensive openexr pango plymouth -postscript -sdl -semantic-desktop -server
-	silc taglib thumbnail user-session vaapi vlc -vnc -wallpapers -webstart xa
+	silc taglib thumbnail user-session vaapi vlc -vnc -wallpapers webp -webstart xa
 	xmp xvmc zip
 "
