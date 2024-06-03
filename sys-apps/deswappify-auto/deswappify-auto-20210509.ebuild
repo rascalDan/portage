@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{5..11} )
+PYTHON_COMPAT=( python3_{5..12} )
 inherit python-r1 systemd
 
 ID="edd256a886cdfcf04bab08559ba9e45464a59a20"
