@@ -1,5 +1,5 @@
 EAPI="8"
-PYTHON_COMPAT=( python3_{9,10,11} )
+PYTHON_COMPAT=( python3_{10,11,12} )
 inherit llvm multilib python-single-r1 cmake vim-plugin
 
 youcompletemev="49ced5a30ad7778178fd44703665a8ef3329e592"
