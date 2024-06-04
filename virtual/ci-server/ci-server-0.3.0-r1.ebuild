@@ -10,7 +10,7 @@ SRC_URI=""
 LICENSE=""
 SLOT="0"
 KEYWORDS="*"
-IUSE="deps-only odbc mysql postgresql"
+IUSE="deps-only odbc mysql postgres"
 
 DEPEND=""
 RDEPEND="
@@ -23,7 +23,7 @@ RDEPEND="
 		mysql? (
 			dev-libs/libdbpp-mysql
 		)
-		postgresql? (
+		postgres? (
 			dev-libs/libdbpp-postgresql
 		)
 		net-misc/gentoobrowse-api
@@ -45,7 +45,7 @@ RDEPEND="
 		virtual/miller-mysql
 		dev-db/mariadb-connector-c
 	)
-	postgresql? (
+	postgres? (
 		virtual/miller-postgresql
 	)
 	virtual/miller-base
