@@ -7,7 +7,7 @@ SRC_URI=""
 LICENSE=""
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="mediaserver dosfs ocfs2 ci"
+IUSE="mediaserver dosfs ocfs2 ci mysql postgresql"
 
 RDEPEND="
 	=net-misc/unison-2.51*
@@ -26,8 +26,12 @@ RDEPEND="
 	net-nds/shelldap
 	virtual/miller-base
 	virtual/miller-mailserver
-	virtual/miller-postgresql
-	virtual/miller-mysql
+	postgresql? (
+		virtual/miller-postgresql
+	)
+	mysql? (
+		virtual/miller-mysql
+	)
 	virtual/miller-webappserver
 	virtual/miller-webserver
 	virtual/miller-proxy

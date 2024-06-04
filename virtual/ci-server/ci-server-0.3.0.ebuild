@@ -10,7 +10,7 @@ SRC_URI=""
 LICENSE=""
 SLOT="0"
 KEYWORDS="*"
-IUSE="deps-only"
+IUSE="deps-only odbc mysql postgresql"
 
 DEPEND=""
 RDEPEND="
@@ -20,8 +20,12 @@ RDEPEND="
 		dev-libs/icetray
 		dev-libs/libadhocutil
 		dev-libs/libdbpp
-		dev-libs/libdbpp-mysql
-		dev-libs/libdbpp-postgresql
+		mysql? (
+			dev-libs/libdbpp-mysql
+		)
+		postgresql? (
+			dev-libs/libdbpp-postgresql
+		)
 		net-misc/gentoobrowse-api
 		sys-cluster/netfs
 		www-misc/icespider
@@ -37,13 +41,19 @@ RDEPEND="
 	app-text/htmltidy
 	dev-cpp/glibmm
 	dev-cpp/libxmlpp
-	virtual/miller-mysql
-	virtual/miller-postgresql
+	mysql? (
+		virtual/miller-mysql
+		dev-db/mariadb-connector-c
+	)
+	postgresql? (
+		virtual/miller-postgresql
+	)
 	virtual/miller-base
 	dev-db/sqlite
-	dev-db/unixODBC
-	dev-db/psqlodbc
-	dev-db/mariadb-connector-c
+	odbc? (
+		dev-db/unixODBC
+		dev-db/psqlodbc
+	)
 	dev-libs/boost
 	dev-libs/fcgi
 	dev-libs/glib
