@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr vpnc pptp forticlient openconnect wifi b43 networkmanager plymouth vaapi video_cards_intel"
+IUSE="cdr vpnc pptp forticlient openconnect wifi b43 networkmanager plymouth vaapi video_cards_intel wayland"
 
 RDEPEND="
 	virtual/eject
@@ -13,6 +13,10 @@ RDEPEND="
 	cdr? ( kde-apps/k3b )
 	virtual/miller-base
 	x11-base/xorg-server
+	wayland? (
+		app-misc/wayland-utils
+		dev-libs/weston
+	)
 	kde-apps/yakuake
 	media-sound/alsa-utils
 	!networkmanager? (
