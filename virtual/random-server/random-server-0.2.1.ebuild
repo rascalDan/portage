@@ -10,7 +10,7 @@ KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
 IUSE="mediaserver dosfs ocfs2 ci mysql postgres"
 
 RDEPEND="
-	=net-misc/unison-2.51*
+	=net-misc/unison-2.53*
 	sys-devel/distcc
 	sys-devel/gcc:10[cxx]
 	sys-devel/gcc:12[cxx]
