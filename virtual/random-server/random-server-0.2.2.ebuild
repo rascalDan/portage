@@ -12,10 +12,11 @@ IUSE="mediaserver dosfs ocfs2 ci mysql postgres"
 RDEPEND="
 	=net-misc/unison-2.53*
 	sys-devel/distcc
-	sys-devel/gcc:10[cxx]
 	sys-devel/gcc:12[cxx]
 	sys-devel/gcc:13[cxx]
+	sys-devel/gcc:14[cxx]
 	sys-devel/clang:17
+	sys-devel/clang:18
 	net-dns/bind
 	net-firewall/iptables
 	net-fs/autofs
