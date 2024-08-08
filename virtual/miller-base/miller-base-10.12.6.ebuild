@@ -68,8 +68,7 @@ RDEPEND="
 	app-misc/screen
 	app-vim/gentoo-syntax
 	ldap? (
-		sys-auth/pam_ldap
-		sys-auth/nss_ldap
+		sys-auth/nss-pam-ldapd
 	)
 	app-editors/vim
 	X? (
