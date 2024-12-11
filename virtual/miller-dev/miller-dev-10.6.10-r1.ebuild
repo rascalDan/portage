@@ -75,7 +75,7 @@ RDEPEND="
 	cxx? (
 		dev-util/ccache
 		dev-util/cppcheck
-		sys-devel/clang[static-analyzer]
+		llvm-core/clang[static-analyzer]
 		dev-util/splint
 		sys-devel/gcc:13
 		sys-devel/mold

@@ -32,7 +32,7 @@ RDEPEND="
 	)
 
 	sys-devel/gcc
-	sys-devel/clang[static-analyzer]
+	llvm-core/clang[static-analyzer]
 	dev-util/lcov
 	dev-util/cproto
 	dev-util/cppcheck

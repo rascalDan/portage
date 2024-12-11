@@ -14,5 +14,5 @@ net-misc/gentoobrowse-api server
 net-nds/openldap samba
 net-proxy/haproxy -slz
 sys-cluster/netfs server client
-sys-devel/clang static-analyzer
+llvm-core/clang static-analyzer
 sys-kernel/linux-firmware savedconfig

@@ -15,8 +15,8 @@ RDEPEND="
 	sys-devel/gcc:12[cxx]
 	sys-devel/gcc:13[cxx]
 	sys-devel/gcc:14[cxx]
-	sys-devel/clang:18
-	sys-devel/clang:19
+	llvm-core/clang:18
+	llvm-core/clang:19
 	net-dns/bind
 	net-firewall/iptables
 	net-fs/autofs
