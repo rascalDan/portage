@@ -55,6 +55,7 @@ RDEPEND="
 	net-analyzer/nrpe
 	net-analyzer/check_crm
 	net-analyzer/check_drbd
+	sys-cluster/drbd-utils
 	net-analyzer/check_haproxy_stats
 	net-analyzer/check_ice
 	net-analyzer/check_service
@@ -66,7 +67,6 @@ RDEPEND="
 			sys-fs/dosfstools
 	)
 	ocfs2? (
-			sys-cluster/drbd-utils
 			sys-apps/ocfs2-service
 			sys-fs/ocfs2-tools )
 	mediaserver? (
