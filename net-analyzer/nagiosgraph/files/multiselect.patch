@@ -1,0 +1,19 @@
+--- a/etc/ngshared.pm	2025-01-13 09:50:56.597104649 +0000
++++ b/etc/ngshared.pm	2025-01-13 09:51:44.709518279 +0000
+@@ -2457,14 +2457,14 @@
+                                            $cgi->td(($context eq 'both' || $context eq 'service')
+                                                     ? $cgi->table($cgi->Tr({-valign => 'top', -id => 'db_controls' }, "\n",
+                                                                            $cgi->td({-class => 'control_label'}, _('Data Sets:')), "\n",
+-                                                                           $cgi->td($cgi->popup_menu(-name => 'db', -values => [], -size => DBLISTROWS, -multiple => 1)), "\n",
++                                                                           $cgi->td($cgi->scrolling_list(-name => 'db', -values => [], -size => DBLISTROWS, -multiple => 1)), "\n",
+                                                                            $cgi->td($cgi->button(-name => 'clear', -label => _('Clear'), -onClick => 'clearDBSelection()')), "\n",
+                                                                            ), "\n",
+                                                                   ) . "\n"
+                                                     : q()), "\n",
+                                            $cgi->td($cgi->table($cgi->Tr({-valign => 'top'}, "\n",
+                                                                          $cgi->td({-class => 'control_label'}, _('Periods:')), "\n",
+-                                                                         $cgi->td($cgi->popup_menu(-name => 'period', -values => [@PERIOD_KEYS], -labels => \%period_labels, -size => PERIODLISTROWS, -multiple => 1)), "\n",
++                                                                         $cgi->td($cgi->scrolling_list(-name => 'period', -values => [@PERIOD_KEYS], -labels => \%period_labels, -size => PERIODLISTROWS, -multiple => 1)), "\n",
+                                                                          $cgi->td($cgi->button(-name => 'clear', -label => _('Clear'), -onClick => 'clearPeriodSelection()')), "\n",
+                                                                          ), "\n",
+                                                                 $cgi->Tr($cgi->td({-class => 'control_label'}, _('Size:')), "\n",

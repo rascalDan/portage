@@ -21,6 +21,7 @@ BDEPEND=""
 
 src_prepare() {
 	eapply ${FILESDIR}/multi_param.patch
+	eapply ${FILESDIR}/multiselect.patch
 	eapply_user
 }
 
