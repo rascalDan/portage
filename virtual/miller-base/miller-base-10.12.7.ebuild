@@ -36,7 +36,7 @@ RDEPEND="
 		sys-apps/pciutils
 		sys-apps/usbutils
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
-		firmware? ( sys-kernel/linux-firmware )
+		firmware? ( sys-kernel/linux-firmware sys-firmware/intel-microcode )
 		app-admin/logrotate
 		video_cards_nouveau? ( sys-firmware/nvidia-firmware )
 		app-antivirus/clamav
