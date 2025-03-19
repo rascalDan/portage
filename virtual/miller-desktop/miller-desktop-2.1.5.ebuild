@@ -44,7 +44,7 @@ RDEPEND="
 		)
 	openconnect? (
 		net-vpn/openconnect
-		net-libs/webkit-gtk:4
+		net-libs/webkit-gtk:4.1
 		)
 	sys-fs/dosfstools
 	sys-block/partitionmanager
