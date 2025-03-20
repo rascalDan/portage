@@ -24,6 +24,7 @@ RDEPEND="${DEPEND}
 	$(python_gen_cond_dep '
 		dev-python/lxml[${PYTHON_USEDEP}]
 		dev-python/parallax[${PYTHON_USEDEP}]
+		dev-python/python-dateutil[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 	')
 "
@@ -36,5 +37,6 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+	python_fix_shebang "${ED}"
 	python_optimize
 }

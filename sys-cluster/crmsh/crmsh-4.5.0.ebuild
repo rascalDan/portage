@@ -42,5 +42,6 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+	python_fix_shebang "${ED}"
 	python_optimize
 }
