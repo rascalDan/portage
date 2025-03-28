@@ -61,7 +61,7 @@ RDEPEND="
 		)
 		net-ftp/ncftp
 		app-text/dos2unix
-		net-dns/bind-tools
+		net-dns/bind
 	)
 	sys-process/lsof
 	app-eselect/eselect-repository
