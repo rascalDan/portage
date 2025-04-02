@@ -48,7 +48,7 @@ RDEPEND="
 	)
 	media-gfx/gimp
 	media-sound/clementine
-	kde-apps/spectacle
+	kde-plasma/spectacle
 	kde-apps/kwalletmanager
 	x11-misc/kdocker
 	kde-apps/okular
