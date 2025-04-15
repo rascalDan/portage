@@ -1,4 +1,4 @@
-EAPI=7
+EAPI=8
 
 DESCRIPTION="Virtual for Random servers"
 HOMEPAGE=""
@@ -7,7 +7,7 @@ SRC_URI=""
 LICENSE=""
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="mediaserver dosfs ocfs2 ci mysql postgres"
+IUSE="mediaserver dosfs ocfs2 glusterfs ci mysql postgres"
 
 RDEPEND="
 	=net-misc/unison-2.53*
@@ -69,6 +69,8 @@ RDEPEND="
 	ocfs2? (
 			sys-apps/ocfs2-service
 			sys-fs/ocfs2-tools )
+	glusterfs? (
+			sys-cluster/glusterfs )
 	mediaserver? (
 			net-misc/minidlna
 			net-misc/yt-dlp
