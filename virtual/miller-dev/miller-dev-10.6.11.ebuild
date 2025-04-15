@@ -88,6 +88,7 @@ RDEPEND="
 	app-vim/vcscommand
 	dev-vcs/git
 	dev-vcs/git-extras
+	dev-vcs/git-revise
 	sys-devel/distcc
 	dev-util/patchutils
 	|| (
