@@ -78,7 +78,7 @@ RDEPEND="
 	bash-completion? ( app-shells/bash-completion )
 	sys-apps/systemd
 	autoservicerestart? (
-		sys-apps/autorestart
+		app-admin/needrestart
 	)
 	app-portage/cpuid2cpuflags
 	app-text/ansifilter
@@ -122,6 +122,9 @@ src_install() {
 	use !autoupdate && newexe "${FILESDIR}"/auto-download-packages 70-auto-download-package
 	newexe "${FILESDIR}"/write-new-updates 50-write-new-updates
 	newexe "${FILESDIR}"/systemd-reload 90-systemd-reload
+	if use autoservicerestart ; then
+		newexe "${FILESDIR}"/auto-service-restart.sh 95-auto-service-restart
+	fi
 	newexe "${FILESDIR}"/linkfiles 98-linkfiles
 	if use autoupdate ; then
 		dosym /sbin/update-install /etc/portage/postsync.d/75-update-install
