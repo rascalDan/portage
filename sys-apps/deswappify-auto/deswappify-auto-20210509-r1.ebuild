@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{5..12} )
+PYTHON_COMPAT=( python3_{5..13} )
 inherit python-r1 systemd
 
 ID="edd256a886cdfcf04bab08559ba9e45464a59a20"
-DESCRIPTION="Automatically fetch swapped pages to physical memory when enough memory is available"
+DESCRIPTION="Automatically fetch swapped pages to physical memory when memory is available"
 HOMEPAGE="https://github.com/wiedemannc/deswappify-auto"
 SRC_URI="https://github.com/wiedemannc/deswappify-auto/archive/$ID.zip -> ${P}.zip"
 
