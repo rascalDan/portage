@@ -23,6 +23,7 @@ RDEPEND="
 	net-fs/samba
 	net-misc/dhcp
 	net-proxy/haproxy
+	net-proxy/haproxy-load-daemon
 	net-nds/smbldap-tools
 	net-nds/shelldap
 	virtual/miller-base
