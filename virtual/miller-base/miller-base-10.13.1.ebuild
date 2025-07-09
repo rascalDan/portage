@@ -32,7 +32,6 @@ RDEPEND="
 			sys-fs/btrfsmaintenance
 			)
 		sys-fs/lvm2
-		sys-boot/grub
 		sys-apps/pciutils
 		sys-apps/usbutils
 		samba? ( || ( net-fs/cifs-utils net-fs/samba[client] ) )
