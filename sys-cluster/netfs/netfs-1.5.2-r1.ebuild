@@ -42,7 +42,7 @@ src_install() {
 	if use client ; then
 		insinto /etc/netfs
 		doins netfs/etc/client.xml
-		dosym ../usr/bin/netfs /sbin/mount.netfs
+		dosym /usr/bin/netfs /sbin/mount.netfs
 	fi
 	if use server ; then
 		insinto /etc/netfs
