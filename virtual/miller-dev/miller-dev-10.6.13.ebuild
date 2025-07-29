@@ -105,7 +105,7 @@ RDEPEND="
 	dev-libs/Ice
 	dev-libs/slice-parser
 	dev-cpp/glibmm
-	dev-cpp/libxmlpp:3.0
+	dev-cpp/libxmlpp:5.0
 	dev-util/libabigail
 	dev-util/unifdef
 	net-libs/libesmtp
