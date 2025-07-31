@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
 
-DEPEND="dev-cpp/glibmm"
+DEPEND="dev-cpp/glibmm:2"
 RDEPEND="${DEPEND}
 	sys-devel/flex
 	dev-build/b2"

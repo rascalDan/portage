@@ -20,6 +20,7 @@ DEPEND="
 	sys-devel/flex
 	dev-build/b2
 	virtual/pkgconfig
+	dev-cpp/glibmm:2
 	man? ( app-text/doxygen )
 "
 

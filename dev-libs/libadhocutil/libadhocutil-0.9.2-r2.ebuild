@@ -14,7 +14,7 @@ IUSE="man test"
 RDEPEND="
 	net-misc/curl
 	=dev-libs/Ice-3.7*
-	dev-cpp/glibmm
+	dev-cpp/glibmm:2
 "
 DEPEND="
 	${RDEPEND}
