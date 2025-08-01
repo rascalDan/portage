@@ -46,7 +46,7 @@ RDEPEND="
 		app-office/libreoffice
 	)
 	media-gfx/gimp
-	media-sound/clementine
+	media-sound/strawberry
 	kde-plasma/spectacle
 	kde-apps/kwalletmanager
 	x11-misc/kdocker
