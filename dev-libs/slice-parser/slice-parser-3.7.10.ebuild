@@ -9,7 +9,7 @@ SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz
 	https://github.com/zeroc-ice/ice/archive/v${PV}.tar.gz -> Ice-${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 RDEPEND="=dev-libs/Ice-${PV}*"
 DEPEND="${RDEPEND}
