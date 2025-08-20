@@ -13,8 +13,8 @@ RDEPEND="
 	=net-misc/unison-2.53*
 	sys-devel/distcc
 	sys-devel/gcc:12[cxx]
-	sys-devel/gcc:13[cxx]
 	sys-devel/gcc:14[cxx]
+	sys-devel/gcc:15[cxx]
 	llvm-core/clang:18
 	llvm-core/clang:19
 	net-dns/bind
