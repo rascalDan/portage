@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="app-text/discount"
+DEPEND="=app-text/discount-2*"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
