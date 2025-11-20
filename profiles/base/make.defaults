@@ -27,7 +27,7 @@ USE="
 	system-act system-av1 system-boost system-bootloader system-bootstrap system-cmark system-crontab
 	system-ffmpeg system-harfbuzz system-heimdal system-icu system-info system-ipxe system-jpeg system-lcms
 	system-leveldb system-libcxx system-libevent system-libs system-libvpx system-libyaml system-llvm
-	system-lua system-lz4 system-man system-mathjax system-mesa system-mitkrb5 system-numpy system-png
+	system-lua system-lz4 system-man system-mathjax system-mesa system-mitkrb5 system-numpy system-pipewire system-png
 	system-python system-qemu system-seabios system-sqlite system-ssl system-tbb system-webp system-wfconfig
 	system-wide system-wlroots system-zlib systemd -themes -thin threads uuid -vala vim-pager vim-syntax
 	-winbind xml -resolvconf -printsupport zstd
