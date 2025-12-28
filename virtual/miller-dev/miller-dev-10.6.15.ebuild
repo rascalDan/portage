@@ -148,6 +148,6 @@ RDEPEND="
 		)
 		kde-apps/kcachegrind
 		app-editors/gvim
-		dev-util/hotspot
+		dev-debug/hotspot
 	)"
 
