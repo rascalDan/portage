@@ -1,11 +1,12 @@
 EAPI="8"
-PYTHON_COMPAT=( python3_{10,11,12} )
-inherit llvm multilib python-single-r1 cmake vim-plugin
+PYTHON_COMPAT=( python3_{10..13} )
+LLVM_COMPAT=( {16..20} )
+inherit llvm-r2 multilib python-single-r1 cmake vim-plugin
 
-youcompletemev="63ab13e95141c252c545f9a6c7144ced6790d68f"
-ycmdv="8b61f198f9c824ce3ef246e5fd542a2304c9275e"
+youcompletemev="159e8dea6ad8ca5143b89b788b943f1a995c4fce"
+ycmdv="73ec4f6655e1a6f18ded977c0a43add2704a0b12"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 SRC_URI="
 	https://github.com/ycm-core/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/ycm-core/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
@@ -20,7 +21,7 @@ IUSE="+clang"
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	dev-cpp/abseil-cpp:=
-	clang? ( llvm-core/clang:= )
+	clang? ( $(llvm_gen_dep 'llvm-core/clang:${LLVM_SLOT}=') )
 	$(python_gen_cond_dep '
 			>=dev-libs/boost-1.65:=[python,${PYTHON_USEDEP}]
 			|| (
