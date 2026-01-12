@@ -44,7 +44,7 @@ RDEPEND="
 	)
 	java? (
 		dev-java/maven-bin
-		dev-util/idea-community
+		dev-util/intellij-idea
 	)
 	ilt? (
 		blender? (
