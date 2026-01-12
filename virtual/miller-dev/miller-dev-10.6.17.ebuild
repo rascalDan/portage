@@ -1,4 +1,4 @@
-EAPI="7"
+EAPI="8"
 DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
@@ -77,7 +77,6 @@ RDEPEND="
 		dev-util/cppcheck
 		llvm-core/clang[static-analyzer]
 		dev-util/splint
-		sys-devel/gcc:14
 		sys-devel/gcc:15
 		sys-devel/mold
 		dev-util/bloaty
