@@ -8,7 +8,7 @@ HOMEPAGE="http://slicer.randomdan.homeip.net/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 LICENSE="MIT"
 SLOT="0/1.13.0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="db xml json"
 
 RDEPEND=">=dev-libs/Ice-3.7
