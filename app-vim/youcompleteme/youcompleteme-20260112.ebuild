@@ -23,7 +23,6 @@ COMMON_DEPEND="
 	dev-cpp/abseil-cpp:=
 	clang? ( $(llvm_gen_dep 'llvm-core/clang:${LLVM_SLOT}=') )
 	$(python_gen_cond_dep '
-			>=dev-libs/boost-1.65:=[python,${PYTHON_USEDEP}]
 			|| (
 				app-editors/vim[python,${PYTHON_SINGLE_USEDEP}]
 				app-editors/gvim[python,${PYTHON_SINGLE_USEDEP}]
