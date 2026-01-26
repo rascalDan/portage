@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller development workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="X dotnet odbc mysql postgres cxx vnc java ilt +blender"
+IUSE="gui dotnet odbc mysql postgres cxx vnc java ilt +blender ftp rdp"
 
 RDEPEND="
 	=net-misc/unison-2.53*
@@ -55,7 +55,6 @@ RDEPEND="
 		media-libs/assimp
 		x11-apps/rgb
 	)
-	dev-util/uncrustify
 	dev-util/cproto
 	dev-util/ctags
 	dev-db/pgFormatter
@@ -73,10 +72,12 @@ RDEPEND="
 	net-misc/pssh
 	app-misc/jq
 	cxx? (
+		dev-cpp/catch
+		dev-cpp/emscripten
 		dev-util/ccache
 		dev-util/cppcheck
 		llvm-core/clang[static-analyzer]
-		dev-util/splint
+		net-proxy/haproxy-load-daemon
 		sys-devel/gcc:15
 		sys-devel/mold
 		dev-util/bloaty
@@ -112,19 +113,22 @@ RDEPEND="
 	media-gfx/imagemagick
 	app-shells/gentoo-bashcomp
 	app-arch/rar
-	net-ftp/ftp
+	ftp? (
+		net-ftp/ftp
+	)
 	media-video/ffmpeg
 	net-misc/yt-dlp
 	www-servers/apache
-	X? (
+	gui? (
 		|| ( www-client/google-chrome ( www-client/chromium www-plugins/chrome-binary-plugins ) )
 		|| ( www-client/firefox www-client/firefox-bin )
 		vnc? ( || (
 			net-misc/tigervnc
 			net-misc/vnc
 			) )
-		x11-misc/xdotool
-		net-misc/rdesktop
+		rdp? (
+			net-misc/rdesktop
+		)
 		media-gfx/gimp
 		kde-apps/kruler
 		net-analyzer/wireshark
