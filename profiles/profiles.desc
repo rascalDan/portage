@@ -1,3 +1,4 @@
 amd64 base/server stable
-amd64 base/workstation stable
+amd64 base/workstation/multilib stable
+amd64 base/workstation/no-multilib stable
 amd64 base/server/container stable
