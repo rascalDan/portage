@@ -3,12 +3,9 @@ DESCRIPTION="Virtual for desktops/laptops"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="cdr vpnc pptp forticlient openconnect wifi b43 networkmanager plymouth vaapi video_cards_intel wayland"
+IUSE="cdr vpnc pptp forticlient openconnect wifi b43 networkmanager vaapi video_cards_intel wayland"
 
 RDEPEND="
-	plymouth? (
-		media-gfx/MIB-Ossigeno-Ultimate-Plymouth
-	)
 	cdr? ( kde-apps/k3b )
 	virtual/miller-base
 	x11-base/xorg-server
