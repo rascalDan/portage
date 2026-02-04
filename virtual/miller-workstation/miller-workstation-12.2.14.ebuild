@@ -3,7 +3,7 @@ DESCRIPTION="Virtual for Miller workstations"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 mips ppc ppc-macos sparc sparc-fbsd x86 x86-fbsd"
-IUSE="rdp vnc xscreensaver vlc screencast"
+IUSE="rdp vnc xscreensaver vlc screencast vaapi video_cards_nvidia"
 
 RDEPEND="
 	=net-misc/unison-2.53*
@@ -22,7 +22,12 @@ RDEPEND="
 	rdp? ( kde-apps/krdc[rdp] )
 	vnc? ( kde-apps/krdc[vnc] )
 	|| (
-		www-client/firefox
+		(
+			www-client/firefox
+			vaapi? ( video_cards_nvidia? (
+				media-libs/nvidia-vaapi-driver
+				) )
+		)
 		(
 			|| (
 				www-client/chromium:0/stable
