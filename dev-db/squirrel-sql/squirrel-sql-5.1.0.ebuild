@@ -6,10 +6,10 @@ SRC_URI="https://sourceforge.net/projects/squirrel-sql/files/1-stable/${PV}-plai
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="oracle informix postgres mysql mssql jaybird"
 
-DEPEND="virtual/jre"
+DEPEND=">=virtual/jre-17 <=virtual/jre-25"
 RDEPEND="${DEPEND}
 	informix? ( dev-java/jdbc-informix )
 	jaybird? ( dev-java/jdbc-jaybird )
