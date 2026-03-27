@@ -1,10 +1,10 @@
 EAPI=8
 inherit bjam
 
-DESCRIPTION="WebStat web site access analyser	"
+DESCRIPTION="WebStat web site access analyser"
 HOMEPAGE="https://git.randomdan.homeip.net/repo/webstat/"
 SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz
-	https://github.com/eliaskosunen/scnlib/archive/refs/tags/v4.0.1.tar.gz"
+	https://github.com/eliaskosunen/scnlib/archive/refs/tags/v4.0.1.tar.gz -> scnlib-4.0.1.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
