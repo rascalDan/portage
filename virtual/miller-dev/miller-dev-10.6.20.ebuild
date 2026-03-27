@@ -18,6 +18,7 @@ RDEPEND="
 	app-vim/vim-spell-en
 	app-vim/nerdcommenter
 	app-vim/youcompleteme
+	app-vim/vim-clang-format
 	app-vim/surround
 	app-vim/syntastic
 	app-vim/gitgutter
