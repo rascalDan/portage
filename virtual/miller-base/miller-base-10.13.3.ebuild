@@ -17,7 +17,6 @@ RDEPEND="
 	fuse? ( net-fs/sshfs )
 	!ischroot? (
 		net-fs/autofs
-		sys-kernel/kergen
 		sys-apps/ethtool
 		sys-cluster/netfs
 		sys-apps/kexec-tools
