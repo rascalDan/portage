@@ -14,7 +14,6 @@ RDEPEND="
 	sys-devel/distcc
 	sys-devel/gcc:12[cxx]
 	sys-devel/gcc:15[cxx]
-	llvm-core/clang:19
 	llvm-core/clang:21
 	llvm-core/clang:22
 	net-dns/bind
