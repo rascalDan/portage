@@ -1,12 +1,12 @@
 EAPI="8"
 PYTHON_COMPAT=( python3_{10..14} )
-LLVM_COMPAT=( {16..21} )
+LLVM_COMPAT=( {16..23} )
 inherit llvm-r2 multilib python-single-r1 cmake vim-plugin
 
 youcompletemev="159e8dea6ad8ca5143b89b788b943f1a995c4fce"
 ycmdv="73ec4f6655e1a6f18ded977c0a43add2704a0b12"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SRC_URI="
 	https://github.com/ycm-core/YouCompleteMe/archive/$youcompletemev.tar.gz -> youcompleteme-$youcompletemev.tar.gz
 	https://github.com/ycm-core/ycmd/archive/$ycmdv.tar.gz -> ycmd-$ycmdv.tar.gz
