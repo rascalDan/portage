@@ -91,6 +91,7 @@ RDEPEND="
 	dev-vcs/git
 	dev-vcs/git-extras
 	dev-vcs/git-revise
+	dev-vcs/lazygit
 	sys-devel/distcc
 	dev-util/patchutils
 	|| (
