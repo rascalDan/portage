@@ -1,4 +1,4 @@
-EAPI="7"
+EAPI="8"
 
 inherit bjam
 
@@ -8,14 +8,14 @@ SRC_URI="https://git.randomdan.homeip.net/repo/${PN}/snapshot/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0/0.5"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~x86"
 IUSE="ut tools"
 
 RDEPEND="
 	dev-libs/boost:=
 	=dev-libs/Ice-3.7*
-	>=dev-libs/libdbpp-1.4:=
-	>=dev-libs/libadhocutil-0.7.5:=
+	>=dev-libs/libdbpp-1.4.10:=
+	>=dev-libs/libadhocutil-0.9.3:=
 	dev-cpp/slicer:=[db]
 	net-libs/libesmtp
 	tools? ( dev-build/b2 )
