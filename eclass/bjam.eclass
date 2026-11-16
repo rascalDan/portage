@@ -11,8 +11,8 @@
 inherit
 
 src_configure() {
-	ebegin "Setting portage CXX and LD flags"
-	sed -i "s|^using gcc .*|using gcc : : : <compileflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;|" ${S}/Jamroot.jam
+	ebegin "Setting portage C, CXX and LD flags"
+	echo "using gcc : : : <cflags>\"${CFLAGS}\" <cxxflags>\"${CXXFLAGS}\" <linkflags>\"${LDFLAGS}\" ;" > ${WORKDIR}/project-config.jam
 	eend $?
 
 	ebegin "Applying macro replacements"
